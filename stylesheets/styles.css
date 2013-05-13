@@ -2,9 +2,9 @@
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
-  font-weight:300;
+  background-color: #f6f3e0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,19 +32,32 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
-.view {
-	color: red;
+.github-link {
+	background-color: #e84b68;
+	width: 250px;
+	height: 30px;
+	text-align: center;
+	display: inline-block;
+	margin: 10px;
+	padding-top: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
+a.view {
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+}
 a {
-  color:#39c;
-  font-weight:400;
+  color: #dd2648;
+  font-weight: 300;
   text-decoration:none;
 }
 
 a small {
-  font-size:11px;
-  color:#777;
+  font-size: 11px;
+  color: #eb278e;
   margin-top:-0.6em;
   display:block;
 }
@@ -103,6 +116,7 @@ header {
   width:270px;
   float:left;
   position:fixed;
+  text-align: center;
 }
 
 header ul {
@@ -185,6 +199,7 @@ footer {
   float:left;
   position:fixed;
   bottom:50px;
+  text-align: center;
 }
 
 @media print, screen and (max-width: 960px) {
