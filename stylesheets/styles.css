@@ -96,6 +96,9 @@ a.view {
 	vertical-align: middle;
 
 }
+
+/* table */
+
 /* original */
 
 
@@ -188,6 +191,7 @@ th, td {
   text-align:left;
   padding:5px 10px;
   border-bottom:1px solid #e5e5e5;
+  font-size: 11px;
 }
 
 dt {
