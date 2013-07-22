@@ -128,7 +128,7 @@
 
 
 .lecture {
-	width:30%;
+	width:70%;
 	padding-left:10px;
 	font-size:12px;
 }
@@ -394,7 +394,7 @@ footer {
 
 @media print, screen and (max-width: 480px) {
   body {
-    padding:15px;
+    padding:5px;
   }
   
   header ul {
