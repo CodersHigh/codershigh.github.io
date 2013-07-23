@@ -91,7 +91,7 @@
 	height:30px;
 	width:auto;
 	vertical-align: middle;
-	margin:5px 10px 5px 15px;
+	margin:5px 10px 5px 5%;
 }
 
 .btn-text {
@@ -128,7 +128,7 @@
 
 
 .lecture {
-	width:70%;
+	width:40%;
 	padding-left:10px;
 	font-size:12px;
 }
@@ -183,7 +183,6 @@ a {
   color: #e1434b;
 }
 
-a:visited { color:inherit; }
 
 a small {
   font-size: 11px;
@@ -369,18 +368,20 @@ footer {
   }
   .app-div {
 	width: 30%;
-}
+	}
 }
 
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap:break-word;
+    padding:5%;
+    margin:0;
   }
   
   header {
     padding:0;
   }
-  
+
   header ul, header p.view {
     position:static;
   }
@@ -402,6 +403,7 @@ footer {
   }
   .book-frame {
 	width: 100%;}
+
 }
 
 @media print {
