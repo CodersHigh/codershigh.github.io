@@ -53,8 +53,8 @@
 }
 
 .btn-frame {
-	width: 45%;
-	margin: auto 10px 10px 0;
+	width: 47%;
+	margin: auto 10px 2% 0;
 	float: left;
 	vertical-align: middle;
 	background-color:white;
@@ -391,6 +391,7 @@ footer {
   }
   .app-div {
 	width: 55%;
+
 }
 
 @media print, screen and (max-width: 480px) {
