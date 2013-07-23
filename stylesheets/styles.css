@@ -53,23 +53,29 @@
 }
 
 .btn-frame {
-	width: 47%;
+	width: 45%;
 	margin: auto 10px 2% 0;
 	float: left;
 	vertical-align: middle;
 	background-color:white;
 	box-shadow: 3px 3px 1px #cfccbd;
 	border: 2px solid #cead82;
-	-webkit-border-radius: 5px;
+	-webkit-border-radius: 15px;
 }
 .video-frame{
-	width:17%;
-	padding:0;
+	width:80px;
+	height:80px;
+	vertical-align:middle;
 }
 
 .book-frame {
+	width: 45%;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f3bb00), to(#f39300));
 	border: 1px #50b9cc;
+	box-shadow: 3px 3px 1px #cfccbd;
+	-webkit-border-radius: 10px;
+	float: left;
+	margin: auto 10px 2% 0;
 }
 
 .app-div {
@@ -391,7 +397,8 @@ footer {
   }
   .app-div {
 	width: 55%;
-
+  .book-frame {
+	width: 100%;}
 }
 
 @media print, screen and (max-width: 480px) {
@@ -402,8 +409,6 @@ footer {
   header ul {
     display:none;
   }
-  .book-frame {
-	width: 100%;}
 
 }
 
