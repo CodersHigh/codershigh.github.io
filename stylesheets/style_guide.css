@@ -1,0 +1,128 @@
+body {
+	width:92%;
+	padding:4%;
+}
+a {
+text-decoration: none;
+color:#f04c00;}
+a:link {
+color:#f04c00;} 
+a:visited {
+color:#f04c00;}
+
+/* header */
+h2 {
+	width:90%;
+	height:60px;
+	font-size:1.5em;
+	font-weight:bold;
+	vertical-align:middle;
+	margin-left:3%;
+	padding:20px 0 25px 0;
+	font-family:sans-serif;
+	text-align:center;
+}
+
+h2 img {
+	width: 60px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+footer {
+	bottom:50px;
+	position:fixed;
+}
+
+/* code section */
+.code { 
+	max-width:700px;
+	margin: -20px auto 0px auto;
+	padding-bottom: 30px;
+}
+.code h3 {
+	text-align:center;
+	font-family:sans-serif;
+}
+.code p {
+	margin : 5px auto 5px auto;
+}
+.code_box {
+	width: 40%;
+	background-color:#eee;
+	text-align:center;
+	float:left;
+	vertical-align:middle;
+	-webkit-border-radius:10px;
+	border: 1px dashed #777;
+}
+
+.code_title {
+	float:left;
+	width: 50%;
+	text-align:right;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.code_text {
+
+}
+
+/* manual section */
+.guide {
+	max-width:700px;
+	margin: 10px auto 20px auto;
+	background-color:#f6f1d5;
+	padding:20px;
+	-webkit-border-radius:30px;
+}
+
+.guide img {
+	max-width:90%;
+	margin: 10px 5% 15px 5%;
+	-webkit-box-shadow: 0px 0px 15px #555;
+}
+
+p .icon {
+	width: 40px;
+	margin:0;
+	padding:0;
+	-webkit-box-shadow: 0px 0px 0px #fff;
+}
+
+.order_num {
+	width:40px;
+	height:40px;
+	background-color:#f89633;
+	color:white;
+	font-size:30px;
+	font-weight:300;
+	text-align:left;
+	padding: 2px 2px 0 7px;
+	margin: 0 10px 15px 0;
+	-webkit-border-bottom-right-radius:20px;
+	-webkit-border-top-left-radius:10px;
+	float:left;
+	font-family:sans-serif;
+}
+
+.guide p {
+	text-align:justify;
+	font-family:serif;
+	font-size:0.9em;
+	margin: 0px 0px 20px 60px;
+	line-height:1.5em;
+}
+
+
+.point {
+	color: #f04c00;
+}
+
+/* common */
+.link {}
+
+hr {
+	border: 3px dotted #aaa;
+}
