@@ -108,6 +108,7 @@ p .icon {
 }
 
 .guide p {
+	width:80%;
 	text-align:justify;
 	font-family:serif;
 	font-size:0.9em;
@@ -126,3 +127,4 @@ p .icon {
 hr {
 	border: 3px dotted #aaa;
 }
+
