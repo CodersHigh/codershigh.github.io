@@ -1,0 +1,16 @@
+.preview-table {
+width:1400px; height:870px;
+}
+
+.preview-tr {
+width:100%;
+}
+
+.preview-td {
+border:1px solid #aaa; margin:0; padding:0;
+}
+
+object {
+	width:700px; height:870px;
+}
+

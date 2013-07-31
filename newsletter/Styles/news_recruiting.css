@@ -1,0 +1,56 @@
+/* recruiting */
+
+.recruiting {
+	position: absolute;
+	top:498px;
+	-webkit-border-radius:20px;
+	padding-bottom:14px;
+	background-color: #eee;
+	
+}
+ 
+
+
+/* left */
+.type1 {
+	width:352px;
+	height:267px;
+}
+
+
+/* wide */
+
+.type2 {
+	top:440px;
+	width:714px;
+	height:332px;
+}
+
+.recruiting > .text {
+	margin: 14px 17px 14px 17px;
+}
+
+.recruiting > .text p {
+	margin-top: 14px;
+}
+
+/* table */
+
+.table {	margin:0 17px 0 17px;}
+.recruiting > .table > table {
+	border: 1px solid #ccc;
+	border-collapse:collapse;
+
+	font-size:10px;
+	letter-spacing:-0.05em;
+	line-height:1.5em;
+}
+
+tr, td {
+	border: 1px solid black;
+	padding:3px;}
+
+tr.title {
+	text-align:center;
+	background-color:#ddd;
+	font-weight:bold;}
