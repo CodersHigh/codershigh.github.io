@@ -28,12 +28,14 @@ src:url("../Fonts/KoPubBatangBold.otf");
 
 
 body {
-	width: 600px;
+	width:714px;
+	height:1024px;
+/*	width: 600px;
 	height: 800px;
 	transform: scale(0.85);
    -webkit-transform: scale(0.85);
    -ms-transform: scale(0.85);
-   -moz-transform: scale(0.85);
+   -moz-transform: scale(0.85);*/
 }
 
 
