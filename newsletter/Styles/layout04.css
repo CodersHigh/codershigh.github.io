@@ -1,0 +1,112 @@
+
+
+.text , .image { border:0;}
+
+
+/* topic1 */
+
+.topic1 {
+	position:absolute;
+	left:0; top:0;
+	width:700px;
+	height:230px;
+	padding: 7px 7px 17px 7px;
+}
+
+.topic1 >.text {
+	width:700px;
+	height:230px;
+}
+
+.topic1 >.image {
+	position:absolute;
+	left:0; top:0;
+	height:244px;
+	width:714px;
+}
+
+
+/* topic2 */
+
+.topic2 {
+	position:absolute;
+	left:0; top:264px;
+	width:455px;
+	height:154px;
+	padding: 7px 7px 17px 7px;
+}
+.topic2 >.text {
+	width:455px;
+	height:154px;
+}
+
+.topic2 >.image {
+	position:absolute;
+	left:0; top:0;
+	height:154px;
+	width:auto;
+}
+
+
+/* topic3 */
+.topic3 {
+	position:absolute;
+	left:489px;top:264px;
+	width:210px;
+	height:154px;
+	padding:7px 7px 17px 7px;
+}
+
+.topic3 >.text {
+	width:210px;
+	height:161px;
+}
+
+.topic3 >.image {
+	position:absolute;
+	left:0; top:0;
+	width:224px;
+	height:168px;
+}
+
+/* topic4 */
+.topic4 {
+	position:absolute;
+	left:0; top:452px;
+	width: 217px;
+	height: 321px;
+	padding:7px 7px 0 7px;
+}
+
+.topic4 >.text {
+	width:217px;
+	height:321px;
+}
+
+.topic4 >.image {
+	position:absolute;
+	left:0; top:0;
+	width:224px;
+	height:328px;
+	
+}
+/* topic5 */
+.topic5 {
+	position:absolute;
+	left:244px; top:452px;
+	width: 455px;
+	height: 321px;
+	padding:7px 7px 0 7px;
+}
+
+.topic5 >.text {
+	width:455px;
+	height:321px;
+}
+
+.topic5 >.image {
+	position:absolute
+	left:0; top:0;
+	height:328px;
+	width:469px;
+}

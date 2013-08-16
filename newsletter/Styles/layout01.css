@@ -6,22 +6,24 @@
 /* topic1 */
 
 .topic1 {
-	width:714px;
-	height:129px;
-	margin-bottom:7px;
+	position:absolute;
+	left:0; top:0;
+	width:700px;
+	height:115px;
+	padding: 7px 7px 17px 7px;
 }
 
 .topic1 >.text {
-	width:439px;
+	width:700px;
 	height:115px;
-	margin-top:7px;
-	margin-left:12px;
 	float:left;
 }
 
 .topic1 >.image {
+	position:absolute;
+	top:0; left:0;
 	width:252px;
-	height:123px;
+	height:122px;
 	float:left;
 }
 
@@ -29,75 +31,77 @@
 /* topic2 */
 
 .topic2 {
-	float:left;
-	width:453px;
-	height:466px;
-	margin-top:5px;
-	margin-bottom:5px;
-}
-
-.topic2 >.image {
-	width:438px;
-	height:353px;
+	position:absolute;
+	left:0; top:149px;
+	width:436px;
+	height:439px;
+	padding: 7px 7px 17px 7px;
 }
 
 .topic2 >.text {
-	width:427px;
-	height:99px;
-	margin-top:7px;
-	margin-left:12px;
+	width:436px;
+	height:439px;		
+}
+
+.topic2 >.image {
+	position:absolute;
+	left:0; top:0;
+	width:450px;
+	height:453px;
 }
 
 
 
 /* topic3 */
 .topic3 {
-	float:right;
-	width:246px;
-	height:359px;
-	margin-top:5px;
-	margin-bottom:5px;
+	position:absolute;
+	left:475px; top:149px;
+	width:225px;
+	height:342px;
+	padding: 7px 7px 17px 7px;
 }
 
 .topic3 >.image {
-	width:100%;
-	height:242px;
+	position:absolute;
+	left:0; top:0;
+	width:239px;
+	height:356px;
 }
 
 .topic3 >.text {
-	width:220px;
-	height:101px;
-	margin-top:12px;
-	margin-left:12px;
+	width:225px;
+	height:342px;	
 }
 
 
 
 /* topic4 */
 .topic4 {
-	float:left;
-	width: 452px;
-	height: 160px;
-	margin-top:7px;
+	position:absolute;
+	left:0; top:622px;
+	width:438px;
+	height:151px;
+	padding:7px 7px 0 7px;
 }
 
-.topic4 >.text {
-	width:379px;
-	height:147px;
-	margin-top:14px;
-	margin-left:60px;
+.topic4 > .text {
+	width:438px;
+	height:151px;	
 }
 
 
 /* topic5 */
 .topic5 {
-	float:right;
-	width: 246px;
-	height: 261px;
-	margin-top: -93px;
+	position:absolute;
+	left:475px; top:525px;
+	width: 225px;
+	height: 248px;
+	padding: 7px 7px 0 7px;
 }
 
 .topic5 >.image {
-	width:100%;
-	height:100%;
+	position:absolute;
+	left:0; top:0;
+	width:239px;
+	height:255px;
 }

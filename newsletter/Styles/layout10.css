@@ -1,0 +1,94 @@
+
+
+.text , .image { border:0;}
+
+
+/* topic1 */
+
+.topic1 {
+	position:absolute;
+	left:0; top:0;
+	width:700px;
+	height:230px;
+	padding:7px 7px 17px 7px;
+}
+
+.topic1 >.text {
+	width:700px;
+	height:230px;	
+}
+
+.topic1 >.image {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:auto;
+	height:244px;
+}
+
+
+/* topic2 */
+
+.topic2 {
+	position:absolute;
+	left:0; top:264px;
+	width:210px;
+	height:181px;
+	padding: 7px 7px 17px 7px;
+}
+.topic2 >.text {
+	width:210px;
+	height:181px;
+}
+
+.topic2 >.image {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:224px;
+	height:195px;
+}
+
+/* topic3 */
+.topic3 {
+	position:absolute;
+	top:264px; left:244px;
+	width:456px;
+	height:181px;
+	padding: 7px 7px 17px 7px;
+}
+.topic3 >.text {
+	width:456px;
+	height:181px;
+}
+.topic3 >.image {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:470px;
+	height:194px;
+}
+
+
+/* topic4 */
+
+.topic4 {
+	position:absolute;
+	top:476px; left:0;
+	width:700px;
+	height:296px;
+	padding: 7px 7px 0 7px;
+}
+
+.topic4 >.text {
+	width:700px;
+	height:296px;
+}
+
+.topic4 >.image {
+	position:absolute;
+	left:0;
+	top:0;
+	width:714px;
+	height:303px;
+}

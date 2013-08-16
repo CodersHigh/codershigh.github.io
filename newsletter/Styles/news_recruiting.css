@@ -2,28 +2,23 @@
 
 .recruiting {
 	position: absolute;
-	top:498px;
-	-webkit-border-radius:20px;
-	padding-bottom:14px;
+	-webkit-border-radius:18px;
 	background-color: #eee;
 	
 }
  
 
 
-/* left */
-.type1 {
-	width:352px;
-	height:267px;
-}
+/* half */
 
 
 /* wide */
 
-.type2 {
-	top:440px;
-	width:714px;
-	height:332px;
+.wide {
+	margin-top:10px;
+	left:7px;
+	width:700px;
+	padding-bottom:14px;
 }
 
 .recruiting > .text {
@@ -36,21 +31,26 @@
 
 /* table */
 
-.table {	margin:0 17px 0 17px;}
-.recruiting > .table > table {
+table.recruiting {
+width:auto;
+height:auto;
+margin:0 17px 0 17px;}
+table.recruiting {
 	border: 1px solid #ccc;
 	border-collapse:collapse;
 
 	font-size:10px;
 	letter-spacing:-0.05em;
 	line-height:1.5em;
+	font-family: 'kopub dotum', sans-serif;
 }
 
-tr, td {
-	border: 1px solid black;
-	padding:3px;}
+table.recruiting tr, table.recruiting td {
+	border: 1px solid #333;
+	padding:3px;
+}
 
-tr.title {
+table.recruiting tr.title {
 	text-align:center;
 	background-color:#ddd;
 	font-weight:bold;}

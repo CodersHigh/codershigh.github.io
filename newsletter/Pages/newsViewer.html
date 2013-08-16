@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html>
+<head>
+  <title> 링고스타 뉴스레터</title>
+  <link href="../Styles/webView.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="viewer_navi.js"></script>
+
+</head>
+
+<body>
+<table style="width:1700px;">
+	<tr>
+	<td style="width:600px; padding-top:25px; text-align:right;">
+		<input type="button" id="PrevPageBtn" value="◀ 이전" onclick="clickBtnToMove(1)" />
+	</td>
+	<td style="text-align:center; padding-top:25px;" colspan=2><h1>링고스타 뉴스레터</h1></td>
+	<td style="width:300px; padding-top:25px;">
+		<input type="button" id="nextPageBtn" value="다음 ▶" onclick="clickBtnToMove(2)" />
+		<input type="button" id="latestPageBtn" value="최신호 ▶▶" onclick="clickBtnToMove(3)" />
+	</td>
+	<td style="width:300px; padding-top:25px;">
+		<select id="newsList" onchange="selectNewsOnList()">
+			<option>제10호 - 2013/07/26</option>
+			<option>제9호 - 2013/07/03</option>
+			<option>제8호 - 2013/06/13</option>
+			<option>제7호 - 2013/05/28</option>
+			<option>제6호 - 2013/03/18</option>
+			<option>제5호 - 2013/02/27</option>
+			<option>제4호 - 2013/01/14</option>
+			<option>제3호 - 2012/12/26</option>
+			<option>제2호 - 2012/11/02</option>
+			<option>제1호 - 2012/07/18</option>
+		</select>
+	</td>
+	</tr>
+</table>
+
+<table class="preview-table">
+<tr class="preview-tr">
+ <td class="preview-td" colspan=2>
+ 	<div id="left-div">
+ 	 <object id="left-page" data="../Originals/newsletter010-1.xhtml" type="text/html" title="뉴스레터10호-1페이지">
+
+    </object> 
+    </div>
+ </td>
+ <td class="preview-td" colspan=2>
+ 	<div id="right-div">
+ 	 <object id="right-page" data="../Originals/newsletter010-2.xhtml" type="text/html" title="뉴스레터10호-2페이지">
+ 	 <a id="right-href" href="../Originals/newsletter010-2.xhtml">본 페이지가 나타나지 않을 경우에 클릭하세요.</a>
+    </object> 
+ </td>
+ </tr>
+ </table>    
+</body>
+</html>

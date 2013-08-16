@@ -1,76 +1,39 @@
-@font-face{
-font-family:kopub dotum;
-font-weight:normal;
-font-style:normal;
-src:url("../Fonts/KoPubDotumLight.otf");
-}
-
-@font-face{
-font-family:kopub dotum;
-font-weight:bold;
-font-style:normal;
-src:url("../Fonts/KoPubDotumBold.otf");
-}
-
-@font-face{
-font-family:kopub batang;
-font-weight:normal;
-font-style:normal;
-src:url("../Fonts/KoPubBatangLight.otf");
-}
-
-@font-face{
-font-family:kopub batang;
-font-weight:bold;
-font-style:normal;
-src:url("../Fonts/KoPubBatangBold.otf");
-}
-
-
-body {
-	width:714px;
-	height:1024px;
-/*	width: 600px;
-	height: 800px;
-	transform: scale(0.85);
-   -webkit-transform: scale(0.85);
-   -ms-transform: scale(0.85);
-   -moz-transform: scale(0.85);*/
-}
 
 
 .newsletter {
-	margin-top:-60px;
-	margin-left:0;
-	
+	width:714px;
+	height: 940px;
+	margin: 25px 27px 49px 27px;
 }
 
 
-div {
-	padding:0;
-	margin:0;	
-}
-
-p {
-	font-family: 'kopub batang';
-	font-size:13px;
-	line-height:18px;
-	text-align: justify;
-}
 
 .note {
 	font-size:12px;
 	color:#99202e;
 }
 
+.point {
+	color:#c11e0f;
+}
+
+table {
+	width:100%;
+	height:100%;
+	font-family: 'kopub batang';
+	font-size:13px;
+	line-height:18px;
+	border-collapse: collapse;
+}
 
 /* left Page */
 
 .newsletter-title {
-	width:205px;
-	height:55px;
-	margin-bottom:6px;
-	margin-top:120px;
+	width:120px;
+	height:60px;
+	margin-bottom:11px;
+	margin-top:44px;
+	margin-right:4px;
 	float:left;
 }
 
@@ -78,16 +41,16 @@ p {
 	width:18px;
 	height:55px;
 	float:left;
-	margin-bottom:6px;
-	margin-top:120px;
+	margin-bottom:10px;
+	margin-top:44px;
 }
 
 .newsletter-num2 {
 	width:18px;
 	height:55px;
 	float:left;
-	margin-bottom:6px;
-	margin-top:120px;
+	margin-bottom:10px;
+	margin-top:44px;
 }
 
 .date {margin:0; font-family:'kopub dotum', sans-serif;}
@@ -96,8 +59,8 @@ p {
 
 .logo-lingostar {
 	position:absolute;
-	top:30px;
-	left:610px;
+	top:25px;
+	left:640px;
 	width:103px;
 	height:35px;
 }
@@ -119,16 +82,16 @@ p {
 .path {
 	position:absolute;
 	top:90px;
+	left:550px;
 	margin-bottom:11px;
-	width: 714px;
+	width: 200px;
 	height: 33px;
 }
 
 .path > .path-home {
 	float:left;
-	margin-left:510px;
-	width:35px;
-	height:33px;
+	width:30px;
+	height:27px;
 	background:url("../Images/common_path_home.png") no-repeat;
 	background-size:contain;
 }
@@ -170,11 +133,12 @@ hr {
 
 .top-line {
 	position:absolute;
+	top:135px;
 	width:714px;
 	height: 6px;
 	border-top: 2px solid #222;
 	border-bottom: 1px solid #888;
-	top:135px;
+	margin-bottom:11px;
 }
 
 .rightpage {
@@ -184,7 +148,7 @@ hr {
 .topics {
 	position:absolute;
 	width:714px;
-	height:auto;
+	height:780px;
 	top:159px;
 }
 
@@ -199,8 +163,12 @@ hr {
 }
 
 .bottom-line {
-	padding-bottom:3px;	
 	border-bottom:1px solid #ccc;
+}
+
+.side-line {
+	width:1px;
+	border-left:1px solid #ccc;
 }
 
 h1, h2, h3 {
@@ -234,7 +202,15 @@ a {
 	font-family: 'kopub dotum', sans-serif;
 	font-size:11px;
 	font-weight:bold;
+	letter-spacing:0;
 }
 	
-.center { text-align:center;}
-.right { text-align: right;}
+.image {z-index:10;}
+.text {z-index:11;}
+
+
+/* Lecture table */
+.lecture-title {
+	border-bottom:1px solid #666;
+	font-family: 'kopub dotum', sans-serif;
+}
