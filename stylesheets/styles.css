@@ -143,6 +143,12 @@
 .right {
 	text-align:right;
 }
+
+.author-link{
+	font-size:14px;
+	color:blue;
+	font-weight: 600;
+}
 /* table */
 
 /* original */
