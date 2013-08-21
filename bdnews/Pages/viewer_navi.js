@@ -5,8 +5,8 @@
 	function selectNewsOnList() {
 		var selection = document.getElementById("newsList");
 		var index = selection.selectedIndex;
-		if (index==0) index=1;
-		else if (index==1) index=3;
+		if (index==0) index=3;
+		else if (index==1) index=1;
 		currentPage = index;
 		moveToPage();
 	}
