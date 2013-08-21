@@ -1,0 +1,86 @@
+#background {
+	position:absolute;
+	left:0; top:0;
+	width:729px;
+	height:1032px;
+	background:url("../Images/bd12-3.png") no-repeat;
+}
+.title {
+	position:absolute;
+	top:392px;
+	left:44px;
+	width:120px;
+	height:12px;
+}
+
+.topic1 {
+	position:absolute;
+	top:132px; left:55px;
+	width:630px;
+}
+
+.topic1 > p:nth-of-type(1) {
+	position:absolute;
+	left:0;
+	width:200px;
+}
+.topic1 > p:nth-of-type(2) {
+	position:absolute;
+	padding-left:215px;
+	width:200px;
+}
+.topic1 > p:nth-of-type(3) {
+	position:absolute;
+	padding-left:430px;
+	width:200px;
+}
+.topic1 > p:nth-of-type(4) {
+	position:absolute;
+	top:110px;
+	padding-left:430px;
+	width:200px;
+}
+
+
+.topic2 {
+	position:absolute;
+	top:560px; left:60px;
+	width:400px;
+}
+
+.topic3 {
+	position:absolute;
+	top:800px; left:55px;
+	width:295px;
+}
+
+.topic3 > p:nth-of-type(1){
+	position:absolute;
+	left:0px; top:0;
+	margin-left:100px;
+}
+
+.topic3 > p:nth-of-type(2){
+	position:absolute;
+	left: 0px; top:40px;
+	margin-left:100px;
+}
+
+.topic3 > p:nth-of-type(3){
+	position:absolute;
+	left: 0px; top:108px;
+	text-indent:0;
+}
+.topic3 > p:nth-of-type(4){
+	position:absolute;
+	left: 0px; top:158px;
+	width:295px;
+}
+
+.topic4 {
+	position:absolute;
+	left:390px;
+	top:885px;
+	width:290px;
+	
+}

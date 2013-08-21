@@ -1,0 +1,102 @@
+@font-face{
+font-family:kopub dotum;
+font-weight:normal;
+font-style:normal;
+src:url("../../newsletter/Fonts/KoPubDotumLight.otf");
+}
+
+@font-face{
+font-family:kopub dotum;
+font-weight:bold;
+font-style:normal;
+src:url("../../newsletter/Fonts/KoPubDotumBold.otf");
+}
+
+@font-face{
+font-family:kopub batang;
+font-weight:normal;
+font-style:normal;
+src:url("../../newsletter/Fonts/KoPubBatangLight.otf");
+}
+
+@font-face{
+font-family:kopub batang;
+font-weight:bold;
+font-style:normal;
+src:url("../../newsletter/Fonts/KoPubBatangBold.otf");
+}
+
+body {
+	width: 729px;
+	height: 1032px;
+	margin:0;
+	padding;0;
+}
+
+div {
+	padding:0;
+	margin:0;
+}
+
+#info {
+	font-family: 'kopub dotum';
+	font-size:9px;
+	line-height:18px;
+	text-align: justify;
+	letter-spacing:-1px;
+}
+
+.title {
+	font-family: 'kopub dotum';
+	font-size:11px;
+	letter-spacing:-0.05em;
+	font-weight:bold;
+}
+
+
+
+p {
+	font-family: 'kopub dotum';
+	font-size:11px;
+	line-height:17px;
+	text-align: justify;
+	letter-spacing:-1px;
+	margin-top:0;
+	margin-bottom:0;
+}
+
+
+img { width:100%; }
+
+.center { text-align:center;
+margin-left:auto;
+margin-right:auto;}
+.right { text-align: right;}
+
+.batang { font-family: 'kopub batang',serif;}
+.underline {
+	text-decoration:underline;
+}
+img {width:100%;}
+
+
+hr {
+	margin:0;
+	padding:0;
+}
+
+a {
+	text-decoration: none;
+	color:#445299;
+}
+
+.link-text {
+	font-family: 'kopub dotum', sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	letter-spacing:0;
+}
+	
+.image {z-index:10;}
+.text {z-index:11;}
+
