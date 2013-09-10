@@ -61,6 +61,13 @@
 		
 		leftDiv.innerHTML = leftDiv.innerHTML;
 		rightDiv.innerHTML = rightDiv.innerHTML;
+		
+		
+		
+		var selection = document.getElementById("newsList");
+		selection.selectedIndex = latestPage - currentPage;
+
+		
 	}
 
 
