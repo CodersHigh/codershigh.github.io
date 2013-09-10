@@ -26,6 +26,35 @@ font-style:normal;
 src:url("../../newsletter/Fonts/KoPubBatangBold.otf");
 }
 
+@font-face{
+font-family:kopub dotum w;
+font-weight:normal;
+font-style:normal;
+src:url("../../newsletter/Fonts/KoPubDotumLight.woff");
+}
+
+@font-face{
+font-family:kopub dotum w;
+font-weight:bold;
+font-style:normal;
+src:url("../../newsletter/Fonts/KoPubDotumBold.woff");
+}
+
+@font-face{
+font-family:kopub batang w;
+font-weight:normal;
+font-style:normal;
+src:url("../../newsletter/Fonts/KoPubBatangLight.woff");
+}
+
+@font-face{
+font-family:kopub batang w;
+font-weight:bold;
+font-style:normal;
+src:url("../Fonts/KoPubBatangBold.woff");
+}
+
+
 body {
 	width: 729px;
 	height: 1032px;
@@ -39,27 +68,27 @@ div {
 }
 
 #info {
-	font-family: 'kopub dotum';
+	font-family: 'kopub dotum', 'kopub dotum w', sans-serif;
 	font-size:10px;
 	line-height:18px;
-	letter-spacing:-1px;
+	letter-spacing: 0;
 }
 
 .title {
-	font-family: 'kopub dotum';
+	font-family: 'kopub dotum', 'kopub dotum w', sans-serif;
 	font-size:11px;
-	letter-spacing:-1px;
+	letter-spacing:0;
 	font-weight:bold;
 }
 
 
 
 p {
-	font-family: 'kopub dotum';
+	font-family: 'kopub dotum', 'kopub dotum w', sans-serif;
 	font-size:11px;
 	line-height:17px;
-	text-align: justify;
-	letter-spacing:-2px;
+	text-align:justify;
+	letter-spacing:-1px;
 	margin-top:0;
 	margin-bottom:0;
 }
@@ -72,7 +101,7 @@ margin-left:auto;
 margin-right:auto;}
 .right { text-align: right;}
 
-.batang { font-family: 'kopub batang',serif;}
+.batang { font-family: 'kopub batang', 'kopub batang w',serif;}
 .underline {
 	text-decoration:underline;
 }
@@ -90,7 +119,7 @@ a {
 }
 
 .link-text {
-	font-family: 'kopub dotum', sans-serif;
+	font-family: 'kopub dotum', 'kopub dotum w', sans-serif;
 	font-size:11px;
 	font-weight:bold;
 	letter-spacing:0;

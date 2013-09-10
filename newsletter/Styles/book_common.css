@@ -26,6 +26,57 @@ font-style:normal;
 src:url("../Fonts/KoPubBatangBold.otf");
 }
 
+@font-face{
+font-family:kopub dotum w;
+font-weight:normal;
+font-style:normal;
+src:url("../Fonts/KoPubDotumLight.woff");
+}
+
+@font-face{
+font-family:kopub dotum w;
+font-weight:bold;
+font-style:normal;
+src:url("../Fonts/KoPubDotumBold.woff");
+}
+
+@font-face{
+font-family:kopub batang w;
+font-weight:normal;
+font-style:normal;
+src:url("../Fonts/KoPubBatangLight.woff");
+}
+
+@font-face{
+font-family:kopub batang w;
+font-weight:bold;
+font-style:normal;
+src:url("../Fonts/KoPubBatangBold.woff");
+}
+
+@font-face{
+font-family:kopub dotum t;
+font-weight:bold;
+font-style:normal;
+src:url("../Fonts/KoPubDotumBold.ttf");
+}
+
+@font-face{
+font-family:kopub batang t;
+font-weight:normal;
+font-style:normal;
+src:url("../Fonts/KoPubBatangLight.ttf");
+}
+
+@font-face{
+font-family:kopub batang t;
+font-weight:bold;
+font-style:normal;
+src:url("../Fonts/KoPubBatangBold.ttf");
+}
+
+
+
 body {
 	width: 768px;
 	height: 1024px;
@@ -39,15 +90,14 @@ div {
 }
 
 p {
-	font-family: 'kopub batang';
+	font-family: 'kopub batang', 'kopub batang w', 'kopub batang t', serif;
 	font-size:13px;
 	line-height:18px;
 	text-align: justify;
-	letter-spacing:-0.05em;
 }
 
 ul {
-	font-family: 'kopub batang';
+	font-family: 'kopub batang', 'kopub batang w', 'kopub batang t', serif;
 	font-size:13px;
 	line-height:20px;
 	text-align: justify;
@@ -70,7 +120,7 @@ margin-left:auto;
 margin-right:auto;}
 .right { text-align: right;}
 
-.dotum { font-family: 'kopub dotum', sans-serif;}
+.dotum { font-family: 'kopub dotum', 'kopub dotum w', 'kopub dotum t', sans-serif;}
 .underline {
 	text-decoration:underline;
 }

@@ -42,7 +42,7 @@ table.recruiting {
 	font-size:10px;
 	letter-spacing:-0.05em;
 	line-height:1.5em;
-	font-family: 'kopub dotum', sans-serif;
+	font-family: 'kopub dotum', 'kopub dotum w', 'kopub dotum t' sans-serif;
 }
 
 table.recruiting tr, table.recruiting td {
