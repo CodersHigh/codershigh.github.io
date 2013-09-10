@@ -196,6 +196,7 @@ h3 {
 }
 
 a {
+	border: inherit;
 	text-decoration: none;
 	color:#445299;
 }
