@@ -40,16 +40,15 @@ div {
 
 #info {
 	font-family: 'kopub dotum';
-	font-size:9px;
+	font-size:10px;
 	line-height:18px;
-	text-align: justify;
 	letter-spacing:-1px;
 }
 
 .title {
 	font-family: 'kopub dotum';
 	font-size:11px;
-	letter-spacing:-0.05em;
+	letter-spacing:-1px;
 	font-weight:bold;
 }
 
@@ -60,7 +59,7 @@ p {
 	font-size:11px;
 	line-height:17px;
 	text-align: justify;
-	letter-spacing:-1px;
+	letter-spacing:-2px;
 	margin-top:0;
 	margin-bottom:0;
 }

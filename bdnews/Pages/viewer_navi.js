@@ -57,8 +57,8 @@
 		var leftPageURL = "../Originals/bd"+num+"-1.xhtml"
 		var rightPageURL = "../Originals/bd"+num+"-2.xhtml"
 		
-		document.getElementById("left-page").data = leftPageURL;
-		document.getElementById("right-page").data = rightPageURL;
+		document.getElementById("left-page").src = leftPageURL;
+		document.getElementById("right-page").src = rightPageURL;
 		
 		
 		leftDiv.innerHTML = leftDiv.innerHTML;

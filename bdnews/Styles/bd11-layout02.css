@@ -9,7 +9,7 @@
 	position:absolute;
 	top:392px;
 	left:47px;
-	width:120px;
+	width:140px;
 	height:12px;
 }
 
@@ -26,9 +26,12 @@
 	left:152px;
 	width:520px;
 	height:170px;
+	column-count:2;
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
 }
 
-.topic2 > p:nth-of-type(1){
+/*.topic2 > p:nth-of-type(1){
 	position:absolute;
 	top:0; left:0;
 	padding-right:265px;
@@ -38,7 +41,7 @@
 	position:absolute;
 	top:0; left:0;
 	padding-left:265px;
-}
+}*/
 
 .topic3 {
 	position:absolute;

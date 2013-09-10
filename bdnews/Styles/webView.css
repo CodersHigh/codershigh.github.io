@@ -16,3 +16,7 @@ object {
 	width:729px; height:1032px;
 }
 
+#left-page, #right-page {
+	width:729px; height:1032px;
+	border:0;
+}

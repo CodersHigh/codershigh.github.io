@@ -21,20 +21,24 @@
 
 #info > div:nth-of-type(2) {
 	position:absolute;
-	left:65px;
-	width:140px;
+	text-align:center;
+	left:80px;
+	width:185px;
 }
 #info > div:nth-of-type(3) {
 	position:absolute;
-	left:195px;
-	width:310px;
+	text-align:right;
+	left:270px;
+	width:375px;
 }
 
 #info > div:nth-of-type(4) {
 	position:absolute;
-	left:500px;
-	width:145px;
+	left:480px;
+	width:165px;
+	margin-top:-25px;
 	letter-spacing:0;
+	text-align:right;
 }
 
 .title {

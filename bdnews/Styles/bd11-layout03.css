@@ -37,25 +37,25 @@
 	position:absolute;
 	left:0px; top:0;
 	margin-left:95px;
-	letter-spacing:-1px;
+	letter-spacing:-2px;
 }
 
 .topic3 > p:nth-of-type(2){
 	position:absolute;
 	left: 0px; top:151px;
 	margin-right: 75px;
-		letter-spacing:-1px;
+	letter-spacing:-2px;
 }
 
 .topic3 > p:nth-of-type(3){
 	position:absolute;
 	left: 0px; top:254px;
 	margin-right: 75px;
-	letter-spacing:-1px;
+	letter-spacing:-2px;
 }
 .topic3 > p:nth-of-type(4){
 	position:absolute;
 	left: 0px; top:351px;
 	margin-right: 75px;
-	letter-spacing:-1px;
+	letter-spacing:-2px;
 }
