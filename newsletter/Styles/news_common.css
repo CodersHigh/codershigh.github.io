@@ -196,9 +196,12 @@ h3 {
 }
 
 a {
-	border: inherit;
 	text-decoration: none;
 	color:#445299;
+}
+
+a > img {
+	border: 0;
 }
 
 .link-text {
