@@ -61,7 +61,7 @@
       
         <!-- 책 -->
         <h3>출간 형태</h3>
-<div class="book-frame dimmed"><p><img class="btn-icon" src="../images/icon-epub.png" /><span class="btn-text">ePub</span><p></div>
+<div class="book-frame"><a href="https://itunes.apple.com/us/book/deulaegon-laideo-mandeulgi/id735921791?mt=11" target='_new'><p><img class="btn-icon" src="../images/icon-epub.png" /><span class="btn-text">ePub</span><p></a></div>
 <div class="book-frame"><a href="http://www.huddlebooks.com/?p=1310" target='_new'><p><img class="btn-icon" src="../images/icon-paperbook.png" /><span class="btn-text">PDF</span><p></a></div>
 <br style="clear:both;" />
 
@@ -71,9 +71,10 @@
         <!-- 도서 정보 요약 -->
         <h3>요약</h3>	
         <p class="description">[드래곤 라이더 만들기]는 코더스하이 튜토리얼 두번째 시리즈로, cocos2d로 게임 앱 개발을 시작하는 초급자를 위한 예제입니다. 하나의 게임을 따라가기 식으로 만들어 봄으로써 게임 만들기의 기초를 배울 수 있습니다.</p>
-        <div id="toc-toggle"><span class="description" onclick="popuptoc()"><b>목차 펼치기 ▼</b></span></div>
+        <span id="list-start" />
+        <div id="toc-toggle"><a href="#list-start"><span class="description" onclick="popuptoc()"><b>목차 펼치기 ▼</b></span></a></div>
 		<div id="toc-content" class="toc" style="display:none;">
-				<span class="description" onclick="closetoc()"><b>목차 접기 ▲</b></span>
+				<a href="#list-start"><span class="description" onclick="closetoc()"><b>목차 접기 ▲</b></span></a>
 				<div>
 				<h4>Chapter 1. Objective-C</h4>
 				<ul>
