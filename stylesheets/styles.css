@@ -44,6 +44,27 @@
 	background-color: #eeeac6;
 }
 
+.tutorial-list .primer {
+	border-bottom: 1px dotted #9b987d;
+	padding-bottom:4px;
+	margin-bottom:4px;
+	list-style:square;
+	color:#3278b1;
+}
+
+.primer .link, .primer a, .primer a:hover, .primer a:visited {
+	font-size:12px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.primer ul {
+	color:#323;
+	list-style:none;
+	padding:0;
+}
+
+ul img {vertical-align:middle;}
 
 .book-cover-img {
 	width: 250px;
