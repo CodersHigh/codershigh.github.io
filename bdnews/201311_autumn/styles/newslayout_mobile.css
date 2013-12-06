@@ -1,4 +1,4 @@
-@media all and (max-width:768px) {
+@media (max-width:992px) {
 	body {
 		width:95%;
 		-webkit-box-shadow: none;
@@ -21,18 +21,11 @@
 		border-radius: 15px;
 	}
 	
-	.article_layout01 > .img {
-		position: relative;
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
 
-	}
-	
 
 }
 
-@media all and (max-width:620px) {
+@media (max-width:768px) {
 	#title {
 		position:relative;
 		float:none;
@@ -55,7 +48,7 @@
 
 }
 
-@media all and (max-width:500px) {
+@media (max-width:500px) {
 	body {
 		max-width: 496px;
 		padding: 2px;
