@@ -1,0 +1,158 @@
+@media all and (max-width:768px) {
+	body {
+		width:95%;
+		-webkit-box-shadow: none;
+		padding: 5px;
+		margin:0 auto 0 auto;
+
+	}
+	#top{
+		height:auto;
+	}
+	
+	.field_title h1{
+		font-size:25px;
+		font-weight:100;
+	}
+
+	.field {
+		width:95%;
+		margin: 0px auto 10px auto;
+		border-radius: 15px;
+	}
+	
+	.article_layout01 > .img {
+		position: relative;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	
+
+}
+
+@media all and (max-width:620px) {
+	#title {
+		position:relative;
+		float:none;
+		margin-left:auto;
+		margin-right:auto;
+		width:100%;
+	}
+	
+	#top_navi {
+		position:static;
+		float:none;
+		display:block;
+		width:75%;
+		max-width:400px;
+		margin: 0 auto 10px auto;
+		border-radius : 20px;
+		background-color:rgba(34, 185, 243, 0.13);
+		padding:5px 20px 5px 20px;
+	}
+
+}
+
+@media all and (max-width:500px) {
+	body {
+		max-width: 496px;
+		padding: 2px;
+		margin:0 auto 0 auto;
+		border:0;
+	}
+	
+	
+	h1 {
+ 		font-size:1.2em;
+	}
+
+	h2 {
+		font-size:2.0em;
+	}
+
+	h3 {
+		font-size:1.8em;
+	}
+
+	.headline {
+		font-size:2.3em;
+	}
+	/* color */
+	.lightpink {	background-color:#ffc9b1; 	}
+	.lightblue {	background-color:#75c7f3; 	}
+	.lightgreen {	background-color:#a5db66;	}
+	.lightorange {	background-color:#f9ad2b;	}
+	.border_lightpink {		border-color:#ffc9b1;	}
+	.border_lightblue {		border-color:#75c7f3;	}
+	.border_lightgreen {	border-color:#a5db66;	}
+	.border_lightorange {	border-color:#f9ad2b;	}
+
+
+	/* field */
+	.field {
+		width:90%;
+		margin: 0px auto 10px auto;
+		border-radius: 15px;
+	}
+	
+	article > .title_img {
+	max-width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+	/* layout */
+	/* 	layout01 */
+	
+	.article_layout01 > .img {
+		display: block;
+		float: none;
+		max-width: 60%;
+		padding: 0;
+		margin-top:15px;
+	}
+	
+	.article_layout01 > .text-right {
+		text-align:left;
+	}
+	
+	/* wide-image */
+	.article_layout02 > .img, .article_layout03 > .img, .article_layout04 > .img, .article_layout06 > .img {
+		width:100%;
+		float:none;
+		margin:5px auto 5px auto;
+		padding:0;
+	}
+	
+/* 	layout07 */
+.article_layout07 > div:nth-of-type(n) {
+	float:none;
+	width:100%;
+	max-width:500px;
+	margin:15px auto 5px auto;
+	padding:0;
+	border-right:0;	
+}
+
+	
+/* latyout-half */
+.article_layout_half{
+	width:100%;
+	max-width:400px;
+	float:none;
+	margin:0;
+}
+
+.article_layout_half + .article_layout_half {
+	border-top: 1px dotted #ccc;
+	border-left:0;
+	padding:0;
+	margin:0;
+	float:none;
+}
+	
+	
+	
+}
