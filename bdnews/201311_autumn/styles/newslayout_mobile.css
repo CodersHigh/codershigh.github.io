@@ -1,6 +1,5 @@
 @media (max-width:992px) {
 	body {
-		width:95%;
 		-webkit-box-shadow: none;
 		padding: 5px;
 		margin:0 auto 0 auto;
@@ -48,9 +47,8 @@
 
 }
 
-@media (max-width:500px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px)  {
 	body {
-		max-width: 496px;
 		padding: 2px;
 		margin:0 auto 0 auto;
 		border:0;
