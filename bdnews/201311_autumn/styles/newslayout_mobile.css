@@ -24,8 +24,15 @@
 
 }
 
-@media (max-width:768px) {
-	#title {
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px)  {
+	body {
+		padding: 2px;
+		margin:0 auto 0 auto;
+		border:0;
+		width:100%;
+	}
+		#title {
 		position:relative;
 		float:none;
 		margin-left:auto;
@@ -44,16 +51,6 @@
 		background-color:rgba(34, 185, 243, 0.13);
 		padding:5px 20px 5px 20px;
 	}
-
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 1024px)  {
-	body {
-		padding: 2px;
-		margin:0 auto 0 auto;
-		border:0;
-	}
-	
 	
 	h1 {
  		font-size:1.2em;
@@ -70,6 +67,8 @@
 	.headline {
 		font-size:2.3em;
 	}
+	
+	
 	/* color */
 	.lightpink {	background-color:#ffc9b1; 	}
 	.lightblue {	background-color:#75c7f3; 	}
