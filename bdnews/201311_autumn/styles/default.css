@@ -183,12 +183,16 @@ hr {
 	margin-bottom:20px;
 }
 
-
 article {
 	margin-top:20px;
 	margin-bottom:30px;
 	padding-bottom:20px;
 	clear:both;
+}
+
+.content {
+	width:90%;
+	max-width:90%;
 }
 
 article + article {
@@ -226,6 +230,7 @@ article > .journalist {
 	font-size:0.9em;
 	margin-bottom:10px;
 }
+
 .field_title {
 	margin-left:15px;
  	padding-top:5px;
