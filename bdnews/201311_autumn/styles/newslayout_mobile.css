@@ -90,7 +90,7 @@
 	.article_layout01 > .img {
 		display:block;
 		float:none;
-		max-width:50%;
+		max-width:30%;
 	}
 	
 	.article_layout01 > .text-right {
@@ -149,7 +149,7 @@ body {
 	font-size:20px;
 	}
 	#title {
-		max-width:90%;
+		max-width:50%;
 	}
 }
 	
