@@ -146,7 +146,7 @@
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 body {
-	font-size:40px;
+	font-size:20px;
 	}
 	#title {
 		max-width:90%;

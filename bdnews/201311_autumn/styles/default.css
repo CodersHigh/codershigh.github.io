@@ -182,7 +182,12 @@ hr {
 	border-radius: 20px;
 	margin-bottom:20px;
 }
-
+.content {
+	width:100%;
+	max-width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
 
 article {
 	margin-top:20px;
