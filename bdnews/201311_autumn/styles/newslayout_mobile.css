@@ -3,7 +3,6 @@
 		margin:0 auto 0 auto;
 		border:0;
 		width:100%;
-		max-width:100%;
 		font-size:20px;
 	}
 	#title {
@@ -63,6 +62,7 @@
 
 	/* field */
 	.field {
+		width:90%;
 		margin: 0px auto 10px auto;
 		border-radius: 15px;
 	}
@@ -70,7 +70,6 @@
 	.field_title {
 		width:50%;
 	}
-
 	article > .title_img {
 	max-width:90%;
 	margin-left:auto;
@@ -91,7 +90,7 @@
 	.article_layout01 > .img {
 		display:block;
 		float:none;
-		max-width:30%;
+		max-width:50%;
 	}
 	
 	.article_layout01 > .text-right {
@@ -135,7 +134,7 @@
 }
 
 
-@media only screen and (min-device-width : 200px) and (max-device-width : 1280px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
 /* Styles */
 	#title {
 		max-width:90%;
@@ -147,10 +146,10 @@
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 body {
-	font-size:20px;
+	font-size:40px;
 	}
 	#title {
-		max-width:50%;
+		max-width:90%;
 	}
 }
 	
