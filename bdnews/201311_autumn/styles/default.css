@@ -183,6 +183,7 @@ hr {
 	margin-bottom:20px;
 }
 .content {
+	clear:both;
 	width:100%;
 	max-width:100%;
 	margin-left:auto;
