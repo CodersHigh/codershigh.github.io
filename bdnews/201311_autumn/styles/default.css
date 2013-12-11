@@ -329,6 +329,12 @@ p .right {
 	color:#333;
 }
 
+.video {
+	width:100%;
+	height:400px;
+	margin-top:20px;
+}
+
 /*  Layout */
 
 /* layout01 */
@@ -385,7 +391,7 @@ p .right {
 /* layout04 */
 .article_layout04 > .img {
 	float:left; 
-	width:60%;
+	width:50%;
 	max-width:500px;
 	padding: 5px 15px 5px 0px;
 }

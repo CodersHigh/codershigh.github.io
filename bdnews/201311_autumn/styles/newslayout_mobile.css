@@ -47,7 +47,11 @@
 	.headline {
 		font-size:2.3em;
 	}
-	
+	.video {
+		width:100%;
+		height:220px;
+		margin-top:20px;
+	}
 	
 	/* color */
 	.lightpink {	background-color:#ffc9b1; 	}
