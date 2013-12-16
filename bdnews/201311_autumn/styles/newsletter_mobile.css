@@ -257,7 +257,7 @@ and (max-width : 767px) {
 	.article_layout01 > .img {
 		display:block;
 		float:none;
-		max-width:30%;
+		max-width:45%;
 	}
 	
 	.article_layout01 > .text-right {
