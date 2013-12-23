@@ -44,7 +44,8 @@
 		var frame = document.getElementById("viewer_frame");
 		var URL = "archive/" + filename + "/page01.html";
 
-		frame.setAttribute('src',URL);
+		// frame.setAttribute('src',URL);
+		frame.data = URL;
 
 		frame.innerHTML = frame.innerHTML;
 
@@ -77,15 +78,14 @@
 			<img src="bdlogo.png" rel="봇들신문" />
 		</div>
 
-	<!-- 상단으로 가는 네비게이션 -->
-	<button id="nav_to_top" type="button" onclick="SelectNewsletter()">▲TOP</button>
-		
+	
 	</header>
 	
 	
 	<div id="container">
 		<!-- src : 최신호로 업데이트 요구 -->
-		<iframe id="viewer_frame" src="archive/news_201311/page01.html"></iframe>
+		<!-- <iframe id="viewer_frame" src="archive/news_201311/page01.html"></iframe> -->
+		<object id="viewer_frame" data="archive/news_201311/page01.html"></object>
 	</div>
 	<footer>
 		
