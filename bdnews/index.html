@@ -15,6 +15,8 @@
 	
 	window.onload = resizeElementHeight;
 	window.onresize = resizeElementHeight;
+
+
 	function resizeElementHeight() {
 	  var height = 0;
 	  var body = window.document.body;
@@ -33,6 +35,7 @@
 	  
 	}
 
+
 	function SelectNewsletter(){
 
 		var selected = document.getElementById("newsList").selectedIndex;
@@ -44,7 +47,10 @@
 		frame.setAttribute('src',URL);
 
 		frame.innerHTML = frame.innerHTML;
+
+
 	}
+
 
 	</script>
 </head>
@@ -71,12 +77,12 @@
 			<img src="bdlogo.png" rel="봇들신문" />
 		</div>
 
-
+	<!-- 상단으로 가는 네비게이션 -->
+	<button id="nav_to_top" type="button" onclick="SelectNewsletter()">▲TOP</button>
 		
 	</header>
 	
 	
-<!-- 기획면 -->
 	<div id="container">
 		<!-- src : 최신호로 업데이트 요구 -->
 		<iframe id="viewer_frame" src="archive/news_201311/page01.html">

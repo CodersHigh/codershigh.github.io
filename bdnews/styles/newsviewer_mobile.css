@@ -16,6 +16,10 @@ and (max-width : 767px) {
 		padding:0;
 	}
 
+	#nav_to_top {
+		font-size:0.7em;
+	}
+	
 	#viewer_header {
 		max-width:767px;
 		padding:20px 0 0 0;
