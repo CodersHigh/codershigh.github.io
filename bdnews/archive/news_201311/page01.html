@@ -10,7 +10,14 @@
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="../../js/css3-mediaqueries.js"></script>
 	<![endif]-->
-
+	<script type="text/javascript">
+		window.onresize = setTopBtn;
+		function setTopBtn() {
+			var btn = document.getElementById("nav_to_top");
+			btn.style.bottom = "15px";
+			btn.style.right = "15px";
+		}
+	</script>
 
 </head>
 <body>

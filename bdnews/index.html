@@ -38,7 +38,6 @@
 		var selected = document.getElementById("newsList").selectedIndex;
 		var filename = document.getElementsByTagName("option")[selected].value;
 
-		alert(filename);
 		var frame = document.getElementById("viewer_frame");
 		var URL = "archive/" + filename + "/page01.html";
 
@@ -59,8 +58,9 @@
 			<select id="newsList" onchange="SelectNewsletter()">
 				<!-- option value 값 = newsletter 해당 호 폴더이름 -->
 				<!-- 각 호의 첫 페이지 경로 및 파일이름 : value값/page01.html 로 지정해 주어야함. -->
+				<!-- 최신호의 option 태그의 attribute를 selected로 설저 -->
 				<option disabled="disabled">--- 2013 ---</option>
-				<option value="news_201311">2013년 가을호</option>
+				<option value="news_201311" selected>2013년 가을호</option>
 			</select>
 			</div>
 		</nav>
