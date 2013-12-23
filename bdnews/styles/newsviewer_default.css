@@ -47,24 +47,6 @@ ul {
 	margin-right:auto;
 }
 
-/* 상단으로 가는 네비게이션 */
-
-#nav_to_top {
-	
-	position:fixed;
-	right:20px;
-	bottom:15px;
-	z-index: 1;
-	
-	text-align:center;
-	font-family:'Nanum Gothic', sans-serif;
-	font-weight:bold;
-	font-size:0.8em;
-	color:#888;
-
-	padding:3px;
-}
-
 
 #nav {
 	position: relative;	
@@ -99,7 +81,7 @@ ul {
 	border: none;
 	font-size: 1.4em;
 	font-family: 'Nanum Myeongjo', sans-serif;
-
+	
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
