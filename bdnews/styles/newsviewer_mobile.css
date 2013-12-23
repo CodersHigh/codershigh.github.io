@@ -1,0 +1,118 @@
+/* ... Smartphones (portrait and landscape) ... */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+	
+	
+}
+
+/* ... Smartphones (landscape) ... */
+@media only screen
+and (min-width : 320px)
+and (max-width : 767px) {
+	
+	body {
+		font-size:16px;
+		padding:0;
+	}
+
+	#viewer_header {
+		max-width:767px;
+		padding:20px 0 0 0;
+		height:200px;
+	}
+
+	#viewer_header #title {
+		width:200px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#nav {
+		position: absolute;	
+		float: none;
+		width: 100%;
+		margin-top: 130px;
+	}
+
+	#nav > nav {
+		width:80%;
+		height:40px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#nav_container {
+		height: 40px;
+		padding-left:10px;
+		padding-top:2px;
+		margin: auto;
+		background-color:#eee;
+		border-radius:10px;
+		-webkit-box-shadow:1px 1px 2px #aaa;
+	}
+
+	#nav_container > select {
+		padding:5px;
+}
+
+	#container {
+	position:absolute;
+	top:220px;
+	width:100%;
+	overflow: hidden;
+	padding:0;
+}
+}
+ 
+/* ... Smartphones (portrait) ... */
+@media only screen
+and (max-width : 320px) {
+
+}
+
+
+/* ... iPads (portrait and landscape) ... */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+	 body {
+	 	font-size:20px;
+	 	-webkit-box-shadow: none;
+	 	margin: 10px auto 20px auto;
+	 	padding: 20px 30px 20px 30px;
+	 }
+}
+
+
+/* ... iPads (landscape) ... */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+}
+ 
+/* ... iPads (portrait) ... */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+}
+
+
+/* ... Desktops and laptops ... */
+@media only screen
+and (min-width : 1224px) {
+}
+
+
+/* ... Large screens ... */
+@media only screen
+and (min-width : 1824px) {.
+}
+ 
+/* ... iPhone 4 ... */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+}
