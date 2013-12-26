@@ -6,7 +6,6 @@ and (max-device-width : 767px) {
 	body {
 		font-size:16px;
 		padding:0;
-		background-color:yellow;
 	}
 
 	#nav_to_top {
@@ -69,13 +68,12 @@ and (max-device-width : 767px) {
 /* ... Smartphones (landscape) ... */
 @media only screen
 and (min-width : 100px)
-and (max-width : 767px), 
+and (max-width : 767px) 
  {
 
 	body {
 		font-size:16px;
 		padding:0;
-		background-color:lightpink;
 	}
 
 	#nav_to_top {
@@ -85,26 +83,24 @@ and (max-width : 767px),
 	#viewer_header {
 		width:100%;
 		padding:20px 0 0 0;
-		height:120px;
-
+		/*height:120px;*/
+		height:80px;
 	}
 
 	#viewer_header #title {
 		width:100px;
-		margin-left:auto;
-		margin-right:auto;
+		position:absolute;
+		float:left;
+		margin-left:5%;
 	}
 
 	#nav {
-		position: absolute;	
-		margin-left:auto;
-		margin-right:auto;
-
-		max-width:767px;
-		width: 100%;
-		margin-top: 70px;
+		position:relative;
+		float:right;
+		width: 200px;
+		margin-top: 20px;
+		margin-right:5%;
 	}
-
 	#nav > nav {
 		width:80%;
 		height:30px;
@@ -127,7 +123,8 @@ and (max-width : 767px),
 }
 
 	#container {
-	top:140px;
+	/*top:140px;*/
+	top:100px;
 	overflow-y:auto;
 	overflow-x:hidden;
 	-webkit-overflow-scrolling:touch;
@@ -153,7 +150,6 @@ and (max-device-width : 1024px) {
 	body {
 		font-size:16px;
 		padding:0;
-		background-color:green;
 	}
 	#viewer_header {
 		max-width:1024px;
@@ -218,10 +214,10 @@ and (orientation : landscape) {
 		height:80px;
 	}
 	#viewer_header #title {
+		position:absolute;
 		width:100px;
 		float:left;
-		margin-left:100px;
-		background-color:blue;
+		margin-left:5%;
 	}
 
 	#nav {
@@ -244,7 +240,6 @@ and (max-device-width : 1024px)
 and (orientation : portrait) {
 	#viewer_header {
 		height:80px;
-		background-color:orange;
 	}
 	#viewer_header #title {
 		width:100px;
