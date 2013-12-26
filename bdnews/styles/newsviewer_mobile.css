@@ -70,7 +70,7 @@ and (max-device-width : 480px) {
 and (min-width : 100px)
 and (max-width : 767px), 
  {
-	div {border:1px dashed #f39;}
+ 	
 	body {
 		font-size:16px;
 		padding:0;
