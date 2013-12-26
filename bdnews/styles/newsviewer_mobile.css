@@ -15,11 +15,11 @@ and (max-device-width : 480px) {
 	#viewer_header {
 		max-width:767px;
 		padding:20px 0 0 0;
-		height:200px;
+		height:120px;
 	}
 
 	#viewer_header #title {
-		width:200px;
+		width:100px;
 		margin-left:auto;
 		margin-right:auto;
 	}
@@ -28,18 +28,18 @@ and (max-device-width : 480px) {
 		position: absolute;	
 		float: none;
 		width: 100%;
-		margin-top: 130px;
+		margin-top: 70px;
 	}
 
 	#nav > nav {
 		width:80%;
-		height:40px;
+		height:30px;
 		margin-left:auto;
 		margin-right:auto;
 	}
 
 	#nav_container {
-		height: 40px;
+		height: 30px;
 		padding-left:10px;
 		padding-top:2px;
 		margin: auto;
@@ -49,24 +49,28 @@ and (max-device-width : 480px) {
 	}
 
 	#nav_container > select {
-		padding:5px;
-}
+		padding:2px;
+	}
 
 	#container {
-	position:absolute;
-	top:220px;
-	width:100%;
-	overflow: hidden;
-	padding:0;
-}
+	top:140px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling:touch;
+	}
+
+	#viewer_frame {
+		display:inline-block;
+	}
 	
 }
 
 /* ... Smartphones (landscape) ... */
 @media only screen
-and (min-width : 320px)
-and (max-width : 767px) {
-	
+and (min-width : 100px)
+and (max-width : 767px), 
+ {
+	div {border:1px dashed #f39;}
 	body {
 		font-size:16px;
 		padding:0;
@@ -77,33 +81,37 @@ and (max-width : 767px) {
 	}
 	
 	#viewer_header {
-		max-width:767px;
+		width:100%;
 		padding:20px 0 0 0;
-		height:200px;
+		height:120px;
+
 	}
 
 	#viewer_header #title {
-		width:200px;
+		width:100px;
 		margin-left:auto;
 		margin-right:auto;
 	}
 
 	#nav {
 		position: absolute;	
-		float: none;
+		margin-left:auto;
+		margin-right:auto;
+
+		max-width:767px;
 		width: 100%;
-		margin-top: 130px;
+		margin-top: 70px;
 	}
 
 	#nav > nav {
 		width:80%;
-		height:40px;
+		height:30px;
 		margin-left:auto;
 		margin-right:auto;
 	}
 
 	#nav_container {
-		height: 40px;
+		height: 30px;
 		padding-left:10px;
 		padding-top:2px;
 		margin: auto;
@@ -113,16 +121,19 @@ and (max-width : 767px) {
 	}
 
 	#nav_container > select {
-		padding:5px;
+		padding:2px;
 }
 
 	#container {
-	position:absolute;
-	top:220px;
-	width:100%;
-	overflow: hidden;
-	padding:0;
-}
+	top:140px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling:touch;
+	}
+
+	#viewer_frame {
+		display:inline-block;
+	}
 }
  
 /* ... Smartphones (portrait) ... */
@@ -136,12 +147,60 @@ and (max-width : 320px) {
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-	 body {
-	 	font-size:20px;
-	 	-webkit-box-shadow: none;
-	 	margin: 10px auto 20px auto;
-	 	padding: 20px 30px 20px 30px;
-	 }
+	body {
+		font-size:16px;
+		padding:0;
+	}
+	#viewer_header {
+		max-width:1024px;
+		padding:20px 0 0 0;
+		height:120px;
+	}
+
+	#viewer_header #title {
+		width:100px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#nav {
+		position: absolute;	
+		float: none;
+		width: 100%;
+		margin-top: 70px;
+	}
+
+	#nav > nav {
+		width:80%;
+		height:30px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#nav_container {
+		height: 30px;
+		padding-left:10px;
+		padding-top:2px;
+		margin: auto;
+		background-color:#eee;
+		border-radius:10px;
+		-webkit-box-shadow:1px 1px 2px #aaa;
+	}
+
+	#nav_container > select {
+		padding:2px;
+	}
+
+	#container {
+	top:140px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling:touch;
+	}
+
+	#viewer_frame {
+		display:inline-block;
+	}
 }
 
 
@@ -150,6 +209,27 @@ and (max-device-width : 1024px) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
+
+	#viewer_header {
+		height:80px;
+	}
+	#viewer_header #title {
+		width:100px;
+		float:left;
+		margin-left:100px;
+	}
+
+	#nav {
+		position:relative;
+		float:right;
+		width: 200px;
+		margin-top: 20px;
+		margin-right:20px;
+	}
+
+	#container {
+		top:100px;
+	}
 }
  
 /* ... iPads (portrait) ... */
@@ -157,12 +237,33 @@ and (orientation : landscape) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
+	#viewer_header {
+		height:80px;
+	}
+	#viewer_header #title {
+		width:100px;
+		float:left;
+		margin-left:100px;
+	}
+
+	#nav {
+		position:relative;
+		float:right;
+		width: 200px;
+		margin-top: 20px;
+		margin-right:20px;
+	}
+
+	#container {
+		top:100px;
+	}
 }
 
 
 /* ... Desktops and laptops ... */
 @media only screen
 and (min-width : 1224px) {
+
 }
 
 

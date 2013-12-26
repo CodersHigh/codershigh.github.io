@@ -171,7 +171,7 @@ and (max-device-width : 480px) {
 
 /* ... Smartphones (landscape) ... */
 @media only screen
-and (min-width : 320px)
+and (min-width : 100px)
 and (max-width : 767px) {
 	body {
 		padding: 2px;
@@ -261,7 +261,7 @@ and (max-width : 767px) {
 		padding-right:0.3em;
 		color:#333;
 		font-size:1.3em;
-		font-family:nanumPen;
+		font-family:'Nanum Pen Script', sans-serif;
 		text-indent:0;
 	}	
 	/* color */
@@ -362,10 +362,12 @@ and (max-width : 320px) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 	 body {
-	 	font-size:20px;
+	 	font-size:18px;
+	 	width:100%;
+	 	max-width:1024px;
 	 	-webkit-box-shadow: none;
-	 	margin: 10px auto 20px auto;
-	 	padding: 20px 30px 20px 30px;
+	 	margin: 0 auto 20px auto;
+	 	padding: 0px 0px 20px 0px;
 	 }
 }
 
@@ -382,8 +384,12 @@ and (orientation : landscape) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
+
 }
 
+@media only screen and (min-width:1025px) and (max-width: 1223px) {
+	body { max-width:840px;}
+}
 
 /* ... Desktops and laptops ... */
 @media only screen
