@@ -43,16 +43,6 @@ and (max-device-width : 480px) {
 	font-family:nanumPen;
 	text-indent:0;
 	}	
-	/* color */
-	.lightpink {	background-color:#ffc9b1; 	}
-	.lightblue {	background-color:#75c7f3; 	}
-	.lightgreen {	background-color:#a5db66;	}
-	.lightorange {	background-color:#f9ad2b;	}
-	.border_lightpink {		border-color:#ffc9b1;	}
-	.border_lightblue {		border-color:#75c7f3;	}
-	.border_lightgreen {	border-color:#a5db66;	}
-	.border_lightorange {	border-color:#f9ad2b;	}
-
 
 	/* 상단 네비게이션 */
 
@@ -125,13 +115,17 @@ and (max-device-width : 480px) {
 		float:none;
 		max-width:45%;
 	}
+
+	.article_layout01 > .right {
+		padding:0;
+	}
 	
 	.article_layout01 > .text-right {
 		text-align:left;
 	}
 	
 	/* wide-image */
-	.article_layout02 > .img, .article_layout03 > .img, .article_layout04 > .img, .article_layout06 > .img {
+	.article_layout02 > .img, .article_layout03 > .img, .article_layout04 > .img, .article_layout06 > .img, .article_layout08 > .img {
 		width:100%;
 		max-width:100%;
 		float:none;
@@ -264,15 +258,6 @@ and (max-width : 767px) {
 		font-family:'Nanum Pen Script', sans-serif;
 		text-indent:0;
 	}	
-	/* color */
-	.lightpink {	background-color:#ffc9b1; 	}
-	.lightblue {	background-color:#75c7f3; 	}
-	.lightgreen {	background-color:#a5db66;	}
-	.lightorange {	background-color:#f9ad2b;	}
-	.border_lightpink {		border-color:#ffc9b1;	}
-	.border_lightblue {		border-color:#75c7f3;	}
-	.border_lightgreen {	border-color:#a5db66;	}
-	.border_lightorange {	border-color:#f9ad2b;	}
 
 
 	/* field */
@@ -308,13 +293,15 @@ and (max-width : 767px) {
 		float:none;
 		max-width:45%;
 	}
-	
+	.article_layout01 > .right {
+		padding:0;
+	}
 	.article_layout01 > .text-right {
 		text-align:left;
 	}
 	
 	/* wide-image */
-	.article_layout02 > .img, .article_layout03 > .img, .article_layout04 > .img, .article_layout06 > .img {
+	.article_layout02 > .img, .article_layout03 > .img, .article_layout04 > .img, .article_layout06 > .img, .article_layout08 > .img  {
 		width:100%;
 		max-width:100%;
 		float:none;
