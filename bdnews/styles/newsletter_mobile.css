@@ -31,7 +31,7 @@ and (max-device-width : 480px) {
 		font-size:1.8em;
 	}
 	.video {
-		width:100%;
+		width:80%;
 		height:220px;
 		margin-top:20px;
 	}
