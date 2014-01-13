@@ -16,15 +16,14 @@
 <h1><center>커리큘럼</center></h1>
 <div class="menu_tab" style="float:left; width:100%">
 	<h2>
-		<div class="tab" style="float:left"><a href="./author_lingostar_curriculum_iosbasic.html">iOS 개발 기본</a></div>
-		<div class="tab" style="float:left"><a href="./author_lingostar_curriculum_iosadv.html">
-			iOS 개발 고급</a>
-		</div>
-		<div class="tab" style="float:left"><a href="./author_lingostar_curriculum_appprototype.html">
-			App 프로토타이핑</a>
-		</div>
-		<div class="selected" style="float:left"><a href="./author_lingostar_curriculum_osxdev.html">
-		OS X 개발</a></div>
+		<div class="selected" onclick="location.href='./author_lingostar_curriculum_iosbasic.html'" style="cursor:pointer;">
+		iOS 개발 기본</div>
+		<div class="tab" onclick="location.href='./author_lingostar_curriculum_iosadv.html'" style="cursor:pointer;">
+			iOS 개발 고급</div>
+		<div class="tab" onclick="location.href='./author_lingostar_curriculum_appprototype.html'" style="cursor:pointer;">
+			App prototyping</div>
+		<div class="selected" onclick="location.href='./author_lingostar_curriculum_osxdev.html'" style="cursor:pointer;">
+		OS X 개발</div>
 	</h2>
 </div>
 
@@ -50,102 +49,109 @@
 		<br><br>
 		특히 iOS에는 없거나 개념이 다른 UI 요소들 - Window, Menubar, Dock 등과 플랫폼적인특성으로 가능한부분들을 익힌다.</p><br><br>
 	</div>
+	<div style="float:left"><h3>2. 학습목차</h3></div>
 	</div>
-</div>
 
-	<h3>2. 학습목차</h3>
-	<div class="flow_1" style="float:left; width:800px">
-	<h4>OS X UI</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
+	<div class="flow">
+	<div style="padding:20px"><h4>OS X UI</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
 		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			OS X의 Foundation
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			iOS에는 없고 OS X에만 있는 NSTree, NSXMLElement, NSArrayController와 같은 클래스들의 특성과 용도를 알아본다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			OS X의 UI 요소들
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			NSTableView, NSOutlineView 등 OS X에서만 사용하는 UI들의 활용법을 알아본다.
 		</div>
 	</div>
 
-	<div class="flow_2" style="float:left; width:800px">
-	<h4>Background Process</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
-		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	<div class="flow">
+	<div style="padding:20px"><h4>Background Process</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
+		<div class="flow_text"><center>내용</center></div>
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Daemon과 Agent
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			간단한 동작을 하는 Daemon과 Agent를 만들어서 실행시키는 방법을 알아본다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			IPC
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Daemon과 UI를 가진 App간의 데이터 통신방법을 실습해본다.
 		</div>
 	</div>
 
-	<div class="flow_3" style="float:left; width:800px">
-	<h4>AppleScript</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
+	<div class="flow">
+	<div style="padding:20px"><h4>AppleScript</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
 		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Apple Script의 개요
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Apple Script의 개념과 동작 범위를 알아본다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Apple Script 활용
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Apple Script를 이용해 할 수 있는 작업을 알아보고 우리의 앱이 Apple Script에 대응하도록 한다.
 		</div>
 	</div>
 
-	<div class="flow_4" style="float:left; width:800px">
-	<h4>배포</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
+	<div class="flow" >
+	<div style="padding:20px"><h4>배포</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
 		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			OS X 용 Installer 만들기
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			OS X 용 인스톨러 프로그램을 이용해 Daemon을 설치하는 실습을 해본다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Install 화면 구성과 Shell 사용
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			인스톨러 제품을 만들기 위한 다양한 기능을 실습해본다.
 		</div>
 	</div>
-
+</div>
 <br style="clear:both;" />
 
     <script src="javascripts/scale.fix.js"></script>
