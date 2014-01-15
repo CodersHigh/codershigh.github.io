@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>LingoStar의 커리큘럼</title>
-	<link rel="stylesheet" href="../stylesheets/style_common.css">
-    <link rel="stylesheet" href="../stylesheets/style_author.css">
+	<link rel="stylesheet" href="../stylesheets/style_curriculum.css">
     <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -13,169 +12,189 @@
     <![endif]-->
   </head>
   <body>
-  
-<h1><center>커리큘럼</center></h1>
-	<div class="menu_tab" style="float:left; width:100%">
+	<div>
+	<header>
+        <div style="float: right; cursor:pointer" onclick="location.href='../index.html'" ><img src="../images/logo_codershigh.png" alt="coders high logo"  style="width: 80px; padding-bottom: 10px" /> </div>
+        <div style="padding-top: 15px;"><h1><center>커리큘럼</center></h1></div>  
+    </header>
+	</div>
+	
 	<h2>
-		<div style='float:left; width:180px'>iOS 개발 기본</div>
-		<div style='float:left; width:180px'>
-			iOS 개발 고급
-		</div>
-		<div style='float:left; width:280px'>
-			애플리케이션 프로토타이핑
-		</div>
-		<div style="float:left; width 180px">OS X 개발</div>
+	<div class="menu_tab" style="float:left; width:100%">
+	<div class="tab" onclick="location.href='./author_lingostar_curriculum_iosbasic.html'" style="cursor:pointer;">
+		iOS 개발 기본</div>
+		<div class="selected" onclick="location.href='./author_lingostar_curriculum_iosadv.html'" style="cursor:pointer;">
+			iOS 개발 고급</div>
+		<div class="tab" onclick="location.href='./author_lingostar_curriculum_appprototype.html'" style="cursor:pointer;">
+			App prototyping</div>
+		<div class="tab" onclick="location.href='./author_lingostar_curriculum_osxdev.html'" style="cursor:pointer;">
+		OS X 개발</div>
 	</h2>
 	</div>
-	<br><br><br>
 
-<h3>
-	<div class="summary1" style="float:left; width:100%">
-		<div style='float:left; width:100px'>개발 과정명</div>
-		<div style="float:left; width:220px"><center>iOS 앱 개발 고급</center></div>
+<div class="contents_site">
+	<br>
+	<div class="content_site" id="text">
+	<h3>
+	<div style="float:left; width:100%">
+		<div class="summary_name">개발 과정명</div>
+		<div class="summary_des">iOS 개발 고급</div>
 	</div>
 	<br><br>
-	<div class="summary2" style="float:left; width:100%">
-		<div style='float:left; width:100px'>교육시간</div>
-		<div style="float:left; width:220px"><center>선택적 구성</center></div>
+	<div style="float:left; width:100%">
+		<div class="summary_name">교육시간</div>
+		<div class="summary_des">선택적 구성</div>
 	</div>
 	</h3>
-	<br>
-
+	<br><br>
 	<div class="outline" style="float:left; width:100%">
 		<h3>1. 과정개요</h3>
 		<p class="text_outline">
-		iOS기반의 앱을 개발하는 보다 발전된 방법과 개발 방법론을 익힌다.
+		&nbsp;iOS기반의 앱을 개발하는 보다 발전된 방법과 개발 방법론을 익힌다.
 		<br><br>
-		Touch와 Event처리에 대해 배움으로서사용자 이벤트를처리하는 화면 구성요소들에 대해 이해한다.<br>
+		&nbsp;Touch와 Event처리에 대해 배움으로서사용자 이벤트를처리하는 화면 구성요소들에 대해 이해한다.<br>
 		앱 개발 시 점점 중요해지는 유닛 테스트에 대해 알아보고,테스트주도 개발방법론을 실습해 본다.</p><br><br>
 	</div>
 
-	<h3>2. 학습목차</h3>
-	<div class="flow_1" style="float:left; width:800px">
-	<h4>Touch와 Event</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
-		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	<div style="float:left"><h3>2. 학습목차</h3></div>
+	</div>
+	<div class="flow">
+	<div style="padding:20px"><h4>Touch와 Event</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
+		<div class="flow_text"><center>내용</center></div>
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Touch & UIResponder
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			UITouch의 동작방식에 대해 익히고 UIView의 슈퍼클래스인 UIResponder의 메소드 오버라이드 방법을 알아본다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Graphics
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			iOS에서의 Graphics 프레임워크에 대해 이해하고 기본적인 드로잉을 구현해 본다.
 		</div>
-		<div style='float:left; width:50px; height:80px'><center>2</center></div>
-		<div style="float:left; width:200px; height:80px">
+		<div class="flow_num"><center>2</center></div>
+		<div class="flow_name">
 			SignPad 만들기
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			UITouch와 UIKit Graphics를 이용해서 간단한 사인패드 애플리케이션을 만들어본다. 개인별로 스트로크 컬러, 스트로크 두께, 그리고 알파값을 조절할 수 있는 기능을 추가해본다.
 		</div>
 	</div>
 
-	<div class="flow_2" style="float:left; width:800px">
-	<h4>Graphics의 핵심</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
+	<div class="flow">
+	<div style="padding:20px"><h4>Graphics의 핵심</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
 		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			UIControl & Gesture
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Control 오브젝트의 추상 슈퍼클래스인 UIControl과 다른 방식의 이벤트 처리 방식인 UIGestureRecognizer를 이해한다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>2</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>2</center></div>
+		<div class="flow_name">
 			Custom Button 제작
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Custom 컨트롤 클래스를 만들어 봄으로서 UI의 완성도를 위한 작업방식을 배운다.
 		</div>
-		<div style='float:left; width:50px; height:80px'><center>2</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>2</center></div>
+		<div class="flow_name">
 			Animation
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			다이나믹한 UI제작을 위해 iOS의 애니메이션 방법을 배운다.<br>
 			QuartsCore 레벨에서 뷰의콘텐트제공방식에 대해 이해한다.
 		</div>
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			시계 버튼 만들기
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			커스텀 컨트롤 제작과 애니메이션을 활용하여 시계처럼 동작하는 버튼을 만들어 본다.
 		</div>
 	</div>
 
-	<div class="flow_3" style="float:left; width:800px">
-	<h4>Test</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
+	<div class="flow">
+	<div style="padding:20px"><h4>Test</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
 		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>2</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>2</center></div>
+		<div class="flow_name">
 			단위 테스트 방법론
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			애자일 개발 방법론 중 하나인 단위 테스트 방법론에 대해 알아보고, 개발 과정에서 활용법에 대해 고민해본다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Xcode에서의 TDD 개념
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Xcode에서 제공하는 OCUnit의 사용법을 배운다.
 		</div>
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			Instrument의 사용법
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Xcode에서 기본으로 제공하는 퍼포먼스 측정 도구인 Instrument의 사용법을 배운다.
 		</div>
 	</div>
 
-	<div class="flow_4" style="float:left; width:800px">
-	<h4>iOS의 기본 MDM</h4>
-		<div style='float:left; width:50px; height:40px'><center>시간</center></div>
-		<div style="float:left; width:160px; height:40px"><center>주제</center></div>
+	<div class="flow">
+	<div style="padding:20px"><h4>iOS의 기본 MDM</h4></div>
+		<div class="flow_num"><center>시간</center></div>
+		<div class="flow_name"><center>주제</center></div>
 		<div style="float:left; width:590px; height:40px"><center>내용</center></div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			iOS의 MDM
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			애플이 제공하는 기본 MDM의 방식을 알아보고 실습해본다.
 		</div>
-
-		<div style='float:left; width:50px; height:80px'><center>3</center></div>
-		<div style="float:left; width:200px; height:80px">
+	</div>
+	<div class="flow">
+		<div class="flow_num"><center>3</center></div>
+		<div class="flow_name">
 			등록과 배포
 		</div>
-		<div style="float:left; width:550px; height:80px">
+		<div class="flow_text">
 			Apple Developer Connection의 개발자/기기/App ID의 관리 방법과 인증서 관리/프로비저닝프로파일 관리 방법 실습
 		</div>
 	</div>
+</div>
 
 <br style="clear:both;" />
-
-    </div>
     <script src="javascripts/scale.fix.js"></script>
     
   </body>
