@@ -10,11 +10,10 @@ body {
 	body {
   	padding-left: 10px;
   	padding-right: 10px;
-  	padding-top: 50px;
 	}
   .flow_num {
     float: left;
-    width:50px;
+    width: 50px;
   }
   .flow_name {
     float: left;
@@ -28,7 +27,8 @@ body {
 }
 @media print, screen and(min-width: 480px) {
 	body {
-		padding: 30px;
+		padding-left: 30px;
+    padding-right: 30px;
 	}
   .flow_num {
     float: left;
@@ -68,16 +68,16 @@ body {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
 }
 .menu_tab{
     float: left;
 		width: 100%;
 		padding-top: 20px;
 		background: #ccc9aa;
-		-moz-border-radius-topright: 10px;
-		-webkit-border-top-right-radius: 10px;
-		-moz-border-radius-topleft: 10px;
-		-webkit-border-top-left-radius: 10px;
+		-moz-border-radius: 10px 10px 0 0;
+		-webkit-border-radius: 10px 10px 0 0;
 	}
 
 	.tab{
@@ -86,10 +86,8 @@ body {
     height: 44px;
 		background: #ccc9aa;
 		padding : 1% 0% 1% 2%;
-		-moz-border-radius-topright: 10px;
-		-webkit-border-top-right-radius: 10px;
-		-moz-border-radius-topleft: 10px;
-		-webkit-border-top-left-radius: 10px;
+		-moz-border-radius: 10px 10px 0 0;
+		-webkit-border-radius: 10px 10px 0 0;
 	}
 
 	.tab:hover{
@@ -99,10 +97,8 @@ body {
 		font-weight: bolder;
 		background: #eeeac6;
 		padding : 1% 0% 1% 2%;
-		-moz-border-radius-topright: 10px;
-		-webkit-border-top-right-radius: 10px;
-		-moz-border-radius-topleft: 10px;
-		-webkit-border-top-left-radius: 10px;
+		-moz-border-radius: 10px 10px 0 0;
+		-webkit-border-radius: 10px 10px 0 0;
 	}
 
 	.selected{
@@ -112,20 +108,16 @@ body {
 		font-weight: bolder;
 		background: #eeeac6;
 		padding : 1% 0% 1% 2%;
-		-moz-border-radius-topright: 10px;
-		-webkit-border-top-right-radius: 10px;
-		-moz-border-radius-topleft: 10px;
-		-webkit-border-top-left-radius: 10px;
+		-moz-border-radius: 10px 10px 0 0;
+		-webkit-border-radius: 10px 10px 0 0;
 	}
 
 	.contents_site{
     float: left;
     width: 100%;
 		background: #eeeac6;
-    -moz-border-radius-bottomright: 10px;
-    -webkit-border-bottom-right-radius: 10px;
-    -moz-border-radius-bottomleft: 10px;
-    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
 	}
 
   #text{
