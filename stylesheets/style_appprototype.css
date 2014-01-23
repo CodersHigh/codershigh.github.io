@@ -6,14 +6,26 @@ body {
   background-color: #f6f3e0;
 }
 @media print, screen and(max-width: 480px) {
-	
+	.video {
+    width: 100%;
+    height: 280px;
+  }
 }
 @media print, screen and(min-width: 480px) {
-	
+	.selection_team {
+    padding-bottom: 40px;
+  }
+  .video {
+    width: 420px;
+    height: 315px;
+  }
 }
 
 @media print, screen and(min-width: 1100px) {
-  
+  .video {
+    width: 420px;
+    height: 315px;
+  }
 }
 .selection_year {
   float: left;
@@ -28,17 +40,26 @@ body {
   width: 100%;
 }
 .video {
-  width: 420px;
-  height: 315px;
 }
-
+.preview {
+  border-bottom: 1px dotted #808080;
+  margin-bottom: 10px;
+}
+.item {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.item_name {
+  padding-top: 20px;
+  border-bottom: 1px dotted #808080;s
+}
 .sp-slideshow {
   float: left;
   position: relative;
   margin: 10px auto;
-  max-width: 600px;
+  max-width: 400px;
   min-width: 350px;
-  height: 460px;
+  height: 400px;
   border : 10px solid #fff;
   border : 10px solid rgba(255,255,255,0.9);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -51,7 +72,7 @@ body {
   overflow: hidden;
 }
 .sp-parallax-bg {
-  background: url(../images/map.png) repeat-x scroll 0 0;
+  background: scroll 0 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -215,7 +236,7 @@ input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
-  padding: 40px 0 40px 0;
+  padding: 20px 0 10px 0;
   max-height: 100%;
   max-width: 100%;
 }
@@ -235,29 +256,10 @@ input.sp-selector-2:checked ~ .sp-content .sp-slider > li:nth-child(2),
 input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3) {
   opacity: 1;
 }
-
-.pic {
-  -webkit-transition: all 0.6s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  margin-top: 10px;
-  margin-left: -20px;
-  border: 1px solid black;
-  -webkit-box-shadow:#272229 2px 2px 10px;
-  -moz-box-shadow:#272229 2px 2px 10px;
-  -box-shadow: #272229 2px 2px 10px;
-}
 .sp-slider > li img:hover {
   cursor: pointer;
 }
-.sp-slider > li img:hover .pic {
-  width: 320px;
-  height: 240px;
-  opacity: 1;
-  visibility: visible;
-  float: right;
-}
+
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin: 0 0 10px 0;
