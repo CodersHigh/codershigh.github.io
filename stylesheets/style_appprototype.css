@@ -53,6 +53,27 @@ body {
   padding-top: 20px;
   border-bottom: 1px dotted #808080;s
 }
+.item_creator {
+  padding-top: 10px;
+}
+.item_ads > p {
+  margin-top: 4px;
+}
+.item_screenshot {
+  margin-top: 4px;
+}
+.item_storyboard {
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+.storyboard {
+  border: 1px dashed gray;
+}
+.screenshot {
+  float: left;
+  width: 100%;
+  margin-top: 4px;
+}
 .sp-slideshow {
   float: left;
   position: relative;
