@@ -39,6 +39,10 @@ body {
   float: left;
   width: 100%;
 }
+.selection_view {
+  float: left;
+  width: 100%;
+}
 .video {
 }
 .preview {
