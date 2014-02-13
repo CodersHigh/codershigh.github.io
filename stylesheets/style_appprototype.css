@@ -1,10 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,400,700);
 
-body {
-  font: 300 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  background-color: #f6f3e0;
-}
 @media print, screen and(max-width: 480px) {
 	.video {
     width: 100%;
@@ -27,22 +21,41 @@ body {
     height: 315px;
   }
 }
-.selection_year {
+
+.group {
   float: left;
   width: 100%;
 }
-.selection_school {
-  float: left;
-  width: 100%;
+
+.works_site {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow:3px -0px 10px rgba(0, 0, 0, 0.2000);
+    border:1px solid #c1d4e2;
+    margin-top:1em;
+    margin-bottom:2em;
+}
+.flow {
+  margin-bottom:3em;
+  padding-bottom:2em;
+  border-bottom:1px solid #ddd;
+}
+.flow_name {
+  font-size:1.4em;
+  font-weight:bold;
+}
+.flow > h4 {
+  font-size:1.1em;
+  margin-top:1.2em;
+}
+.flow > ul > li {
+  margin:0;
 }
 .selection_team {
   float: left;
   width: 100%;
 }
-.selection_view {
-  float: left;
-  width: 100%;
-}
+
 .video {
 }
 .preview {
@@ -74,14 +87,13 @@ body {
   border: 1px dashed gray;
 }
 .screenshot {
-  float: left;
   width: 100%;
   margin-top: 4px;
 }
 .sp-slideshow {
-  float: left;
+  
   position: relative;
-  margin: 10px auto;
+  margin-top: 10px;
   max-width: 400px;
   min-width: 350px;
   height: 400px;

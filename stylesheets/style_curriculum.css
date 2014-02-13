@@ -229,7 +229,6 @@ body {
 	}
 
   .text > p {
-    text-indent:0.8em;
     text-align:justify;
 
   }
@@ -405,6 +404,9 @@ header ul {
   width:270px;
 }
 
+header {
+  height:80px;
+}
 header li {
   width:89px;
   float:left;
