@@ -1,16 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 
 body {
-  font: 300 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Nanum Gothic","Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   background-color: #f6f3e0;
+  padding:1em;
+  max-width:880px;
+  margin-left:auto;
+  margin-right:auto;
 }
+
 @media print, screen and(max-width: 480px) {
 	body {
   	padding: none;
 	}
+
   .text {
     padding: 5px;
+    line-height:1.5em;
   }
   .flow_num {
     float: left;
@@ -27,9 +39,9 @@ body {
   }
 }
 @media print, screen and(min-width: 480px) {
-	body {
-		padding: 0 4% 4% 4%;
-	}
+	
+
+
   .lingo_path {
     padding-bottom: 10px;
   }
@@ -60,7 +72,9 @@ body {
   .lingo_path {
     padding-top: 10px;
     padding-bottom: 60px;
+    vertical-align: middle;
   }
+
   .flow_num {
     float: left;
     width:50px;
@@ -74,66 +88,178 @@ body {
     width: 500px;
   }
 }
+
 .lingo_path {
   float: left;
   width: 100%;
+  margin-bottom:2em;
 }
+
+.lingo_path > div {
+  float:left;
+  height:50px;
+}
+
+.lingo_path > .dimmed {
+  color:#959376;
+  font-size:20px;
+  font-family:"Nanum Gothic";
+  margin:10px;
+}
+.lingo_path > div > h2 {
+  margin:10px 0;
+  font-family:"Nanum Gothic";
+
+}
+.path_icon {
+  height:50px;
+  vertical-align: middle;
+}
+
 .flow {
   float: left;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  -moz-border-radius: 0 0 10px 10px;
-  -webkit-border-radius: 0 0 10px 10px;
+}
+
+.flow_num {
+  float:left;
+  background-color:#8fb1cc;
+  -webkit-border-radius:2em;
+  padding:3px 5px;
+  margin-right:0.5em;
+  margin-bottom:0.5em;
+  font-size:1em;
+  color:white;
+}
+
+.flow_name {
+  font-size:1.1em;
+  color:#555;
+}
+
+.flow_text {
+  margin:0;
+  margin-bottom:0.5em;
+  margin-left:0.5em;
+}
+
+.flow > ul > li {
+  margin-bottom:0.8em;
 }
 .menu_tab{
     float: left;
 		width: 100%;
-		padding-top: 20px;
-		background: #ccc9aa;
-		-moz-border-radius: 10px 10px 0 0;
-		-webkit-border-radius: 10px 10px 0 0;
-	}
+}
+
+.menu_tab > div > .menu_title {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size:1em;
+}
 
 	.tab{
+    position:relative;
     float: left;
-		width: 23%;
-    height: 44px;
-		background: #ccc9aa;
-		padding : 1% 0% 1% 2%;
-		-moz-border-radius: 10px 10px 0 0;
-		-webkit-border-radius: 10px 10px 0 0;
+    width: 20%;
+    max-width:180px;
+    height: 45px;
+    bottom: -10px;
+    background: #6d84c4;
+    padding: 10px 5px 5px 5px;
+    -moz-border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    text-align:center;
+    border-right:1px solid #586db4;
+    box-shadow:2px -2px 3px rgba(0, 0, 0, 0.2000);
 	}
+
+  .tab > p {
+    color:#bad0e8;
+    text-shadow: 0px 0px 5px #5477c1;
+    font-weight:normal;
+    margin:0;
+  }
 
 	.tab:hover{
-    float: left;
-		width: 23%;
-    height: 44px;
 		font-weight: bolder;
-		background: #eeeac6;
-		padding : 1% 0% 1% 2%;
-		-moz-border-radius: 10px 10px 0 0;
-		-webkit-border-radius: 10px 10px 0 0;
+		background: #84a2df;
 	}
+  .tab:hover > .menu_title {
+    color:#333;
+    text-shadow:none;
+    font-weight:bold;
+  }
 
 	.selected{
+    position:relative;
     float: left;
-		width: 23%;
-    height: 44px;
-		font-weight: bolder;
-		background: #eeeac6;
-		padding : 1% 0% 1% 2%;
-		-moz-border-radius: 10px 10px 0 0;
-		-webkit-border-radius: 10px 10px 0 0;
+    width:23%;
+    height: 40px;
+    font-weight: bolder;
+    background: #fffcf5;
+    padding: 10px 5px 5px 5px;
+    -moz-border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    text-align:center;
+    border-left:1px solid #c1d4e2;
+    border-top:10px solid #5377c1;
+    box-shadow:2px -2px 3px rgba(0, 0, 0, 0.2000);
+    z-index: 2;
 	}
+  .selected > p {
+    color:#2f446e;
+    margin:0;
+  }
 
 	.contents_site{
+    position:relative;
     float: left;
     width: 100%;
-		background: #eeeac6;
+    max-width:860px;
+		background: #fffcf5;
+    padding:1.5em 0 2em 0;
     -moz-border-radius: 0 0 10px 10px;
     -webkit-border-radius: 0 0 10px 10px;
+    box-shadow:3px -0px 10px rgba(0, 0, 0, 0.2000);
+    border:1px solid #c1d4e2;
+    border-bottom:20px solid #789bcd;
+    margin-top:-2px;
+    z-index:1;
 	}
+
+  .text > p {
+    text-indent:0.8em;
+    text-align:justify;
+
+  }
+
+.text_box {
+  border: dotted 1px #789bcd;
+  background-color: #cfe0ec;
+  -webkit-border-radius:0.5em;
+  padding:0.5em;
+  margin-bottom:2em;
+}
+
+.text_box > ul {
+  list-style-type:square;
+  text-indent: -0.2em;
+  margin:0;
+  padding-left:1.5em;
+  color:#555;
+  font-size:0.9em;
+
+}
+.text {
+    padding:0 1.2em 0 1.2em;
+    line-height:1.5em;
+}
+
+.text > ul {
+  padding-left:1.5em;
+  text-align:justify;
+}
 
 .summary_name {
 	float: left;
@@ -152,11 +278,19 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin: 0 0 10px 0;
+  margin: 0.5em 0 0 0;
 }
 
-p, ul, ol, table, pre, dl {
+ol, table, pre, dl {
   margin:0px;
+}
+
+p, ul {
+  margin-bottom:1.5em;
+}
+
+ul {
+  padding-left:1.5em;
 }
 
 h1, h2, h3 {
@@ -164,20 +298,36 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:30px;
+  font-size:2em;
+  font-family: "Nanum Myeongjo", "Helvetica", sans-serif;
+  margin-bottom:0.5em;
 }
 
 h2 {
   color:#393939;
+  font-size:1.5em;
+}
+
+h3 {
+  font-size:1.4em;
+}
+
+h4 {
+  font-size:1.2em;
 }
 
 h3, h4, h5, h6 {
   color:#494949;
+  font-family: "Nanum Myeongjo", sans-serif;
 }
 
 a {
   text-decoration:none;
-  color: #000000;
+  color: #364ebf;
+  font-family: "Nanum Gothic", sans-serif;
+  border-bottom:1px dotted #364ebf;
+  padding-bottom:2px;
+  font-weight:bold;
 }
 
 a small {
@@ -305,8 +455,8 @@ small {
 
 hr {
   border:0;
-  background:#e5e5e5;
-  height:1px;
+  background:#b6d5d8;
+  height:2px;
   margin:0 0 20px;
 }
 
