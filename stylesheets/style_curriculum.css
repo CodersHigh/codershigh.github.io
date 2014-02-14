@@ -100,17 +100,23 @@ body {
   height:30px;
 }
 
+
 .lingo_path > .dimmed {
   color:#959376;
-  font-size:20px;
+  font-size:1.2em;
   font-family:"Nanum Gothic";
-  margin:10px;
+  margin: 10px 5px;
+
 }
 .lingo_path > div > h2 {
   margin:10px 0;
   font-family:"Nanum Gothic";
-
 }
+.lingo_path > div > h4 {
+  margin-top:10px;
+}
+
+
 .path_icon {
   height:50px;
   vertical-align: middle;
@@ -164,9 +170,9 @@ body {
     width: 20%;
     max-width:180px;
     height: 45px;
-    bottom: -10px;
+    bottom: -5px;
     background: #6d84c4;
-    padding: 10px 5px 5px 5px;
+    padding: 15px 5px 5px 5px;
     -moz-border-radius: 20px 20px 0 0;
     -webkit-border-radius: 20px 20px 0 0;
     text-align:center;
@@ -194,7 +200,7 @@ body {
 	.selected{
     position:relative;
     float: left;
-    width:23%;
+    width:20%;
     height: 40px;
     font-weight: bolder;
     background: #fffcf5;
@@ -218,13 +224,14 @@ body {
     width: 100%;
     max-width:860px;
 		background: #fffcf5;
-    padding:1.5em 0 2em 0;
+    padding:1.5em 0 1.5em 0;
     -moz-border-radius: 0 0 10px 10px;
     -webkit-border-radius: 0 0 10px 10px;
     box-shadow:3px -0px 10px rgba(0, 0, 0, 0.2000);
     border:1px solid #c1d4e2;
     border-bottom:20px solid #789bcd;
     margin-top:-2px;
+    margin-bottom:3em;
     z-index:1;
 	}
 

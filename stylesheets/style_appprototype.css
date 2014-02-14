@@ -22,15 +22,14 @@
   }
 }
 
-.lingo_path > .dimmed  {
-  font-size:1.2em;
-  margin: 10px 5px;
+
+.tab {
+  height:30px;
 }
 
-.lingo_path > div > h4 {
-  margin-top:10px;
+.selected {
+  height:30px;
 }
-
 
 .group {
   float: left;
@@ -77,7 +76,7 @@
   clear:both;
 }
 .selection_team > li {
-  width:150px;
+  width:180px;
   float:left;
 }
 
@@ -113,7 +112,7 @@
 .storyboard {
   border: 1px solid #ddd;
   width:100%;
-  max-width:450px;
+  max-width:350px;
 }
 .screenshot {
   width: 100%;

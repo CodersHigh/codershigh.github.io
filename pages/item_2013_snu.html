@@ -8,19 +8,8 @@
     <link rel="stylesheet" href="../stylesheets/style_curriculum.css">
     <link rel="stylesheet" href="../stylesheets/style_appprototype.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <script type="text/javascript">
-    function SelectCurriculum(){
-
-		var selected = document.getElementById("groupList").selectedIndex;
-		var filename = document.getElementsByTagName("option")[selected].value;
-
-		var URL =  filename + '.html';
-
-		window.location = URL;
-	}
-
-    </script>
+	<script language="javascript" type="text/javascript" src="../javascripts/select_curriculum.js"></script>
+    
 </head>
 <body>
 <header>
@@ -35,27 +24,27 @@
 	</div>
 
 </header>
-<select id="groupList" onchange="SelectCurriculum()">
-		<option value="item_2013_snu" selected>서울대</option>
-		<option value="item_2013_uic">연세대</option>
-		<option value="item_2012_dgu">동국대&amp;산기대 창업스쿨</option>
-		<option value="item_2012_kidp">한국디자인진흥원</option>
-</select>
+<div class="menu_tab">
+	
+		<div class="selected" onclick="location.href='./item_2013_snu.html'" style="cursor:pointer;">
+			<p class="menu_title">2013년</p></div>
+		<div class="tab" onclick="location.href='./item_2012_snu.html'" style="cursor:pointer;">
+			<p class="menu_title">2012년</p></div>
+	</div>
 
-
-<div class="contents_site works_site">
+<div class="contents_site">
 <div class="text">
 	
 	
 	<div class="text_box">
-		<ul class="selection_year">
-			<li><a href="item_2013_snu.html">2013 결과물</a></li>
-			<li><a href="item_2012_snu.html">2012 결과물</a></li>
-		</ul>
+		<select id="groupList" onchange="SelectCurriculum()">
+			<option value="item_2013_snu" selected>서울대 정보문화학과</option>
+			<option value="item_2013_uic">연세대 테크노아트학과</option>
+		</select>
 		<hr />
 		<ul class="selection_team">
 			<li><a href="#s1">Read On Page</a></li>
-			<li><a href="#s2">MyIssue</a></h3></li>
+			<li><a href="#s2">MyIssue</a></li>
 			<li><a href="#s3">스누티처</a></li>
 			<li><a href="#s4">이군화와 김곤신</a></li>
 			<li><a href="#s5">뭐하고놀지</a></li>
