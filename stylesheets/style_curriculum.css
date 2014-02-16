@@ -138,11 +138,13 @@ body {
   margin-bottom:0.5em;
   font-size:1em;
   color:white;
+  width:auto;
 }
 
 .flow_name {
   font-size:1.1em;
   color:#555;
+  width:auto;
 }
 
 .flow_text {
@@ -150,7 +152,10 @@ body {
   margin-bottom:0.5em;
   margin-left:0.5em;
 }
-
+.flow > ul {
+  clear:both;
+  margin-top:1.5em;
+}
 .flow > ul > li {
   margin-bottom:0.8em;
 }
