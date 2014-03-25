@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>UIKit User Interface Catalog: Web Views</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="UIKitUICatalog" />
+<meta id="document-version" name="document-version" content="2.1.3" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40012857" />
+<meta id="book-title" name="book-title" content="UIKit User Interface Catalog" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2013-12-16" />
+<meta id="description" name="description" content="Describes the views and controls in UIKit, drawing from the human interface guidelines for more depth." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">UIKit User Interface Catalog</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="UIKitUICatalog.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIView1-SW1" class="part-name">Views
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW1">About Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW1">Action Sheets</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1">Activity Indicators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIAlertView.html#/apple_ref/doc/uid/TP40012857-UIAlertView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIAlertView-SW1">Alert Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UICollectionView.html#/apple_ref/doc/uid/TP40012857-UICollectionView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UICollectionView-SW1">Collection Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIImageView.html#/apple_ref/doc/uid/TP40012857-UIImageView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIImageView-SW1">Image Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UILabel.html#/apple_ref/doc/uid/TP40012857-UILabel-SW1" data-id="//apple_ref/doc/uid/TP40012857-UILabel-SW1">Labels</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UINavigationBar.html#/apple_ref/doc/uid/TP40012857-UINavigationBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UINavigationBar-SW1">Navigation Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPickerView.html#/apple_ref/doc/uid/TP40012857-UIPickerView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPickerView-SW1">Picker Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIProgressView.html#/apple_ref/doc/uid/TP40012857-UIProgressView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIProgressView-SW1">Progress Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIScrollView-SW1">Scroll Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISearchBar-SW1">Search Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITabBar-SW1">Tab Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITableView.html#/apple_ref/doc/uid/TP40012857-UITableView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITableView-SW1">Table Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextView-SW1">Text Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIWebView-SW1">Web Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIControl1-SW1" class="part-name">Controls
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW1">About Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIButton-SW1">Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIDatePicker-SW1">Date Pickers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPageControl-SW1">Page Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1">Segmented Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextField-SW1">Text Fields</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISlider-SW1">Sliders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIStepper-SW1">Steppers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISwitch-SW1">Switches</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIWebView1-SW1" class="part-name">Attributes Inspector Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-CH4-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH4-SW1">Activity Indicator View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarButtonItem.html#/apple_ref/doc/uid/TP40012857-CH2-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH2-SW1">Bar Button Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarItem.html#/apple_ref/doc/uid/TP40012857-CH1-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH1-SW1">Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Button.html#/apple_ref/doc/uid/TP40012857-CH5-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH5-SW1">Button</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionReusableView.html#/apple_ref/doc/uid/TP40012857-CH28-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH28-SW1">Collection Reusable View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionView.html#/apple_ref/doc/uid/TP40012857-CH29-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH29-SW1">Collection View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionViewCell.html#/apple_ref/doc/uid/TP40012857-CH30-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH30-SW1">Collection View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control.html#/apple_ref/doc/uid/TP40012857-CH9-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH9-SW1">Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DatePicker.html#/apple_ref/doc/uid/TP40012857-CH7-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH7-SW1">Date Picker</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ImageView.html#/apple_ref/doc/uid/TP40012857-CH10-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH10-SW1">Image View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Label.html#/apple_ref/doc/uid/TP40012857-CH11-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH11-SW1">Label</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationBar.html#/apple_ref/doc/uid/TP40012857-CH12-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH12-SW1">Navigation Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationItem.html#/apple_ref/doc/uid/TP40012857-CH27-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH27-SW1">Navigation Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PageControl.html#/apple_ref/doc/uid/TP40012857-CH22-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH22-SW1">Page Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PickerView.html#/apple_ref/doc/uid/TP40012857-CH16-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH16-SW1">Picker View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProgressView.html#/apple_ref/doc/uid/TP40012857-CH17-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH17-SW1">Progress View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ScrollView.html#/apple_ref/doc/uid/TP40012857-CH6-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH6-SW1">Scroll View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SearchBar.html#/apple_ref/doc/uid/TP40012857-CH15-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH15-SW1">Search Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SegmentedControl.html#/apple_ref/doc/uid/TP40012857-CH18-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH18-SW1">Segmented Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Slider.html#/apple_ref/doc/uid/TP40012857-CH19-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH19-SW1">Slider</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Stepper.html#/apple_ref/doc/uid/TP40012857-CH20-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH20-SW1">Stepper</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Switch.html#/apple_ref/doc/uid/TP40012857-CH21-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH21-SW1">Switch</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBar.html#/apple_ref/doc/uid/TP40012857-CH13-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH13-SW1">Tab Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBarItem.html#/apple_ref/doc/uid/TP40012857-CH3-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH3-SW1">Tab Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableView.html#/apple_ref/doc/uid/TP40012857-CH25-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH25-SW1">Table View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableViewCell.html#/apple_ref/doc/uid/TP40012857-CH26-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH26-SW1">Table View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TextView.html#/apple_ref/doc/uid/TP40012857-CH24-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH24-SW1">Text View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Toolbar.html#/apple_ref/doc/uid/TP40012857-CH14-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH14-SW1">Toolbar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="View.html#/apple_ref/doc/uid/TP40012857-CH8-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH8-SW1">View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebView.html#/apple_ref/doc/uid/TP40012857-CH23-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH23-SW1">Web View</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView"></a>
+  <h2 class='chapter-name chapter-name-short'>Web Views</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW6">
+	  				Content of Web Views (Programmatic)
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW7">
+	  				Behavior of Web Views
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW3">
+	  				Appearance of Web Views
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW8">
+	  				Using Auto Layout with Web Views
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW9">
+	  				Making Web Views Accessible
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW10">
+	  				Internationalizing Web Views
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW13">
+	  				Debugging Web Views
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW11">
+	  				Elements Similar to a Web View
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  A web view is a region that can display rich HTML content (shown here between the navigation bar and toolbar in Mail on iPhone).
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uiwebview_intro_2x.png" alt="image: ../Art/uiwebview_intro.png" width="320" height="546" />
+</figure><p class="para">
+  <strong class="inline-head">Purpose.</strong> Web views allow users to:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  View web content within an app
+</p>
+</li>
+</ul>
+<p class="para">
+  <strong>Implementation.</strong> Web views are implemented in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/cl/UIWebView">UIWebView</a></code> class and discussed in the <em class="u-book"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006950" target="_self">UIWebView Class Reference</a></em>.
+</p>
+<p class="para">
+  <strong class="inline-head">Configuration.</strong> Configure web views in Interface Builder, in the Web View section of the Attributes Inspector. A few configurations cannot be made through the Attributes Inspector, so you must make them programmatically. You can set other configurations programmatically, too, if you prefer.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uiwebview_attributes_inspector_plain_2x.png" alt="image: ../Art/uiwebview_attributes_inspector_plain_2x.png" width="261" height="97" />
+</figure>
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW6"></a>
+  <h3 class="section-name" tabindex="0">Content of Web Views (Programmatic)</h3>
+  <p class="para">
+  To get your web view to display content, you simply create a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/cl/UIWebView">UIWebView</a></code> object, attach it to a window, and send it a request to load web content. Use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/instm/UIWebView/loadRequest:">loadRequest:</a></code> method to begin loading web content, the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/instm/UIWebView/stopLoading">stopLoading</a></code> method to stop loading, and the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/instp/UIWebView/loading">loading</a></code> property to find out if a web view is in the process of loading. You can create the web view object in code or in Interface Builder, but you can load content in code only.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+    <ul class="code-lines">
+        <li><code class="code-voice"><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">myWebView</span> <span class="nl">loadRequest:</span><span class="p">[</span><span class="n">NSURLRequest</span> <span class="nl">requestWithURL:</span><span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="s">@&quot;http://www.apple.com/&quot;</span><span class="p">]]];</span>
+</code></li>
+    </ul>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW7"></a>
+  <h3 class="section-name" tabindex="0">Behavior of Web Views</h3>
+  <p class="para">
+  You can set your web view to automatically scale web content to fit on the screen of the user’s device. By default, this behavior is disabled, but you can enable it by checking the Scales Page To Fit (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/instp/UIWebView/scalesPageToFit">scalesPageToFit</a></code>) box in Attributes Inspector. Enabling this property also allows the user to zoom in and out in the web view.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uiwebview_attributes_inspector_behavior_2x.png" alt="image: ../Art/uiwebview_attributes_inspector_behavior_2x.png" width="256" height="73" />
+</figure><p class="para">
+  A web view is capable of recognizing when web text is formatted as a link, address, phone number, or event. If you enable the corresponding Detection (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/instp/UIWebView/dataDetectorTypes">dataDetectorTypes</a></code>) checkboxes, users will be able to trigger the appropriate action for each type of text by clicking it in the web view. For example, they will be able to call a phone number or add an event to their calendar.
+</p><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW3"></a>
+  <h3 class="section-name" tabindex="0">Appearance of Web Views</h3>
+  <p class="para">
+  You cannot customize the appearance of a web view.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW8"></a>
+  <h3 class="section-name" tabindex="0">Using Auto Layout with Web Views</h3>
+  <p class="para">
+  You can create Auto Layout constraints between a web view and other user interface elements. You can create any type of constraint for a web view besides a baseline constraint.
+</p><p class="para">
+  You generally want the web view to fill the full width of your screen. To ensure that this happens correctly on all devices and orientations, you can create “Leading Space to Superview” and “Trailing Space to Superview” constraints, and set both values equal to 0. This will ensure that the web view remains pinned to the edges of the device screen.
+</p><p class="para">
+  For general information about using Auto Layout with iOS views, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW5" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW5">Using Auto Layout with Views</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW9"></a>
+  <h3 class="section-name" tabindex="0">Making Web Views Accessible</h3>
+  <p class="para">
+  Web views are accessible by default. The default accessibility trait for a web view is &quot;User Interaction Enabled.”
+</p><p class="para">
+  For general information about making iOS views accessible, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW3" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW3">Making Views Accessible</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW10"></a>
+  <h3 class="section-name" tabindex="0">Internationalizing Web Views</h3>
+  <p class="para">
+  Web views have no special properties related to internationalization.
+</p><p class="para">
+  For more information, see <em class="u-book"><a href="../../../MacOSX/Conceptual/BPInternational/BPInternational.html#/apple_ref/doc/uid/10000171i" target="_self">Internationalization Programming Topics</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW13"></a>
+  <h3 class="section-name" tabindex="0">Debugging Web Views</h3>
+  <p class="para">
+  When debugging issues with web views, watch for these common pitfalls: 
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong>Placing a web view inside of a scroll view.</strong> Web views handle their own scrolling. You should not embed web view objects in scroll views. If you do so, unexpected behavior can result because touch events for the two objects can be mixed up and wrongly handled.
+</p>
+</li><li class="item"><p class="para">
+  <strong>Not testing web content size.</strong> Web content comes in a variety of sizes, and it may be difficult to view content that is too large or too small for a device screen. Enable the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/instp/UIWebView/scalesPageToFit">scalesPageToFit</a></code> property to allow users to zoom in or out if you anticipate that this might be the case for your app.
+</p>
+</li><li class="item"><p class="para">
+  <strong>Not having a valid Internet connection.</strong> Since web views rely entirely on the Internet, a working connection is essential to loading web view content. Slow or disabled connections may make it appear as if your web view is not functioning properly when the actual problem is with the connection.
+</p>
+</li>
+</ul>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIWebView-SW11"></a>
+  <h3 class="section-name" tabindex="0">Elements Similar to a Web View</h3>
+  <p class="para">
+  The following element provides similar functionality to a web view:
+</p><p class="para">
+  <strong>Scroll View.</strong> Use a scroll view for scrollable content. For more information, see <span class="x-name"><a href="UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIScrollView-SW1">Scroll Views</a></span>.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a></p>
+  			<p class="next-link"><a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW1">About Controls</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2013-12-16
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

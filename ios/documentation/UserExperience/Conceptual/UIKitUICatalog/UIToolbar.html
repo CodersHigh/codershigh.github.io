@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>UIKit User Interface Catalog: Toolbars</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="UIKitUICatalog" />
+<meta id="document-version" name="document-version" content="2.1.3" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40012857" />
+<meta id="book-title" name="book-title" content="UIKit User Interface Catalog" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2013-12-16" />
+<meta id="description" name="description" content="Describes the views and controls in UIKit, drawing from the human interface guidelines for more depth." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">UIKit User Interface Catalog</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="UIKitUICatalog.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIView1-SW1" class="part-name">Views
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW1">About Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW1">Action Sheets</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1">Activity Indicators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIAlertView.html#/apple_ref/doc/uid/TP40012857-UIAlertView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIAlertView-SW1">Alert Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UICollectionView.html#/apple_ref/doc/uid/TP40012857-UICollectionView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UICollectionView-SW1">Collection Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIImageView.html#/apple_ref/doc/uid/TP40012857-UIImageView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIImageView-SW1">Image Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UILabel.html#/apple_ref/doc/uid/TP40012857-UILabel-SW1" data-id="//apple_ref/doc/uid/TP40012857-UILabel-SW1">Labels</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UINavigationBar.html#/apple_ref/doc/uid/TP40012857-UINavigationBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UINavigationBar-SW1">Navigation Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPickerView.html#/apple_ref/doc/uid/TP40012857-UIPickerView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPickerView-SW1">Picker Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIProgressView.html#/apple_ref/doc/uid/TP40012857-UIProgressView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIProgressView-SW1">Progress Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIScrollView-SW1">Scroll Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISearchBar-SW1">Search Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITabBar-SW1">Tab Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITableView.html#/apple_ref/doc/uid/TP40012857-UITableView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITableView-SW1">Table Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextView-SW1">Text Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIWebView-SW1">Web Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIControl1-SW1" class="part-name">Controls
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW1">About Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIButton-SW1">Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIDatePicker-SW1">Date Pickers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPageControl-SW1">Page Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1">Segmented Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextField-SW1">Text Fields</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISlider-SW1">Sliders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIStepper-SW1">Steppers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISwitch-SW1">Switches</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIWebView1-SW1" class="part-name">Attributes Inspector Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-CH4-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH4-SW1">Activity Indicator View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarButtonItem.html#/apple_ref/doc/uid/TP40012857-CH2-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH2-SW1">Bar Button Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarItem.html#/apple_ref/doc/uid/TP40012857-CH1-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH1-SW1">Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Button.html#/apple_ref/doc/uid/TP40012857-CH5-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH5-SW1">Button</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionReusableView.html#/apple_ref/doc/uid/TP40012857-CH28-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH28-SW1">Collection Reusable View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionView.html#/apple_ref/doc/uid/TP40012857-CH29-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH29-SW1">Collection View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionViewCell.html#/apple_ref/doc/uid/TP40012857-CH30-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH30-SW1">Collection View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control.html#/apple_ref/doc/uid/TP40012857-CH9-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH9-SW1">Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DatePicker.html#/apple_ref/doc/uid/TP40012857-CH7-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH7-SW1">Date Picker</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ImageView.html#/apple_ref/doc/uid/TP40012857-CH10-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH10-SW1">Image View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Label.html#/apple_ref/doc/uid/TP40012857-CH11-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH11-SW1">Label</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationBar.html#/apple_ref/doc/uid/TP40012857-CH12-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH12-SW1">Navigation Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationItem.html#/apple_ref/doc/uid/TP40012857-CH27-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH27-SW1">Navigation Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PageControl.html#/apple_ref/doc/uid/TP40012857-CH22-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH22-SW1">Page Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PickerView.html#/apple_ref/doc/uid/TP40012857-CH16-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH16-SW1">Picker View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProgressView.html#/apple_ref/doc/uid/TP40012857-CH17-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH17-SW1">Progress View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ScrollView.html#/apple_ref/doc/uid/TP40012857-CH6-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH6-SW1">Scroll View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SearchBar.html#/apple_ref/doc/uid/TP40012857-CH15-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH15-SW1">Search Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SegmentedControl.html#/apple_ref/doc/uid/TP40012857-CH18-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH18-SW1">Segmented Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Slider.html#/apple_ref/doc/uid/TP40012857-CH19-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH19-SW1">Slider</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Stepper.html#/apple_ref/doc/uid/TP40012857-CH20-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH20-SW1">Stepper</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Switch.html#/apple_ref/doc/uid/TP40012857-CH21-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH21-SW1">Switch</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBar.html#/apple_ref/doc/uid/TP40012857-CH13-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH13-SW1">Tab Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBarItem.html#/apple_ref/doc/uid/TP40012857-CH3-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH3-SW1">Tab Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableView.html#/apple_ref/doc/uid/TP40012857-CH25-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH25-SW1">Table View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableViewCell.html#/apple_ref/doc/uid/TP40012857-CH26-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH26-SW1">Table View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TextView.html#/apple_ref/doc/uid/TP40012857-CH24-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH24-SW1">Text View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Toolbar.html#/apple_ref/doc/uid/TP40012857-CH14-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH14-SW1">Toolbar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="View.html#/apple_ref/doc/uid/TP40012857-CH8-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH8-SW1">View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebView.html#/apple_ref/doc/uid/TP40012857-CH23-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH23-SW1">Web View</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar"></a>
+  <h2 class='chapter-name chapter-name-short'>Toolbars</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW13">
+	  				Content of Toolbars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW2">
+	  				Behavior of Toolbars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW3">
+	  				Appearance of Toolbars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW6">
+	  				Using Auto Layout with Toolbars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW8">
+	  				Making Toolbars Accessible
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW16">
+	  				Internationalizing Toolbars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW17">
+	  				Debugging Toolbars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW26">
+	  				Elements Similar to a Toolbar
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  A toolbar usually appears at the bottom of a screen, and displays one or more buttons called toolbar items. Generally, these buttons provide some sort of tool that is relevant to the screen’s current content. A toolbar is often used in conjunction with a navigation controller, which manages both the navigation bar and the toolbar. 
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uitoolbar_intro_2x.png" alt="image: ../Art/uitoolbar_intro.png" width="320" height="44" />
+</figure><p class="para">
+  <strong class="inline-head">Purpose.</strong> Toolbars allow users to: 
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  Select one of a set of performable actions within a given view
+</p>
+</li>
+</ul>
+<p class="para">
+  <strong class="inline-head">Implementation.</strong>
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  Toolbars are implemented in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/cl/UIToolbar">UIToolbar</a></code> class and discussed in <em class="u-book"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006927" target="_self">UIToolbar Class Reference</a></em>.
+</p>
+</li><li class="item"><p class="para">
+  Bar button items are implemented in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/occ/cl/UIBarButtonItem">UIBarButtonItem</a></code> class and discussed in <em class="u-book"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007519" target="_self">UIBarButtonItem Class Reference</a></em>.
+</p>
+</li><li class="item"><p class="para">
+  Bar items are implemented in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/occ/cl/UIBarItem">UIBarItem</a></code> class and discussed in <em class="u-book"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007520" target="_self">UIBarItem Class Reference</a></em>.
+</p>
+</li>
+</ul>
+<p class="para">
+  <strong class="inline-head">Configuration.</strong> Configure toolbars in Interface Builder, in the Toolbar section of the Attributes Inspector. A few configurations cannot be made through the Attributes Inspector, so you must make them programmatically. You can set other configurations programmatically, too, if you prefer.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uitoolbar_attributes_inspector_plain_2x.png" alt="image: ../Art/uitoolbar_attributes_inspector_plain_2x.png" width="261" height="69" />
+</figure><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uibarbuttonitem_attributes_inspector_plain_2x.png" alt="image: ../Art/uibarbuttonitem_attributes_inspector_plain_2x.png" width="261" height="91" />
+</figure><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uibaritem_attributes_inspector_plain_2x.png" alt="image: ../Art/uibaritem_attributes_inspector_plain_2x.png" width="261" height="112" />
+</figure>
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW13"></a>
+  <h3 class="section-name" tabindex="0">Content of Toolbars</h3>
+  <p class="para">
+  After you create a toolbar, you need to add items to the bar. Each item is a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/occ/cl/UIBarButtonItem">UIBarButtonItem</a></code> object, which you can add to the toolbar directly in Interface Builder or in code using the <code class="code-voice u-api"><!-- a href="" -->items<!-- /a --></code> property. If you want to animate changes to your toolbar items array, use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/instm/UIToolbar/setItems:animated:">setItems:animated:</a></code> method.
+</p><p class="para">
+  You can specify the content of a particular bar button item by selecting its identifier. The identifier can either be custom or take on the value of well-know system buttons such as Edit or Done. For a list of system identifiers, see <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/c/tdef/UIBarButtonSystemItem">UIBarButtonSystemItem</a></code>.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uibarbuttonitem_attributes_inspector_main_2x.png" alt="image: ../Art/uibarbuttonitem_attributes_inspector_main_2x.png" width="261" height="72" />
+</figure><p class="para">
+  If you are using a bar button item with the custom identifier, you can set some of its properties at the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/occ/cl/UIBarItem">UIBarItem</a></code> level. For example, you can specify either a custom title or image using the Title (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/occ/instp/UIBarItem/title">title</a></code>) or Image (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/occ/instp/UIBarItem/image">image</a></code>) fields.
+</p><p class="para">
+  You can assign a tag to your bar button item using the Tag (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/occ/instm/UIBarItem/tag">tag</a></code>) field. This is intended to be a unique identifier for your button so you can access it in code.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uibaritem_attributes_inspector_main_2x.png" alt="image: ../Art/uibaritem_attributes_inspector_main_2x.png" width="261" height="93" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW2"></a>
+  <h3 class="section-name" tabindex="0">Behavior of Toolbars</h3>
+  <p class="para">
+  Toolbars do not need a <span class="pediaLink" data-header="Delegation" data-contents="Delegation is a simple and powerful pattern in which one object in a program acts on behalf of, or in coordination with, another object."><a href="../../../General/Conceptual/DevPedia-CocoaCore/Delegation.html#/apple_ref/doc/uid/TP40008195-CH14" target="_self">delegate</a></span> to function properly; their parent view controller can define their behavior without implementing any delegate protocols.
+</p><p class="para">
+  When a user clicks a particular button on the toolbar, you can respond by performing some corresponding action in your app, such as deleting an email. You register the <span class="pediaLink" data-header="Target-Action" data-contents="Target-action is a design pattern in which an object holds the information necessary to send a message to another object when an event occurs."><a href="../../../General/Conceptual/Devpedia-CocoaApp/TargetAction.html#/apple_ref/doc/uid/TP40009071-CH3" target="_self">target-action</a></span> method for a bar button item as shown below.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+    <ul class="code-lines">
+        <li><code class="code-voice"><span class="n">self</span><span class="p">.</span><span class="n">myBarButtonItem</span><span class="p">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</code></li>
+        <li><code class="code-voice"><span class="n">self</span><span class="p">.</span><span class="n">myBarButtonItem</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">myAction:</span><span class="p">);</span>
+</code></li>
+    </ul>
+  </div>
+</section><p class="para">
+  Alternatively, you can Control-drag the bar button item’s selector from the Connections Inspector to the action method. For more information, see <span class="x-name"><a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW19" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW19">Target-Action Mechanism</a></span>.
+</p><p class="para">
+  You can disable or enable a given button on the toolbar by selecting the button in Interface Builder and toggling its Enabled (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/occ/instp/UIBarItem/enabled">enabled</a></code>) box.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uibaritem_attributes_inspector_main_2x.png" alt="image: ../Art/uibaritem_attributes_inspector_main_2x.png" width="261" height="93" />
+</figure><p class="para">
+  A common way to create and manage a toolbar is in conjunction with a navigation controller. The navigation controller displays the toolbar and populates it with items from the currently visible view controller. Using a navigation controller is ideal for an app design where you want to change the contents of the toolbar dynamically. However, you should not use a navigation controller if your app does not have or need a navigation bar. For more information, see <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html#/apple_ref/doc/uid/TP40011313-CH2-SW4" target="_self">“Displaying a Navigation Toolbar”</a> in <em class="u-book"><a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Introduction.html#/apple_ref/doc/uid/TP40011313" target="">View Controller Catalog for iOS</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW3"></a>
+  <h3 class="section-name" tabindex="0">Appearance of Toolbars</h3>
+  <p class="para">
+  You can customize the appearance of a toolbar by setting the properties depicted below.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uitoolbar_callouts_2x.png" alt="image: ../Art/uitoolbar_callouts.png" width="572" height="229" />
+</figure><p class="para">
+  To customize the appearance of all toolbars in your app, use the appearance proxy (for example, <code class="code-voice">[UIToolbar appearance]</code>). For more information about appearance proxies, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW18" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW18">Appearance Proxies</a></span>. 
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW14"></a>
+  <h3 class="section-name" tabindex="0">Style</h3>
+  <p class="para">
+  Toolbar have two standard appearance styles: translucent white with dark text (default) or translucent black with light text. Use the Style (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/instp/UIToolbar/barStyle">barStyle</a></code>) field to select one of these standard styles. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uitoolbar_attributes_inspector_main_2x.png" alt="image: ../Art/uitoolbar_attributes_inspector_main_2x.png" width="261" height="50" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW15"></a>
+  <h3 class="section-name" tabindex="0">Tint Color</h3>
+  <p class="para">
+  You can specify a custom tint color for the bar background using the Tint (<code class="code-voice">barTintColor</code>) field. The default background tint color is white. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/Art/uitoolbar_attributes_inspector_main_2x.png" alt="image: ../Art/uitoolbar_attributes_inspector_main_2x.png" width="261" height="50" />
+</figure><p class="para">
+  Additionally, you can set a custom tint color for the interactive elements within a toolbar bar—including the button images and text—programmatically using the <code class="code-voice">tintColor</code> property. The toolbar bar will inherit its superview’s tint color if a custom one is set, or show the default system blue color if none is set. For more information, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW17" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW17">Tint Color</a></span>. 
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW18"></a>
+  <h3 class="section-name" tabindex="0">Background Images</h3>
+  <p class="para">
+  You can set a custom background image for your toolbar using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/instm/UIToolbar/backgroundImageForToolbarPosition:barMetrics:">backgroundImageForToolbarPosition:barMetrics:</a></code> method. The image must be  the correct dimensions in order to cover the area of the toolbar correctly. Remember to set custom images for different sets of bar metrics.
+</p><p class="para">
+  If you want to use custom shadow image for the toolbar, use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/instm/UIToolbar/setShadowImage:forToolbarPosition:">setShadowImage:forToolbarPosition:</a></code> method. To show a custom shadow image, you must also set a custom background image with <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/instm/UIToolbar/backgroundImageForToolbarPosition:barMetrics:">backgroundImageForToolbarPosition:barMetrics:</a></code>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW9"></a>
+  <h3 class="section-name" tabindex="0">Translucency</h3>
+  <p class="para">
+  Toolbars are translucent by default on iOS 7. Additionally, there is a system blur applied to all toolbars. This allows your content to show through underneath the bar. 
+</p><p class="para">
+  These settings automatically apply when you set any style for <code class="code-voice">barStyle</code> or any custom color for <code class="code-voice">barTintColor</code>. If you prefer, you can make the toolbar opaque by setting the <code class="code-voice">translucent</code> property to <code class="code-voice">NO</code> programmatically. In this case, the bar draws an opaque background using black if the toolbar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleBlack">UIBarStyleBlack</a></code> style, white if the toolbar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleDefault">UIBarStyleDefault</a></code>, or the toolbar’s <code class="code-voice">barTintColor</code> if a custom value is defined.
+</p><p class="para">
+  If the toolbar has a custom background image, the default translucency is automatically inferred from the average alpha values of the image. If the average alpha is less than 1.0, the toolbar will be translucent by default; if the average alpha is 1.0, the toolbar will be opaque by default. If you set the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/instp/UIToolbar/translucent">translucent</a></code> property to <code class="code-voice">YES</code> on a toolbar with an opaque custom background image, the toolbar makes the image translucent. If you set the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/occ/instp/UIToolbar/translucent">translucent</a></code> property to <code class="code-voice">NO</code> on a toolbar with a translucent custom background image, the toolbar provides an opaque background for the image using black if the toolbar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleBlack">UIBarStyleBlack</a></code> style, white if the toolbar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleDefault">UIBarStyleDefault</a></code>, or the toolbar’s <code class="code-voice">barTintColor</code> if a custom value is defined.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW4"></a>
+  <h3 class="section-name" tabindex="0">Bar Button Item Icons</h3>
+  <p class="para">
+  Any bar button in a toolbar can have a custom image instead of text. You can provide this image to your bar button item during initialization. Note that a bar button image will be automatically rendered as a template image within a toolbar, unless you explicitly set its rendering mode to <code class="code-voice">UIImageRenderingModeAlwaysOriginal</code>. For more information, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW7" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW7">Template Images</a></span>.
+</p>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW6"></a>
+  <h3 class="section-name" tabindex="0">Using Auto Layout with Toolbars</h3>
+  <p class="para">
+  You can create Auto Layout constraints between a toolbar and other user interface elements. You can create any type of constraint for a toolbar besides a baseline constraint.
+</p><p class="para">
+  You cannot create Auto Layout constraints for individual bar button items. However, you can use bar button items with the Fixed Space and Flexible Space identifiers to determine the spacing of buttons on your toolbar.
+</p><p class="para">
+  For general information about using Auto Layout with iOS views, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW5" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW5">Using Auto Layout with Views</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW8"></a>
+  <h3 class="section-name" tabindex="0">Making Toolbars Accessible</h3>
+  <p class="para">
+  Toolbars are accessible by default.
+</p><p class="para">
+  For general information about making iOS views accessible, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW3" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW3">Making Views Accessible</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW16"></a>
+  <h3 class="section-name" tabindex="0">Internationalizing Toolbars</h3>
+  <p class="para">
+  To internationalize a toolbar, you must provide localized strings for all button titles. Remember to test all localizations, as button size may change unexpectedly when using localized strings.
+</p><p class="para">
+  For more information, see <em class="u-book"><a href="../../../MacOSX/Conceptual/BPInternational/BPInternational.html#/apple_ref/doc/uid/10000171i" target="_self">Internationalization Programming Topics</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW17"></a>
+  <h3 class="section-name" tabindex="0">Debugging Toolbars</h3>
+  <p class="para">
+  When debugging issues with toolbars, watch for this common pitfall: 
+</p><p class="para">
+  <strong>Trying to customize the content of a non-custom bar button item.</strong> If you try to set a custom title or image—at the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarItem_Class/Reference/Reference.html#/apple_ref/occ/cl/UIBarItem">UIBarItem</a></code> level—for a bar button item with a non-custom identifier, the bar button item’s identifier will automatically switch to the custom type in Interface Builder. 
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIToolbar-SW26"></a>
+  <h3 class="section-name" tabindex="0">Elements Similar to a Toolbar</h3>
+  <p class="para">
+  The following elements provide similar functionality to a toolbar:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong>Tab Bar.</strong> A toolbar is most similar to a tab bar—both can appear at the bottom of the screen. Use a toolbar to display controls that perform specific functions, and use a tab bar to allow the user to switch between different views or subtasks. For more information, see <span class="x-name"><a href="UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITabBar-SW1">Tab Bars</a></span>.
+</p>
+</li><li class="item"><p class="para">
+  <strong>Navigation Bar.</strong> For more information, see <span class="x-name"><a href="UINavigationBar.html#/apple_ref/doc/uid/TP40012857-UINavigationBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UINavigationBar-SW1">Navigation Bars</a></span>.
+</p>
+</li>
+</ul>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextView-SW1">Text Views</a></p>
+  			<p class="next-link"><a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIWebView-SW1">Web Views</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2013-12-16
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

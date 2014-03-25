@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Auto Layout Guide: Adopting Auto Layout</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40010853">
+	<meta id="document-version" name="document-version" content="2.4.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="TP40010853-CH15">
+    <meta id="date" name="date" content="2013-09-18">
+    <meta id="description" name="description" content="Describes the constraint-based system for laying out user interface elements.">
+    <meta id="book-title" name="book-title" content="Auto Layout Guide">
+    <meta id="book-name" name="book-name" content="AutolayoutPG">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}">
+    <meta name="pdf" contents="../AutolayoutPG.pdf" /><link id="book-pdf" media="print" rel="alternate" type="application/pdf" href="../AutolayoutPG.pdf" />
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Adopting Auto Layout">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Auto Layout Guide" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="../VisualFormatLanguage/VisualFormatLanguage.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../ImplementingView/ImplementingView.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40010853-CH15" title="Adopting Auto Layout"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Auto Layout Guide</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../VisualFormatLanguage/VisualFormatLanguage.html'>Next</a><a class='previousLink' rel='prev' href='../ImplementingView/ImplementingView.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40010853-CH15-SW1" title="Adopting Auto Layout"></a><h1 id="pageTitle">Adopting Auto Layout</h1><p>Views that are aware of Auto Layout can coexist in a window with views that are not. That is, an existing project can incrementally adopt Auto Layout—you don’t have to make it work in your entire app all at once. Instead, you can transition your app to use Auto Layout one view at a time using the property <code><!--a target="_self" -->translatesAutoresizingMaskIntoConstraints<!--/a--></code>.</p><p>When this property is <code>YES</code>, which it is by default, the <strong>autoresizing mask</strong> of a view is translated into constraints. For example, if a view is configured like the one below, and  <code>translatesAutoresizingMaskIntoConstraints</code> is <code>YES</code>, then the constraints <code>|-20-[button]-20-|</code> and <code>V:|-20-[button(20)]</code> are added to the view’s superview. The net effect is that unaware views behave as they did in versions of OS X prior to version 10.7.</p><figure class="figure"><a name="//apple_ref/doc/uid/TP40010853-CH15-SW2"></a><img src="../Art/springsAndStruts.png" alt="../Art/springsAndStruts.png" width="558" height="214"></figure><p>If you move the button <code>15</code> points to the left (including by calling <code>setFrame:</code> at runtime), the new constraints would be <code>|-5-[button]-35-|</code> and <code>V:|-20-[button(20)]</code>. </p><p>For views that are aware of Auto Layout, in most circumstances you want <code>translatesAutoresizingMaskIntoConstraints</code> to be <code>NO</code>. The reason is that the constraints generated by translating the autoresizing mask are already sufficient to completely specify the frame of a view given its superview’s frame, which is generally too much. For example, this translation would prevent a button from automatically assuming its optimal width when its title is changed.</p><p>The principal circumstance in which you should <em>not</em> call <code>setTranslatesAutoresizingMaskIntoConstraints:</code> is when you are not the person who specifies a view’s relation to its container. For example, an <code>NSTableRowView</code> instance is placed by <code>NSTableView</code>. It might do this by allowing the autoresizing mask to be translated into constraints, or it might not. This is a private implementation detail. Other views on which you should not call <code>setTranslatesAutoresizingMaskIntoConstraints:</code> include an <code>NSTableCellView</code> object, a subview of <code>NSSplitView</code>, a view of <code>NSTabViewItem</code>, or the content view of an <code>NSPopover</code>, <code>NSWindow</code>, or <code>NSBox</code> object. For those familiar with classic Cocoa layout: If you would not call <code>setAutoresizingMask:</code> on a view in classic style, you should not call <code>setTranslatesAutoresizingMaskIntoConstraints:</code> under Auto Layout.</p><p>If you have a view that does its own custom layout by calling <code>setFrame:</code>, your existing code should work. Just don’t call <code>setTranslatesAutoresizingMaskIntoConstraints:</code> with the argument <code>NO</code> on views that you place manually.</p>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../VisualFormatLanguage/VisualFormatLanguage.html'>Next</a><a class='previousLink' rel='prev' href='../ImplementingView/ImplementingView.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-09-18</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

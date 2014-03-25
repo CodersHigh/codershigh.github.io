@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2280: Newsstand FAQ</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40011215">
+	<meta id="document-version" name="document-version" content="2.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40011215-CH1">
+    <meta id="date" name="date" content="2012-01-19">
+    <meta id="description" name="description" content="TN2280: answers frequently asked questions about Newsstand and the Newsstand Kit frameworks.">
+    <meta id="book-title" name="book-title" content="Newsstand FAQ">
+    <meta id="book-name" name="book-name" contents="DTS_TN2280_NewsstandFAQ">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Framework/Core Services Layer/NewsstandKit}, {Topic/General}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2280">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Newsstand FAQ" type="text/html" href="index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40011215" title="Technical Note TN2280"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Newsstand FAQ</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40011215-CH1-DontLinkElementID_2" title="Technical Note TN2280"></a><div class="dtsDocNumber">Technical Note TN2280</div><h1 id="pageTitle">Newsstand FAQ</h1><p>New in iOS 5.0, Newsstand provides a central place for users to read magazines and newspapers. Publishers who want to deliver their magazine and newspaper content through Newsstand can create their own iOS applications using the Newsstand Kit framework. This document intends to supplement the available technical documentation on the Newsstand Kit framework by answering frequently asked questions from Newsstand app developers.</p>
+
+   
+    <div class="outerMiniTOC">
+
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-NEWSSTAND_APP_ICONS">Newsstand App Icons</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-NEWSSTAND_APP_ICONS-WHAT_ARE_THE_SIZE_GUIDELINES_FOR_NEWSSTAND_APP_ICONS_">What are the size guidelines for Newsstand app icons?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-NEWSSTAND_APP_ICONS-I_VE_MODIFIED_MY_INFO_PLIST_FILE_TO_SPECIFY_A_NEW_IMAGE_FOR_MY_NEWSSTAND_ICON__AND_HAVE_STYLED_IT_WITH_A_BINDING_EDGE_AND_BINDING_TYPE___WHY_ISN_T_THIS_STYLING_SHOWN_ON_MY_APP_IN_THE_NEWSSTAND_VIEW_">I've modified my Info.plist file to specify a new image for my Newsstand icon, and have styled it with a binding edge and binding type.  Why isn't this styling shown on my app in the Newsstand view?</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-SELLING_ISSUES">Selling Issues</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-TNTAG2">How should I sell issues of my publication within my Newsstand app?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-SELLING_ISSUES-USERS_CAN_BROWSE_NEWSSTAND_APPS_VIA_A_STORE_BUTTON_IN_THE_NEWSSTAND___WILL_MY_NEWSSTAND_APP_STILL_BE_INCLUDED_IN_SEARCH_RESULTS_RETURNED_BY_THE_APP_STORE_APP_ON_IOS__AND_BY_ITUNES_ON_OS_X_">Users can browse Newsstand apps via a Store button in the Newsstand.  Will my Newsstand app still be included in search results returned by the App Store app on iOS, and by iTunes on OS X?</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT">Delivering Your Content</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-HOW_IS_THE_PUSH_NOTIFICATION_THAT_INITIATES_THE_NEWSSTAND_BACKGROUND_DOWNLOAD_DIFFERENT_FROM_OTHER_PUSH_NOTIFICATIONS___WILL_I_HAVE_TO_CHANGE_OR_MODIFY_MY_BACKEND_INFRASTRUCTURE_">How is the push notification that initiates the Newsstand background download different from other push notifications?  Will I have to change or modify my backend infrastructure?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-CAN_I_INITIATE_A_BACKGROUND_DOWNLOAD_WITH_A_PUSH_NOTIFICATION_IN_A_NON_NEWSSTAND_APP_">Can I initiate a background download with a push notification in a non-Newsstand app?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-IS_MY_NEWSSTAND_APP_REQUIRED_TO_USE_NEWSSTAND_KIT_S_BACKGROUND_DOWNLOADING_FEATURE_">Is my Newsstand app required to use Newsstand Kit's background downloading feature?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-CAN_USERS_DISABLE_BACKGROUND_DOWNLOADING_">Can users disable background downloading?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-ONCE_MY_APP_HAS_RECEIVED_THE_NOTIFICATION__CAN_I_INITIATE_THE_BACKGROUND_DOWNLOAD_FROM_A_THREAD_OTHER_THAN_THE_MAIN_THREAD_">Once my app has received the notification, can I initiate the background download from a thread other than the main thread?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-SHOULD_I_PACKAGE_MY_ISSUE_FOR_BACKGROUND_DOWNLOAD_INTO_ONE_LARGE_FILE__OR_DOWNLOAD_EACH_ASSET_SEPARATELY_">Should I package my issue for background download into one large file, or download each asset separately?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-THE_CONTENT_OF_MY_PUBLICATION_NEEDS_TO_BE_UPDATED_THROUGHOUT_THE_DAY___CAN_I_INITIATE_A_NEWSSTAND_BACKGROUND_DOWNLOAD_MORE_THAN_ONCE_IN_A_24_HOUR_PERIOD_">The content of my publication needs to be updated throughout the day.  Can I initiate a Newsstand background download more than once in a 24-hour period?</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-MANAGING_CONTENT">Managing Content</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-MANAGING_CONTENT-WILL_ALL_OF_MY_ISSUES_BE_AUTOMATICALLY_STORED_ON_THE_USER_S_DEVICE__INDEFINITELY_">Will all of my issues be automatically stored on the user's device, indefinitely?</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011215-CH1-MANAGING_CONTENT-CAN_I_MOVE_MY_ISSUES_OUT_OF_THE_DEFAULT_NEWSSTAND_STORAGE_LOCATION_ONCE_THEY_RE_DOWNLOADED__OR_DOWNLOAD_ISSUES_TO_ANOTHER_LOCATION_">Can I move my issues out of the default Newsstand storage location once they're downloaded, or download issues to another location?</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011215-RevisionHistory-DontLinkElementID_1">Document Revision History</a>
+                
+                
+                
+            </div>
+            
+        
+    </div>
+
+<section><a name="//apple_ref/doc/uid/DTS40011215-CH1-NEWSSTAND_APP_ICONS" title="Newsstand App Icons"></a><h2 class="jump">Newsstand App Icons</h2><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-NEWSSTAND_APP_ICONS-WHAT_ARE_THE_SIZE_GUIDELINES_FOR_NEWSSTAND_APP_ICONS_" title="What are the size guidelines for Newsstand app icons?"></a><h3 class="jump">What are the size guidelines for Newsstand app icons?</h3><p>On iPhone, the length of the longest edge of your Newsstand app icon should be at least 90 pixels. On iPhone 4 retina display your icon dimensions should be doubled, meaning that the longest edge should be at least 180 pixels. On iPad the longest edge of your Newsstand app icon should be at least 126 pixels.</p><p>In all cases, the longest edge may be a horizontal or vertical edge. If the longest edge is horizontal, the aspect ratio should not exceed 2:1. If the longest edge is vertical, the aspect ratio should not be smaller than 1:2.</p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-NEWSSTAND_APP_ICONS-I_VE_MODIFIED_MY_INFO_PLIST_FILE_TO_SPECIFY_A_NEW_IMAGE_FOR_MY_NEWSSTAND_ICON__AND_HAVE_STYLED_IT_WITH_A_BINDING_EDGE_AND_BINDING_TYPE___WHY_ISN_T_THIS_STYLING_SHOWN_ON_MY_APP_IN_THE_NEWSSTAND_VIEW_" title="I've modified my Info.plist file to specify a new image for my Newsstand icon, and have styled it with a binding edge and binding type.  Why isn't this styling shown on my app in the Newsstand view?"></a><h3 class="jump">I've modified my Info.plist file to specify a new image for my Newsstand icon, and have styled it with a binding edge and binding type.  Why isn't this styling shown on my app in the Newsstand view?</h3><p>If you specify a newspaper binding type with <code>UINewsstandBindingTypeNewspaper</code>, you'll see a subtle fold at the bottom of your icon in the Newsstand view. All other visual styling — magazine staples, magazine pages, and the stacked newspaper pages — is only shown in the iOS app switcher.</p></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-SELLING_ISSUES" title="Selling Issues"></a><h2 class="jump">Selling Issues</h2><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-TNTAG2" title="How should I sell issues of my publication within my Newsstand app?"></a><h3 class="jump">How should I sell issues of my publication within my Newsstand app?</h3><p>Your Newsstand app should always offer the option to purchase an auto-renewable subscription to your publication. Additionally you may sell single issues as individual non-consumable in-app purchase items. </p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-SELLING_ISSUES-USERS_CAN_BROWSE_NEWSSTAND_APPS_VIA_A_STORE_BUTTON_IN_THE_NEWSSTAND___WILL_MY_NEWSSTAND_APP_STILL_BE_INCLUDED_IN_SEARCH_RESULTS_RETURNED_BY_THE_APP_STORE_APP_ON_IOS__AND_BY_ITUNES_ON_OS_X_" title="Users can browse Newsstand apps via a Store button in the Newsstand.  Will my Newsstand app still be included in search results returned by the App Store app on iOS, and by iTunes on OS X?"></a><h3 class="jump">Users can browse Newsstand apps via a Store button in the Newsstand.  Will my Newsstand app still be included in search results returned by the App Store app on iOS, and by iTunes on OS X?</h3><p>Yes. Newsstand apps are included in search results returned within the App Store app on iOS, and within iTunes on OS X. </p><p>Users also may browse the iTunes Store by category. In iTunes Connect you may set the Primary Category on your Newsstand app to any of the available categories, such as Games, Lifestyle, or Business. The Secondary Category for Newsstand apps is automatically set to the Newsstand category.</p></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT" title="Delivering Your Content"></a><h2 class="jump">Delivering Your Content</h2><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-HOW_IS_THE_PUSH_NOTIFICATION_THAT_INITIATES_THE_NEWSSTAND_BACKGROUND_DOWNLOAD_DIFFERENT_FROM_OTHER_PUSH_NOTIFICATIONS___WILL_I_HAVE_TO_CHANGE_OR_MODIFY_MY_BACKEND_INFRASTRUCTURE_" title="How is the push notification that initiates the Newsstand background download different from other push notifications?  Will I have to change or modify my backend infrastructure?"></a><h3 class="jump">How is the push notification that initiates the Newsstand background download different from other push notifications?  Will I have to change or modify my backend infrastructure?</h3><p>The notification that initiates the Newsstand background download is the same as any other push notification, with two exceptions. The first difference is the payload — your Newsstand notification should include the <code>content-available </code>property (with a value of 1) in the JSON payload. Second, your app may only initiate a background download once every 24 hours. iOS will ignore notifications that try to initiate a background download more than once in a 24 hour period. </p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-CAN_I_INITIATE_A_BACKGROUND_DOWNLOAD_WITH_A_PUSH_NOTIFICATION_IN_A_NON_NEWSSTAND_APP_" title="Can I initiate a background download with a push notification in a non-Newsstand app?"></a><h3 class="jump">Can I initiate a background download with a push notification in a non-Newsstand app?</h3><p>No, this feature is only for Newsstand apps.</p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-IS_MY_NEWSSTAND_APP_REQUIRED_TO_USE_NEWSSTAND_KIT_S_BACKGROUND_DOWNLOADING_FEATURE_" title="Is my Newsstand app required to use Newsstand Kit's background downloading feature?"></a><h3 class="jump">Is my Newsstand app required to use Newsstand Kit's background downloading feature?</h3><p>If you're delivering an issue to a user as part of a subscription, you must deliver it via background download. </p><p>In general, users will expect Newsstand apps to have content downloaded in the background, ready and available for offline viewing. If a user hasn't purchased a subscription for new issues, you may use Newsstand Kit's background downloading feature to deliver other content. Keep in mind that your Newsstand app should not deliver or manage content in a way that ends up consuming large amounts available storage space on a user's device.</p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-CAN_USERS_DISABLE_BACKGROUND_DOWNLOADING_" title="Can users disable background downloading?"></a><h3 class="jump">Can users disable background downloading?</h3><p>Yes, users can disable Newsstand's push notification-initiated background downloading on a per-app basis in Settings. You can determine whether background downloading has been disabled for your app by looking for <code>UIRemoteNotificationTypeNewsstandContentAvailability</code> in the set of enabled types returned by UIApplication's <code>enabledRemoteNotificationTypes</code> property.</p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-ONCE_MY_APP_HAS_RECEIVED_THE_NOTIFICATION__CAN_I_INITIATE_THE_BACKGROUND_DOWNLOAD_FROM_A_THREAD_OTHER_THAN_THE_MAIN_THREAD_" title="Once my app has received the notification, can I initiate the background download from a thread other than the main thread?"></a><h3 class="jump">Once my app has received the notification, can I initiate the background download from a thread other than the main thread?</h3><p>In iOS 5.0, you should initiate the background download from the main thread.</p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-SHOULD_I_PACKAGE_MY_ISSUE_FOR_BACKGROUND_DOWNLOAD_INTO_ONE_LARGE_FILE__OR_DOWNLOAD_EACH_ASSET_SEPARATELY_" title="Should I package my issue for background download into one large file, or download each asset separately?"></a><h3 class="jump">Should I package my issue for background download into one large file, or download each asset separately?</h3><p>Packaging your issue assets into one compressed file is best for system performance, and it lets you determine the total download time for your issue.</p><p>Since your app has to be woken up and notified whenever a download finishes, downloading each issue asset individually is not the best approach for system performance. And, when you download each asset individually, it's impossible to calculate the total download time for your issue. </p><p>If you cannot deliver your issue in a single compressed file, then you should group your assets into sets of downloads that make sense for your app. For example, you might group the assets that are needed to show the first page of your issue into a single download.</p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-DELIVERING_YOUR_CONTENT-THE_CONTENT_OF_MY_PUBLICATION_NEEDS_TO_BE_UPDATED_THROUGHOUT_THE_DAY___CAN_I_INITIATE_A_NEWSSTAND_BACKGROUND_DOWNLOAD_MORE_THAN_ONCE_IN_A_24_HOUR_PERIOD_" title="The content of my publication needs to be updated throughout the day.  Can I initiate a Newsstand background download more than once in a 24-hour period?"></a><h3 class="jump">The content of my publication needs to be updated throughout the day.  Can I initiate a Newsstand background download more than once in a 24-hour period?</h3><p>Allowing multiple background downloads for multiple apps would drain system resources, so Newsstand apps are limited to one background download initiated by push notification each day. If you send additional notifications to a device that attempt to initiate a background download, those notifications will be delivered to the device but ignored by Newsstand Kit.</p><p>If you want your Newsstand app to deliver breaking news, consider sending an issue via background download and downloading a small amount of additional, up-to-the-minute content when the user launches your app.</p><p>For test purposes on development devices only, you can override the built-in limit and initiate more than one background download in a 24-hour period by setting the user default  @"<code>NKDontThrottleNewsstandContentNotifications</code>". See Listing 1.</p><a name="//apple_ref/doc/uid/DTS40011215-CH1-SOURCECODE1" title="Listing 1Setting the user default NKDontThrottleNewsstandContentNotifications"></a><p class="codesample clear"><strong class="caption_number">Listing 1</strong>&nbsp;&nbsp;Setting the user default NKDontThrottleNewsstandContentNotifications</p><div class="codesample clear"><table><tr><td scope="row"><pre>[[NSUserDefaults standardUserDefaults]setBool: YES forKey:@"NKDontThrottleNewsstandContentNotifications"];<span></span></pre></td></tr></table></div><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40011215-CH1-DontLinkElementID_3" title="Note"></a><p><strong>Note:</strong>&nbsp;A development device refers to a device which has been recognized in Xcode Organizer as having the "Use for Development" checkbox enabled.</p><p></p></aside></div></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-MANAGING_CONTENT" title="Managing Content"></a><h2 class="jump">Managing Content</h2><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-MANAGING_CONTENT-WILL_ALL_OF_MY_ISSUES_BE_AUTOMATICALLY_STORED_ON_THE_USER_S_DEVICE__INDEFINITELY_" title="Will all of my issues be automatically stored on the user's device, indefinitely?"></a><h3 class="jump">Will all of my issues be automatically stored on the user's device, indefinitely?</h3><p>Newsstand Kit provides a managed repository for your issues located at the <code>contentURL</code> for the <code>NKIssue</code>. This managed repository acts as a cache for the content you host on your servers, and like any cache is susceptible to eviction as system resources become low. </p><p>In such an event, the information you provide Newsstand Kit via the <code>currentlyReadingIssue</code> property and the <code>date</code> parameter in <code>addIssueWithName:date:</code> helps Newsstand Kit to prioritize which content is most critical for the user as it evicts elements from the cache. Your Newsstand app should be capable of re-downloading back issues at the user's request, should such resource constraints arise.</p></section><section><a name="//apple_ref/doc/uid/DTS40011215-CH1-MANAGING_CONTENT-CAN_I_MOVE_MY_ISSUES_OUT_OF_THE_DEFAULT_NEWSSTAND_STORAGE_LOCATION_ONCE_THEY_RE_DOWNLOADED__OR_DOWNLOAD_ISSUES_TO_ANOTHER_LOCATION_" title="Can I move my issues out of the default Newsstand storage location once they're downloaded, or download issues to another location?"></a><h3 class="jump">Can I move my issues out of the default Newsstand storage location once they're downloaded, or download issues to another location?</h3><p>You should not store or move your issues to a location other than the Newsstand managed repository, such as the Documents folder for your app. Doing so can result in a very long backup times, and a shortage of storage space. </p><p>Whether purchased as part of a subscription or as an individual non-consumable item, issues should always be stored in the default Newsstand storage location. This lets iOS manage the available storage space on a system-wide basis, delivering the best experience for users.</p></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><br/><hr/><a name="//apple_ref/doc/uid/DTS40011215-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40011215-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2012-01-19</td><td><p>Added mention of the user default boolean key setting - NKDontThrottleNewsstandContentNotifications as a way to allow multiple downloads per day while testing in the sandbox only.</p></td></tr><tr><td scope="row">2011-09-30</td><td><p>Added detailed information about icon sizes for different devices, and categories.</p></td></tr><tr><td scope="row">2011-09-08</td><td><p>New document that 
+					answers frequently asked questions about Newsstand and the Newsstand Kit frameworks.</p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2012 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2012-01-19</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

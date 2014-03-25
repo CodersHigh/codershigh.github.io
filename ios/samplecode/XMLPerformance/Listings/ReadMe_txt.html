@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>XMLPerformance: ReadMe.txt</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Sample Code">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40008094">
+	<meta id="document-version" name="document-version" content="4.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40008094-ReadMe_txt">
+    <meta id="date" name="date" content="2013-03-29">
+    <meta id="description" name="description" content="Performance and parsing XML, focusing on speed, memory footprint, and user experience.">
+    <meta id="book-title" name="book-title" content="XMLPerformance">
+    <meta id="book-name" name="book-name" content="DTS_SC1556_XMLPerformance">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Sample Code}, {Framework/Core Services Layer/Foundation}, {Topic/Performance}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="ReadMe.txt">
+    <meta id="resources-uri" name="resources-uri" content="../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="XMLPerformance" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="main_m.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../Introduction/Intro.html">
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40008094-ReadMe_txt" title="ReadMe.txt"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>XMLPerformance</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='main_m.html'>Next</a><a class='previousLink' rel='prev' href='../Introduction/Intro.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40008094-ReadMe_txt-DontLinkElementID_23" title="ReadMe.txt"></a>
+    <h1 id="pageTitle">ReadMe.txt</h1>
+    <div class="codesample clear"><table><tr><td scope="row"><pre>XMLPerformance<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>ABSTRACT<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>This sample explores two approaches to parsing XML, focusing on performance with respect to speed, memory footprint, and user experience. The XML data used is the current "Top 300" songs from the iTunes store. The data itself is not particularly important to the sample - it was chosen because of its simplicity, availability, and because the size (approximately 850KB) is sufficient to demonstrate the performance issues central to the sample.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>DETAILED DESCRIPTION<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>The iPhone SDK provides two APIs for parsing XML. At the Objective C level, NSXMLParser implements an event-driven approach with a delegate object implementing methods for handling each of the "events" the parser encounters during its single pass over the XML data. Events most commonly of interest are the beginning and ending of elements and character data within elements. The other API in the SDK, the C library "libxml2", has a similar approach known as SAX ("Simple API for XML"). Because it is C, callback functions are used instead of delegate methods, and the parameters are C strings instead of NSString objects. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>This sample allows the user to choose between these two approaches for parsing a simple RSS feed. The feed, iTunes' "Top 300" songs, is parsed into an array of "Song" objects displayed in a table. Details about a song can be viewed by selecting the song. The sample also tracks statistics related to the parse: the amount of time required to download the data, and the amount of time spent parsing the data. These statistics are stored in a SQLite database in the application's Documents directory, and the average (mean) of all runs with each parser can be viewed in a table. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>The process for linking and using libraries is slightly more complex than the same process for frameworks. The primary consideration is making it possible for the compiler to find the header file(s) associated with the library. With a framework, the executable code and header files are packaged together in a way that Xcode understands and placed in locations that Xcode has knowledge of via the SDK. Library header files, on the other hand, are typically found in a different location than the executable itself. Though they are still part of the SDK, it is necessary to specify the location in the project build settings. We use the "Header Search Paths" setting for this purpose. The SDKROOT variable should prefix the path as the location where the SDK is installed or the SDK versions available may differ. For this project, the setting is:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>PERFORMANCE<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>The focus of this sample is performance. There are three areas of concern: speed, memory, and user experience. For applications dealing with small amounts of XML data, none of these may be significant. In this case, developers should use the API with which they are most comfortable. For most developers, this will be the NSXMLParser API in the Foundation framework. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>For large datasets, developers should test their application with an iPhone or iPod touch and evaluate the application's performance with respect to speed, memory, and user experience. It's important that this be done with a device and not with the iPhone Simulator because the Simulator does not accurately reflect the memory and processor constraints. The techniques implemented in this sample can help the developer improve performance and memory usage, if it's determined that such a need exists.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Memory:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>NSXMLParser be used with either a NSURL or a NSData. In both cases, all of the XML data is loaded into memory. On iOS, this can be a very significant consideration. The actual parsing will require additional memory, particularly with intermediate objects created and autoreleased.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>With libxml, you can parse XML data in chunks. This alleviates the need to have all of the data in memory at one time, possibly resulting in a considerably smaller memory footprint. This could be applied to data downloaded using NSURLConnection. The NSURLConnection delegate method connection:didReceiveData: may be called multiple times during a download, and rather than accumulate the data, it can be immediately passed to the libxml parser. When the parser is finished, the data can be discarded. In addition, libxml callbacks use C strings rather than Objective C objects. In general, the overhead for objects is not significant, but in large numbers, in tight loops, this adds up. In particular, when the character data in an XML element is parsed, that data is delivered as one or more parse "events". For NSXMLParser, these events result as the delegate method parser:foundCharacters:, with an autoreleased NSString as the container for the character data. In libxml, the events call in the registered callback function, passing a pointer to a C string buffer. This offers another opportunity to optimize on memory management. Rather than creating an object with each call of the function, the character data can be accumulated in a separate buffer, until all data for the current XML element has been handled. Only at that point does a NSString object need to be created.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Speed:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Speed is obviously important to users, as waiting for long operations to complete is not a good experience. In addition, speed is an indirect reflection of processor load, which is in turn tied to power consumption. Hence, an more rapidly executing code path not only provides a better user experience with the application itself, it consumes less power, leading to longer battery life and a better experience for the overall device. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>User Experience:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>At times CPU and/or IO intensive operations cannot be avoided. A positive user experience can still be provided in these cases by offloading work to separate threads, using NSThread, NSOperation, or lower level threading APIs such as POSIX threads(pthreads). This sample involves both lengthy IO (downloading the XML data) and CPU intensive work (parsing the XML). To keep the interface responsive, this work is done in a secondary thread. Periodically, the secondary thread updates the primary thread with the results of the work it has done. In turn, the user interface displays the new data to the user. If this approach were not used, the user would experience 3 or more seconds in which the application would appear to hang while the data was being downloaded and parsed.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Metrics:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>This sample includes some screenshots and a sample trace document from Instruments. The first screenshot, "StatisticsScreenshot.png", is captured from the application, showing the statistics that might be seen after running each parser several times. The second, "ObjectAllocScreenshot.png", shows the Instruments window with one run from each parser. The top run is a run with the LibXMLParser. Note the significantly smaller peak memory usage. In addition, the trace document itself, included as a zipped archive, can be opened and examined. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>SYSTEM REQUIREMENTS<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Xcode 4.6, iOS 6.0 SDK<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>PACKAGING LIST<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>AppDelegate<span></span></pre></td></tr><tr><td scope="row"><pre>Adds the main UITabBarController's view to the application's window.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>ParserChoiceViewController<span></span></pre></td></tr><tr><td scope="row"><pre>Provides an interface for choosing and running one of the two available parsers. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>SongsViewController<span></span></pre></td></tr><tr><td scope="row"><pre>Creates and runs an instance of the parser type chosen by the user, and displays the parsed songs in a table. Selecting a row in the table navigates to a detail view for that song. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>DetailViewController<span></span></pre></td></tr><tr><td scope="row"><pre>Displays details of a single parsed song.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Song<span></span></pre></td></tr><tr><td scope="row"><pre>Contains the parsed information about a song.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>iTunesRSSParser<span></span></pre></td></tr><tr><td scope="row"><pre>Base class for the two parsers, this class handles interactions with a delegate object (the SongsViewController in this sample) and provides basic functionality common to both parsers.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>LibXMLParser<span></span></pre></td></tr><tr><td scope="row"><pre>Subclass of iTunesRSSParser that uses libxml2 for parsing the XML data.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>CocoaXMLParser<span></span></pre></td></tr><tr><td scope="row"><pre>Subclass of iTunesRSSParser that uses the Foundation framework's NSXMLParser for parsing the XML data.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>StatsViewController<span></span></pre></td></tr><tr><td scope="row"><pre>Displays statistics about each parser, including its average time to download the XML data, parse it, and the total average time from beginning the download to completing the parse.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Statistics<span></span></pre></td></tr><tr><td scope="row"><pre>Collection of C functions for database storage of parser performance metrics. These functions manage all interactions with the SQLite database, including both writes to the database and queries for aggregate statistics about the measurements. <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>main.m<span></span></pre></td></tr><tr><td scope="row"><pre>Launches the application.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>CHANGES FROM PREVIOUS VERSIONS<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>1.4 - Fixed auto release pool crasher bug, updated to adopt current best practices for Objective-C, now using Automatic Reference Counting (ARC), slightly improved UI.<span></span></pre></td></tr><tr><td scope="row"><pre>1.3 - Minor updates for iOS 4.0.<span></span></pre></td></tr><tr><td scope="row"><pre>1.2 - Fixed a memory leak in LibXMLParser implementation of the NSURLConnection delegate method -connectionDidFinishLoading:. Improved autorelease pool management in Cocoa parser.<span></span></pre></td></tr><tr><td scope="row"><pre>1.1 - Updated user interface for iPhone SDK 3.0 and fixed bug in Xcode build setting for header search paths.<span></span></pre></td></tr><tr><td scope="row"><pre>1.0 - Initial version published.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>Copyright (C) 2010-2013 Apple Inc. All rights reserved.<span></span></pre></td></tr></table></div>
+
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='main_m.html'>Next</a><a class='previousLink' rel='prev' href='../Introduction/Intro.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-03-29</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

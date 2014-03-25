@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>iOS Human Interface Guidelines: Bars</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">iOS Human Interface Guidelines</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="MobileHIG.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI Design Basics
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">Designing for iOS 7</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS App Anatomy</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">Starting and Stopping</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">Layout</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">Navigation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">Modal Contexts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">Interactivity and Feedback</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Animation.html#/apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">Animation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">Branding</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">Color and Typography</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">Icons and Graphics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">Terminology and Wording</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Integration.html#/apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">Integrating with iOS</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">Design Strategies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">Design Principles</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Process.html#/apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">From Concept to Product</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">Case Study: From Desktop to iOS</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">Running on iPhone 5</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS Technologies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">Social Media</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">Game Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">Notification Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Printing.html#/apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">AirPrint</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">Accessing User Data</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EditMenu.html#/apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">Edit Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UndoRedo.html#/apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">Undo and Redo</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="KeyboardInputView.html#/apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">Keyboards and Input Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI Elements
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">Content Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">Temporary Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">Icon and Image Design
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">App Icon</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">Bar Button Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NewsstandIcons.html#/apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">Newsstand Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebClipIcons.html#/apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">Web Clip Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ResizableImages.html#/apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">Creating Resizable Images</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH12"></a>
+  <h2 class='chapter-name chapter-name-short'>Bars</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW2">
+	  				The Status Bar
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW3">
+	  				Navigation Bar
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW4">
+	  				Toolbar
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW33">
+	  				Toolbar and Navigation Bar Buttons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW52">
+	  				Tab Bar
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW34">
+	  				Tab Bar Icons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW5">
+	  				Search Bar
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW8">
+	  				Scope Bar
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW2"></a>
+  <h3 class="section-name" tabindex="0">The Status Bar</h3>
+  <p class="para">
+  The <strong>status bar</strong> displays important information about the device and the current environment (shown below on iPhone).
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label default-dark-content">Default (dark) content</p>
+		<img class="inline-graphic" src="Art/status_bar_default_2x.png" alt="image: ../Art/status_bar_default_2x.png" width="224" height="14" />
+	</section>
+		<section class="right-container">
+				<p class="container-label light-content">Light content</p>
+			<img class="inline-graphic" src="Art/status_bar_light_2x.png" alt="image: ../Art/status_bar_light_2x.png" width="224" height="14" />
+		</section>
+</section><p class="para">
+  The status bar:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Is transparent
+</p>
+</li><li class="item"><p class="para">
+  Always appears at the upper edge of the device screen
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW11"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">You can set the style of the status bar globally for the entire app or you can let individual view controllers set the style as appropriate. To learn more, read <em class="u-book"><a href="../../../UIKit/Reference/UIApplication_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006728" target="_self">UIApplication Class Reference</a></em> for information about the <code class="code-voice">UIStatusBarStyle</code> constant and <em class="u-book"><a href="../../../UIKit/Reference/UIViewController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006926" target="_self">UIViewController Class Reference</a></em> for information about the <code class="code-voice">preferredStatusBarStyle</code> property.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  
+</p><p class="para">
+  <strong class="inline-head">Don’t create a custom status bar.</strong> Users depend on the consistency of the system-provided status bar. Although you might hide the status bar in your app, it’s not appropriate to create custom UI that takes its place.
+</p><p class="para">
+  <strong class="inline-head">Prevent scrolling content from showing through the status bar.</strong> As users scroll, you don’t want them to see a confusing mix of app content and status bar items in the status bar area. To give users the impression of spaciousness while still ensuring maximum readability, make sure the status bar has a background that obscures the content behind it. Here are a few ways to keep scrolling content from showing through the status bar:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Use a navigation controller to display content. A navigation controller automatically displays a status bar background and it ensures that its content views don’t appear behind the status bar. (To learn more about navigation controllers, see <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html#/apple_ref/doc/uid/TP40011313-CH2" target="_self">“Navigation Controllers”</a>.)
+</p>
+</li><li class="item"><p class="para">
+  Create a nondistracting custom image—such as a gradient—and display it behind the status bar. To ensure that the image stays behind the status bar, you could use a view controller to keep the image above a scrolling view or you could use a scrolling view to keep it pinned to the top.
+</p>
+</li><li class="item"><p class="para">
+  Position content to avoid the status bar area (that is, the area defined by the app’s <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIApplication_Class/Reference/Reference.html#/apple_ref/occ/instp/UIApplication/statusBarFrame">statusBarFrame</a></code> property). If you do this, you should use the window’s background color to provide a solid color behind the status bar.
+</p>
+</li>
+</ul><p class="para">
+  
+</p><p class="para">
+  <strong class="inline-head">Avoid putting distracting content behind the status bar.</strong> In particular, you don’t want to imply that users should tap the status bar to access content or activate controls in your app. 
+</p><p class="para">
+  <strong class="inline-head">Think twice before permanently hiding the status bar.</strong> Because the status bar is transparent, it’s not usually necessary to hide it. Permanently hiding the status bar means that users must switch away from your app to read the time or to find out whether they have a Wi-Fi connection.
+</p><p class="para">
+  <strong class="inline-head">Consider hiding the status bar—and all other app UI—while people are actively viewing full-screen media.</strong> If you hide the status bar, be sure to let people retrieve it (and the appropriate app UI) with a single tap. Unless you have a compelling reason to do so, avoid defining a custom gesture to redisplay the status bar because users are unlikely to discover such a gesture or to remember it.
+</p><p class="para">
+  <strong class="inline-head">Choose a status bar content color that coordinates with your app.</strong> The default appearance displays dark content, which looks good on top of light-colored app content. The light status bar content looks good on top of dark-colored app content.
+</p><p class="para">
+  <strong class="inline-head">When appropriate, display the network activity indicator.</strong> The network activity indicator can appear in the status bar to show users that lengthy network access is occurring. To learn how to implement this indicator in your code, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW44" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW44">Network Activity Indicator</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW3"></a>
+  <h3 class="section-name" tabindex="0">Navigation Bar</h3>
+  <p class="para">
+  A <strong>navigation bar</strong> enables navigation through an information hierarchy and, optionally, management of screen contents.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/nav_bar_iphone_2x.png" alt="image: ../Art/nav_bar_iphone_2x.png" width="224" height="30" />
+</figure><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/nav_bar_ipad_7_2x.png" alt="image: ../Art/nav_bar_ipad_7_2x.png" width="326" height="30" />
+</figure><p class="para">
+  A navigation bar:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Is translucent
+</p>
+</li><li class="item"><p class="para">
+  Generally appears at the top of an app screen, just below the status bar
+</p>
+<p class="para">
+  On iPad, a navigation bar can also display within a view that doesn’t extend across the screen, such as one pane of a split view controller.
+</p>
+</li><li class="item"><p class="para">
+  Can automatically change its height when an iPhone changes orientation
+</p>
+<p class="para">
+  Maintains the same height in all orientations on iPad
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW12"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">A navigation bar is contained in a navigation controller, which is a programmatic object that manages the display of a hierarchy of custom views. To learn more about defining a navigation bar in your code, see <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html#/apple_ref/doc/uid/TP40011313-CH2" target="_self">“Navigation Controllers”</a> and <a href="../UIKitUICatalog/UINavigationBar.html#/apple_ref/doc/uid/TP40012857-UINavigationBar" target="_self">“Navigation Bars”</a>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  Use a navigation bar to enable navigation among different views and—if appropriate—to provide a control that manages the items in a view. If you need to provide a larger set of controls and you don’t need to enable navigation, consider using a toolbar instead (to learn more, see <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW4">Toolbar</a></span>).
+</p><p class="para">
+  When the user goes to a new level in a navigation hierarchy, two things should happen:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  The navigation bar title should change to the new level’s title, if appropriate.
+</p>
+</li><li class="item"><p class="para">
+  A back button should appear in the left end of the bar, and it should be labeled with the previous level’s title.
+</p>
+</li>
+</ul><div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/nav_bar_title_not_required_2x.png" alt="image: ../Art/nav_bar_title_not_required_2x.png" width="224" height="207" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  <strong class="inline-head">When it adds value, use the title of the current view as the title of the navigation bar.</strong> If titling a navigation bar seems redundant, you can leave the title empty. For example, Notes doesn’t title the current note because the first line of content supplies all the context users need.
+</p>
+  </div>
+</div><p class="para">
+  
+</p><p class="para">
+  <strong class="inline-head">Consider putting a segmented control in a navigation bar at the top level of an app.</strong> This is especially useful if doing so helps to flatten your information hierarchy, making it easier for people to find what they’re looking for. If you use a segmented control in a navigation bar, be sure to choose accurate back-button titles. (For usage guidelines, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW27" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW27">Segmented Control</a></span>.)
+</p><div class="two-columns">
+  <div class="left-column">
+    <p class="para">
+  <strong class="inline-head">If necessary, consider using a prompt to clarify what users can do in the current screen.</strong> A prompt is a brief sentence that appears near the top of the navigation bar. For example, Stocks uses a prompt to make sure users understand how to find the information they want.
+</p>
+  </div>
+  <div class="right-column">
+    <img class="inline-graphic" src="Art/prompt_stocks_2x.png" alt="image: ../Art/prompt_stocks_2x.png" width="224" height="383" />
+  </div>
+</div><p class="para">
+  If you need to use a prompt, write a succinct, one-line sentence that uses appropriate ending punctuation.
+</p><p class="para">
+  
+</p><p class="para">
+  <strong class="inline-head">Avoid crowding a navigation bar with additional controls, even if it looks like there’s enough space.</strong> In general, a navigation bar should contain no more than the view’s current title, the back button, and one control that manages the view’s contents. If you use a segmented control in the navigation bar, the bar shouldn’t display a title and it shouldn’t contain any controls other than the segmented control.
+</p><p class="para">
+  <strong class="inline-head">Make sure text-titled buttons have enough space between them.</strong> If there isn’t enough space between multiple left or right bar button items in a navigation bar, the text titles can appear to run together, making it difficult for users to distinguish them. If button titles look too close together in your navigation bar, use <code class="code-voice">UIBarButtonSystemItemFixedSpace</code> to add the appropriate spacing between them. (To learn more about this constant, see <em class="u-book"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007519" target="_self">UIBarButtonItem Class Reference</a></em>.)
+</p><p class="para">
+  <strong class="inline-head">As much as possible, make sure that the look of a customized navigation bar is consistent throughout your app.</strong> For example, don’t combine an opaque navigation bar with a translucent toolbar. Also, it’s best to avoid changing the image, color, or translucency of the navigation bar in different screens in the same orientation.
+</p><p class="para">
+  <strong class="inline-head">Make sure that a customized back button still looks like a back button.</strong> Users know that the standard back button allows them to retrace their steps through a hierarchy of information. If you decide to replace the system-provided chevron with a custom image, be sure to supply a custom mask image, too. iOS 7 uses the mask to make the button title appear to emerge from—or disappear into—the chevron during transitions.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-DontLinkElementID_3"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">Don’t create a multisegment back button. The back button always takes the user to the current screen’s parent. If you think users might get lost without a multisegment control that displays a type of breadcrumb path, it probably means that you should flatten the information hierarchy.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">On iPhone, be prepared for the change in navigation bar height that occurs on device rotation.</strong> In particular, make sure that your custom navigation bar icons fit well in the thinner bar that appears in landscape orientation. Don’t specify the height of a navigation bar programmatically; instead, take advantage of the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarPositioning_Protocol/Reference/Reference.html#/apple_ref/c/tdef/UIBarMetrics">UIBarMetrics</a></code> constants to ensure that your content fits well.
+</p><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW4"></a>
+  <h3 class="section-name" tabindex="0">Toolbar</h3>
+  <p class="para">
+  A <strong>toolbar</strong> contains controls that perform actions related to objects in the screen or view. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/mail_toolbar_iphone_2x.png" alt="image: ../Art/mail_toolbar_iphone_2x.png" width="224" height="30" />
+</figure><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/mail_toolbar_ipad_2x.png" alt="image: ../Art/mail_toolbar_ipad_2x.png" width="537" height="30" />
+</figure><p class="para">
+  A toolbar:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Is translucent
+</p>
+</li><li class="item"><p class="para">
+  Always appears at the bottom edge of a screen or view on iPhone
+</p>
+<p class="para">
+  Can also appear at the top edge of the screen or view on iPad.
+</p>
+</li><li class="item"><p class="para">
+  Can automatically change its height when an iPhone changes orientation
+</p>
+<p class="para">
+  Maintains the same height in all orientations on iPad.
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW13"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">A toolbar is typically contained in a navigation controller, which is an object that manages the display of a hierarchy of custom views. To learn more about defining a toolbar in your code, see <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html#/apple_ref/doc/uid/TP40011313-CH2-SW4" target="_self">“Displaying a Navigation Toolbar”</a> in <em class="u-book"><a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Introduction.html#/apple_ref/doc/uid/TP40011313" target="">View Controller Catalog for iOS</a></em> and <a href="../UIKitUICatalog/Toolbar.html#/apple_ref/doc/uid/TP40012857-CH14" target="_self">“Toolbar”</a>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  Use a toolbar to provide a set of actions users can take in the current context.
+</p><p class="para">
+  <strong class="inline-head">Include the most frequently used commands that make sense in the current context.</strong> As much as possible, avoid using a toolbar to provide commands that are only occasionally useful.
+</p><p class="para">
+  <strong class="inline-head">Consider using a segmented control to provide access to different perspectives or modes in the current context.</strong> It’s not a good idea to use a segmented control in a toolbar to show app-level tasks or modes, because a toolbar is specific to the current screen or view. If you need to give people access to primary tasks, views, or modes in your app, use a tab bar instead. To learn more about segmented controls, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW27" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW27">Segmented Control</a></span>; to learn more about tab bars, see <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW52" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW52">Tab Bar</a></span>.
+</p><p class="para">
+  <strong class="inline-head">Use icons if you need to put more than three items in a toolbar.</strong> Because text-titled buttons typically use more space than icons, it can be difficult to keep the titles from running together.
+</p><p class="para">
+  <strong class="inline-head">Make sure text-titled buttons have enough space between them.</strong> If there isn’t enough space between two or more buttons in a toolbar, the text titles can appear to run together and users can find it difficult to distinguish between them. If button titles look too close in your toolbar, use <code class="code-voice">UIBarButtonSystemItemFixedSpace</code> to add the appropriate spacing between them. (To learn more about this constant, see <em class="u-book"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007519" target="_self">UIBarButtonItem Class Reference</a></em>.)
+</p><p class="para">
+  <strong class="inline-head">On iPhone, be prepared for the change in toolbar height that occurs on device rotation.</strong> In particular, make sure your custom toolbar icons fit well in the thinner bar that appears in landscape orientation. Don’t specify the height of a toolbar programmatically; instead, take advantage of the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarPositioning_Protocol/Reference/Reference.html#/apple_ref/c/tdef/UIBarMetrics">UIBarMetrics</a></code> constants to ensure that your content fits well.
+</p><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW33"></a>
+  <h3 class="section-name" tabindex="0">Toolbar and Navigation Bar Buttons</h3>
+  <p class="para">
+  iOS provides many of the standard toolbar and navigation bar buttons that are used in the built-in apps. To learn how to design custom bar icons, see <span class="x-name"><a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">Bar Button Icons</a></span>. Items in the toolbar and navigation bar can be tinted using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIView_Class/UIView/UIView.html#/apple_ref/occ/instp/UIView/tintColor">tintColor</a></code> property.
+</p><p class="para">
+  To find out which symbol names to use to specify the buttons described in <span class="x-name-no-link">Table 35-1</span>, see the documentation for <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/c/tdef/UIBarButtonSystemItem">UIBarButtonSystemItem</a></code> in <em class="u-book"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007519" target="_self">UIBarButtonItem Class Reference</a></em>.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-DontLinkElementID_4"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">As with all standard buttons and icons, it’s essential that you base your usage of a button on its semantic meaning, not on its appearance. This will help your app’s UI make sense even if the button associated with a specific meaning changes its appearance.
+    </p>
+    
+  </aside>
+</div><div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW58"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"><strong class="caption-number">Table 35-1</strong>Standard buttons available for toolbars and navigation bars</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Button
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Name
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Meaning
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonAction_2x.png" alt="image: ../Art/UIBarButtonAction_2x.png" width="19" height="26" />
+</p></td>
+            <td><p class="para">
+  Share
+</p></td>
+            <td><p class="para">
+  Open an action sheet that lists system-provided and app-specific services that act on the specified content.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonCamera_2x.png" alt="image: ../Art/UIBarButtonCamera_2x.png" width="25" height="19" />
+</p></td>
+            <td><p class="para">
+  Camera
+</p></td>
+            <td><p class="para">
+  Open an action sheet that displays a photo picker in camera mode.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonCompose_2x.png" alt="image: ../Art/UIBarButtonCompose_2x.png" width="23" height="23" />
+</p></td>
+            <td><p class="para">
+  Compose
+</p></td>
+            <td><p class="para">
+  Open a new message view in edit mode.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonBookmarks_2x.png" alt="image: ../Art/UIBarButtonBookmarks_2x.png" width="26" height="23" />
+</p></td>
+            <td><p class="para">
+  Bookmarks
+</p></td>
+            <td><p class="para">
+  Show app-specific bookmarks.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonSearch_2x.png" alt="image: ../Art/UIBarButtonSearch_2x.png" width="18" height="18" />
+</p></td>
+            <td><p class="para">
+  Search
+</p></td>
+            <td><p class="para">
+  Display a search field.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonAdd_2x.png" alt="image: ../Art/UIBarButtonAdd_2x.png" width="17" height="17" />
+</p></td>
+            <td><p class="para">
+  Add
+</p></td>
+            <td><p class="para">
+  Create a new item.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonTrash_2x.png" alt="image: ../Art/UIBarButtonTrash_2x.png" width="18" height="25" />
+</p></td>
+            <td><p class="para">
+  Trash
+</p></td>
+            <td><p class="para">
+  Delete current item.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonOrganize_2x.png" alt="image: ../Art/UIBarButtonOrganize_2x.png" width="21" height="17" />
+</p></td>
+            <td><p class="para">
+  Organize
+</p></td>
+            <td><p class="para">
+  Move or route an item to a destination within the app, such as a folder.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonReply_2x.png" alt="image: ../Art/UIBarButtonReply_2x.png" width="25" height="19" />
+</p></td>
+            <td><p class="para">
+  Reply
+</p></td>
+            <td><p class="para">
+  Send or route an item to another location.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonRefresh_2x.png" alt="image: ../Art/UIBarButtonRefresh_2x.png" width="18" height="22" />
+</p></td>
+            <td><p class="para">
+  Refresh
+</p></td>
+            <td><p class="para">
+  Refresh contents (use only when necessary; otherwise, refresh automatically).
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonPlay_2x.png" alt="image: ../Art/UIBarButtonPlay_2x.png" width="15" height="18" />
+</p></td>
+            <td><p class="para">
+  Play
+</p></td>
+            <td><p class="para">
+  Begin media playback or slides.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonFastForward_2x.png" alt="image: ../Art/UIBarButtonFastForward_2x.png" width="23" height="14" />
+</p></td>
+            <td><p class="para">
+  FastForward
+</p></td>
+            <td><p class="para">
+  Fast forward through media playback or slides.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonPause_2x.png" alt="image: ../Art/UIBarButtonPause_2x.png" width="15" height="18" />
+</p></td>
+            <td><p class="para">
+  Pause
+</p></td>
+            <td><p class="para">
+  Pause media playback or slides (note that this implies context preservation).
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UIBarButtonRewind_2x.png" alt="image: ../Art/UIBarButtonRewind_2x.png" width="23" height="14" />
+</p></td>
+            <td><p class="para">
+  Rewind
+</p></td>
+            <td><p class="para">
+  Move backwards through media playback or slides.
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  In addition to the buttons shown in <span class="x-name-no-link">Table 35-1</span>, you can also use the system-provided Edit, Cancel, Save, Done, Redo, and Undo buttons to support editing or other types of content manipulation in your app. The appearance of each of these buttons is provided by its text title. To find out which symbol names to use to specify these buttons, see the documentation for <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/c/tdef/UIBarButtonSystemItem">UIBarButtonSystemItem</a></code> in <em class="u-book"><a href="../../../UIKit/Reference/UIBarButtonItem_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007519" target="_self">UIBarButtonItem Class Reference</a></em>.
+</p><p class="para">
+  Finally, you can also use the system-provided Info button in a toolbar:
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/info_button_2x.png" alt="image: ../Art/info_button_2x.png" width="22" height="22" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW52"></a>
+  <h3 class="section-name" tabindex="0">Tab Bar</h3>
+  <p class="para">
+  A <strong>tab bar</strong> gives people the ability to switch between different subtasks, views, or modes in an app. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/music_tab_bar_iphone_2x.png" alt="image: ../Art/music_tab_bar_iphone_2x.png" width="224" height="33" />
+</figure><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/music_tab_bar_ipad_2x.png" alt="image: ../Art/music_tab_bar_ipad_2x.png" width="537" height="39" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW14"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">A tab bar is contained in a tab bar controller, which is an object that manages the display of a set of custom views. To learn more about defining a tab bar in your code, see <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/TabBarControllers.html#/apple_ref/doc/uid/TP40011313-CH3" target="_self">“Tab Bar Controllers”</a> and <a href="../UIKitUICatalog/UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar" target="_self">“Tab Bars”</a>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  A tab bar:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Is translucent
+</p>
+</li><li class="item"><p class="para">
+  Always appears at the bottom edge of the screen
+</p>
+</li><li class="item"><p class="para">
+  Displays no more than five tabs at one time on iPhone (if there are more tabs, the tab bar displays four of them and adds the More tab, which reveals the additional tabs in a list)
+</p>
+</li><li class="item"><p class="para">
+  Maintains the same height in all orientations
+</p>
+</li><li class="item"><p class="para">
+  Can display a badge on a tab to communicate app-specific information (a badge is a red oval containing white text and either a number or exclamation point)
+</p>
+</li>
+</ul><p class="para">
+  Use a tab bar to give users access to different perspectives on the same set of data or different subtasks related to the overall function of your app.
+</p><p class="para">
+  <strong class="inline-head">In general, use a tab bar to organize information at the app level.</strong> A tab bar is well suited for use in the main app view because it’s a good way to flatten your information hierarchy and provide access to several peer information categories or modes at one time. 
+</p><p class="para">
+  <strong class="inline-head">Don’t use a tab bar to give users controls that act on elements in the current screen or app mode.</strong> If you need to provide controls, including a control that displays a modal view, use a toolbar instead (for usage guidelines, see <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW4">Toolbar</a></span>).
+</p><p class="para">
+  <strong class="inline-head">Don’t remove a tab when its function is unavailable.</strong> If you remove a tab in some cases but not in others, you make your app’s UI unstable and unpredictable. The best solution is to ensure that all tabs are enabled, but explain why a tab’s content is unavailable. For example, if the user doesn’t have any songs on an iOS device, the Songs tab in the Music app displays a screen that explains how to download songs.
+</p><p class="para">
+  <strong class="inline-head">Consider badging a tab bar icon to communicate unobtrusively.</strong> You can display a badge on a tab bar icon to indicate that there is new information associated with that view or mode.
+</p><p class="para">
+  <strong class="inline-head">On iPad, you might use a tab bar in a split view pane or a popover.</strong> Do so if the tabs switch or filter the content within that view. However, it often works better to use a segmented control at the bottom edge of a popover or split view pane, because the appearance of a segmented control coordinates better with the popover or split view appearance. (For more information on using a segmented control, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW27" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW27">Segmented Control</a></span>.)
+</p><p class="para">
+  <strong class="inline-head">On iPad, avoid crowding the tab bar with too many tabs.</strong> Putting too many tabs in a tab bar can make it physically difficult for people to tap the one they want. And with each additional tab you display, you increase the complexity of your app. In general, try to limit the number of tabs in the main view or in the right pane of a split view to about seven. In a popover or in the left pane of a split view, up to about five tabs fit well.
+</p><p class="para">
+  <strong class="inline-head">On iPad, avoid creating a More tab.</strong> In an iPad app, a screen devoted solely to a list of additional tabs is a poor use of space.
+</p><p class="para">
+  <strong class="inline-head">Display the same tabs in each orientation of an iPad app to increase visual stability.</strong> In portrait orientation, the recommended seven tabs fit well across the width of the screen. In landscape orientation, you should center the same tabs along the width of the screen. This guidance also applies to the usage of a tab bar within a split view pane or a popover. For example, if you use a tab bar in a popover in portrait, it works well to display the same tabs in the left pane of a split view in landscape.
+</p><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW34"></a>
+  <h3 class="section-name" tabindex="0">Tab Bar Icons</h3>
+  <p class="para">
+  iOS provides the standard icons described in <span class="x-name-no-link">Table 35-2</span> for use in tab bars. To learn how to design custom tab bar icons, see <span class="x-name"><a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">Bar Button Icons</a></span>. Tab bar icons can be tinted using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIView_Class/UIView/UIView.html#/apple_ref/occ/instp/UIView/tintColor">tintColor</a></code> property.
+</p><p class="para">
+  To find out which symbol names to use to specify these icons, see the documentation for <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITabBarItem_Class/Reference/Reference.html#/apple_ref/c/tdef/UITabBarSystemItem">UITabBarSystemItem</a></code> in <em class="u-book"><a href="../../../UIKit/Reference/UITabBarItem_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006928" target="_self">UITabBarItem Class Reference</a></em>.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-DontLinkElementID_5"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">As with all standard buttons and icons, it’s essential that you base your usage of an icon on its semantic meaning, not its appearance. This will help your app’s UI make sense even if the icon associated with a specific meaning changes its appearance.
+    </p>
+    
+  </aside>
+</div><div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW17"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"><strong class="caption-number">Table 35-2</strong>Standard icons for use in the tabs of a tab bar</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Icon
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Name
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Meaning
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarBookmarks_2x.png" alt="image: ../Art/UITabBarBookmarks_2x.png" width="27" height="23" />
+</p></td>
+            <td><p class="para">
+  Bookmarks
+</p></td>
+            <td><p class="para">
+  Show app-specific bookmarks.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarContacts_2x.png" alt="image: ../Art/UITabBarContacts_2x.png" width="25" height="25" />
+</p></td>
+            <td><p class="para">
+  Contacts
+</p></td>
+            <td><p class="para">
+  Show contacts.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarDownloads_2x.png" alt="image: ../Art/UITabBarDownloads_2x.png" width="19" height="24" />
+</p></td>
+            <td><p class="para">
+  Downloads
+</p></td>
+            <td><p class="para">
+  Show downloads.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarFavorites_2x.png" alt="image: ../Art/UITabBarFavorites_2x.png" width="27" height="26" />
+</p></td>
+            <td><p class="para">
+  Favorites
+</p></td>
+            <td><p class="para">
+  Show user-determined favorites.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarFeatured_2x.png" alt="image: ../Art/UITabBarFeatured_2x.png" width="27" height="26" />
+</p></td>
+            <td><p class="para">
+  Featured
+</p></td>
+            <td><p class="para">
+  Show content featured by the app.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarHistory_2x.png" alt="image: ../Art/UITabBarHistory_2x.png" width="25" height="25" />
+</p></td>
+            <td><p class="para">
+  History
+</p></td>
+            <td><p class="para">
+  Show history of user actions.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarMore_2x.png" alt="image: ../Art/UITabBarMore_2x.png" width="23" height="4" />
+</p></td>
+            <td><p class="para">
+  More
+</p></td>
+            <td><p class="para">
+  Show additional tab bar items.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarMostRecent_2x.png" alt="image: ../Art/UITabBarMostRecent_2x.png" width="25" height="25" />
+</p></td>
+            <td><p class="para">
+  MostRecent
+</p></td>
+            <td><p class="para">
+  Show the most recent item.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarMostViewed_2x.png" alt="image: ../Art/UITabBarMostViewed_2x.png" width="23" height="23" />
+</p></td>
+            <td><p class="para">
+  MostViewed
+</p></td>
+            <td><p class="para">
+  Show items most popular with all users.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarRecents_2x.png" alt="image: ../Art/UITabBarRecents_2x.png" width="25" height="25" />
+</p></td>
+            <td><p class="para">
+  Recents
+</p></td>
+            <td><p class="para">
+  Show the items accessed by the user within an app-defined period.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarSearch_2x.png" alt="image: ../Art/UITabBarSearch_2x.png" width="24" height="24" />
+</p></td>
+            <td><p class="para">
+  Search
+</p></td>
+            <td><p class="para">
+  Enter a search mode.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <img class="inline-graphic" src="Art/UITabBarTopRated_2x.png" alt="image: ../Art/UITabBarTopRated_2x.png" width="27" height="26" />
+</p></td>
+            <td><p class="para">
+  TopRated
+</p></td>
+            <td><p class="para">
+  Show the highest-rated items, as determined by the user.
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW5"></a>
+  <h3 class="section-name" tabindex="0">Search Bar</h3>
+  <p class="para">
+  A <strong>search bar</strong> accepts text from users, which can be used as input for a search (shown here with placeholder text).
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/search_bar_2x.png" alt="image: ../Art/search_bar_2x.png" width="224" height="30" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW6"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">To learn how to define a search bar in your code, see <a href="../UIKitUICatalog/UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar" target="_self">“Search Bars”</a>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  A search bar can display optional elements, such as these:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong>Placeholder text.</strong> This text might state the function of the control (for example, “Search” as shown above) or remind users in what context they are searching (for example, “Google”).
+</p>
+</li><li class="item"><p class="para">
+  <strong>The Bookmarks button.</strong> This button can provide a shortcut to information users want to easily find again. For example, the Bookmarks button in the Maps search mode gives access to bookmarked locations, recent searches, and contacts.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/search_bar_bookmarks_2x.png" alt="image: ../Art/search_bar_bookmarks_2x.png" width="224" height="30" />
+</figure><p class="para">
+  The Bookmarks button is visible only when there is no user-supplied or nonplaceholder text in the search bar. When the search bar contains such text, the Clear button appears so that users can erase the text.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">The Clear button.</strong> Most search bars include a Clear button that lets users erase the contents of the search bar with one tap.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/search_bar_clear_2x.png" alt="image: ../Art/search_bar_clear_2x.png" width="178" height="30" />
+</figure><p class="para">
+  When the search bar contains any nonplaceholder text, the Clear button is visible so users can erase the text. If there is no user-supplied or nonplaceholder text in the search bar, the Clear button is hidden.
+</p>
+</li><li class="item"><p class="para">
+  <strong>The results list icon.</strong> This icon indicates the presence of search results. When users tap the results list icon, an app can display the results of their most recent search.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/search_bar_results_2x.png" alt="image: ../Art/search_bar_results_2x.png" width="224" height="30" />
+</figure></li><li class="item"><p class="para">
+  <strong class="inline-head">A prompt.</strong> A descriptive title, called a <em>prompt</em>, can be placed above the search bar. A prompt is a short, complete sentence that provides introductory or app-specific context for the search bar.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/search_bar_prompt_2x.png" alt="image: ../Art/search_bar_prompt_2x.png" width="224" height="52" />
+</figure></li>
+</ul><p class="para">
+  Use a search bar to enable search in your app. Don’t use a text field to enable search because it doesn’t have the standard search bar appearance that users expect.
+</p><p class="para">
+  In iOS 7 and later, using <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchDisplayController_Class/Reference/Reference.html#/apple_ref/occ/cl/UISearchDisplayController">UISearchDisplayController</a></code> makes it easy to put a search bar in a navigation bar. Note that when a search display controller’s view controller is contained within a navigation controller—as is the case in Mail—the search bar automatically transitions into the navigation bar when users initiate a search.
+</p><p class="para">
+  <strong class="inline-head">Choose a search bar style that complements the importance of search in your app.</strong> If search is a primary function in your app, you may want to use the prominent style; if users don’t need to search very often, you may want to use the minimal style.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label the-prominent-search-bar-style-shown-in-mail">The prominent search bar style (shown in Mail)</p>
+		<img class="inline-graphic" src="Art/search_bar_prominent_2x.png" alt="image: ../Art/search_bar_prominent_2x.png" width="224" height="62" />
+	</section>
+		<section class="right-container">
+				<p class="container-label the-minimal-search-bar-style-shown-in-music">The minimal search bar style (shown in Music)</p>
+			<img class="inline-graphic" src="Art/search_bar_minimal_2x.png" alt="image: ../Art/search_bar_minimal_2x.png" width="224" height="65" />
+		</section>
+</section><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW8"></a>
+  <h3 class="section-name" tabindex="0">Scope Bar</h3>
+  <p class="para">
+  A <strong>scope bar</strong>—which is available only in conjunction with a search bar—helps users define the scope of a search.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/scope_bar_2x.png" alt="image: ../Art/scope_bar_2x.png" width="223" height="32" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH12-SW7"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">To learn more about defining a search bar and scope bar in your code, see <a href="../UIKitUICatalog/UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar" target="_self">“Search Bars”</a>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  When a search bar is present, a scope bar can appear near it. A scope bar adopts the same appearance that you specify for the search bar.
+</p><p class="para">
+  
+</p><p class="para">
+  It can be useful to display a scope bar when there are clearly defined or typical categories in which users might want to search. However, it’s even better to improve search results so that users don’t need to scope their search.
+</p><p class="para">
+  
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="KeyboardInputView.html#/apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">Keyboards and Input Views</a></p>
+  			<p class="next-link"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">Content Views</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

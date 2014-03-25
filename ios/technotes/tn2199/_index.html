@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2199: OpenAL FAQ for iPhone OS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40007999">
+	<meta id="document-version" name="document-version" content="1.2.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40007999-CH1">
+    <meta id="date" name="date" content="2008-11-14">
+    <meta id="description" name="description" content="TN2199: Basic information about adding positional audio to an iPhone OS application">
+    <meta id="book-title" name="book-title" content="OpenAL FAQ for iPhone OS">
+    <meta id="book-name" name="book-name" contents="DTS_TN2199_OpenALFAQforiPho">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Framework/Media Layer/CoreAudio}, {Topic/Audio & Video/Audio}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2199">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="OpenAL FAQ for iPhone OS" type="text/html" href="index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40007999" title="Technical Note TN2199"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>OpenAL FAQ for iPhone OS</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40007999-CH1-DontLinkElementID_2" title="Technical Note TN2199"></a><div class="dtsDocNumber">Technical Note TN2199</div><h1 id="pageTitle">OpenAL FAQ for iPhone OS</h1><p>Common questions and answers about using OpenAL to add positional audio to your iPhone OS application.</p><p>OpenAL is a cross-platform, positional audio API included in iPhone OS. It is the recommended technology for adding audio to games and is well suited for adding audio features to many other types of applications. OpenAL provides an environmental context for audio, enabling you to build applications that immerse users in directional sound. Built upon Core Audio, OpenAL in iPhone OS provides high performance and excellent audio quality.</p><p><strong>1. Which version of the OpenAL specification does iPhone OS implement?</strong></p><p>The OpenAL framework in iPhone OS 2.1 implements the OpenAL 1.1 specification.</p><p><strong>2. What are the supported Apple platforms for OpenAL?</strong></p><p>OpenAL is available in the OpenAL framework (<code>OpenAL.framework</code>) in iPhone OS 2.0 and later. It is also available in Mac OS X v10.4 and later.</p><p><strong>3. Which audio formats can I play using OpenAL on the iPhone and iPod touch?</strong></p><p>To use OpenAL for playback, your application typically reads audio data from disk using Extended Audio File Services. In this process you convert the on-disk format, as needed, into one of the OpenAL playback formats. As part of this conversion, you must ensure that the samples you pass to OpenAL have iPhone-native endianness. Use the <code>kAudioFormatFlagsNativeEndian</code> constant from the <code>CoreAudioTypes.h</code> header file when calling Extended Audio File Services.</p><p>The on-disk audio format that your application reads must be PCM (uncompressed) or a compressed format that does not use hardware decompression, such as IMA-4.</p><p>The supported playback formats for OpenAL in iPhone OS are identical to those for OpenAL in Mac OS X. You can play the following linear PCM variants: mono 8-bit, mono 16-bit, stereo 8-bit, and stereo 16-bit.</p><p><strong>4. How does OpenAL on the iPhone/iPod touch differ from OpenAL on the desktop?</strong></p><p>The iPhone OS implementation of OpenAL does not include the effect extensions found on the desktop. Specifically, the Roger Beep, Distortion, Reverb, Obstruction, and Occlusion effects are not available in iPhone OS.</p><p>The OpenAL capture APIs, which you would use for OpenAL recording, are also not available in this version of the OS.</p><p><strong>5. What are the best practices for optimizing performance and efficiency when using OpenAL on iPhone and iPod touch?</strong></p><ul class="ul"><li class="li"><p>Use the <code>alBufferDataStatic</code> API, found in the <code>oalStaticBufferExtension.h</code> header file, instead of the standard <code>alBufferData</code> function. This eliminates extra buffer copies by allowing your application to own the audio data memory used by the buffer objects.</p></li><li class="li"><p>If your application renders several audio buffers simultaneously, you should typically use a lower sample rate, such as 22kHz. When rendering a single source, a 44.1kHz sample rate may be most efficient. Experiment and analyze the performance of your application. Individual circumstances determine the best tradeoff between sample rate and the number of audio sources being rendered.</p></li></ul><p><strong>6. Where can I get support for OpenAL development?</strong></p><p>Apple actively participates in the OpenAL mailing lists, where you can post questions or issues. Visit <span class="content_text"><a href="http://openal.org" class="urlLink" rel="external">OpenAL.org</a></span> to subscribe to these lists. </p><p>For Apple-specific audio technology discussions, join the <span class="content_text"><a href="http://lists.apple.com/mailman/listinfo/coreaudio-api" class="urlLink" rel="external">Core Audio mailing list</a></span>.</p><p><strong>7. Where can I get detailed information about OpenAL?</strong></p><p>Visit the <span class="content_text"><a href="http://openal.org/" class="urlLink" rel="external">OpenAL</a></span> website for detailed information about the technology, including features, specifications, documentation, mailing lists, licensing, shipping titles, and more.</p><br/><hr/><a name="//apple_ref/doc/uid/DTS40007999-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40007999-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2008-11-14</td><td><p>Corrected a typographical error.</p></td></tr><tr><td scope="row">2008-09-18</td><td><p>New document that 
+					basic information about adding positional audio to an iPhone OS application</p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2008 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2008-11-14</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

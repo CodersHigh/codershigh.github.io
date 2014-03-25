@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>iOS Human Interface Guidelines: App Icon</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">iOS Human Interface Guidelines</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="MobileHIG.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI Design Basics
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">Designing for iOS 7</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS App Anatomy</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">Starting and Stopping</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">Layout</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">Navigation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">Modal Contexts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">Interactivity and Feedback</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Animation.html#/apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">Animation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">Branding</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">Color and Typography</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">Icons and Graphics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">Terminology and Wording</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Integration.html#/apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">Integrating with iOS</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">Design Strategies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">Design Principles</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Process.html#/apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">From Concept to Product</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">Case Study: From Desktop to iOS</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">Running on iPhone 5</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS Technologies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">Social Media</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">Game Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">Notification Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Printing.html#/apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">AirPrint</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">Accessing User Data</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EditMenu.html#/apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">Edit Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UndoRedo.html#/apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">Undo and Redo</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="KeyboardInputView.html#/apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">Keyboards and Input Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI Elements
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">Content Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">Temporary Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">Icon and Image Design
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">App Icon</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">Bar Button Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NewsstandIcons.html#/apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">Newsstand Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebClipIcons.html#/apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">Web Clip Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ResizableImages.html#/apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">Creating Resizable Images</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH19"></a>
+  <h2 class='chapter-name chapter-name-short'>App Icon</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW3">
+	  				Document Icons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW4">
+	  				Spotlight and Settings Icons
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  Every app needs a beautiful, memorable app icon that attracts people in the App Store and stands out on their Home screen. iOS can use versions of the app icon in Game Center, search results, Settings, and to represent app-created documents.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/app_icons_home_screen_2x.png" alt="image: ../Art/app_icons_home_screen_2x.png" width="224" height="383" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW5"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">An app uses the same app icon in all versions of iOS that it supports. If you decide to redesign the app icon for the iOS 7 version of your app, the new icon should replace the old one even if the app displays different UI in different versions of iOS.
+    </p>
+    
+  </aside>
+</div>
+<p class="para">
+  <strong class="inline-head">For the best results, enlist the help of a professional graphic designer.</strong> An experienced graphic designer can help you develop an overall visual style for your app and apply that style to all the icons and images in it.
+</p>
+<p class="para">
+  <strong class="inline-head">Use universal imagery that people will easily recognize.</strong> In general, avoid focusing on a secondary or obscure aspect of an element. For example, the Mail app icon uses an envelope, not a rural mailbox, a mail carrier’s bag, or a post office symbol.
+</p>
+<p class="para">
+  <strong class="inline-head">Embrace simplicity.</strong> In particular, avoid cramming lots of different images into your icon. Find a single element that captures the essence of your app and express that element in a simple, unique shape. Add details cautiously. If an icon’s content or shape is overly complex, the details can become confusing and may appear muddy at smaller sizes.
+</p>
+<div class="tip clear">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-DontLinkElementID_1"></a>
+  <aside class="aside">
+    <p class="aside-title">Tip
+    </p>
+    <p class="para">To test the appearance of your app icon at small sizes, move it into a folder on the Home screen. Even better, move several app icons into a folder and see if your app icon looks good and remains distinctive.
+    </p>
+    
+  </aside>
+</div>
+<p class="para">
+  <strong class="inline-head">Create an abstract interpretation of your app’s main idea.</strong> It rarely works well to use a photo or screenshot in an app icon because photographic details can be very hard to see at small sizes. Typically, it’s better to interpret reality in an artistic way, because doing so lets you emphasize the aspects of the subject that you want users to notice. 
+</p>
+<p class="para">
+  <strong class="inline-head">If you want to portray real substances, do it accurately.</strong> Icons that depict real objects should accurately replicate the characteristics of substances such as fabric, glass, paper, and metal, and convey the object’s weight and feel.
+</p>
+<p class="para">
+  <strong class="inline-head">Make sure the app icon looks good on a variety of backgrounds.</strong> Don’t just test your icon on a light or dark background because you can’t predict which wallpaper people will choose.
+</p>
+<p class="para">
+  <strong class="inline-head">Avoid transparency.</strong> An app icon should be opaque. If the icon’s boundaries are smaller than the recommended sizes—or you use transparency to create “see-through” areas—the resulting icon can appear to float on a black background, which tends to look especially unattractive on the beautiful wallpapers that users choose.
+</p>
+<p class="para">
+  <strong class="inline-head">Don’t use iOS interface elements in your artwork.</strong> You don’t want users to confuse your icons or images with the iOS UI.
+</p>
+<p class="para">
+  <strong class="inline-head">Don’t use replicas of Apple hardware products in your artwork.</strong> The symbols that represent Apple products are copyrighted and can’t be reproduced in your icons or images. In general, it’s a good idea to avoid replicas of any specific devices in your artwork, because these designs change frequently and icons that are based on them can quickly look dated.
+</p>
+<p class="para">
+  <strong class="inline-head">Don’t reuse iOS app icons in your interface.</strong> It can be confusing to users to see the same icon used to mean slightly different things in multiple locations throughout the system.
+</p>
+<p class="para">
+  With the exception of the App Store icon—which must be named <code class="code-voice">iTunesArtwork</code>—you can name an app icon anything you want. As long as you use the <code class="code-voice">CFBundleIcons</code> key to declare the names and you add the <code class="code-voice">@2x</code> suffix to the names of all high-resolution icons, iOS chooses an icon based on whether its size is appropriate for the intended usage. To learn more about icon naming, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW1" target="_self">“App Icons”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="_self">iOS App Programming Guide</a></em>.
+</p>
+<p class="para">
+  <strong class="inline-head">Create different sizes of the app icon for different devices.</strong> If you’re creating a universal app, you need to supply app icons in all four sizes.
+</p>
+<p class="para">
+  For iPhone and iPod touch, both of these sizes are required:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  120 x 120 pixels
+</p>
+</li><li class="item"><p class="para">
+  60 x 60 pixels (standard resolution)
+</p>
+</li>
+</ul>
+<p class="para">
+  For iPad, both of these sizes are required:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  152 x 152
+</p>
+</li><li class="item"><p class="para">
+  76 x 76 pixels (standard resolution)
+</p>
+</li>
+</ul>
+<p class="para">
+  When iOS displays an app icon on the Home screen of a device, it automatically applies a mask that rounds the corners. Make sure your icon has 90° corners so it looks good after the mask is applied. For example:
+</p>
+<section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label a-120-x-120-pixel-icon-before-the-mask-is-applied">A 120 x 120 pixel icon before the mask is applied</p>
+		<img class="inline-graphic" src="Art/star120_original_2x.png" alt="image: ../Art/star120_original.png" width="42" height="42" />
+	</section>
+		<section class="right-container">
+				<p class="container-label a-120-x-120-pixel-icon-after-the-mask-is-applied">A 120 x 120 pixel icon after the mask is applied</p>
+			<img class="inline-graphic" src="Art/star120_processed_2x.png" alt="image: ../Art/star120_processed.png" width="42" height="42" />
+		</section>
+</section><p class="para">
+  <strong class="inline-head">Create a large version of your app icon for display in the App Store.</strong> Although it’s important that this version be instantly recognizable as your app icon, it can be subtly richer and more detailed. There are no visual effects added to this version of your app icon.
+</p>
+<p class="para">
+  For the App Store, create a large version of your app icon in two sizes so that it looks good on all devices:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  1024 x 1024 pixels
+</p>
+</li><li class="item"><p class="para">
+  512 x 512 pixels (standard resolution)
+</p>
+</li>
+</ul>
+<p class="para">
+  Be sure to name this version of your app icon <code class="code-voice">iTunesArtwork@2x</code> and <code class="code-voice">iTunesArtwork</code>, respectively.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW6"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">iOS might also use the large image in other ways. In an iPad app, for example, iOS uses the large image to generate the large document icon.
+    </p>
+    
+  </aside>
+</div>
+<p class="para">
+  If you’re developing an app for ad-hoc distribution (that is, to be distributed in-house only, not through the App Store), you must also provide the large versions of your app icon. This icon identifies your app in iTunes. 
+</p>
+<p class="para">
+  
+</p>
+
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW3"></a>
+  <h3 class="section-name" tabindex="0">Document Icons</h3>
+  <p class="para">
+  If your iOS app creates documents of a custom type, you want users to be able to recognize these documents at a glance. You don't need to design a custom icon for this purpose because iOS uses your app icon to create document icons for you.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW4"></a>
+  <h3 class="section-name" tabindex="0">Spotlight and Settings Icons</h3>
+  <p class="para">
+  Every app should supply a small icon that iOS can display when the app name matches a term in a Spotlight search. Apps that supply settings should also supply a small icon to identify them in the built-in Settings app.
+</p><p class="para">
+  These icons should clearly identify your app so that people can recognize it in a list of search results or in Settings. For example, the icons of the built-in apps are easy to discern in Settings, even though the icons are small:
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/app_icons_in_settings_2x.png" alt="image: ../Art/app_icons_in_settings_2x.png" width="224" height="383" />
+</figure><p class="para">
+  You can name these small icons anything you want as long as you use the <code class="code-voice">CFBundleIcons</code> key to declare the names and you add the <code class="code-voice">@2x</code> suffix to the names of all high-resolution icons. You can use custom names because iOS chooses an icon based on whether its size is appropriate for the intended usage. To learn more about icon naming, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW1" target="_self">“App Icons”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>.
+</p><p class="para">
+  For all devices, supply separate icons for Spotlight search results and Settings. If you don’t provide these icons, iOS might shrink your app icon for display in these locations.
+</p><p class="para">
+  For Spotlight search results on iPhone, iPod touch, and iPad create an icon in the following two sizes:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  80 x 80 pixels
+</p>
+</li><li class="item"><p class="para">
+  40 x 40 pixels (standard resolution)
+</p>
+</li>
+</ul><p class="para">
+  For Settings on iPhone, iPod touch, and iPad create an icon in the following two sizes:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  58 x 58 pixels
+</p>
+</li><li class="item"><p class="para">
+  29 x 29 pixels (standard resolution)
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW2"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">If the background of your icon is white, don’t add a gray overlay in an effort to increase its visibility in Settings. iOS adds a 1-pixel border stroke so that all icons look good on the white background of Settings.
+    </p>
+    
+  </aside>
+</div>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a></p>
+  			<p class="next-link"><a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>iOS Human Interface Guidelines: Temporary Views</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">iOS Human Interface Guidelines</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="MobileHIG.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI Design Basics
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">Designing for iOS 7</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS App Anatomy</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">Starting and Stopping</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">Layout</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">Navigation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">Modal Contexts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">Interactivity and Feedback</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Animation.html#/apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">Animation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">Branding</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">Color and Typography</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">Icons and Graphics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">Terminology and Wording</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Integration.html#/apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">Integrating with iOS</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">Design Strategies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">Design Principles</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Process.html#/apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">From Concept to Product</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">Case Study: From Desktop to iOS</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">Running on iPhone 5</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS Technologies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">Social Media</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">Game Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">Notification Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Printing.html#/apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">AirPrint</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">Accessing User Data</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EditMenu.html#/apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">Edit Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UndoRedo.html#/apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">Undo and Redo</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="KeyboardInputView.html#/apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">Keyboards and Input Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI Elements
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">Content Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">Temporary Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">Icon and Image Design
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">App Icon</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">Bar Button Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NewsstandIcons.html#/apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">Newsstand Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebClipIcons.html#/apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">Web Clip Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ResizableImages.html#/apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">Creating Resizable Images</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH14"></a>
+  <h2 class='chapter-name chapter-name-short'>Temporary Views</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW2">
+	  				Alert
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW36">
+	  				Action Sheet
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW3">
+	  				Modal View
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW2"></a>
+  <h3 class="section-name" tabindex="0">Alert</h3>
+  <p class="para">
+  An <strong>alert</strong> gives people important information that affects their use of an app or the device.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/alert_2x.png" alt="image: ../Art/alert_2x.png" width="224" height="118" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW5"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">To learn about using an alert in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIAlertView_Class/UIAlertView/UIAlertView.html#/apple_ref/doc/uid/TP40006802" target="_self">UIAlertView Class Reference</a></em>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  An alert:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Displays a required title and an optional message
+</p>
+</li><li class="item"><p class="para">
+  Contains one or more buttons
+</p>
+</li>
+</ul><p class="para">
+  
+</p><p class="para">
+  The infrequency with which alerts appear helps users take them seriously. It’s best to minimize the number of alerts your app displays, and make sure each one offers critical information and useful choices. 
+</p><p class="para">
+  <strong class="inline-head">Avoid creating unnecessary alerts.</strong> In general, alerts are unnecessary in the following scenarios:
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  If an alert does this...
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Do this instead of using an alert...
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Provides information related to the standard functioning of an app
+</p></td>
+            <td><p class="para">
+  Design an eye-catching way to display the information, one that harmonizes with the app’s style.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Updates users on tasks that are progressing normally
+</p></td>
+            <td><p class="para">
+  Use a progress view or activity indicator (described in <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW7" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW7">Progress View</a></span> and <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW2" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW2">Activity Indicator</a></span>) or integrate status information into the app UI.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Asks for confirmation of user-initiated tasks
+</p></td>
+            <td><p class="para">
+  Use an action sheet (described in <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW36" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW36">Action Sheet</a></span>).
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Informs users of problems they can do nothing about
+</p></td>
+            <td><p class="para">
+  If the problem isn’t critical, integrate the information into the app’s UI; otherwise, use an alert.
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  As you read the guidelines for designing alert text, it’s useful to know the following definitions:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong>Title-style capitalization</strong> means that every word is capitalized, except articles, coordinating conjunctions, and prepositions of four or fewer letters when they aren’t the first word.
+</p>
+</li><li class="item"><p class="para">
+  <strong>Sentence-style capitalization</strong> means that the first word is capitalized, and the rest of the words are lowercase unless they are proper nouns or proper adjectives.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">Succinctly describe the situation and explain what people can do about it.</strong> Ideally, the text you write gives people enough context to understand why the alert has appeared and to decide which button to tap.
+</p><div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/alert_title_only_2x.png" alt="image: ../Art/alert_title_only_2x.png" width="224" height="131" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  <strong class="inline-head">Keep the title short enough to display on a single line, if possible.</strong> A long alert title is difficult for people to read quickly, and it might get truncated or force the alert message to scroll.
+</p>
+  </div>
+</div><p class="para">
+  <strong class="inline-head">Avoid single-word titles.</strong> Single-word titles, such as Error or Warning, rarely provide any useful information.
+</p><p class="para">
+  <strong class="inline-head">When possible, use a sentence fragment.</strong> A short, informative statement tends to be easier to understand than a complete sentence.
+</p><p class="para">
+  <strong class="inline-head">As much as possible, write a title that makes it unnecessary to add a message.</strong> For example, you might be able to avoid adding a message if you use a question—or, less frequently, two sentences—for the alert title.
+</p><p class="para">
+  <strong class="inline-head">Don’t hesitate to be negative.</strong> People understand that most alerts tell them about problems or warn them about dangerous situations. It’s better to be negative and direct than it is to be positive but oblique.
+</p><p class="para">
+  <strong class="inline-head">As much as possible, avoid “you,” “your,” “me,” and “my.”</strong> Sometimes, text that identifies people directly can be ambiguous and can even be interpreted as insulting or patronizing.
+</p><p class="para">
+  <strong>Use capitalization and punctuation appropriately.</strong> Specifically:
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  When the alert title...
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Use...
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Is a sentence fragment or a single sentence that is not a question
+</p></td>
+            <td><p class="para">
+  Title-style capitalization and no ending punctuation
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Is a single sentence that is a question
+</p></td>
+            <td><p class="para">
+  Sentence-style capitalization and an ending question mark
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Consists of two or more sentences
+</p></td>
+            <td><p class="para">
+  Sentence-style capitalization and appropriate ending punctuation for each sentence
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><div class="two-columns">
+  <div class="left-column">
+    <p class="para">
+  <strong class="inline-head">If you must provide an optional alert message, write a short, complete sentence.</strong> If possible, keep the message short enough to be displayed on one or two lines. If the message is too long, it will scroll, giving users a poor experience. Use sentence-style capitalization and appropriate ending punctuation in the message.
+</p>
+  </div>
+  <div class="right-column">
+    <img class="inline-graphic" src="Art/alert_title_with_msg_2x.png" alt="image: ../Art/alert_title_with_msg_2x.png" width="224" height="156" />
+  </div>
+</div><p class="para">
+  <strong class="inline-head">Avoid lengthening alert text with descriptions of which button to tap.</strong> Ideally, the combination of unambiguous alert text and logical button labels gives people enough information to understand the situation and their choices. If you must provide detailed guidance, follow these guidelines:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Be sure to use the word “tap” (not “touch” or “click” or “choose”) to describe the selection action.
+</p>
+</li><li class="item"><p class="para">
+  Don’t enclose a button title in quotation marks, but do preserve its capitalization.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">Be sure to test the appearance of an alert in both orientations.</strong> Because in landscape the height of an alert is constrained, the alert’s appearance may differ from its appearance in portrait. It’s recommended that you optimize the length of the alert text so that it can be read without scrolling no matter what the orientation.
+</p><div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/two_button_alert_2x.png" alt="image: ../Art/two_button_alert_2x.png" width="224" height="156" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  <strong class="inline-head">Generally, use a two-button alert.</strong> A two-button alert is often the most useful, because it’s easiest for people to choose between two alternatives. A single button alert is less likely to be helpful because it informs people without giving them any control over the situation. An alert that contains three or more buttons is significantly more complex than a two-button alert and should be avoided as much as possible. If you add too many buttons to an alert, it can cause the alert to scroll, which is a bad user experience.
+</p>
+  </div>
+</div><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW6"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">If you find that you need to offer people more than two choices, consider using an action sheet instead (to learn how to use an action sheet, see <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW36" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW36">Action Sheet</a></span>). 
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">Place buttons appropriately.</strong>  Ideally, the button that's most natural to tap should meet two criteria: It should perform the action that users are most likely to want and it should be the least likely to cause problems if a user taps it inadvertently. Specifically:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  When the most likely button performs a nondestructive action, it should be on the right in a two-button alert. The button that cancels this action should be on the left.
+</p>
+</li><li class="item"><p class="para">
+  When the most likely button performs a destructive action, it should be on the left in a two-button alert. The button that cancels this action should be on the right.
+</p>
+</li>
+</ul><p class="para">
+  
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW4"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">Pressing the Home button while an alert is visible should quit the app, as expected. Doing so should also be identical to tapping the Cancel button—that is, the alert is dismissed and the action isn’t performed.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">Give alert buttons short, logical titles.</strong> The best button titles consist of one or two words that describe the result of tapping the button. Follow these guidelines as you create titles for alert buttons:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  As with all button titles, use title-style capitalization and no ending punctuation.
+</p>
+</li><li class="item"><p class="para">
+  As much as possible, use verbs and verb phrases that relate directly to the alert text—for example, “Cancel,” “View All,” “Reply,” or “Ignore.”
+</p>
+</li><li class="item"><p class="para">
+  Use “OK” for a simple acceptance option if there is no better alternative. Avoid using “Yes” or “No.”
+</p>
+</li><li class="item"><p class="para">
+  Avoid “you,” “your,” “me,” and “my” as much as possible. Button titles that use these words are often ambiguous and can appear patronizing.
+</p>
+</li>
+</ul><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW36"></a>
+  <h3 class="section-name" tabindex="0">Action Sheet</h3>
+  <p class="para">
+  An <strong class="inline-head">action sheet</strong> displays a set of choices related to a task the user initiates.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label on-iphone-an-action-sheet-emerges-from-the-bottom-of-the-screen">On iPhone, an action sheet emerges from the bottom of the screen</p>
+		<img class="inline-graphic" src="Art/action_sheet_iphone_2x.png" alt="image: ../Art/action_sheet_iphone_2x.png" width="224" height="138" />
+	</section>
+		<section class="right-container">
+				<p class="container-label on-ipad-an-action-sheet-is-always-displayed-in-a-popover"> On iPad, an action sheet is always displayed in a popover</p>
+			<img class="inline-graphic" src="Art/action_sheet_ipad_2x.png" alt="image: ../Art/action_sheet_ipad.pdf" width="205" height="129" />
+		</section>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW7"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">To learn how to define an action sheet in your code, see <a href="../UIKitUICatalog/UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet" target="_self">“Action Sheets”</a>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  
+</p><p class="para">
+  
+</p><p class="para">
+  
+</p><p class="para">
+  An action sheet:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Appears as the result of a user action
+</p>
+</li><li class="item"><p class="para">
+  Displays two or more buttons
+</p>
+</li>
+</ul><p class="para">
+  Use an action sheet to:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Provide alternative ways to complete a task.</strong> An action sheet lets you to provide a range of choices that make sense in the context of the current task, without giving these choices a permanent place in the UI.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Get confirmation before completing a potentially dangerous task.</strong> An action sheet prompts users to think about the potentially dangerous effects of the step they’re about to take and gives them some alternatives.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">On iPhone, include a Cancel button so that users can easily and safely abandon the task.</strong> Place the Cancel button at the bottom of the action sheet to encourage users to read through all the alternatives before making a choice.
+</p><p class="para">
+  <strong class="inline-head">On iPad, base the way the action sheet is displayed on the way the user initiates the task.</strong> Specifically:
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  If the task is initiated from...
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Display the action sheet...
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Include a Cancel button?
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Outside of a popover
+</p></td>
+            <td><p class="para">
+  Without animation—that is, the action sheet and the popover appear simultaneously
+</p></td>
+            <td><p class="para">
+  No, because users can tap outside the popover to dismiss the action sheet
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Inside a popover
+</p></td>
+            <td><p class="para">
+  With animation—that is, the action sheet slides up on top of the popover’s content
+</p></td>
+            <td><p class="para">
+  Yes, because users need to be able to dismiss the action sheet without closing the popover
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  <strong class="inline-head">On all devices, use red for the button that performs a potentially destructive action.</strong> Display a red button at the top of the action sheet, because the closer to the top of the action sheet a button is, the more eye-catching it is. And on iPhone, the farther a destructive button is from the bottom of an action sheet, the less likely users are to tap it when they’re aiming for the Home button. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/action_sheet_red_button_2x.png" alt="image: ../Art/action_sheet_red_button_2x.png" width="224" height="79" />
+</figure><p class="para">
+  <strong class="inline-head">Avoid making users scroll an action sheet.</strong> If you include too many buttons in an action sheet, users must scroll to see all their choices. This is a disconcerting experience for users, because they must spend extra time to distinguish the choices. Also, it can be very difficult for users to scroll without inadvertently tapping a button.
+</p><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW3"></a>
+  <h3 class="section-name" tabindex="0">Modal View</h3>
+  <p class="para">
+  A <strong>modal view</strong>—that is, a view presented modally—provides self-contained functionality in the context of the current task or workflow.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/modal_view_mail_compose_2x.png" alt="image: ../Art/modal_view_mail_compose_2x.png" width="224" height="383" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH14-SW8"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">To learn more about defining a modal view in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIViewController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006926" target="_self">UIViewController Class Reference</a></em>.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  A modal view:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Occupies the entire screen or, on iPad, can occupy the entire area of a parent view (such as a popover)
+</p>
+</li><li class="item"><p class="para">
+  Contains the text and controls that are necessary to complete the task
+</p>
+</li><li class="item"><p class="para">
+  Usually displays a button that completes the task and dismisses the view and a Cancel button that abandons the task and dismisses the view
+</p>
+</li>
+</ul><p class="para">
+  Use a modal view when you need to offer the ability to accomplish a self-contained task related to your app’s primary function. A modal view is especially appropriate for a multistep subtask that requires UI elements that don’t belong in the main app UI all the time. 
+</p><p class="para">
+  <strong class="inline-head">On iPad, choose a modal view style that suits the current task and the visual style of your app.</strong> You can use any of these styles, defined here:
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Modal view style
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Appearance
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Recommended for
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Full screen
+</p></td>
+            <td><p class="para">
+  Covers the entire screen.
+</p></td>
+            <td><p class="para">
+  Presenting a potentially complex task that people can complete within the context of the modal view.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Page sheet
+</p></td>
+            <td><p class="para">
+  Has a fixed width of 768 points; the sheet height is the current height of the screen.
+</p><p class="para">
+  In landscape, the area of the screen that’s visible on both sides of the modal view is dimmed.
+</p></td>
+            <td><p class="para">
+  Presenting a potentially complex task that people can complete within the context of the modal view.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Form sheet
+</p></td>
+            <td><p class="para">
+  Has fixed dimensions of 540 x 620 points and is centered in the screen. 
+</p><p class="para">
+  When the keyboard is visible in landscape, a form sheet modal view moves up to just below the status bar.
+</p></td>
+            <td><p class="para">
+  Gathering structured information from the user.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Current context
+</p></td>
+            <td><p class="para">
+  Uses the same size as its parent view.
+</p></td>
+            <td><p class="para">
+  Displaying modal content within a split view pane, popover, or other non–full–screen view.
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  <strong class="inline-head">On iPad, don’t display a modal view on top of a popover.</strong> With the possible exception of an alert, nothing should display on top of a popover. In rare cases when you might need to display a modal view as a result of an action the user takes in a popover, close the popover before you open the modal view.
+</p><p class="para">
+  <strong class="inline-head">On iPhone, coordinate the overall look of a modal view with the appearance of your app.</strong> For example, a modal view often includes a navigation bar that contains a title and buttons that cancel or complete the modal view’s task. When this is the case, the navigation bar should use the same appearance as the navigation bar in the app.
+</p><p class="para">
+  <strong class="inline-head">On all devices, display a title that identifies the task, if appropriate.</strong> You might also display text in other areas of the view that more fully describes the task or provides some guidance. 
+</p><p class="para">
+  <strong class="inline-head">On all devices, choose an appropriate transition style for revealing the modal view.</strong> Use a style that coordinates with your app and enhances the user’s awareness of the temporary context shift that the modal view represents. To do this, you can specify one of the following transition styles: 
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Vertical.</strong> In the vertical style, the modal view slides up from the bottom edge of the screen and slides back down when dismissed (this is the default transition style).
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Flip.</strong> In the flip style, the current view flips horizontally from right to left to reveal the modal view. Visually, the modal view looks as if it is the back of the current view. When the modal view is dismissed, it flips horizontally from left to right, revealing the previous view.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">If you vary the transition styles for modal views in an app, do so in a way that makes sense to users.</strong> Users are quick to notice behavioral differences in an app and will assume that they mean something. It’s best to establish a logical, consistent pattern that users can easily detect and remember, and avoid changing transition styles without a good reason.
+</p><p class="para">
+  
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">Controls</a></p>
+  			<p class="next-link"><a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

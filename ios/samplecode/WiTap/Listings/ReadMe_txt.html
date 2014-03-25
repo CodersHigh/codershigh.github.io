@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WiTap: ReadMe.txt</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Sample Code">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40007321">
+	<meta id="document-version" name="document-version" content="4.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40007321-ReadMe_txt">
+    <meta id="date" name="date" content="2013-03-29">
+    <meta id="description" name="description" content="Demonstrates peer-to-peer networking over Wi-Fi.">
+    <meta id="book-title" name="book-title" content="WiTap">
+    <meta id="book-name" name="book-name" content="DTS_SC10029_WiTap">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Sample Code}, {Framework/Core Services Layer/Foundation}, {Topic/Networking & Internet/Services & Discovery}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="ReadMe.txt">
+    <meta id="resources-uri" name="resources-uri" content="../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="WiTap" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="main_m.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../Introduction/Intro.html">
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40007321-ReadMe_txt" title="ReadMe.txt"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>WiTap</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='main_m.html'>Next</a><a class='previousLink' rel='prev' href='../Introduction/Intro.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40007321-ReadMe_txt-DontLinkElementID_9" title="ReadMe.txt"></a>
+    <h1 id="pageTitle">ReadMe.txt</h1>
+    <div class="codesample clear"><table><tr><td scope="row"><pre>WiTap<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>DESCRIPTION:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>The WiTap sample application demonstrates how to achieve network communication between applications. Using Bonjour, the application both advertises itself on the local network and displays a list of other instances of this application on the network.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Simply build the sample using Xcode and run it in the simulator or on the device. Wait for another player to connect or select a game to connect to. Once connected, tap one or more colored pads on a device to see them highlighted simultaneously on the remote device.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>The version of WiTap no longer works over Bluetooth; see QA1753 "Bonjour over Bluetooth on iOS 5.0" for a discussion of why that's the case and what you can do about it.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/ios/#qa/qa1753/_index.html&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>BUILD REQUIREMENTS:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Mac OS X 10.8.2, Xcode 4.6.1, iOS 6.1 SDK<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>RUNTIME REQUIREMENTS:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>iOS 6.0 or later<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>PACKING LIST:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>ReadMe.txt<span></span></pre></td></tr><tr><td scope="row"><pre>This document.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>WiTap.xcodeproj<span></span></pre></td></tr><tr><td scope="row"><pre>An Xcode project for the sample.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Info.plist<span></span></pre></td></tr><tr><td scope="row"><pre>Icons<span></span></pre></td></tr><tr><td scope="row"><pre>Default Images<span></span></pre></td></tr><tr><td scope="row"><pre>Various boilerplate resources.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>AppController.h<span></span></pre></td></tr><tr><td scope="row"><pre>AppController.m<span></span></pre></td></tr><tr><td scope="row"><pre>UIApplication's delegate class, the central controller of the application.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>TapViewController.h<span></span></pre></td></tr><tr><td scope="row"><pre>TapViewController.m<span></span></pre></td></tr><tr><td scope="row"><pre>The main view controller for the app.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>TapView.h<span></span></pre></td></tr><tr><td scope="row"><pre>TapView.m<span></span></pre></td></tr><tr><td scope="row"><pre>UIView subclass that can highlight itself when locally or remotely tapped.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>PickerViewController.h<span></span></pre></td></tr><tr><td scope="row"><pre>PickerViewController.m<span></span></pre></td></tr><tr><td scope="row"><pre>A view controller that displays both the currently advertised game name and a list of other games available on the local network.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>PickerExtras.xib<span></span></pre></td></tr><tr><td scope="row"><pre>PickerHeaderBackground.png<span></span></pre></td></tr><tr><td scope="row"><pre>Some user interface bits and bobs for the PickerViewController.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Networking/QServer.m<span></span></pre></td></tr><tr><td scope="row"><pre>Networking/QServer.m<span></span></pre></td></tr><tr><td scope="row"><pre>A general-purpose TCP server class.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>main.m<span></span></pre></td></tr><tr><td scope="row"><pre>The main file for the WiTap application.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>===========================================================================<span></span></pre></td></tr><tr><td scope="row"><pre>CHANGES FROM PREVIOUS VERSIONS:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 2.0<span></span></pre></td></tr><tr><td scope="row"><pre>- A major rewrite.<span></span></pre></td></tr><tr><td scope="row"><pre>- Updated to the latest coding techniques and standards.<span></span></pre></td></tr><tr><td scope="row"><pre>- Adopted QServer to replace the ancient TCPServer.<span></span></pre></td></tr><tr><td scope="row"><pre>- Changed the on-the-wire protocol to allow easy testing via telnet.<span></span></pre></td></tr><tr><td scope="row"><pre>- Implement an 'end game' button to allow for easier testing.<span></span></pre></td></tr><tr><td scope="row"><pre>- Support rotation in all view controllers.<span></span></pre></td></tr><tr><td scope="row"><pre>- Fully adopted view controllers (the previous code came from a time when dinosaurs ruled the Earth and view controllers weren't de rigueur, and thus parts of the app used view controllers and parts didn't).<span></span></pre></td></tr><tr><td scope="row"><pre>- Basic multitasking support.<span></span></pre></td></tr><tr><td scope="row"><pre>- Keep the TCP server running to avoid port creep.<span></span></pre></td></tr><tr><td scope="row"><pre>- Fixed down numerous sharp edge cases.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 1.8<span></span></pre></td></tr><tr><td scope="row"><pre>- Upgraded project to build with the iOS 4.1 SDK<span></span></pre></td></tr><tr><td scope="row"><pre>- Implemented an autorelease to the NSNetServiceBrowser object to release the browser once the connection is established. An active browser can cause a delay in sending packets - &lt;rdar://problem/7000938&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>- Upgraded for IPv6 as default, creates IPv4 socket is unable to create IPv6 socket.<span></span></pre></td></tr><tr><td scope="row"><pre>- fixed logic bug in handleEvent to check for read method failure.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 1.7<span></span></pre></td></tr><tr><td scope="row"><pre>- Fixed table selection and cell update bugs, and added support for handling stream errors.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 1.6<span></span></pre></td></tr><tr><td scope="row"><pre>- Upgraded for 3.0 SDK due to deprecated APIs; in "cellForRowAtIndexPath" it now uses UITableViewCell's initWithStyle.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 1.5<span></span></pre></td></tr><tr><td scope="row"><pre>- Updated for and tested with iPhone OS 2.0. First public release.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 1.4<span></span></pre></td></tr><tr><td scope="row"><pre>- Updated for Beta 7.<span></span></pre></td></tr><tr><td scope="row"><pre>- Code clean up.<span></span></pre></td></tr><tr><td scope="row"><pre>- Improved Bonjour support.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 1.3<span></span></pre></td></tr><tr><td scope="row"><pre>- Updated for Beta 4. <span></span></pre></td></tr><tr><td scope="row"><pre>- Added code signing.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Version 1.2<span></span></pre></td></tr><tr><td scope="row"><pre>- Added icon.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Copyright (C) 2008-2013 Apple Inc. All rights reserved.<span></span></pre></td></tr></table></div>
+
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='main_m.html'>Next</a><a class='previousLink' rel='prev' href='../Introduction/Intro.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-03-29</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

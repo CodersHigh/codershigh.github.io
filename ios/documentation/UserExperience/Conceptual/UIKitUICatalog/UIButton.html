@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>UIKit User Interface Catalog: Buttons</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="UIKitUICatalog" />
+<meta id="document-version" name="document-version" content="2.1.3" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40012857" />
+<meta id="book-title" name="book-title" content="UIKit User Interface Catalog" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2013-12-16" />
+<meta id="description" name="description" content="Describes the views and controls in UIKit, drawing from the human interface guidelines for more depth." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">UIKit User Interface Catalog</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="UIKitUICatalog.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIView1-SW1" class="part-name">Views
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW1">About Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW1">Action Sheets</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1">Activity Indicators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIAlertView.html#/apple_ref/doc/uid/TP40012857-UIAlertView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIAlertView-SW1">Alert Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UICollectionView.html#/apple_ref/doc/uid/TP40012857-UICollectionView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UICollectionView-SW1">Collection Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIImageView.html#/apple_ref/doc/uid/TP40012857-UIImageView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIImageView-SW1">Image Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UILabel.html#/apple_ref/doc/uid/TP40012857-UILabel-SW1" data-id="//apple_ref/doc/uid/TP40012857-UILabel-SW1">Labels</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UINavigationBar.html#/apple_ref/doc/uid/TP40012857-UINavigationBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UINavigationBar-SW1">Navigation Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPickerView.html#/apple_ref/doc/uid/TP40012857-UIPickerView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPickerView-SW1">Picker Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIProgressView.html#/apple_ref/doc/uid/TP40012857-UIProgressView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIProgressView-SW1">Progress Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIScrollView-SW1">Scroll Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISearchBar-SW1">Search Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITabBar-SW1">Tab Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITableView.html#/apple_ref/doc/uid/TP40012857-UITableView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITableView-SW1">Table Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextView-SW1">Text Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIWebView-SW1">Web Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIControl1-SW1" class="part-name">Controls
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW1">About Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIButton-SW1">Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIDatePicker-SW1">Date Pickers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPageControl-SW1">Page Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1">Segmented Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextField-SW1">Text Fields</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISlider-SW1">Sliders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIStepper-SW1">Steppers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISwitch-SW1">Switches</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIWebView1-SW1" class="part-name">Attributes Inspector Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-CH4-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH4-SW1">Activity Indicator View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarButtonItem.html#/apple_ref/doc/uid/TP40012857-CH2-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH2-SW1">Bar Button Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarItem.html#/apple_ref/doc/uid/TP40012857-CH1-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH1-SW1">Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Button.html#/apple_ref/doc/uid/TP40012857-CH5-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH5-SW1">Button</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionReusableView.html#/apple_ref/doc/uid/TP40012857-CH28-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH28-SW1">Collection Reusable View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionView.html#/apple_ref/doc/uid/TP40012857-CH29-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH29-SW1">Collection View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionViewCell.html#/apple_ref/doc/uid/TP40012857-CH30-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH30-SW1">Collection View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control.html#/apple_ref/doc/uid/TP40012857-CH9-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH9-SW1">Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DatePicker.html#/apple_ref/doc/uid/TP40012857-CH7-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH7-SW1">Date Picker</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ImageView.html#/apple_ref/doc/uid/TP40012857-CH10-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH10-SW1">Image View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Label.html#/apple_ref/doc/uid/TP40012857-CH11-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH11-SW1">Label</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationBar.html#/apple_ref/doc/uid/TP40012857-CH12-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH12-SW1">Navigation Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationItem.html#/apple_ref/doc/uid/TP40012857-CH27-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH27-SW1">Navigation Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PageControl.html#/apple_ref/doc/uid/TP40012857-CH22-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH22-SW1">Page Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PickerView.html#/apple_ref/doc/uid/TP40012857-CH16-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH16-SW1">Picker View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProgressView.html#/apple_ref/doc/uid/TP40012857-CH17-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH17-SW1">Progress View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ScrollView.html#/apple_ref/doc/uid/TP40012857-CH6-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH6-SW1">Scroll View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SearchBar.html#/apple_ref/doc/uid/TP40012857-CH15-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH15-SW1">Search Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SegmentedControl.html#/apple_ref/doc/uid/TP40012857-CH18-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH18-SW1">Segmented Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Slider.html#/apple_ref/doc/uid/TP40012857-CH19-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH19-SW1">Slider</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Stepper.html#/apple_ref/doc/uid/TP40012857-CH20-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH20-SW1">Stepper</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Switch.html#/apple_ref/doc/uid/TP40012857-CH21-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH21-SW1">Switch</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBar.html#/apple_ref/doc/uid/TP40012857-CH13-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH13-SW1">Tab Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBarItem.html#/apple_ref/doc/uid/TP40012857-CH3-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH3-SW1">Tab Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableView.html#/apple_ref/doc/uid/TP40012857-CH25-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH25-SW1">Table View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableViewCell.html#/apple_ref/doc/uid/TP40012857-CH26-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH26-SW1">Table View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TextView.html#/apple_ref/doc/uid/TP40012857-CH24-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH24-SW1">Text View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Toolbar.html#/apple_ref/doc/uid/TP40012857-CH14-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH14-SW1">Toolbar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="View.html#/apple_ref/doc/uid/TP40012857-CH8-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH8-SW1">View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebView.html#/apple_ref/doc/uid/TP40012857-CH23-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH23-SW1">Web View</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton"></a>
+  <h2 class='chapter-name chapter-name-short'>Buttons</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW95">
+	  				Content of Buttons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW5">
+	  				Behavior of Buttons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW3">
+	  				Appearance of Buttons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW8">
+	  				Using Auto Layout with Buttons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW9">
+	  				Making Buttons Accessible
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW11">
+	  				Internationalizing Buttons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW13">
+	  				Elements Similar to a Button
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  Buttons let a user initiate behavior with a tap. You communicate a button’s function through a textual label or with an image. Your app changes button appearance based upon user touch interactions, using highlighting, changes in the label or image, color, and state to indicate the button action dynamically.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_intro.png" alt="image: ../Art/uibutton_intro.png" width="169" height="30" />
+</figure><p class="para">
+  <strong class="inline-head">Purpose.</strong> Buttons allow users to:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  Initiate behavior with a tap
+</p>
+</li><li class="item"><p class="para">
+  Initiate an action in the app with a single simple gesture
+</p>
+</li>
+</ul>
+<p class="para">
+  <strong>Implementation.</strong> Buttons are implemented in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code> class and discussed in the <em class="u-book"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/doc/uid/TP40006815" target="_self">UIButton Class Reference</a></em>.
+</p>
+<p class="para">
+  <strong class="inline-head">Configuration.</strong> Configure buttons in Interface Builder, in the Button section of the Attributes Inspector. A few configurations cannot be made through the Attributes Inspector, so you must make them programmatically. You can set other configurations programmatically, too, if you prefer.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_attributes_inspector_plain_2x.png" alt="image: ../Art/uibutton_attributes_inspector_plain_2x.png" width="261" height="487" />
+</figure>
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW95"></a>
+  <h3 class="section-name" tabindex="0">Content of Buttons</h3>
+  <p class="para">
+  Set a button’s content using the Type (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/buttonType">buttonType</a></code>) field in the Attributes Inspector. In iOS 7, the rounded rect button type has been deprecated in favor of the system button, <code class="code-voice">UIButtonTypeSystem</code>. Button objects can be specified as one of five standard types—system, detail disclosure, info light, info dark, and add contact. The detail disclosure, info, and add contact button types are supplied with standard image graphics to indicate their purpose to the user. These images cannot be customized.
+</p><p class="para">
+  There is also a custom type for great versatility in defining a unique interface. 
+</p><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW5"></a>
+  <h3 class="section-name" tabindex="0">Behavior of Buttons</h3>
+  <p class="para">
+  Buttons do not need a <span class="pediaLink" data-header="Delegation" data-contents="Delegation is a simple and powerful pattern in which one object in a program acts on behalf of, or in coordination with, another object."><a href="../../../General/Conceptual/DevPedia-CocoaCore/Delegation.html#/apple_ref/doc/uid/TP40008195-CH14" target="_self">delegate</a></span> to function properly; a view controller can define their behavior and functionality without implementing any delegate protocols.
+</p><p class="para">
+  A button sends the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIControl_Class/Reference/Reference.html#/apple_ref/c/econst/UIControlEventTouchUpInside">UIControlEventTouchUpInside</a></code> event when the user taps it. You can respond to this event by performing some corresponding action in your app, such as saving information. You register the <span class="pediaLink" data-header="Target-Action" data-contents="Target-action is a design pattern in which an object holds the information necessary to send a message to another object when an event occurs."><a href="../../../General/Conceptual/Devpedia-CocoaApp/TargetAction.html#/apple_ref/doc/uid/TP40009071-CH3" target="_self">target-action</a></span> methods for a button as shown below.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+    <ul class="code-lines">
+        <li><code class="code-voice"><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">myButton</span> <span class="nl">addTarget:</span><span class="n">self</span>
+</code></li>
+        <li><code class="code-voice">                  <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">myAction:</span><span class="p">)</span>
+</code></li>
+        <li><code class="code-voice">        <span class="nl">forControlEvents:</span><span class="n">UIControlEventValueChanged</span><span class="p">];</span>
+</code></li>
+    </ul>
+  </div>
+</section><p class="para">
+  Alternatively, you can Control-drag the button’s Value Changed event from the Connections Inspector to the action method. For more information, see <span class="x-name"><a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW19" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW19">Target-Action Mechanism</a></span>.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_attributes_inspector_group-behavior.png" alt="image: ../Art/uibutton_attributes_inspector_group-behavior.png" width="261" height="158" />
+</figure><p class="para">
+  If the Shows Touch On Highlight (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/showsTouchWhenHighlighted">showsTouchWhenHighlighted</a></code>) box is enabled, when a user presses on the button, there will be a white glow where the touch event occurred on the button.
+</p><p class="para">
+  If your button has a custom image, the Highlighted Adjusts Image (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/adjustsImageWhenHighlighted">adjustsImageWhenHighlighted</a></code>) and Disabled Adjusts Image (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/adjustsImageWhenDisabled">adjustsImageWhenDisabled</a></code>) options allow you to specify whether highlighted or disabled states affect the appearance of the image. For example, with those options enabled, the image might get darker when the button is highlighted, and dimmer when the button is disabled.
+</p><p class="para">
+  If your button content extends past the bounds of the button, you can specify which part of the content to truncate using the Line Break (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#/apple_ref/occ/instm/UIButton/lineBreakMode">lineBreakMode</a></code>) field.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW3"></a>
+  <h3 class="section-name" tabindex="0">Appearance of Buttons</h3>
+  <p class="para">
+  You can customize the appearance of a button by setting the properties depicted below.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_callouts_2x.png" alt="image: ../Art/uibutton_callouts.png" width="377" height="104" />
+</figure><p class="para">
+  To customize the appearance of all buttons in your app, use the appearance proxy (for example, <code class="code-voice">[UIButton appearance]</code>). For more information about appearance proxies, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW18" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW18">Appearance Proxies</a></span>. 
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW7"></a>
+  <h3 class="section-name" tabindex="0">State</h3>
+  <p class="para">
+  A button has four states to configure for appearance—default, highlighted, selected, and disabled. To configure the button’s appearance for each state, first select the state from the State Config menu in the Attributes Inspector and then use the other menus and text boxes in the Attributes Inspector’s appearance property group.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_attributes_inspector_group-appearance.png" alt="image: ../Art/uibutton_attributes_inspector_group-appearance.png" width="261" height="185" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW27"></a>
+  <h3 class="section-name" tabindex="0">Shadow</h3>
+  <p class="para">
+  Shadow offset defines how far the shadow is drawn from the button text. You can customize the offset for both dimensions using the Shadow Offset (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#/apple_ref/occ/instp/UIButton/titleShadowOffset">titleShadowOffset</a></code>) fields.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_attributes_inspector_group-appearance.png" alt="image: ../Art/uibutton_attributes_inspector_group-appearance.png" width="261" height="185" />
+</figure><p class="para">
+  You can select the Reverses On Highlight (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/reversesTitleShadowWhenHighlighted">reversesTitleShadowWhenHighlighted</a></code>) checkbox if you want your shadow offset to automatically flip directions when the button is in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIControl_Class/Reference/Reference.html#/apple_ref/c/econst/UIControlStateHighlighted">UIControlStateHighlighted</a></code> state. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_attributes_inspector_group-behavior.png" alt="image: ../Art/uibutton_attributes_inspector_group-behavior.png" width="261" height="158" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW28"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">These shadow properties only have an effect on buttons with plain—not attributed—text.
+    </p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW29"></a>
+  <h3 class="section-name" tabindex="0">Tint Color</h3>
+  <p class="para">
+  You can specify a custom button tint using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instm/UIButton/tintColor">tintColor</a></code> property. This property sets the color of the button image and text. 
+</p><p class="para">
+  If you do not explicitly set a tint color, the button will inherit its superview’s tint color. For more information, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW17" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW17">Tint Color</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW25"></a>
+  <h3 class="section-name" tabindex="0">Title Attributes</h3>
+  <p class="para">
+  Button can have one of two types of text: plain or attributed. Plain text supports a single set of formatting attributes—font, size, color, and so on—for the entire string. On the other hand, attributed text supports multiple sets of attributes that apply to individual characters or ranges of characters in the string. 
+</p><p class="para">
+  The default title is “Button”, intended to be altered to the app need. The title string set in the default state is used in all other states unless you enter a replacement title string for a specific state. Available title customization options differ depending on whether you are using plain or attributed text:
+</p><div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/uibutton_attributes_inspector_subgroup-title_plain.png" alt="image: ../Art/uibutton_attributes_inspector_subgroup-title_plain.png" width="261" height="114" />
+  </div>
+  <div class="right-column">
+    <img class="inline-graphic" src="Art/uibutton_attributes_inspector_subgroup-title_attributed.png" alt="image: ../Art/uibutton_attributes_inspector_subgroup-title_attributed.png" width="261" height="98" />
+  </div>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW26"></a>
+  <h3 class="section-name" tabindex="0">Images</h3>
+  <p class="para">
+  Using the Image (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/currentImage">currentImage</a></code>) field, you can specify an image to appear within the content of your button. If the button has a title, this image appears to the left of it, and centered otherwise. The image does not stretch or condense, so make sure to select an image that is the proper size to appear in your button. Note that this image will be automatically rendered as a template image within the button, unless you explicitly set its rendering mode to <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIImage_Class/Reference/Reference.html#/apple_ref/c/econst/UIImageRenderingModeAlwaysOriginal">UIImageRenderingModeAlwaysOriginal</a></code>. For more information, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW7" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW7">Template Images</a></span>.
+</p><p class="para">
+  The Background (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/currentBackgroundImage">currentBackgroundImage</a></code>) field allows you to specify an image to appear behind button content and fill the entire frame of the button. The image you specify will stretch to fill the button if it is too small. It will be cropped if it is too large.
+</p><p class="para">
+  The images set in the default state are used in all other states unless you enter a replacement image for a specific state.
+</p><p class="para">
+  
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_attributes_inspector_group-appearance.png" alt="image: ../Art/uibutton_attributes_inspector_group-appearance.png" width="261" height="185" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW24"></a>
+  <h3 class="section-name" tabindex="0">Edge Insets</h3>
+  <p class="para">
+  The part of your button that makes up your image and text is your content. You can offset this content by using edge insets. In the Edge field, select whether you want to offset just your title, just your image, or both together. Depending on your selection, the changes you make to the Inset fields will adjust the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/titleEdgeInsets">titleEdgeInsets</a></code>, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/imageEdgeInsets">imageEdgeInsets</a></code>, and <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/instp/UIButton/contentEdgeInsets">contentEdgeInsets</a></code> properties, respectively. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uibutton_attributes_inspector_group-edge_insets.png" alt="image: Art/uibutton_attributes_inspector_group-edge_insets.png" width="261" height="100" />
+</figure><p class="para">
+  There should be no reason for you to adjust the edge insets for info, contact, or disclosure buttons. This functionality is intended for custom or rounded rectangle buttons only.
+</p>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW8"></a>
+  <h3 class="section-name" tabindex="0">Using Auto Layout with Buttons</h3>
+  <p class="para">
+  You can create Auto Layout constraints between a button and other user interface elements. You can create any type of constraint for a button.
+</p><p class="para">
+  For general information about using Auto Layout with iOS controls, see <span class="x-name"><a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW6" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW6">Using Auto Layout with Controls</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW9"></a>
+  <h3 class="section-name" tabindex="0">Making Buttons Accessible</h3>
+  <p class="para">
+  Buttons are accessible by default. The default accessibility traits for a button are Button and User Interaction Enabled. 
+</p><p class="para">
+  The accessibility label, traits, and hint are spoken back to the user when VoiceOver is enabled on a device. The button’s title overwrites its accessibility label; even if you set a custom value for the label, VoiceOver speaks the value of the title. VoiceOver speaks this information when a user taps the button once. For example, when a user taps the Options button in Camera, VoiceOver speaks the following:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+    <ul class="code-lines">
+        <li><code class="code-voice"><span class="s">&quot;Options. Button. Shows additional camera options.&quot;</span>
+</code></li>
+    </ul>
+  </div>
+</section><p class="para">
+  For general information about making iOS controls accessible, see <span class="x-name"><a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW7" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW7">Making Controls Accessible</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW11"></a>
+  <h3 class="section-name" tabindex="0">Internationalizing Buttons</h3>
+  <p class="para">
+  To internationalize a button, you must provide localized strings for its title text.
+</p><p class="para">
+  For more information, see <em class="u-book"><a href="../../../MacOSX/Conceptual/BPInternational/BPInternational.html#/apple_ref/doc/uid/10000171i" target="_self">Internationalization Programming Topics</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIButton-SW13"></a>
+  <h3 class="section-name" tabindex="0">Elements Similar to a Button</h3>
+  <p class="para">
+  The following element provides similar functionality to a button:
+</p><p class="para">
+  <strong>Bar Button.</strong> An icon used to execute an action from a toolbar or for navigation in a navigation bar. For more information, see <span class="x-name"><a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a></span>.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW1">About Controls</a></p>
+  			<p class="next-link"><a href="UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIDatePicker-SW1">Date Pickers</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2013-12-16
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

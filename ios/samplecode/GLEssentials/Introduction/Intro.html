@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GLEssentials</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Sample Code">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40010104">
+	<meta id="document-version" name="document-version" content="2.3.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40010104-Intro">
+    <meta id="date" name="date" content="2013-07-09">
+    <meta id="description" name="description" content="Sample provides an example of various recommended OpenGL techniques.">
+    <meta id="book-title" name="book-title" content="GLEssentials">
+    <meta id="book-name" name="book-name" content="DTS_SC2077_GLEssentials">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Sample Code}, {Framework/Media Layer/OpenGLES}, {Topic/Graphics & Animation/3D Drawing}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="GLEssentials">
+    <meta id="resources-uri" name="resources-uri" content="../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="GLEssentials" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="../Listings/Readme_txt.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40010104-Intro" title="GLEssentials"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>GLEssentials</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../Listings/Readme_txt.html'>Next</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40010104" title="GLEssentials"></a><a name="//apple_ref/doc/uid/DTS40010104-Intro-DontLinkElementID_2" title="GLEssentials"></a>
+    <h1 id="pageTitle">GLEssentials</h1><div class="spec_sheet_info_box"><table cellspacing="0" class="specbox"><tr><td scope="row"><strong><span style="white-space: nowrap;">Last Revision:</span></strong></td><td><div class="zSharedSpecBoxHeadList">Version 1.7, 2013-07-09<br />Changes in this version include:&#xD;
+&#xD;
+1) WIth OSX demonstrate going to fullscreen and back.  Add window controller and fullscreen window classes.  When the user types the 'F' key, the window controller hides the non-fullscreen window, creates a fullscreen window, and sets the OpenGL view this new fullscreen window.     2) Add support for retina displays on OSX.  Call [NSOpenGLView setsWantsBestResolutionOpenGLSurface:YES] at view init.  Also use [NSView convertRectToBacking] in order to get the OpenGL surface size in pixels not points, allowing the app to properly set the viewport and make other pixel dimension based calculations.     3) Fix flickering on window resize on OSX.  Implement the [NSOpenGView drawRect:] in our OpenGL View so that we continue rendering as resize occurs.  Also implement [NSOpenGView renewGState] with a calls to [NSwindow disableScreenUpdatesUntilFlush].  This will synchronize our rendering with that of other rendering in the system and avoid flickering and tearing.     4) Fix problem where OpenGL Errors were reported after closing the window on OSX(but not quitting the app) since the display link was still active, spawning rendering without any drawable present.   To fix this, add the view to the notification center for a windowWillClose event which allows us to stop the display link and terminate our rendering.     5) On OSX, add example of kCGLCECrashOnRemovedFunctions to demonstrate how we can force a crash if a legacy function is called in a Core Profile context.  This allows us to quickly see erroneous usage of legacy OpenGL without having to check for errors.     6) Make iOS App Universal.     7) Simplify clean up of shaders.  Delete the shader objects after they've been attach to a GLSL program, which won't actually delete the shaders until the GLSL program is delated.     8) Use auto-synthesis for properties.<br /><span class="content_text"><a href="../History/History.html#/apple_ref/doc/uid/DTS40010104-RevisionHistory-DontLinkElementID_1" target="_self">(Full Revision History)</a></span><br /></div></td></tr><tr><td scope="row"><strong><span style="white-space: nowrap;">Build Requirements:</span></strong></td><td><div class="zSharedSpecBoxHeadList">OSX version: OSX v10.7 or later, Xcode 3.1 or later; iPhone version: iOS SDK 4.0 or later</div></td></tr><tr><td scope="row"><strong><span style="white-space: nowrap;">Runtime Requirements:</span></strong></td><td><div class="zSharedSpecBoxHeadList">OSX version: OSX v10.6 or later, OSX 10.7 or later to use OpenGL 3.2; iOS version: iOS 4.0 or later (with OpenGL ES 2.0 support) </div></td></tr></table></div>
+    
+        
+        <p>This sample provides examples of some essential techniques for using the OpenGL and OpenGL ES API.  It includes usages of Vertex Buffer Objects (VBOs), Vertex Array Objects (VAOs),  Framebuffer Objects (FBO), and GLSL Program Objects.  It creates a VAO and VBOs from model data loaded in.  It then creates a texture for the model from image data and GLSL shaders from source also loaded in.   Finally, it creates an FBO and texture to render a reflection of the model.  It uses an environment mapping GLSL program to apply the reflection texture to a plane.</p>
+<p>This sample also demonstrates sharing of OSX OpenGL with iOS OpenGL ES  source code.  Additionally, it demonstrates how to obtain and use an OpenGL 3.2 rendering context on OSX 10.7 or later.</p>
+<p>Many of these techniques were described in the "OpenGL Essential Design Practices" session from WWDC 2010.</p>
+    
+    
+        
+        
+        
+        
+    
+
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../Listings/Readme_txt.html'>Next</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-07-09</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

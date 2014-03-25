@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>UIKit User Interface Catalog: Action Sheets</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="UIKitUICatalog" />
+<meta id="document-version" name="document-version" content="2.1.3" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40012857" />
+<meta id="book-title" name="book-title" content="UIKit User Interface Catalog" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2013-12-16" />
+<meta id="description" name="description" content="Describes the views and controls in UIKit, drawing from the human interface guidelines for more depth." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">UIKit User Interface Catalog</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="UIKitUICatalog.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIView1-SW1" class="part-name">Views
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW1">About Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW1">Action Sheets</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1">Activity Indicators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIAlertView.html#/apple_ref/doc/uid/TP40012857-UIAlertView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIAlertView-SW1">Alert Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UICollectionView.html#/apple_ref/doc/uid/TP40012857-UICollectionView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UICollectionView-SW1">Collection Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIImageView.html#/apple_ref/doc/uid/TP40012857-UIImageView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIImageView-SW1">Image Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UILabel.html#/apple_ref/doc/uid/TP40012857-UILabel-SW1" data-id="//apple_ref/doc/uid/TP40012857-UILabel-SW1">Labels</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UINavigationBar.html#/apple_ref/doc/uid/TP40012857-UINavigationBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UINavigationBar-SW1">Navigation Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPickerView.html#/apple_ref/doc/uid/TP40012857-UIPickerView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPickerView-SW1">Picker Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIProgressView.html#/apple_ref/doc/uid/TP40012857-UIProgressView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIProgressView-SW1">Progress Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIScrollView-SW1">Scroll Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISearchBar-SW1">Search Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITabBar-SW1">Tab Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITableView.html#/apple_ref/doc/uid/TP40012857-UITableView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITableView-SW1">Table Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextView-SW1">Text Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIWebView-SW1">Web Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIControl1-SW1" class="part-name">Controls
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW1">About Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIButton-SW1">Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIDatePicker-SW1">Date Pickers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPageControl-SW1">Page Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1">Segmented Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextField-SW1">Text Fields</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISlider-SW1">Sliders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIStepper-SW1">Steppers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISwitch-SW1">Switches</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIWebView1-SW1" class="part-name">Attributes Inspector Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-CH4-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH4-SW1">Activity Indicator View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarButtonItem.html#/apple_ref/doc/uid/TP40012857-CH2-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH2-SW1">Bar Button Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarItem.html#/apple_ref/doc/uid/TP40012857-CH1-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH1-SW1">Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Button.html#/apple_ref/doc/uid/TP40012857-CH5-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH5-SW1">Button</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionReusableView.html#/apple_ref/doc/uid/TP40012857-CH28-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH28-SW1">Collection Reusable View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionView.html#/apple_ref/doc/uid/TP40012857-CH29-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH29-SW1">Collection View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionViewCell.html#/apple_ref/doc/uid/TP40012857-CH30-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH30-SW1">Collection View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control.html#/apple_ref/doc/uid/TP40012857-CH9-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH9-SW1">Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DatePicker.html#/apple_ref/doc/uid/TP40012857-CH7-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH7-SW1">Date Picker</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ImageView.html#/apple_ref/doc/uid/TP40012857-CH10-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH10-SW1">Image View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Label.html#/apple_ref/doc/uid/TP40012857-CH11-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH11-SW1">Label</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationBar.html#/apple_ref/doc/uid/TP40012857-CH12-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH12-SW1">Navigation Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationItem.html#/apple_ref/doc/uid/TP40012857-CH27-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH27-SW1">Navigation Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PageControl.html#/apple_ref/doc/uid/TP40012857-CH22-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH22-SW1">Page Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PickerView.html#/apple_ref/doc/uid/TP40012857-CH16-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH16-SW1">Picker View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProgressView.html#/apple_ref/doc/uid/TP40012857-CH17-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH17-SW1">Progress View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ScrollView.html#/apple_ref/doc/uid/TP40012857-CH6-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH6-SW1">Scroll View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SearchBar.html#/apple_ref/doc/uid/TP40012857-CH15-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH15-SW1">Search Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SegmentedControl.html#/apple_ref/doc/uid/TP40012857-CH18-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH18-SW1">Segmented Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Slider.html#/apple_ref/doc/uid/TP40012857-CH19-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH19-SW1">Slider</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Stepper.html#/apple_ref/doc/uid/TP40012857-CH20-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH20-SW1">Stepper</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Switch.html#/apple_ref/doc/uid/TP40012857-CH21-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH21-SW1">Switch</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBar.html#/apple_ref/doc/uid/TP40012857-CH13-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH13-SW1">Tab Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBarItem.html#/apple_ref/doc/uid/TP40012857-CH3-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH3-SW1">Tab Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableView.html#/apple_ref/doc/uid/TP40012857-CH25-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH25-SW1">Table View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableViewCell.html#/apple_ref/doc/uid/TP40012857-CH26-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH26-SW1">Table View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TextView.html#/apple_ref/doc/uid/TP40012857-CH24-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH24-SW1">Text View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Toolbar.html#/apple_ref/doc/uid/TP40012857-CH14-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH14-SW1">Toolbar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="View.html#/apple_ref/doc/uid/TP40012857-CH8-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH8-SW1">View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebView.html#/apple_ref/doc/uid/TP40012857-CH23-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH23-SW1">Web View</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet"></a>
+  <h2 class='chapter-name chapter-name-short'>Action Sheets</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW6">
+	  				Content of Action Sheets (Programmatic)
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW8">
+	  				Behavior of Action Sheets (Programmatic)
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW9">
+	  				Using Auto Layout with Action Sheets
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW10">
+	  				Making Action Sheets Accessible
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW12">
+	  				Internationalizing Action Sheets
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW13">
+	  				Debugging Action Sheets
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW11">
+	  				Elements Similar to an Action Sheet
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  Action sheets display a set of buttons representing several alternative choices to complete a task initiated by the user. For example, when the user taps the Share button in an app’s toolbar, an action sheet appears offering a list of choices, such as Email, Print, and so on.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uiactionsheet_intro_2x.png" alt="image: ../Art/uiactionsheet_intro_2x.png" width="320" height="112" />
+</figure><p class="para">
+  <strong class="inline-head">Purpose.</strong> Action sheets allow users to:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  Quickly select from a list of actions
+</p>
+</li><li class="item"><p class="para">
+  Confirm or cancel an action
+</p>
+</li>
+</ul>
+<p class="para">
+  <strong>Implementation.</strong> Action sheets are implemented in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/cl/UIActionSheet">UIActionSheet</a></code> class and discussed in the <em class="u-book"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006801" target="_self">UIActionSheet Class Reference</a></em>.
+</p>
+<p class="para">
+  <strong class="inline-head">Configuration.</strong> Action sheets are created, initialized, and configured in code, typically residing in a view controller implementation file. 
+</p>
+
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW6"></a>
+  <h3 class="section-name" tabindex="0">Content of Action Sheets (Programmatic)</h3>
+  <p class="para">
+  You cannot create or manipulate action sheets in Interface Builder. Rather, an action sheet floats over an existing view to interrupt its presentation, and it requires the user to dismiss it.
+</p><p class="para">
+  When you create an action sheet object from the <code class="code-voice">UIActionSheet</code> class, you can initialize its most important properties with one method, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/instm/UIActionSheet/initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:">initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:</a></code>. Depending on your app’s needs, that single message may be enough to configure a fully functional action sheet object, as shown in the following code. Once you have created the action sheet object, send it a <code class="code-voice">show...</code> message, such as <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/instm/UIActionSheet/showInView:">showInView:</a></code> to display the action sheet.
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW4"></a>
+  <span class="caption"></span>
+  <div class="code-sample">
+    <ul class="code-lines">
+        <li><code class="code-voice"><span class="n">UIActionSheet</span> <span class="o">*</span><span class="n">actionSheet</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIActionSheet</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTitle:</span><span class="nb">nil</span>
+</code></li>
+        <li><code class="code-voice">                                                         <span class="nl">delegate:</span><span class="n">self</span>
+</code></li>
+        <li><code class="code-voice">                                                <span class="nl">cancelButtonTitle:</span><span class="s">@&quot;Cancel&quot;</span>
+</code></li>
+        <li><code class="code-voice">                                           <span class="nl">destructiveButtonTitle:</span><span class="s">@&quot;Delete Note&quot;</span>
+</code></li>
+        <li><code class="code-voice">                                                <span class="nl">otherButtonTitles:</span><span class="nb">nil</span><span class="p">];</span>
+</code></li>
+    </ul>
+  </div>
+</section><p class="para">
+  Although the first parameter of the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/instm/UIActionSheet/initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:">initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:</a></code> method enables you to provide a title for an action sheet, iOS human interface guidelines recommend that you do not use a title.
+</p><p class="para">
+  As described in iOS human interface guidelines, you should include a Cancel button with action sheets displayed on iPhone and with those displayed on iPad over an open popover. Otherwise on iPad, action sheets are displayed within a popover, and the user can cancel the action sheet by tapping outside the popover, in which case you do not need to include a Cancel button.
+</p><p class="para">
+  To create a Cancel button, pass a non-<code class="code-voice">nil</code> value for the <code class="code-voice">cancelButtonTitle:</code> parameter of the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/instm/UIActionSheet/initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:">initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:</a></code> method. A Cancel button created in this way is positioned at the bottom of the action sheet.
+</p><p class="para">
+  When your action sheet presents a potentially destructive choice, you should include a destructive button by passing a non-<code class="code-voice">nil</code> value for the <code class="code-voice">destructiveButtonTitle:</code> parameter of the <code class="code-voice u-api-no-link">initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:</code> method. A destructive button created in this way is automatically colored red and positioned at the top of the action sheet.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW8"></a>
+  <h3 class="section-name" tabindex="0">Behavior of Action Sheets (Programmatic)</h3>
+  <p class="para">
+  You can choose to present an action sheet so that it originates from a toolbar, tab bar, button bar item, from a view, or from a rectangle within a view. On iPhone, because the action sheet slides up from the bottom of a view and covers the width of the screen, most apps use <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/instm/UIActionSheet/showInView:">showInView:</a></code>. On iPad, however, action sheets appear within a popover whose arrow points to the control the user tapped to invoke the choices presented by the action sheet. So, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/instm/UIActionSheet/showFromRect:inView:animated:">showFromRect:inView:animated:</a></code> and <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActionSheet_Class/Reference/Reference.html#/apple_ref/occ/instm/UIActionSheet/showFromBarButtonItem:animated:">showFromBarButtonItem:animated:</a></code> are most useful on iPad.
+</p><p class="para">
+  To handle the choices presented by your action sheet, you must designate a delegate to handle the button’s action, and the delegate must conform to the <code class="code-voice">UIActionSheetDelegate</code> protocol. You designate the delegate with the <code class="code-voice">delegate</code> parameter when you initialize the action sheet object. The delegate must implement the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIModalViewDelegate_Protocol/UIActionSheetDelegate/UIActionSheetDelegate.html#/apple_ref/occ/intfm/UIActionSheetDelegate/actionSheet:clickedButtonAtIndex:">actionSheet:clickedButtonAtIndex:</a></code> message to respond when the button is tapped. For example, the following code shows an implementation that simply logs the title of the button that was tapped.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+    <ul class="code-lines">
+        <li><code class="code-voice"><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">actionSheet:</span><span class="p">(</span><span class="n">UIActionSheet</span> <span class="o">*</span><span class="p">)</span><span class="n">actionSheet</span> <span class="nl">clickedButtonAtIndex:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">buttonIndex</span>
+</code></li>
+        <li><code class="code-voice"><span class="p">{</span>
+</code></li>
+        <li><code class="code-voice">    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;The %@ button was tapped.&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">actionSheet</span> <span class="nl">buttonTitleAtIndex:</span><span class="n">buttonIndex</span><span class="p">]);</span>
+</code></li>
+        <li><code class="code-voice"><span class="p">}</span>
+</code></li>
+    </ul>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW9"></a>
+  <h3 class="section-name" tabindex="0">Using Auto Layout with Action Sheets</h3>
+  <p class="para">
+  The layout of action sheets is handled for you. You cannot create Auto Layout constraints between an action sheet and another user interface element.
+</p><p class="para">
+  For general information about using Auto Layout with iOS views, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW5" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW5">Using Auto Layout with Views</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW10"></a>
+  <h3 class="section-name" tabindex="0">Making Action Sheets Accessible</h3>
+  <p class="para">
+  Action sheets are accessible by default.
+</p><p class="para">
+  Accessibility for action sheets primarily concerns button titles. If VoiceOver is activated, it speaks the word “alert” when an action sheet is shown, then speaks its title if set (although iOS human interface guidelines recommend against titling action sheets). As the user taps a button in the action sheet, VoiceOver speaks its title and the word “button.”
+</p><p class="para">
+  For general information about making iOS views accessible, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW3" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW3">Making Views Accessible</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW12"></a>
+  <h3 class="section-name" tabindex="0">Internationalizing Action Sheets</h3>
+  <p class="para">
+  To internationalize an action sheet, you must provide localized translations of the button titles. Button size may change depending on the language and locale.
+</p><p class="para">
+  For more information, see <em class="u-book"><a href="../../../MacOSX/Conceptual/BPInternational/BPInternational.html#/apple_ref/doc/uid/10000171i" target="_self">Internationalization Programming Topics</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW13"></a>
+  <h3 class="section-name" tabindex="0">Debugging Action Sheets</h3>
+  <p class="para">
+  When debugging issues with action sheets, watch for this common pitfall: 
+</p><p class="para">
+  <strong>Not testing localizations.</strong> Be sure to test the action sheets in your app with the localizations you intend to ship. In particular, button titles can truncate if they are longer in localizations other than the one in which you designed your user interface. Following the HI guideline to give buttons short, logical titles helps to ameliorate this potential problem, but localization testing is also required.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW11"></a>
+  <h3 class="section-name" tabindex="0">Elements Similar to an Action Sheet</h3>
+  <p class="para">
+  The following elements provide similar functionality to an action sheet:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Alert View.</strong> Use an alert view to convey important information about an app or the device, interrupting the user and requiring them to stop what they’re doing to choose an action or dismiss the alert. For more information, see <span class="x-name"><a href="UIAlertView.html#/apple_ref/doc/uid/TP40012857-UIAlertView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIAlertView-SW1">Alert Views</a></span>.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Modal View.</strong> Use a modal view (that is, the view controller uses a modal presentation style) when users initiate a self-contained subtask in the context of their workflow or another task. For more information, see <em class="u-book"><a href="../../../UIKit/Reference/UIViewController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006926" target="_self">UIViewController Class Reference</a></em>.
+</p>
+</li>
+</ul>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW1">About Views</a></p>
+  			<p class="next-link"><a href="UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1">Activity Indicators</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2013-12-16
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>iOS Human Interface Guidelines: Sound</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">iOS Human Interface Guidelines</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="MobileHIG.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI Design Basics
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">Designing for iOS 7</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS App Anatomy</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">Starting and Stopping</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">Layout</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">Navigation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">Modal Contexts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">Interactivity and Feedback</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Animation.html#/apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">Animation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">Branding</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">Color and Typography</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">Icons and Graphics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">Terminology and Wording</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Integration.html#/apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">Integrating with iOS</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">Design Strategies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">Design Principles</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Process.html#/apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">From Concept to Product</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">Case Study: From Desktop to iOS</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">Running on iPhone 5</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS Technologies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">Social Media</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">Game Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">Notification Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Printing.html#/apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">AirPrint</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">Accessing User Data</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EditMenu.html#/apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">Edit Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UndoRedo.html#/apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">Undo and Redo</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="KeyboardInputView.html#/apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">Keyboards and Input Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI Elements
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">Content Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">Temporary Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">Icon and Image Design
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">App Icon</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">Bar Button Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NewsstandIcons.html#/apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">Newsstand Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebClipIcons.html#/apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">Web Clip Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ResizableImages.html#/apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">Creating Resizable Images</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH44"></a>
+  <h2 class='chapter-name'>Sound</h2>
+  
+  	<section class="section">
+  		<p class="para">
+  Whether sound is a primary part of your app’s user experience or an optional enhancement, you need to know how users expect sound to behave and how to meet those expectations.
+</p>
+
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW15"></a>
+  <h3 class="section-name" tabindex="0">Understand User Expectations</h3>
+  <p class="para">
+  People can use device controls to affect sound, and they might use wired or wireless headsets and headphones. People also have various expectations for how their actions impact the sound they hear. Although you might find some of these expectations surprising, they all follow the principle of user control in that the user, not the device, decides when it’s appropriate to hear sound.
+</p><p class="para">
+  <strong class="inline-head">Users switch their devices to silent when they want to</strong>:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Avoid being interrupted by unexpected sounds, such as phone ringtones and incoming message sounds
+</p>
+</li><li class="item"><p class="para">
+  Avoid hearing sounds that are the byproducts of user actions, such as keyboard or other feedback sounds, incidental sounds, or app startup sounds
+</p>
+</li><li class="item"><p class="para">
+  Avoid hearing game sounds that are not essential to using the game, such as sound effects and soundtracks
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW2"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">People switch their devices to silent using either the Ring/Silent switch (on iPhone) or the Silent switch (on iPad).
+    </p>
+    
+  </aside>
+</div><p class="para">
+  For example, in a theater users switch their devices to silent to avoid bothering other people in the theater. In this situation, users still want to be able to use apps on their devices, but they don’t want to be surprised by sounds they don’t expect or explicitly request, such as ringtones or new message sounds.
+</p><p class="para">
+  The Ring/Silent (or Silent) switch does <em>not</em> silence sounds that result from user actions that are solely and explicitly intended to produce sound. For example:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Media playback in a media-only app is not silenced because the media playback was explicitly requested by the user.
+</p>
+</li><li class="item"><p class="para">
+  A Clock alarm is not silenced because the alarm was explicitly set by the user.
+</p>
+</li><li class="item"><p class="para">
+  A sound clip in a language-learning app is not silenced because the user took explicit action to hear it.
+</p>
+</li><li class="item"><p class="para">
+  Conversation in an audio chat app is not silenced because the user started the app for the sole purpose of having an audio chat.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">Users use the device’s volume buttons to adjust the volume of all sounds their devices can play,</strong> including songs, app sounds, and device sounds. Users can use the volume buttons to quiet any sound, regardless of the position of the Ring/Silent (or Silent) switch. Using the volume buttons to adjust an app’s currently playing audio also adjusts the overall system volume, with the exception of the ringer volume.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW3"></a>
+  <aside class="aside">
+    <p class="aside-title">iPhone
+    </p>
+    <p class="para">Using the volume buttons when no audio is currently playing adjusts the ringer volume.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">Users use headsets and headphones to hear sounds privately and to free their hands.</strong> Regardless of whether these accessories are wired or wireless, users have specific expectations for the user experience.
+</p><p class="para">
+  When users plug in a headset or headphones, or connect to a wireless audio device, they intend to continue listening to the current audio, but privately. For this reason, they expect an app that is currently playing audio to continue playing without pause.
+</p><p class="para">
+  When users unplug a headset or headphones, or disconnect from a wireless device (or the device goes out of range or turns off), they don’t want to automatically share what they’ve been listening to with others. For this reason, they expect an app that is currently playing audio to pause, allowing them to explicitly restart playback when they’re ready.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW4"></a>
+  <h3 class="section-name" tabindex="0">Define the Audio Behavior of Your App</h3>
+  <p class="para">
+  <strong class="inline-head">If necessary, you can adjust relative, independent volume levels to produce the best mix in your app’s audio output.</strong> But the volume of the final audio output should always be governed by the system volume, whether it’s adjusted by the volume buttons or a volume slider. This means that control over an app’s audio output remains in users’ hands, where it belongs.
+</p><p class="para">
+  <strong class="inline-head">Ensure that your app can display the audio route picker, if appropriate.</strong> (An <strong>audio route</strong> is an electronic pathway for audio signals, such as from a device to headphone or from a device to speakers.) Even though people don’t physically plug in or unplug a wireless audio device, they still expect to be able to choose a different audio route. To handle this, iOS automatically displays a control that allows users to pick an output audio route (use the <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> class to allow the control to display in your app). Because choosing a different audio route is a user-initiated action, users expect currently playing audio to continue without pause.
+</p><p class="para">
+  <strong class="inline-head">If you need to display a volume slider,</strong> be sure to use the system-provided volume slider available when you use the <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> class. Note that when the currently active audio output device does not support volume control, the volume slider is replaced by the appropriate device name.
+</p><p class="para">
+  <strong class="inline-head">If your app produces only UI sound effects that aren’t essential to its functionality, use System Sound Services.</strong> System Sound Services is the iOS technology that produces alerts and UI sounds and invokes vibration; it is unsuitable for any other purpose. When you use System Sound Services to produce sound, you cannot influence how your audio interacts with audio on the device, or how it should respond to interruptions and changes in device configuration. For a sample project that demonstrates how to use this technology, see <em class="u-book"><a href="../../../../samplecode/SysSound/Introduction/Intro.html#/apple_ref/doc/uid/DTS40008018" target="_self">Audio UI Sounds (SysSound)</a></em>.
+</p><p class="para">
+  <strong class="inline-head">If sound plays an important role in your app, use Audio Session Services</strong> or the <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/occ/cl/AVAudioSession">AVAudioSession</a></code> class. These programming interfaces do not produce sound; instead, they help you express how your audio should interact with audio on the device and respond to interruptions and changes in device configuration. 
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW5"></a>
+  <aside class="aside">
+    <p class="aside-title">iPhone
+    </p>
+    <p class="para">No matter what technology you use to produce audio or how you define its behavior, the phone can always interrupt the currently running app. This is because no app should prevent people from receiving an incoming call.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  In Audio Session Services, the <strong>audio session</strong> functions as an intermediary for audio between your app and the system. One of the most important facets of the audio session is the <strong>category</strong>, which defines the audio behavior of your app.
+</p><p class="para">
+  To realize the benefits of Audio Session Services and provide the audio experience users expect, you need to select the category that best describes the audio behavior of your app. This is the case whether your app plays only audio in the foreground or can also play audio in the background. Follow these guidelines as you make this selection:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Select an audio session category based on its semantic meaning, not its precise set of behaviors.</strong> By selecting a category whose purpose is clear, you ensure that your app behaves according to users’ expectations. In addition, it gives your app the best chance of working properly if the exact set of behaviors is refined in the future.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">In rare cases, add a property to the audio session to modify a category’s standard behavior.</strong> A category’s standard behavior represents what most users expect, so you should consider carefully before you change that behavior. For example, you might add the ducking property to make sure your audio is louder than all other audio (except phone audio), if that’s what users expect from your app. (To learn more about audio session properties, see <a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionBasics/AudioSessionBasics.html#/apple_ref/doc/uid/TP40007875-CH3-SW2" target="_self">“Fine-Tuning the Category”</a> in <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="">Audio Session Programming Guide</a></em>.)
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Consider basing your category selection on the current audio environment of the device.</strong> This might make sense if, for example, users can use your app while listening to other audio instead of to your soundtrack. If you do this, be sure to avoid forcing users to stop listening to their music or make an explicit soundtrack choice when your app starts.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">In general, avoid changing categories while your app is running.</strong> The primary reason for changing the category is if your app needs to support recording and playback at different times. In this case, it can be better to switch between the Record category and the Playback category as needed, than to select the Play and Record category. This is because selecting the Record category ensures that no alerts—such as an incoming text message alert—will sound while the recording is in progress.
+</p>
+</li>
+</ul><p class="para">
+  <span class="x-name-no-link">Table 30-1</span> lists the audio session categories you can use. Different categories allow sounds to be silenced by the Ring/Silent or Silent switch (or device locking), to mix with other audio, or to play while the app is in the background. (For the actual category and property names as they appear in the programming interfaces, see <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="_self">Audio Session Programming Guide</a></em>.)
+</p><div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW6"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"><strong class="caption-number">Table 30-1</strong>Audio session categories and their associated behaviors</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Category
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Meaning
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Silenced
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Mixes
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  In Background
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Solo Ambient
+</p></td>
+            <td><p class="para">
+  Sounds enhance app functionality, and should silence other audio.
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Ambient
+</p></td>
+            <td><p class="para">
+  Sounds enhance app functionality but should not silence other audio.
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Playback
+</p></td>
+            <td><p class="para">
+  Sounds are essential to app functionality and might mix with other audio.
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No (default)
+</p><p class="para">
+  Yes (when the Mix With Others property is added)
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Record
+</p></td>
+            <td><p class="para">
+  Audio is user-recorded.
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Play and Record
+</p></td>
+            <td><p class="para">
+  Sounds represent audio input and output, sequentially or simultaneously.
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No (default)
+</p><p class="para">
+  Yes (when the Mix With Others property is added)
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Audio Processing
+</p></td>
+            <td><p class="para">
+  App performs hardware-assisted audio encoding (it does not play or record).
+</p></td>
+            <td><p class="para">
+  N/A
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  Yes *
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  * If you select the Audio Processing category and you want to perform audio processing in the background, you need to prevent your app from suspending before you’re finished with the audio processing. To learn how to do this, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html#/apple_ref/doc/uid/TP40007072-CH4-SW24" target="_self">“Implementing Long-Running Background Tasks”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>.
+</p><p class="para">
+  Here are some scenarios that illustrate how to choose the audio session category that provides an audio experience users appreciate.
+</p><p class="para">
+  <strong class="inline-head">Scenario 1: An educational app that helps people learn a new language.</strong> You provide:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Feedback sounds that play when users tap specific controls
+</p>
+</li><li class="item"><p class="para">
+  Recordings of words and phrases that play when users want to hear examples of correct pronunciation
+</p>
+</li>
+</ul><p class="para">
+  In this app, sound is essential to the primary functionality. People use this app to hear words and phrases in the language they’re learning, so the sound should play even when the device locks or is switched to silent. Because users need to hear the sounds clearly, they expect other audio they might be playing to be silenced.
+</p><p class="para">
+  To produce the audio experience users expect for this app, you’d use the Playback category. Although this category can be refined to allow mixing with other audio, this app should use the default behavior to ensure that other audio does not compete with the educational content the user has explicitly chosen to hear.
+</p><p class="para">
+  <strong class="inline-head">Scenario 2: A Voice over Internet Protocol (VoIP) app.</strong> You provide:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  The ability to accept audio input
+</p>
+</li><li class="item"><p class="para">
+  The ability to play audio
+</p>
+</li>
+</ul><p class="para">
+  In this app, sound is essential to the primary functionality. People use this app to communicate with others, often while they’re currently using a different app. Users expect to be able to receive calls when they’ve switched their device to silent or the device is locked, and they expect other audio to be silent for the duration of a call. They also expect to be able to continue calls when the app is in the background.
+</p><p class="para">
+  To produce the expected user experience for this app, you’d use the Play and Record category, and you’d be sure to activate your audio session only when you need it so that users can use other audio between calls.
+</p><p class="para">
+  <strong class="inline-head">Scenario 3: A game that allows users to guide a character through different tasks.</strong> You provide:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Various gameplay sound effects
+</p>
+</li><li class="item"><p class="para">
+  A musical soundtrack
+</p>
+</li>
+</ul><p class="para">
+  In this app, sound greatly enhances the user experience, but isn’t essential to the main task. Also, users are likely to appreciate being able to play the game silently or while listening to songs in their music library instead of to the game soundtrack. 
+</p><p class="para">
+  The best strategy is to find out if users are listening to other audio when your app starts. Don’t ask users to choose whether they want to listen to other audio or listen to your soundtrack. Instead, use the Audio Session Services function <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/func/AudioSessionGetProperty">AudioSessionGetProperty</a></code> to query the state of the <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/econst/kAudioSessionProperty_OtherAudioIsPlaying">kAudioSessionProperty_OtherAudioIsPlaying</a></code> property. Based on the answer to this query, you can choose either the Ambient or Solo Ambient categories (both categories allow users to play the game silently):
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  If users are listening to other audio, you should assume that they’d like to continue listening and wouldn’t appreciate being forced to listen to the game soundtrack instead. In this situation, you’d choose the Ambient category.
+</p>
+</li><li class="item"><p class="para">
+  If users aren’t listening to any other audio when your app starts, you’d choose the Solo Ambient category.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">Scenario 4: An app that provides precise, real-time navigation instructions to the user’s destination.</strong> You provide:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Spoken directions for every step of the journey
+</p>
+</li><li class="item"><p class="para">
+  A few feedback sounds
+</p>
+</li><li class="item"><p class="para">
+  The ability for users to continue to listen to their own audio
+</p>
+</li>
+</ul><p class="para">
+  In this app, the spoken navigation instructions represent the primary task, regardless of whether the app is in the background. For this reason, you’d use the Playback category, which allows your audio to play when the device is locked or switched to silent, and while the app is in the background. 
+</p><p class="para">
+  To allow people to listen to other audio while they use your app, you can add the <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/econst/kAudioSessionProperty_OverrideCategoryMixWithOthers">kAudioSessionProperty_OverrideCategoryMixWithOthers</a></code> property. However, you also want to make sure that users can hear the spoken instructions above the audio they’re currently playing. To do this, you can apply the <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/econst/kAudioSessionProperty_OtherMixableAudioShouldDuck">kAudioSessionProperty_OtherMixableAudioShouldDuck</a></code> property to the audio session to ensures that your audio is louder than all currently playing audio, with the exception of phone audio on iPhone. These settings allow the app to reactivate its audio session while the app is in the background, which ensures that users get navigation updates in real time.
+</p><p class="para">
+  <strong class="inline-head">Scenario 5: A blogging app that allows users to upload their text and graphics to a website.</strong> You provide:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  A short startup sound file
+</p>
+</li><li class="item"><p class="para">
+  Various short sound effects that accompany user actions (such as a sound that plays when a post has been uploaded)
+</p>
+</li><li class="item"><p class="para">
+  An alert sound that plays when a posting fails
+</p>
+</li>
+</ul><p class="para">
+  In this app, sound enhances the user experience, but it's not essential. The main task has nothing to do with audio and users don’t need to hear any sounds to successfully use the app. In this scenario, you’d use System Sound Services to produce sound. This is because the audio context of all sound in the app conforms to the intended purpose of this technology, which is to produce UI sound effects and alert sounds that obey device locking and the Ring/Silent (or Silent) switch in the way that users expect.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW7"></a>
+  <h3 class="section-name" tabindex="0">Manage Audio Interruptions</h3>
+  <p class="para">
+  Sometimes, currently playing audio is interrupted by audio from a different app. On iPhone, for example, an incoming phone call interrupts the current app’s audio for the duration of the call. In a multitasking environment, the frequency of such audio interruptions can be high.
+</p><p class="para">
+  To provide an audio experience users appreciate, iOS relies on you to:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Identify the type of audio interruption your app can cause
+</p>
+</li><li class="item"><p class="para">
+  Respond appropriately when your app continues after an audio interruption ends
+</p>
+</li>
+</ul><p class="para">
+  Every app needs to identify the type of audio interruption it can cause, but not every app needs to determine how to respond to the end of an audio interruption. This is because most types of apps should respond to the end of an audio interruption by resuming audio. Only apps that are primarily or partly media playback apps—and that provide media playback controls—have to take an extra step to determine the appropriate response.
+</p><p class="para">
+  Conceptually, there are two types of audio interruptions, based on the type of audio that’s doing the interrupting and the way users expect the particular app to respond when the interruption ends:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  A <strong>resumable interruption</strong> is caused by audio that users view as a temporary interlude in their primary listening experience. 
+</p>
+<p class="para">
+  After a resumable interruption ends, an app that displays controls for media playback should resume what it was doing when the interruption occurred, whether this is playing audio or remaining paused. An app that doesn’t have media playback controls should resume playing audio.
+</p>
+<p class="para">
+  For example, consider a user listening to an app for music playback on iPhone when a VoIP call arrives in the middle of a song. The user answers the call, expecting the playback app to be silent while they talk. After the call ends, the user expects the playback app to automatically resume playing the song, because the music—not the call—constitutes their primary listening experience <em>and</em> they had not paused the music before the call arrived. On the other hand, if the user had paused music playback before the call arrived, they would expect the music to remain paused after the call ends.
+</p>
+<p class="para">
+  Other examples of apps that can cause resumable interruptions are apps that play alarms, audio prompts (such as spoken driving directions), or other intermittent audio.
+</p>
+</li><li class="item"><p class="para">
+  A <strong>nonresumable interruption</strong> is caused by audio that users view as a primary listening experience, such as audio from a media playback app. 
+</p>
+<p class="para">
+  After a nonresumable interruption ends, an app that displays media playback controls should not resume playing audio. An app that doesn’t have media playback controls should resume playing audio.
+</p>
+<p class="para">
+  For example, consider a user listening to a music playback app (music app 1) when a different music playback app (music app 2) interrupts. In response, the user decides to listen to music app 2 for some period of time. After quitting music app 2, the user wouldn’t expect music app 1 to automatically resume playing because they’d deliberately made music app 2 their primary listening experience. 
+</p>
+</li>
+</ul><p class="para">
+  The following guidelines help you decide what information to supply and how to continue after an audio interruption ends.
+</p><p class="para">
+  <strong class="inline-head">Identify the type of audio interruption your app caused.</strong> You do this by deactivating your audio session in one of the following two ways when your audio is finished:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  If your app caused a resumable interruption, deactivate your audio session with the <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/c/econst/AVAudioSessionSetActiveFlags_NotifyOthersOnDeactivation">AVAudioSessionSetActiveFlags_NotifyOthersOnDeactivation</a></code> flag.
+</p>
+</li><li class="item"><p class="para">
+  If your app caused a nonresumable interruption, deactivate your audio session without any flags.
+</p>
+</li>
+</ul><p class="para">
+  Providing, or not providing, the flags allows iOS to give interrupted apps the ability to resume playing their audio automatically, if appropriate.
+</p><p class="para">
+  <strong class="inline-head">Determine whether you should resume audio when an audio interruption ends.</strong> You base this decision on the audio user experience you provide in your app.
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  If your app displays media playback controls that people use to play or pause audio, you need to check the <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/c/econst/AVAudioSessionInterruptionFlags_ShouldResume">AVAudioSessionInterruptionFlags_ShouldResume</a></code> flag when an audio interruption ends.
+</p>
+<p class="para">
+  If your app receives the Should Resume flag, your app should:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  Resume playing audio if your app was actively playing audio when it was interrupted
+</p>
+</li><li class="item"><p class="para">
+  Not resume playing audio if your app was <em>not</em> actively playing audio when it was interrupted
+</p>
+</li>
+</ul>
+</li><li class="item"><p class="para">
+  If your app doesn’t display any media playback controls that people can use to play or pause audio, your app should always resume previously playing audio when an audio interruption ends, regardless of whether the Should Resume flag is present. 
+</p>
+<p class="para">
+  For example, a game that plays a soundtrack should automatically resume playing the soundtrack after an interruption. 
+</p>
+</li>
+</ul>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW8"></a>
+  <h3 class="section-name" tabindex="0">Handle Media Remote Control Events, if Appropriate</h3>
+  <p class="para">
+  Apps can receive remote control events when people use iOS media controls or accessory controls, such as headset controls. This allows your app to accept user input that doesn’t come through your UI, whether your app is currently playing audio in the foreground or in the background. 
+</p><p class="para">
+  Apps can send video to AirPlay-enabled hardware—such as Apple TV—and transition to the background while playback continues. Such an app can accept user input via remote control events, so that users can control video playback while the app is in the background. In addition, this type of app can also reactivate an audio session after an interruption while it’s in the background.
+</p><p class="para">
+  A media playback app, in particular, needs to respond appropriately to media remote control events, especially if it plays audio or video while it’s in the background.
+</p><p class="para">
+  To meet the responsibilities associated with the privilege of playing media while your app is in the background, be sure to follow these guidelines:
+</p><p class="para">
+  <strong class="inline-head">Limit your app’s eligibility to receive remote control events to times when it makes sense.</strong> For example, if your app helps users read content, search for information, and listen to audio, it should accept remote control events only while the user is in the audio context. When the user leaves the audio context, you should relinquish the ability to receive the events. If your app lets users play audio or video on an AirPlay-enabled device, it should accept remote control events for the duration of media playback. Following these guidelines allows users to consume a different app’s media—and control it with headset controls—when they’re in the nonmedia contexts of your app.
+</p><p class="para">
+  <strong class="inline-head">As much as possible, use system-provided controls to offer AirPlay support.</strong> When you use the <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPMoviePlayerController_Class/Reference/Reference.html#/apple_ref/occ/cl/MPMoviePlayerController">MPMoviePlayerController</a></code> class to enable AirPlay playback, you can take advantage of a standard control that allows users to choose an AirPlay-enabled device that is currently in range. Or you can use the <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> class to display AirPlay-enabled audio or video devices from which users can choose. Users are accustomed to the appearance and behavior of these standard controls, so they’ll know how to use them in your app.
+</p><p class="para">
+  <strong class="inline-head">Don’t repurpose an event, even if the event has no meaning in your app.</strong> Users expect the iOS media controls and accessory controls to function consistently in all apps. You do not have to handle the events that your app doesn’t need, but the events that you do handle must result in the experience users expect. If you redefine the meaning of an event, you confuse users and risk leading them into an unknown state from which they can’t escape without quitting your app.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a></p>
+  			<p class="next-link"><a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

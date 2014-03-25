@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2259: Adding In-App Purchase to your iOS and OS X Applications</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40009578">
+	<meta id="document-version" name="document-version" content="7.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40009578-CH1">
+    <meta id="date" name="date" content="2014-01-30">
+    <meta id="description" name="description" content="TN2259: Describes how to set up and test In-App Purchase in your iOS and OS X applications.">
+    <meta id="book-title" name="book-title" content="Adding In-App Purchase to your iOS and OS X Applications">
+    <meta id="book-name" name="book-name" contents="DTS_TN2259_AddingInAppPurch">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Framework/Core Services Layer/StoreKit}, {Topic/Networking & Internet}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2259">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Adding In-App Purchase to your iOS and OS X Applications" type="text/html" href="index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40009578" title="Technical Note TN2259"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Adding In-App Purchase to your iOS and OS X Applications</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_2" title="Technical Note TN2259"></a><div class="dtsDocNumber">Technical Note TN2259</div><h1 id="pageTitle">Adding In-App Purchase to your iOS and OS X Applications</h1><p>In-App Purchase allows you to sell additional features and functionality from within your iOS and OS X applications. If you wish to offer In-App Purchase in your applications, you must complete several steps before you can do it. This document provides step-by-step instructions for setting up and testing In-App Purchase. It also answers common questions about In-App Purchase. The "Contracts, Tax, and Banking Information" section describes all the financial documents that must be completed. The "Member Center" and "iTunes Connect" sections indicate the steps to be respectively done in the Member Center and iTunes Connect. The "What's Next" section shows how to test In-App Purchase.</p><p>This document does not cover how to implement In-App Purchase in your applications. Read the <span class="content_text"><a href="../../documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html" class="urlLink" rel="external">In-App Purchase Programming Guide</a></span> for detailed information about implementing In-App Purchase in your applications.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_3" title="Note"></a><p><strong>Note:</strong>&nbsp;In-App Purchase is available in iOS 3.0 and later and OS X 10.7 and later.</p><p></p></aside></div>
+
+   
+    <div class="outerMiniTOC">
+
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40009578-CH1-CONTRACTS__TAX__AND_BANKING_INFORMATION">Contracts, Tax, and Banking Information</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40009578-CH1-MEMBER_CENTER">Member Center</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40009578-CH1-ITUNES_CONNECT">iTunes Connect</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40009578-CH1-WHAT_S_NEXT_">What's Next?</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40009578-CH1-FREQUENTLY_ASKED_QUESTIONS">Frequently Asked Questions</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40009578-CH1-REFERENCES">References</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40009578-RevisionHistory-DontLinkElementID_1">Document Revision History</a>
+                
+                
+                
+            </div>
+            
+        
+    </div>
+
+<section><a name="//apple_ref/doc/uid/DTS40009578-CH1-CONTRACTS__TAX__AND_BANKING_INFORMATION" title="Contracts, Tax, and Banking Information"></a><h2 class="jump">Contracts, Tax, and Banking Information</h2><p>You must complete the following steps before you can support In-App Purchase in your applications:</p><ol class="ol"><li class="li"><p>Agree to the latest Developer Program License Agreement.</p><p>Your Team agent must agree to the latest iOS Developer Program License Agreement (iOS) or to the latest Mac Developer Program License Agreement (OS X) in the <span class="content_text"><a href="http://developer.apple.com/membercenter" class="browserLink" >Member Center</a></span> before you are allowed to create In-App Purchase products. </p></li><li class="li"><p>Complete your contract, tax, and banking Information.</p><p>You must have an iOS Paid Applications contract (iOS) or a Mac OS X Paid Applications contract (OS X) in effect with Apple and have provided your tax and banking information in <span class="content_text"><a href="http://itunesconnect.apple.com" class="urlLink" rel="external">iTunes Connect</a></span> as seen in <span class="content_text"><!--a  -->Figure 1<!--/a--></span>.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009578-CH1-FIGURE1" title="Figure 1Contract section in iTunes Connect"></a><figcaption><strong class="caption_number">Figure 1</strong>&nbsp;&nbsp;Contract section in iTunes Connect</figcaption><img src="Art/tn2259_contract.png" class="wide-image" alt="" width="984" height="512"><img src="Art/tn2259_contract.png" class="ipad-scaled-image" alt="" width="670" height="348"></figure><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009578-CH1-MEMBER_CENTER" title="Member Center"></a><h2 class="jump">Member Center</h2><p>The Member Center is used to configure your App ID and Provisioning Profiles for In-App Purchase. <strong>OS X </strong> and <strong>iOS </strong> developers must complete the following steps in the <span class="content_text"><a href="http://developer.apple.com/membercenter" class="browserLink" >Member Center</a></span>:</p><ol class="ol"><li class="li"><p>Register an explicit App ID for your application.</p><p>Explicit App IDs are App IDs whose Bundle Identifier portion is a string without the wildcard ("*") character. Furthermore, they are automatically registered for In-App Purchase and Game Center as shown in <span class="content_text"><!--a  -->Figure 2<!--/a--></span>. Using an explicit App ID ensures that your In-App Purchase products are only associated with your application. For example, use <code>com.example.MyGreatApplication</code> rather than <code>com.example.*</code>. </p><p>Your Team Agent or Team Admin should navigate to the App IDs section of the Member Center to create App IDs for your applications. Read <span class="content_text"><a href="../../documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html" class="urlLink" rel="external">Registering App IDs</a></span> in the App Distribution Guide to find out how to create App IDs.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009578-CH1-FIGURE2" title="Figure 2Explicit App ID"></a><figcaption><strong class="caption_number">Figure 2</strong>&nbsp;&nbsp;Explicit App ID</figcaption><img src="Art/tn2259_AppIDInPortal.png" class="wide-image" alt="" width="794" height="72"><img src="Art/tn2259_AppIDInPortal.png" class="ipad-scaled-image" alt="" width="670" height="60"></figure><ol class="ol"><li class="li"><p>Certificates and Provisioning Profiles.</p><ul class="ul"><li class="li"><p><strong>iOS developers</strong> must create, download, and install a new Development Provisioning Profile that uses their App ID enabled for In-App Purchase as seen in <span class="content_text"><!--a  -->Figure 3<!--/a--></span>. Read <span class="content_text"><a href="../../documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#/apple_ref/doc/uid/TP40012582-CH30-SW24" class="urlLink" rel="external">Creating Provisioning Profiles Using Member Center</a></span> and <span class="content_text"><a href="../../documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#/apple_ref/doc/uid/TP40012582-CH30-SW26" class="urlLink" rel="external">Refreshing Provisioning Profiles in Xcode</a></span> in the App Distribution Guide to learn how to create and install Provisioning Profiles.</p></li><li class="li"><p><strong>OS X developers</strong> must create, download, and install a Mac Development Certificate that uses their App ID enabled for In-App Purchase. Read <span class="content_text"><a href="../../../mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#/apple_ref/doc/uid/TP40012582-CH31-SW6" class="urlLink" rel="external">Requesting Signing Identities</a></span> in the App Distribution Guide to learn how to create a Mac Development certificate.</p></li></ul></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009578-CH1-FIGURE3" title="Figure 3Provisioning Profile"></a><figcaption><strong class="caption_number">Figure 3</strong>&nbsp;&nbsp;Provisioning Profile</figcaption><img src="Art/tn2259_ProvisionProfileInPortal.png" alt="" width="541" height="267"></figure><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009578-CH1-ITUNES_CONNECT" title="iTunes Connect"></a><h2 class="jump">iTunes Connect</h2><p>To test In-App Purchase, you need to create products to purchase and test accounts to make the purchases. iTunes Connect allows you to create and manage In-App Purchase products and Test User accounts. Both <strong>iOS developers</strong> and <strong>OS X developers</strong> must complete the following steps in iTunes Connect:</p><ol class="ol"><li class="li"><p>Create test user accounts.</p><p>Apple provides a testing environment, called the sandbox, which allows you to test your In-App Purchase products without incurring any financial charges. The sandbox environment uses special test user accounts rather than your regular iTunes Connect accounts to test In-App Purchase. See <span class="content_text"><a href="../../documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SettingUpUserAccounts.html#/apple_ref/doc/uid/TP40011225-CH25-SW9" class="urlLink" rel="external">Test Users</a></span> in the iTunes Connect Developer Guide for more information about creating test user accounts.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_4" title="Note"></a><p><strong>Note:</strong>&nbsp;You can use the same test user accounts to test both your iOS and OS X applications. Each In-App Purchase test user account is tied to one and only one email address. As such, you cannot reuse an existing email address with another test user account. You can create as many test user accounts as you want in iTunes Connect. Furthermore, if your email service provider supports email addresses with "+" sign, you can use that as an alias for your normal email address. For instance, if your email is foo@example.com, then you can use the foo+us@example.com, foo+uk@example.com, and foo+fr@example.com emails when creating test user accounts in iTunes Connect. All communications sent to foo+us@example.com, foo+uk@example.com, and foo+fr@example.com will be routed to foo@example.com.</p><p></p></aside></div></li><li class="li"><p>Create In-App Purchase products.</p><p>Creating In-App Purchase products is available via the Manage In-App Purchases feature in iTunes Connect.</p><p>Your Admin or Technical users should navigate to the Manage Your Applications in iTunes Connect, select the application for which they want to create In-App Purchase products, then click on the Manage In-App Purchases button in the ensuing page for this application. See <span class="content_text"><a href="../../documentation/LanguagesUtilities/Conceptual/iTunesConnectInAppPurchase_Guide/Chapters/CreatingInAppPurchaseProducts.html" class="urlLink" rel="external">Creating In-App Purchase Products</a></span> in the In-App Purchase Configuration Guide for iTunes Connect for more information about creating In-App Purchase products.</p><ul class="ul"><li class="li"><p>Fill out the In-App Purchases form.</p><p>The In-App Purchase form contains the Product ID field, which specifies a unique identifier for each of your In-App Purchase products. See <span class="content_text"><a href="../../_qa/qa2009/ios.html" class="browserLink" >Technical Q&amp;A QA1329, 'In-App Purchase Product Identifiers'</a></span> for more information about product identifiers and how to access the form.</p></li><li class="li"><p>Leave the state of your product as Waiting for Screenshot as shown in <span class="content_text"><!--a  -->Figure 4<!--/a--></span>.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_5" title="Note"></a><p><strong>Note:</strong>&nbsp;Upload a a screenshot of your In-App Purchase product once you are done testing it and ready to upload it for review.</p><p></p></aside></div></li><li class="li"><p>Clear your product for sale.</p><p>The In-App Purchases form contains a Cleared for Sale checkbox, which determines whether your In-App Purchase product will be available for purchase from within your application. Check that box to make sure your product is available for sale. </p></li></ul></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009578-CH1-FIGURE4" title="Figure 4Status of Product IDs "></a><figcaption><strong class="caption_number">Figure 4</strong>&nbsp;&nbsp;Status of Product IDs </figcaption><img src="Art/tn2259_AppAndIAPProducts.png" class="wide-image" alt="" width="977" height="561"><img src="Art/tn2259_AppAndIAPProducts.png" class="ipad-scaled-image" alt="" width="670" height="384"></figure><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009578-CH1-WHAT_S_NEXT_" title="What's Next?"></a><h2 class="jump">What's Next?</h2><p>You have successfully set up In-App Purchase for your application, let's implement and test it: </p><ol class="ol"><li class="li"><p>Launch or create your project in Xcode.</p></li><li class="li"><p>Enter the Bundle Identifier portion of your App ID in the Bundle Identifier field of your Target's Info pane in Xcode.</p></li><li class="li"><p>Enter a version number (CFBundleVersion) and a build number (CFBuildNumber) in the Version and Build fields of your Target's Summary Pane in Xcode, respectively as seen in <span class="content_text"><!--a  -->Figure 5<!--/a--></span>. </p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_6" title="Note"></a><p><strong>Note:</strong>&nbsp;CFBundleVersion  and CFBuildNumber are strings that can only contain positive integers and and period (.) characters. See <span class="content_text"><a href="../../index.html#documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html" class="browserLink" >CFBundleVersion</a></span> for more information.</p><p></p></aside></div></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009578-CH1-FIGURE5" title="Figure 5Setting the version and build in the Summary pane"></a><figcaption><strong class="caption_number">Figure 5</strong>&nbsp;&nbsp;Setting the version and build in the Summary pane</figcaption><img src="Art/tn2259_BuildVersionNumber.png" class="wide-image" alt="" width="1265" height="534"><img src="Art/tn2259_BuildVersionNumber.png" class="ipad-scaled-image" alt="" width="670" height="282"></figure><ol class="ol"><li class="li"><p>Sign your application.</p><p>Navigate to the Build Settings pane of your Target and select the iOS Development Certificate/Provisioning Profile pair (iOS) or Mac signing certificate (OS X) associated with your App ID in the code signing identity section.</p></li><li class="li"><p>Write code for your application.</p><ul class="ul"><li class="li"><p>Both <strong>iOS developers</strong> and <strong>OS X developers</strong> should read the <span class="content_text"><a href="../../documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html" class="urlLink" rel="external">In-App Purchase Programming Guide</a></span> and <span class="content_text"><a href="../../releasenotes/General/ValidateAppStoreReceipt/Introduction.html" class="urlLink" rel="external">Receipt Validation Programming Guide</a></span> for detailed information about implementing In-App Purchase in your applications and receipt validation, respectively.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_7" title="Important"></a><p><strong>Important:</strong>&nbsp;The Feature Delivery section of the In-App Purchase Programming Guide describes how to request information about your products from the App Store. Apple strongly recommends that you populate your user interface with products that were returned by the App Store. This ensures that your customers are only presented with products they can buy. </p><p></p></aside></div></li><li class="li"><p>OS X applications should perform receipt validation immediately after launch. The apps should call <code>exit</code> with a status of <code>173</code> if validation fails as shown in <span class="content_text"><!--a  -->Listing 1<!--/a--></span>.</p><a name="//apple_ref/doc/uid/DTS40009578-CH1-SOURCECODE1" title="Listing 1Receipt validation"></a><br/><br/><p class="codesample clear"><strong class="caption_number">Listing 1</strong>&nbsp;&nbsp;Receipt validation</p><div class="codesample clear"><table><tr><td scope="row"><pre>-(void)applicationWillFinishLaunching:(NSNotification *)notification<span></span></pre></td></tr><tr><td scope="row"><pre>{<span></span></pre></td></tr><tr><td scope="row"><pre>   // Locate the receipt<span></span></pre></td></tr><tr><td scope="row"><pre>   NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>   // Test whether the receipt is present at the above path<span></span></pre></td></tr><tr><td scope="row"><pre>   if(![[NSFileManager defaultManager] fileExistsAtPath:[receiptURL path]])<span></span></pre></td></tr><tr><td scope="row"><pre>   {<span></span></pre></td></tr><tr><td scope="row"><pre>        // Validation fails<span></span></pre></td></tr><tr><td scope="row"><pre>        exit(173);<span></span></pre></td></tr><tr><td scope="row"><pre>   }<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>   // Proceed with further receipt validation steps<span></span></pre></td></tr><tr><td scope="row"><pre>}<span></span></pre></td></tr></table></div></li></ul></li><li class="li"><p>Test your application in the sandbox environment.</p><ul class="ul"><li class="li"><p><strong>iOS developers</strong> must complete the following steps:</p><ul class="nested"><li class="nested li"><p>Sign out of the Store in the Settings application on your testing device.</p></li><li class="nested li"><p>Set the run destination of your application to an iOS Device in Xcode.</p></li><li class="nested li"><p>Build and run your application from Xcode.</p></li></ul></li><li class="li"><p><strong>OS X developers</strong> must complete the following steps:</p><ul class="nested"><li class="nested li"><p>Build your application in Xcode.</p></li><li class="nested li"><p>Run your application.</p><p>You must launch your application from the Finder rather than from Xcode the first time in order to obtain a receipt. Click on your application in the Finder to launch it. OS X displays a "Sign in to download from the App Store." dialog. Enter your test user account and password as requested. The sandbox provides you with a new receipt upon successful authentication.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_8" title="Note"></a><p><strong>Note:</strong>&nbsp;Launch your application from the Finder whenever you need a new receipt.</p><p></p></aside></div></li></ul></li></ul><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_9" title="Important"></a><p><strong>Important:</strong>&nbsp;Use your test user account when prompted by Store Kit to confirm a purchase from within your application.</p><p></p></aside></div><p>Store Kit connects to the sandbox environment when you launch your application from Xcode, from your test device (iOS), or from the Finder (OS X). It connects to a production environment for applications that were downloaded from the App Store. You must not use your test user account to sign into the production environment. This will result in your test user account becoming invalid. Invalid test accounts cannot be used to test In-App Purchase again.</p></li></ol><ol class="ol"><li class="li"><p>Submit your In-App Purchase products for review.</p><p>Log in to <span class="content_text"><a href="http://itunesconnect.apple.com" class="urlLink" rel="external">iTunes Connect</a></span> to submit your In-App Purchase products for review by Apple, after you are done thoroughly testing them in the sandbox environment.</p></li></ol><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009578-CH1-FREQUENTLY_ASKED_QUESTIONS" title="Frequently Asked Questions"></a><h2 class="jump">Frequently Asked Questions</h2><ol class="ol"><li class="li"><p>How many In-App Purchase product IDs can we create per application in iTunes Connect?</p><p>Read <span class="content_text"><a href="../../documentation/LanguagesUtilities/Conceptual/iTunesConnectInAppPurchase_Guide/Chapters/CreatingInAppPurchaseProducts.html#/apple_ref/doc/uid/TP40013727-CH3-SW3" class="urlLink" rel="external">Configuring a Product</a></span> in the In-App Purchase Configuration Guide for iTunes Connect to find out how many In-App Purchase product IDs you can create per application.</p></li><li class="li"><p>My iOS application is currently signed with a Provisioning Profile that uses a wildcard App ID. How do I enable my App ID to support In-App Purchase? </p><p>Read <span class="content_text"><a href="../../documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#/apple_ref/doc/uid/TP40012582-CH30-SW4" class="urlLink" rel="external">Editing App IDs</a></span> in the App Distribution Guide to learn how you can enable your App ID to support In-App Purchase.</p></li><li class="li"><p>I cannot find the  Manage In-App Purchases button in iTunes Connect?</p><p>The  Manage In-App Purchases button may not be available to you for one or more of the following reasons:</p><ul class="ul"><li class="li"><p>You are not an Admin or Technical user for your iTunes Connect account.</p></li><li class="li"><p>Your Team Agent has not agreed to the latest iOS or Mac Developer Program License Agreement.</p></li><li class="li"><p>You do not have the latest Paid Applications contract in effect.</p></li></ul></li><li class="li"><p>Must I upload a binary to test In-App Purchase?</p><p>No. Testing In-App Purchase does not require uploading a binary.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_10" title="Important"></a><p><strong>Important:</strong>&nbsp;DO NOT upload the development binary to iTunes Connect until the application is ready for App Review approval. If the binary is present in iTunes Connect and it is not fully functional, App Review will review the binary and likely reject the development binary. Testing In-App Purchase will fail if you or App Review reject your most recent binary in iTunes Connect. The workaround in this case is to upload a binary without In-App Purchase features that can get approved by App Review. Once the binary is approved, resume testing the binary with In-App Purchase features.</p><p></p></aside></div></li><li class="li"><p>How do I resolve the 'Your account info has changed' error?</p><p>You are getting the 'Your account info has changed'  error because you are signed in with your test user account on your device while testing In-App Purchase. To resolve this error, sign out of the Store in the Settings application on your device, create a new test user account in iTunes Connect, and use it when testing In-App Purchase.</p></li><li class="li"><p>Why are my product identifiers being returned in the <code>invalidProductIdentifiers</code> array?</p><p>Your product identifiers may be returned in the <code>invalidProductIdentifiers</code> array for one or more of the following reasons:</p><ul class="ul"><li class="li"><p>You did not complete all the financial requirements (see the "Contracts, Tax, and Banking Information" section of this document).</p></li><li class="li"><p>You did not use an explicit App ID.</p></li><li class="li"><p>You did not use the Provisioning Profile associated with your explicit App ID.</p></li><li class="li"><p>You did not use the correct product identifier in your code. See <span class="content_text"><a href="../../_qa/qa2009/ios.html" class="browserLink" >Technical Q&amp;A, QA1329, 'In-App Purchase Product Identifiers'</a></span> for more information about product identifiers.</p></li><li class="li"><p>You did not clear your In-App Purchase products for sale in iTunes Connect.</p></li><li class="li"><p>You might have modified your products, but these changes are not yet available to all the App Store servers.</p></li><li class="li"><p>If you or App Review rejected your most recent binary in iTunes Connect.</p></li></ul></li><li class="li"><p>How do I resolve the "You've already purchased this In-App Purchase but it hasn't been downloaded." error message?</p><p>You are getting the "You've already purchased this In-App Purchase but it hasn't been downloaded." error message because you did not call <code>SKPaymentQueue</code> 's <code>finishTransaction:</code>method in your application. Calling <code>finishTransaction:</code> allows you to remove a transaction from the payment queue.</p></li><li class="li"><p>How do I resolve the "You've already purchased this. Tap OK to download it again for free." error message?</p><p>The "You've already purchased this. Tap OK to download it again for free." message is a notification rather than an error. It indicates that you are attempting to purchase a nonconsumable product that you have already bought. You are not charged when purchasing an already bought nonconsumable product.</p></li><li class="li"><p>Calling  the payment queue’s <code>restoreCompletedTransactions</code> method does not restore any products in my application.</p><p>Calling the payment queue’s <code>restoreCompletedTransactions</code> method may not restore any products in your application for one or more of the following reasons:</p><ul class="ul"><li class="li"><p>You did not have any previously bought non-consumable, auto-renewable subscriptions, or free subscriptions.</p></li><li class="li"><p>You were trying to restore non-renewing subscription or consumable products, which are not restorable. The <code>restoreCompletedTransactions</code> method only restores non-consumable, auto-renewable subscriptions, and free subscriptions. </p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_11" title="Note"></a><p><strong>Note:</strong>&nbsp;Store Kit does not call the <code> paymentQueue:updatedTransactions:</code> method when there are no restorable products.</p><p></p></aside></div></li></ul></li><li class="li"><p>When should I restore my In-App Purchase products?</p><p>You should only restore your auto-renewal subscription or nonconsumable products in both of these cases:</p><ul class="ul"><li class="li"><p>To install them on additional devices owned by your customers.</p></li><li class="li"><p>To reinstall them on devices where their associated application was deleted.</p></li></ul></li><li class="li"><p>How do I resolve the "This is not a test user account. Please create a new account in the Sandbox environment." error message?</p><p>You are getting the "This is not a test user account. Please create a new account in the Sandbox environment." error message because you signed in with your iTunes user account when prompted by Store Kit to confirm a purchase. To resolve this error, sign out of the Store in the Settings application on your device and use your In-App Purchase test user account when prompted by Store Kit to confirm a purchase. </p></li><li class="li"><p>How do I retrieve the receipt data?</p><p>Use NSBundle's <code>appStoreReceiptURL</code> method to first locate your application receipt, then read the entire receipt to retrieve your receipt data as shown in <span class="content_text"><!--a  -->Listing 2<!--/a--></span> (iOS 7, OS X 10.7 and later).</p><a name="//apple_ref/doc/uid/DTS40009578-CH1-SOURCECODE2" title="Listing 2Retrieving the receipt data"></a><br/><br/><p class="codesample clear"><strong class="caption_number">Listing 2</strong>&nbsp;&nbsp;Retrieving the receipt data</p><div class="codesample clear"><table><tr><td scope="row"><pre> NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];<span></span></pre></td></tr><tr><td scope="row"><pre>  // Test whether the receipt is present at the above URL<span></span></pre></td></tr><tr><td scope="row"><pre>   if(![[NSFileManager defaultManager] fileExistsAtPath:[receiptURL path]])<span></span></pre></td></tr><tr><td scope="row"><pre>   {<span></span></pre></td></tr><tr><td scope="row"><pre>      NSData *receiptData = [NSData dataWithContentsOfURL:receiptURL];<span></span></pre></td></tr><tr><td scope="row"><pre>   }<span></span></pre></td></tr></table></div><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_12" title="Note"></a><p><strong>Note:</strong>&nbsp;For apps supporting iOS 6 and earlier, Use the <code>transactionReceipt</code> property of your SKPaymentTransaction object to retrieve your receipt data as shown in <span class="content_text"><!--a  -->Listing 3<!--/a--></span>.</p><p></p></aside></div><a name="//apple_ref/doc/uid/DTS40009578-CH1-SOURCECODE3" title="Listing 3Retrieving the receipt data in iOS 6 and earlier"></a><br/><br/><p class="codesample clear"><strong class="caption_number">Listing 3</strong>&nbsp;&nbsp;Retrieving the receipt data in iOS 6 and earlier</p><div class="codesample clear"><table><tr><td scope="row"><pre>-(void)completeTransaction:(SKPaymentTransaction *)transaction<span></span></pre></td></tr><tr><td scope="row"><pre>{<span></span></pre></td></tr><tr><td scope="row"><pre>   NSData *receiptData = [transaction transactionReceipt];<span></span></pre></td></tr><tr><td scope="row"><pre>}<span></span></pre></td></tr></table></div></li><li class="li"><p>Verifying my receipt fails with a status of &lt;string of numbers&gt; (iOS)</p><p>Verifying your receipt may fail with a status of &lt;string of numbers&gt; for one or more of the following reasons:</p><ul class="ul"><li class="li"><p>You did not encode your receipt data using base64 encoding in your iOS application.</p></li><li class="li"><p>The object being posted to the App Store is not formatted as JSON. See <span class="content_text"><!--a  -->Listing 4<!--/a--></span> for a proper JSON object for an auto-renewable subscription. </p><a name="//apple_ref/doc/uid/DTS40009578-CH1-SOURCECODE4" title="Listing 4valid sample receipt for verifying an auto-renewable subscription"></a><br/><br/><p class="codesample clear"><strong class="caption_number">Listing 4</strong>&nbsp;&nbsp;valid sample receipt for verifying an auto-renewable subscription</p><div class="codesample clear"><table><tr><td scope="row"><pre>{<span></span></pre></td></tr><tr><td scope="row"><pre>    "receipt-data" : "...",<span></span></pre></td></tr><tr><td scope="row"><pre>        "password" : "..."<span></span></pre></td></tr><tr><td scope="row"><pre>}<span></span></pre></td></tr></table></div></li></ul></li><li class="li"><p>I updated my iOS application with In-App Purchase. How do I test it (iOS)? </p><p>Follow these steps if you are trying to test whether your updated app correctly implements In-App Purchase:</p><ul class="ul"><li class="li"><p>Install your original application via the Ad Hoc Distribution method.</p></li><li class="li"><p>Install your updated application also via the Ad Hoc Distribution method to verify that it overwrites the original application. </p></li><li class="li"><p>Attempt to use the updated application and try purchasing In-App Purchase products from it.</p></li></ul></li><li class="li"><p>What url should I use to verify my receipt ?</p><ul class="ul"><li class="li"><p>Use the sandbox URL <code> https://sandbox.itunes.apple.com/verifyReceipt </code> while testing your application in the sandbox and while your application is in review.</p></li><li class="li"><p>Use the production URL <code>https://buy.itunes.apple.com/verifyReceipt</code> once your application is live in the App Store.</p></li></ul></li><li class="li"><p>How do I verify my auto-renewable subscriptions receipt (iOS)?</p><p>Always verify your receipt for auto-renewable subscriptions first with the production URL; proceed to verify with the sandbox URL if you receive a 21007 status code. Following this approach ensures that you do not have to switch between URLs while your application is being tested or reviewed in the sandbox or is live in the App Store.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_13" title="Note"></a><p><strong>Note:</strong>&nbsp;The 21007 status code indicates that this receipt is a sandbox receipt, but it was sent to the production service for verification.</p><p></p></aside></div></li><li class="li"><p>How do I resolve the "Current receipt invalid or mismatched ds person id" error message (OS X)?</p><p>You are getting this message because your application does not contain an OS X App Store receipt. See the "Write code for your application" step of this technote's "What's Next?" for more infomation on how to obtain a receipt for your application.</p></li><li class="li"><p>My In-App Purchase has localized information for various languages on iTunes Connect. However, the <code>localizedDescription</code> and <code>localizedTitle</code> properties always return information in English even though my test device language is not set to English.</p><p><code>localizedDescription</code> and <code>localizedTitle</code> return localized information whose language is based on the current iTunes Store rather than the current device language setting. For instance, if your In-App Purchase is localized for German in iTunes Connect and you are logged with an English test user account, then <code>localizedDescription</code> and <code>localizedTitle</code> will return information localized in English. To have <code>localizedDescription</code> and <code>localizedTitle</code> return information localized in German, login with a German test user account on your test device.</p></li></ol><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009578-CH1-REFERENCES" title="References"></a><h2 class="jump">References</h2><ul class="ul"><li class="li"><p><span class="content_text"><a href="../../documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html" class="urlLink" rel="external">App Distribution Guide</a></span></p></li><li class="li"><p><span class="content_text"><a href="../../documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html" class="browserLink" >iTunes Connect Developer Guide</a></span></p></li><li class="li"><p><span class="content_text"><a href="../../documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html" class="urlLink" rel="external">In-App Purchase Programming Guide</a></span></p></li><li class="li"><p><span class="content_text"><a href="../../../mac/releasenotes/General/ValidateAppStoreReceipt/Introduction.html" class="urlLink" rel="external">Receipt Validation Programming Guide</a></span></p></li><li class="li"><p><span class="content_text"><a href="../../documentation/LanguagesUtilities/Conceptual/iTunesConnectInAppPurchase_Guide/Chapters/Introduction.html" class="urlLink" rel="external">In-App Purchase Configuration Guide for iTunes Connect</a></span></p></li><li class="li"><p><span class="content_text"><a href="../../_qa/qa2009/ios.html" class="browserLink" >Technical Q&amp;A, QA1329, 'In-App Purchase Product Identifiers'</a></span></p></li></ul><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><br/><hr/><a name="//apple_ref/doc/uid/DTS40009578-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40009578-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2014-01-30</td><td><p>Updated for iOS 7.</p></td></tr><tr><td scope="row">2013-02-21</td><td><p>Fixed typos and updated the FAQ section.</p></td></tr><tr><td scope="row">2012-08-29</td><td><p>Updated the FAQ section and fixed typos.</p></td></tr><tr><td scope="row">2012-02-22</td><td><p>Added screenshots. Updated the "What's Next?" and FAQ sections.</p></td></tr><tr><td scope="row">2011-08-03</td><td><p>Added information about In App Purchase in Mac OS X 10.7.
+Updated the FAQ section.</p></td></tr><tr><td scope="row">2011-05-23</td><td><p>Updated the "What's Next?" section.</p></td></tr><tr><td scope="row">2011-05-05</td><td><p>Updated the FAQ section.</p></td></tr><tr><td scope="row">2010-10-20</td><td><p>Removed the Enable your App ID for In App Purchase section. Updated the FAQ section.</p></td></tr><tr><td scope="row">2010-03-03</td><td><p>New document that 
+					describes how to set up and test In-App Purchase in your iOS and OS X applications.</p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2014 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2014-01-30</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

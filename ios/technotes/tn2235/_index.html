@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2235: Media Stream Validator Tool Results Explained</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40010221">
+	<meta id="document-version" name="document-version" content="1.1.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40010221-CH1">
+    <meta id="date" name="date" content="2010-08-03">
+    <meta id="description" name="description" content="TN2235: Describes the warnings and errors returned by the Media Stream Validator tool.">
+    <meta id="book-title" name="book-title" content="Media Stream Validator Tool Results Explained">
+    <meta id="book-name" name="book-name" contents="DTS_TN2235_MediaStreamValid">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Topic/Audio & Video}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2235">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Media Stream Validator Tool Results Explained" type="text/html" href="http://developer.apple.com/library/ios/technotes/tn2235/index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40010221" title="Technical Note TN2235"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Media Stream Validator Tool Results Explained</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="http://developer.apple.com/library/ios/technotes/tn2235/index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40010221-CH1-DontLinkElementID_2" title="Technical Note TN2235"></a><div class="dtsDocNumber">Technical Note TN2235</div><h1 id="pageTitle">Media Stream Validator Tool Results Explained</h1><p>Describes the warnings and errors returned by the Media Stream Validator tool.</p>
+
+   
+    <div class="outerMiniTOC">
+
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010221-CH1-SECTION1">HTTP Live Streaming</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010221-CH1-SECTION2">Media Stream Validator Tool</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010221-CH1-SECTION3">Errors and Warnings Explained</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010221-CH1-SUBSECTION3">Errors</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010221-CH1-SUBSECTION4">Warnings</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010221-RevisionHistory-DontLinkElementID_1">Document Revision History</a>
+                
+                
+                
+            </div>
+            
+        
+    </div>
+
+<section><a name="//apple_ref/doc/uid/DTS40010221-CH1-SECTION1" title="HTTP Live Streaming"></a><h2 class="jump">HTTP Live Streaming</h2><p>HTTP Live Streaming allows you to send live or prerecorded audio and video to iPhone, iPad, and other devices including desktop computers, using an ordinary Web server. Playback requires iOS 3.0 or later on devices running iOS; QuickTime X or later is required on the desktop. See the <span class="content_text"><a href="http://developer.apple.com/iphone/library/documentation/NetworkingInternet/Conceptual/StreamingMediaGuide/Introduction/Introduction.html" class="browserLink" >HTTP Live Streaming Overview</a></span> for more information.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40010221-CH1-SECTION2" title="Media Stream Validator Tool"></a><h2 class="jump">Media Stream Validator Tool</h2><p>The Media Stream Validator (<code>mediastreamvalidator</code>) is a command-line tool to validate HTTP Live Streaming streams and servers. </p><p>This tool simulates an HTTP Live Streaming session and verifies that the index file and media segments conform to the HTTP Live Streaming specification. It performs several checks to ensure reliable streaming. If any errors or problems are found, a detailed diagnostic report is displayed. This technote provides an explanation of many of the common errors and warnings reported by the tool.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40010221-CH1-DontLinkElementID_3" title="Important"></a><p><strong>Important:</strong>&nbsp;You should always run the mediastreamvalidator tool on your stream to verify that it conforms to the HTTP Live Streaming specification.</p><p></p></aside></div><p>The Media Stream Validator is part of the HTTP Live Streaming Tools package, which contains several prerelease command-line tools that are used for deployment and validation of HTTP Live Streaming solutions.</p><p>iPhone Developer Program members and Mac and ADC Select or Premier members can download the tools as part of the HTTP Live Streaming Tools package.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40010221-CH1-DontLinkElementID_4" title="Important"></a><p><strong>Important:</strong>&nbsp;The tools are frequently updated. If you are an iPhone Developer Program member or a Mac or ADC Select or Premier member, you can download the latest versions from the Apple Developer Connection website. To download, go to <span class="content_text"><a href="http://connect.apple.com" class="urlLink" rel="external">http://connect.apple.com</a></span>, click on 'QuickTime' or 'iPhone', scroll down to the 'HTTP Live Streaming Tools', download and install the 'HTTP Live Streaming Tools'.</p><p></p></aside></div><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40010221-CH1-SECTION3" title="Errors and Warnings Explained"></a><h2 class="jump">Errors and Warnings Explained</h2><p>Listed below is a description of many of the common errors and warnings that are returned by the Media Stream Validator tool.</p><section><a name="//apple_ref/doc/uid/DTS40010221-CH1-SUBSECTION3" title="Errors"></a><h3 class="jump">Errors</h3><p>These are many of the common errors that can be returned by the Media Stream Validator tool. </p><p>These errors indicate a serious problem with the stream that must be corrected in order for the stream to play correctly.</p><ul class="ul"><li class="li"><p><strong>ERROR: Invalid response from the validator helper: a track is missing the 'type' property</strong></p><p>You have defined an audio or video track in your transport stream program map table (PMT), but there are no frames of that type in the actual stream.</p></li><li class="li"><p><strong>ERROR: Media segment is incorrectly encrypted.</strong></p><p>Check to make sure you have properly encrypted your media. </p><p>Both the <code>mediastreamsegmenter</code> and <code>mediafilesegmenter</code> command-line tools allow you to encrypt the media and produce encryption keys. For details, type <code>man</code> <code>mediastreamsegmenter</code> and <code>man</code> <code>mediafilesegmenter</code> from the terminal window.</p></li></ul><p>If the Media Stream Validator tool returns any of the following errors (or any other errors not listed here) when validating your stream please file a bug report against the tool using the <span class="content_text"><a href="../../../../bug-reporting/index.html" class="browserLink" >Apple Bug Reporter</a></span> and include a link to your stream in your report.</p><ul class="ul"><li class="li"><p><strong>ERROR: Invalid media segment: The validator helper exited due to a fatal error: failed to create format reader: [errno: -12847] format reader file not recognized</strong></p></li><li class="li"><p><strong>ERROR: Invalid media segment: The validator helper exited due to a SIGABRT signal.</strong></p></li><li class="li"><p><strong>ERROR: Invalid media segment: The validator helper exited due to a fatal error: segment duration is not finite</strong></p></li></ul></section><section><a name="//apple_ref/doc/uid/DTS40010221-CH1-SUBSECTION4" title="Warnings"></a><h3 class="jump">Warnings</h3><p>These are many of the common warnings that can be returned by the Media Stream Validator tool.</p><p>Warnings indicate problems that you should correct in order for your stream to play correctly.</p><ul class="ul"><li class="li"><p><strong>WARNING: Media segment duration outside of expected duration by 25.926 % (7.41 vs. 10.00 seconds, limit is 20 %)</strong></p><p>The playback duration of the segment exceeded the value advertised in the <code>duration</code> parameter of the <code>#EXTINF</code> tag in the playlist file. See the <span class="content_text"><a href="http://tools.ietf.org/html/draft-pantos-http-live-streaming" class="urlLink" rel="external">HTTP Live Streaming specification</a></span> (currently an IETF Internet-Draft) for more information about the <code>#EXTINF</code> tag. </p><p>We suggest you use the latest <code>mediastreamsegmenter</code> tool to create your media segments, and use the <code>optimize</code> option. MPEG-2 transport streams can include substantial overhead. They utilize fixed packet sizes that are padded when the packet contents are smaller than the default packet size. Encoder and multiplexer implementations vary in their efficiency at packing media data into these fixed packet sizes. The amount of padding can vary with frame rate, sample rate, and resolution.</p><p>See <span class="content_text"><a href="../../_technotes/tn2010/ios.html" class="browserLink" >Technical Note TN2224 Best Practices for Creating and Deploying HTTP Live Streaming Media for the iPhone and iPad</a></span> for media encoding recommendations.</p></li><li class="li"><p><strong>WARNING: Media segment contains a video track but does not contain any IDR access unit with a SPS and a PPS</strong></p><p>The encoder is not putting any Instantaneous Decoder Refresh (IDR) frames in the media segments except at the very beginning; IDR frames must be included in each segment to allow clients to seek to different points in the stream.</p><p>IDR frames define synchronization points in H.264/MPEG-4 AVC video; IDR frames can be decoded without reference to previous frames. You can seek to these points and play the video (these are the H.264 equivalent of I-frames). </p></li><li class="li"><p><strong>WARNING: Media segment bitrate outside of target playlist bitrate by 29.942 % (364530 vs. 520324 bps, limit is 10 %).</strong></p><p>The actual measured bitrate of the stream is not what is advertised in the <code>BANDWIDTH</code> attribute in the <code>EXT-X-STREAM-INF</code> tag in the playlist. </p><p>You can reduce the overhead by using a more efficient encoder, and by fine-tuning the encoder settings. The <code>-optimize</code> argument can be passed to the Apple segmenter tools to significantly reduce the overhead, particularly for low-bandwidth streams.</p><p>In the case where you are creating a low-bitrate 64kbps stream, we recommend you create an audio-only stream with a poster frame. The Apple <code>mediastreamsegmenter</code> tool can produce an audio-only stream if you specify the following argument:</p><p><code>-a | -audio-only</code></p><p>This strips the audio elementary stream (AAC/ADTS or MP3) and writes it into the media file. You could, for example, run the <code>mediastreamsegmenter</code> on an existing audio/video stream to get an audio-only stream.</p><p>Use the <code>-meta-file</code> argument when invoking the stream or file segmenter with <code>-meta-type=picture</code> to add an image to every segment. For example, this would add an image named <code>poster.jpg</code> to every segment of an audio stream created from the file <code>track01.mp3</code>:</p><p><code>mediafilesegmenter -f /Dir/outputFile -a --meta-file=poster.jpg --meta-type=picture track01.mp3</code></p><p>Remember that the image is resent in every segment. This is typically every ten seconds, so it’s best to keep the file size small.</p><p>You can also get this error if you are using audio inserted in a transport stream; use an audio elementary stream instead.</p></li><li class="li"><p><strong>WARNING: 6 samples (2.007 %) do not have timestamps in track 257 (avc1)</strong></p><p>The encoder is not properly placing timestamps. In AVC video, you should have both a Decoding Time Stamp (DTS) and Presentation Time Stamp (PTS) in each Packetized Elementary Stream (PES) header. These indicate the exact moment where a video frame or an audio frame has to be decoded or presented to the user.</p></li><li class="li"><p><strong>WARNING: The playlist should use relative URIs to reduce its size</strong></p><p>Individual playlist entries that specify full path names require more text than entries with relative path names. In the case of very long video on demand (VOD) playlists or very long duration live playlists this can create a significant file size difference in the playlist file itself, increasing the download time of the playlist files.</p><p>Using relative URIs means less characters, which will reduce the number of bytes going across the network.</p></li><li class="li"><p><strong>WARNING: Playlist Content-Type is 'text/plain', but should be one of 'application/vnd.apple.mpegurl', 'audio/x-mpegurl' or 'audio/mpegurl'</strong></p><p>This is a problem with the MIME-type setting in your webserver. With an Apache webserver the recommended configuration is typically limited to specifying MIME-type associations for .M3U8 files and .ts files as shown in X <span class="content_text"><!--a  -->Table 1<!--/a--></span>:</p><a name="//apple_ref/doc/uid/DTS40010221-CH1-TABLE1" title="Table 1WebServer MIME-type asssociations for .M3U8 files"></a><div class="tableholder"><table class="graybox" border = "0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 1</strong>&nbsp;&nbsp;WebServer MIME-type asssociations for .M3U8 files</caption><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File extension
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+MIME type
+</p></th></tr><tr><td  scope="row"><p>
+.M3U8
+</p></td><td ><p>
+application/x-mpegURL or vnd.apple.mpegURL
+</p></td></tr><tr><td  scope="row"><p>
+.ts
+</p></td><td ><p>
+video/MP2T
+</p></td></tr></table></div></li><li class="li"><p><strong>WARNING: INF tag with duration 2 seconds or more above the playlist's target duration (10.000 seconds)</strong></p><p>The <code>EXTINF</code> <code>duration</code> parameter of each media file in the Playlist file MUST be less than or equal to the target duration.  </p><p>The playlist target duration tag MUST appear once in the Playlist file.  Its format is: </p><p><code>#EXT-X-TARGETDURATION:&lt;s&gt;</code> </p><p>where s is an integer indicating the target duration in seconds.</p><p>See the <span class="content_text"><a href="http://tools.ietf.org/html/draft-pantos-http-live-streaming" class="urlLink" rel="external">IETF Internet Draft of the HTTP Live Streaming Protocol Specification</a></span> for more information.</p></li><li class="li"><p><strong>WARNING: stream discontinuity detected</strong></p><p>You must use the <code>EXT-X-DISCONTINUITY</code> tag where an encoding discontinuity exists between the media file that follows it and the one that preceded it. See the <span class="content_text"><a href="http://tools.ietf.org/html/draft-pantos-http-live-streaming" class="urlLink" rel="external">IETF Internet Draft of the HTTP Live Streaming Protocol Specification</a></span> for more information.</p><p>If you intend to play a new stream at a given point in your presentation, you must use the <code>EXT-X-DISCONTINUITY</code> tag.</p></li><li class="li"><p><strong>WARNING: Media segment took longer to download than its duration (10.30 vs. 9.54 seconds).</strong></p><p>This may be due to a slow server or poor network connection (for example, it required more than 10 seconds to download a 9.54 second segment).</p></li><li class="li"><p><strong>WARNING: Timestamps are too spread out across the variant playlists, with a maximum spread of 125.13 seconds and a maximum target duration of 10 seconds (threshold is twice that number).</strong></p><p>The timestamps aren't equivalent across the variant streams, for example:</p><p>- Stream 1 starts with time 100 and continues</p><p>- Stream 2 starts with time 400 and continues</p><p>For video on demand (VOD), these should be dead-on.</p></li><li class="li"><p><strong>WARNING: Cached time for presentation http://yourserver.com/index.m3u8 (21 seconds) exceeds 2 x the target duration (10 seconds)</strong></p><p>For a live stream index file, the difference between the last modified time and the current time as reported by the server exceeds twice the target duration. This can mean the index file is out of date (it was cached too long).</p></li></ul></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><br/><hr/><a name="//apple_ref/doc/uid/DTS40010221-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40010221-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2010-08-03</td><td><p>New document that 
+					describes the warnings and errors returned by the Media Stream Validator tool.</p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2010 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2010-08-03</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>
