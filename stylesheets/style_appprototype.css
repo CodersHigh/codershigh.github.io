@@ -1,7 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,400,700);
 
+body {
+  font: 300 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#777;
+  background-color: #f6f3e0;
+}
 @media print, screen and(max-width: 480px) {
 	.video {
-    width: 420px;
+    width: 100%;
     height: 280px;
   }
 }
@@ -21,71 +27,23 @@
     height: 315px;
   }
 }
-
-
-.tab {
-  height:30px;
-}
-
-.selected {
-  height:30px;
-}
-
-.group {
+.selection_year {
   float: left;
   width: 100%;
 }
-
-.works_site {
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    box-shadow:3px -0px 10px rgba(0, 0, 0, 0.2000);
-    border:1px solid #c1d4e2;
-    margin-top:1em;
-    margin-bottom:2em;
-}
-
-.underline {
-  border-bottom:1px solid #ddd;
-}
-.flow {
-  margin-bottom:3em;
-  padding-bottom:2em;
-}
-
-.flow_name {
-  font-size:1.4em;
-  font-weight:bold;
-}
-.flow > h4 {
-  font-size:1.1em;
-  margin-top:1.2em;
-  clear:both;
-}
-.flow > ul > li {
-  margin:0;
-}
-.selection_year {
-  overflow: auto;
-}
-.selection_year > li {
-  width:150px;
-  float:left;
+.selection_school {
+  float: left;
+  width: 100%;
 }
 .selection_team {
-  overflow: auto;
-  clear:both;
+  float: left;
+  width: 100%;
 }
-.selection_team > li {
-  width:180px;
-  float:left;
+.selection_view {
+  float: left;
+  width: 100%;
 }
-
 .video {
-  width:100%;
-  max-width:420px;
-  height:315px;
-
 }
 .preview {
   border-bottom: 1px dotted #808080;
@@ -99,7 +57,7 @@
   padding-top: 20px;
   border-bottom: 1px dotted #808080;s
 }
-.item_Presenter {
+.item_creator {
   padding-top: 10px;
 }
 .item_ads > p {
@@ -113,30 +71,20 @@
   padding-bottom: 4px;
 }
 .storyboard {
-  border: 1px solid #ddd;
-  width:100%;
-  max-width:350px;
+  border: 1px dashed gray;
 }
 .screenshot {
+  float: left;
   width: 100%;
   margin-top: 4px;
 }
-
-.sp-content {
-  padding-bottom:2em;
-}
-.sp-slider > li > span {
-  font-size:0.8em;
-}
 .sp-slideshow {
-  
+  float: left;
   position: relative;
-  margin-top: 10px;
+  margin: 10px auto;
   max-width: 400px;
-  width:90%;
-  overflow:auto;
-  /*min-width: 350px;*/
-  /*height: 400px;*/
+  min-width: 350px;
+  height: 400px;
   border : 10px solid #fff;
   border : 10px solid rgba(255,255,255,0.9);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -173,7 +121,6 @@
 }
 .sp-slideshow input + label {
   position: absolute;
-  
   bottom: 15px;
   left: 50%;
   width: 6px;
@@ -366,7 +313,6 @@ h3, h4, h5, h6 {
 a {
   text-decoration:none;
   color: #000000;
-  border:0;
 }
 
 a small {
@@ -426,7 +372,7 @@ img {
 
 header ul {
   list-style:none;
-  height:30px;
+  height:40px;
   
   padding:0;
   
@@ -493,12 +439,10 @@ small {
 }
 
 hr {
-  clear:both;
   border:0;
-  background: #6588c3;
-  box-shadow: 0px 1px 0 white;
+  background:#e5e5e5;
   height:1px;
-  margin:5px 0 5px;
+  margin:0 0 20px;
 }
 
 footer {

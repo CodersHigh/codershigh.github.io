@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>iOS 7 UI Transition Guide: Content Views</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="TransitionGuide" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40013174" />
+<meta id="book-title" name="book-title" content="iOS 7 UI Transition Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2013-10-22" />
+<meta id="description" name="description" content="Describes how to transition an iOS 6 app to iOS 7." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">iOS 7 UI Transition Guide</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="TransitionGuide.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40013174-CH12-SW1" class="part-name">Preparing for Transition
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40013174-CH6-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH6-SW1">Before You Start</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Scoping.html#/apple_ref/doc/uid/TP40013174-CH7-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH7-SW1">Scoping the Project</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SupportingEarlieriOS.html#/apple_ref/doc/uid/TP40013174-CH14-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH14-SW1">Supporting iOS 6</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40013174-CH13-SW1" class="part-name">Updating the UI
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppearanceCustomization.html#/apple_ref/doc/uid/TP40013174-CH15-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH15-SW1">Appearance and Behavior</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Bars.html#/apple_ref/doc/uid/TP40013174-CH8-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH8-SW1">Bars and Bar Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH10-SW1">Content Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH9-SW1">Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TempViews.html#/apple_ref/doc/uid/TP40013174-CH11-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH11-SW1">Temporary Views</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40013174-CH10"></a>
+  <h2 class='chapter-name chapter-name-short'>Content Views</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW3">
+	  				Activity
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW5">
+	  				Collection View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW7">
+	  				Image View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW8">
+	  				Map View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW9">
+	  				Page View Controller
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW4">
+	  				Popover (iPad Only)
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW10">
+	  				Scroll View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW13">
+	  				Split View Controller (iPad Only)
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW2">
+	  				Table View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW11">
+	  				Text View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW12">
+	  				Web View
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  Content views display custom app content.  Because the look of most content views is not provided by the system, visual changes in iOS 7 have almost no effect on them. The main exception is the grouped-style table view, which has a significantly changed default appearance in iOS 7.
+</p>
+
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW3"></a>
+  <h3 class="section-name" tabindex="0">Activity</h3>
+  <p class="para">
+  An activity represents a system-provided or custom feature that can act on the currently selected content. Users can access these features in the system-provided activity view controller that appears when they tap the Share button.
+</p><p class="para">
+  System-provided activities can use either of two icon styles:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  A style that looks like a fully rendered app icon, such as the Mail icon shown below
+</p>
+</li><li class="item"><p class="para">
+  A style that looks similar to a bar button item, such as the Copy and Print icons shown below
+</p>
+</li>
+</ul><p class="para">
+  Third-party features always use the second style.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/activity_view_7_2x.png" alt="image: ../Art/activity_view_7_2x.png" width="224" height="383" />
+</figure><p class="para">
+  To offer a service within your app, create a simple, streamlined template image that represents it and a short title that describes it. Follow these guidelines to create a template image that looks good in the activity view controller:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Use black or white with appropriate alpha transparency.
+</p>
+</li><li class="item"><p class="para">
+  Don’t include a drop shadow.
+</p>
+</li><li class="item"><p class="para">
+  Use anti-aliasing.
+</p>
+</li>
+</ul><p class="para">
+  Center an activity template image in an area that measures about 70 x 70 pixels (high resolution).
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW5"></a>
+  <h3 class="section-name" tabindex="0">Collection View</h3>
+  <p class="para">
+  A collection view manages an ordered collection of items and presents them in a customizable layout.
+</p><p class="para">
+  In iOS 7, collection views support custom animated transitions between layouts. To learn more, see <em class="u-book"><a href="../../../UIKit/Reference/UICollectionViewTransitionLayout_class/Reference/Reference.html#/apple_ref/doc/uid/TP40013096" target="_self">UICollectionViewTransitionLayout Class Reference</a></em>.
+</p><p class="para">
+  Photos uses collection views to display groups of photos and support transitions between them.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/collection_view_7_2x.png" alt="image: ../Art/collection_view_7_2x.png" width="224" height="383" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW7"></a>
+  <h3 class="section-name" tabindex="0">Image View</h3>
+  <p class="para">
+  An image view displays a single image or an animated series of images.
+</p><p class="para">
+  In iOS 7, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIImageView_Class/Reference/Reference.html#/apple_ref/occ/cl/UIImageView">UIImageView</a></code> includes the <code class="code-voice">tintColor</code> property. When the image view contains a template image—that is, an image that specifies the <code class="code-voice">UIImageRenderingModeAlwaysTemplate</code> rendering mode—<code class="code-voice">tintColor</code> is applied to the image.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW8"></a>
+  <h3 class="section-name" tabindex="0">Map View</h3>
+  <p class="para">
+  A map view presents geographical data and supports most of the features provided by the built-in Maps app.
+</p><p class="para">
+  Photos uses a map view to help users view location information for a photo.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/map_view_photos_7_2x.png" alt="image: ../Art/map_view_photos_7_2x.png" width="224" height="322" />
+</figure><p class="para">
+  In iOS 7, use the new <code class="code-voice u-api"><a href="../../../MapKit/Reference/MKOverlayRenderer_class/Reference/Reference.html#/apple_ref/occ/cl/MKOverlayRenderer">MKOverlayRenderer</a></code> class to create an overlay to draw on top of a map view. 
+</p><p class="para">
+  To add a 3D appearance to a map view, assign a camera object—that is, an instance of <code class="code-voice u-api"><a href="../../../MapKit/Reference/MKMapCamera_class/Reference/Reference.html#/apple_ref/occ/cl/MKMapCamera">MKMapCamera</a></code>—to a map view’s <code class="code-voice">camera</code> property. To learn more, see <em class="u-book"><a href="../../../MapKit/Reference/MKMapView_Class/MKMapView/MKMapView.html#/apple_ref/doc/uid/TP40008205" target="_self">MKMapView Class Reference</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW9"></a>
+  <h3 class="section-name" tabindex="0">Page View Controller</h3>
+  <p class="para">
+  A page view controller manages multipage content using either a scrolling or page-curl transition style.
+</p><p class="para">
+  In iOS 7, use the <code class="code-voice">pageViewControllerPreferredInterfaceOrientationForPresentation</code> and <code class="code-voice">pageViewControllerSupportedInterfaceOrientations</code> methods to specify preferred and supported orientations, respectively.
+</p><p class="para">
+  Below, you can see the default appearance of a page view controller in iOS 7 Simulator:
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/page_view_controller_2x.png" alt="image: ../Art/page_view_controller_2x.png" width="222" height="322" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW4"></a>
+  <h3 class="section-name" tabindex="0">Popover (iPad Only)</h3>
+  <p class="para">
+  A popover is a transient view that can be revealed when people tap a control or an onscreen area.
+</p><p class="para">
+  In iOS 7, the popover background is a white blur, which means that the background of the popover’s content view can be transparent. A table view inside a popover automatically uses a translucent appearance; custom content inside a popover should use a translucent appearance. 
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/popover_7_2x.png" alt="image: ../Art/popover_7_2x.png" width="244" height="517" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/popover_6_2x.png" alt="image: ../Art/popover_6_2x.png" width="247" height="523" />
+		</section>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW10"></a>
+  <h3 class="section-name" tabindex="0">Scroll View</h3>
+  <p class="para">
+  A scroll view helps people see content that is larger than the scroll view’s boundaries.
+</p><p class="para">
+  The only visual difference in the scroll view between iOS 7 and iOS 6 is the appearance of the scroller.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/scrolling_view_7_2x.png" alt="image: ../Art/scrolling_view_7_2x.png" width="224" height="321" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/scrolling_view_6_2x.png" alt="image: ../Art/scrolling_view_6_2x.png" width="224" height="322" />
+		</section>
+</section><p class="para">
+  In iOS 7, you can manage scroll view insets yourself by using the <code class="code-voice">automaticallyAdjustsScrollViewInsets</code> property of <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIViewController_Class/Reference/Reference.html#/apple_ref/occ/cl/UIViewController">UIViewController</a></code>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW13"></a>
+  <h3 class="section-name" tabindex="0">Split View Controller (iPad Only)</h3>
+  <p class="para">
+  A split view controller is a full-screen view controller that manages the presentation of two side-by-side view controllers.
+</p><p class="para">
+  The appearance of a split view controller is provided by the views of its child view controllers, which may be affected by the iOS 7 UI.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/split_view_7_2x.png" alt="image: ../Art/split_view_7_2x.png" width="614" height="448" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW2"></a>
+  <h3 class="section-name" tabindex="0">Table View</h3>
+  <p class="para">
+  A table view presents data in a single-column list of multiple rows.
+</p><p class="para">
+  iOS 7 introduces several changes to the appearances of both plain and grouped table views.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7-grouped-table">iOS 7 (grouped table)</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/grouped_table_settings_7_2x.png" alt="image: ../Art/grouped_table_settings_7_2x.png" width="224" height="320" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6-grouped-table">iOS 6 (grouped table)</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/grouped_table_settings_6_2x.png" alt="image: ../Art/grouped_table_settings_6_2x.png" width="224" height="322" />
+		</section>
+</section><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Feature
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Appearance in iOS 7
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Cell separator (both styles)
+</p></td>
+            <td><p class="para">
+  Separators in iOS 7 are thinner, narrower, and lighter in color than separators in iOS 6. 
+</p><p class="para">
+  By default, the separator is inset from the left edge of the table view. *
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Section index (plain style)
+</p></td>
+            <td><p class="para">
+  By default, the section index includes a translucent white background (use the <code class="code-voice">sectionIndexBackgroundColor</code> property to specify a different color).
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Header and footer text (both styles)
+</p></td>
+            <td><p class="para">
+  By default, headers display text using all capital letters; footers display text using sentence-style capitalization. 
+</p><p class="para">
+  You can use a custom <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewHeaderFooterView_class/Reference/Reference.html#/apple_ref/occ/cl/UITableViewHeaderFooterView">UITableViewHeaderFooterView</a></code> object to provide a different look.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Cell group (grouped style)
+</p></td>
+            <td><p class="para">
+  Each group extends the full width of the screen.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Cell selection appearance (both styles)
+</p></td>
+            <td><p class="para">
+  Noninverted content is displayed on a subtle gray background.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Background appearance (grouped style)
+</p></td>
+            <td><p class="para">
+  The background is a solid light gray.
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  * If every cell in a table contains an image view of the same size, by default iOS vertically aligns the leading edge of all separators. In a table that mixes text-only cells with cells that contain image views, you can use the <code class="code-voice">separatorInset</code> property to ensure that the separators are vertically aligned.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW6"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">The <code class="code-voice">separatorInset</code> property is of type <code class="code-voice">UIEdgeInsets</code>. By default, <code class="code-voice">UIEdgeInsets</code> uses <code class="code-voice">UITableViewAutomaticDimension</code> as the value for the <code class="code-voice">top</code>, <code class="code-voice">left</code>, <code class="code-voice">bottom</code>, and <code class="code-voice">right</code> parameters.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  Table-view elements also have a different appearance in iOS 7.
+</p><div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW65"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Table-view element
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Appearance in iOS 7
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Appearance in iOS 6
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Checkmark
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/check_7_2x.png" alt="image: ../Art/check_7_2x.png" width="12" height="12" />
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/check_6_2x.png" alt="image: ../Art/check_6_2x.png" width="23" height="23" />
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Disclosure indicator
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/disclosure_indicator_7_2x.png" alt="image: ../Art/disclosure_indicator_7_2x.png" width="8" height="12" />
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/disclosure_6_2x.png" alt="image: ../Art/disclosure_6_2x.png" width="23" height="23" />
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Detail Disclosure button
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/detail_disclosure_7_2x.png" alt="image: ../Art/detail_disclosure_7_2x.png" width="22" height="22" />
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/detail_disclosure_6_2x.png" alt="image: ../Art/detail_disclosure_6_2x.png" width="35" height="35" />
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Row reorder
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/row_reorder_7_2x.png" alt="image: ../Art/row_reorder_7_2x.png" width="22" height="8" />
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/row_reorder_6.jpg" alt="image: ../Art/row_reorder_6.jpg" width="19" height="16" />
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Row insert
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/row_insert_7_2x.png" alt="image: ../Art/row_insert_7_2x.png" width="22" height="24" />
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/row_insert_6_2x.png" alt="image: ../Art/row_insert_6_2x.png" width="25" height="25" />
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Delete button control 
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/delete_control_7_2x.png" alt="image: ../Art/delete_control_7_2x.png" width="22" height="24" />
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/delete_control_6_2x.png" alt="image: ../Art/delete_control_6_2x.png" width="27" height="27" />
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Delete button
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/delete_button_7_2x.png" alt="image: ../Art/delete_button_7_2x.png" width="49" height="54" />
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/delete_button_6.jpg" alt="image: ../Art/delete_button_6.jpg" width="72" height="42" />
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW11"></a>
+  <h3 class="section-name" tabindex="0">Text View</h3>
+  <p class="para">
+  A text view accepts and displays multiple lines of text.
+</p><p class="para">
+  Be sure to use the  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code> method <code class="code-voice">preferredFontForTextStyle</code> to get the text for display in a text view.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH10-SW12"></a>
+  <h3 class="section-name" tabindex="0">Web View</h3>
+  <p class="para">
+  A web view is a region that can display rich HTML content.
+</p><p class="para">
+  In iOS 7, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIWebView_Class/Reference/Reference.html#/apple_ref/occ/cl/UIWebView">UIWebView</a></code> supports displaying content in a paginated layout.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Bars.html#/apple_ref/doc/uid/TP40013174-CH8-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH8-SW1">Bars and Bar Buttons</a></p>
+  			<p class="next-link"><a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH9-SW1">Controls</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2013-10-22
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

@@ -213,68 +213,69 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH24-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH24"></a>
-  <h2 class='chapter-name'>iOS App Anatomy</h2>
+  <h2 class='chapter-name'>iOS 앱 해부</h2>
   
   	<section class="section">
   		<p class="para">
-  Almost all iOS apps use at least some of the UI components defined by the UIKit framework. Knowing the names, roles, and capabilities of these basic components helps you make informed decisions as you design the UI of your app.
+  대부분의 iOS 앱들은 UIKit 프레임워크에서 정의된 UI요소들을 최소한 몇 개는 사용하고 있다. 그들의 이름과 역할, 그리고 기능을 아는 것은 앱의 UI를 디자인 할 때 세련된 결정을 하는 데 도움을 준다.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/uikit_ui_elements_2x.png" alt="image: ../Art/uikit_ui_elements_2x.png" width="552" height="372" />
 </figure><p class="para">
-  The UI elements provided by UIKit fall into four broad categories:
+  UIKit에 의해 제공되는 UI요소들은 크게 4가지 카테고리로 나뉜다. :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Bars.</strong> Bars contain contextual information that tell users where they are and controls that help users navigate or initiate actions.
+  <strong class="inline-head">바(Bar)들.</strong> 사용자들에게 지금 어디쯤에 있는지를 알려주고 네비게이션하거나 액션을 시작할 수 있는 컨트롤을 포함하는 컨텍스춸한 정보를 담고 있다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Content views.</strong> Content views contain app-specific content and can enable behaviors such as scrolling, insertion, deletion, and rearrangement of items.
+  <strong class="inline-head">콘텐트 뷰들.</strong> 앱 특유의 콘텐트를 담고, item들의 스크롤링이나 삽입, 삭제, 그리고
+  재배열을 하는 behavior를 사용할 수 있다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Controls.</strong> Controls perform actions or display information.
+  <strong class="inline-head">컨트롤들.</strong> 액션을 실행하거나 정보를 표시한다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Temporary views.</strong> Temporary views appear briefly to give users important information or additional choices and functionality.
+  <strong class="inline-head">임시 뷰들.</strong> 사용자에게 중요한 정보를 제공하거나 추가적인 선택과 기능을 주기 위해 일시적으로 보임.
 </p>
 </li>
 </ul>
 <p class="para">
-  In addition to defining UI elements, UIKit defines objects that implement functionality, such as gesture recognition, drawing, accessibility, and printing support.
+  UI 요소를 정의하는 것 외에도, UIKit은 제스처 인식기, 드로잉, 접근성, 그리고 프린팅 지원같은 기능을 구현하는 오브젝트들도 정의한다.
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  Programmatically, a UI element is considered to be a type of <strong>view</strong> because it inherits from <code class="code-voice">UIView</code>. A view knows how to draw itself onscreen, and it knows when a user touches within its bounds. Controls (such as buttons and sliders), content views (such as collection views and table views), and temporary views (such as alerts and action sheets) are all types of views. 
+  프로그램적으로, UI요소들은 <code class="code-voice">UIView</code>로부터 상속되었기 때문에 <strong>뷰</strong>의 일종으로 생각된다. 뷰는 스크린에 자신을 어떻게 그려야하는지를 알고 있으며 사용자가 그 경계선 내부를 터치하는 것을 알고 있다. 컨트롤들 (버튼이나 슬라이더 같은) , 콘텐트 뷰들(콜렉션 뷰들과 테이블 뷰들), 그리고 임시 뷰들(경고나 액션시트)은 모두 뷰의 일종이다.
 </p>
 <p class="para">
-  To manage a set or hierarchy of views in your app, you typically use a <strong>view controller</strong>. A view controller coordinates the display of views, implements the functionality behind user interactions, and can manage transitions from one screen to another. For example, Settings uses a navigation controller to display its hierarchy of views.
+  앱에서 뷰의 집합이나 계층을 관리하기 위해, 주로 <strong>뷰 컨트롤러</strong>를 이용한다. 뷰 컨트롤러는 뷰들의 표시를 관리(coordinate)하여, 사용자 인터렉션 뒤의 기능들을 구현하며, 한 화면에서 다른 화면으로 전환하는 것을 관리할 수 있다.For example, Settings uses a navigation controller to display its hierarchy of views.
 </p>
 <p class="para">
-  Here’s an example of how views and view controllers can combine to present the UI of an iOS app.
+  여기 iOS 앱에서 UI를 보여주기 위해 어떻게 뷰와 뷰 컨트롤러가 결합할 수 있는지를 보여주는 예가 있다.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/windowlayers_world_clock_2x.png" alt="image: ../Art/windowlayers_world_clock_2x.png" width="451" height="452" />
 </figure><p class="para">
-  Although developers think in terms of views and view controllers, users tend to experience an iOS app as a collection of screens. From this perspective, a <em>screen</em> generally corresponds to a distinct visual state or mode in an app.
+  개발자가 뷰나 뷰 컨트롤러 같은 용어로 생각을 하지만, 사용자들은 iOS 앱을 스크린의 모음으로 경험하는 경향이 있다. 이런 관점에서, <em>screen</em>은 일반적으로 앱에서의 독특한 시각적 상태 또는 모드에 해당한다.
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH24-SW2"></a>
   <aside class="aside">
-    <p class="aside-title">Note
+    <p class="aside-title">노트
     </p>
-    <p class="para">An iOS app includes a window. But—unlike a window in a computer app—an iOS window has no visible parts and it can’t be moved to another location on the display. Most iOS apps contain only one window; apps that support an external display can have more than one. 
+    <p class="para"> iOS 앱은 윈도우를 가지고 있다. 하지만 컴퓨터 앱의 윈도우와 달리, iOS 윈도우는 시각적 파트를 가지고 있지 않으며 디스플레이에서 다른 위치로 옮겨질 수 없다. 대부분의 iOS 앱들은하나의 윈도우만 가진다; 외부 디스플레이를 지원하는 앱은 하나 이상의 윈도우를 가진다.
     </p>
     
   </aside>
 </div>
-<p class="para">
-  In <em class="book-name">iOS Human Interface Guidelines</em>, the word <em>screen</em> is used as it’s understood by most users. As a developer, you might also read about screens in other contexts, where the term refers to the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIScreen_Class/Reference/UIScreen.html#/apple_ref/occ/cl/UIScreen">UIScreen</a></code> object you can use to access an external display screen.
+<p class="para"> <!--역자 주 - 링크수정 필요-->
+  개발자로서, 여러 곳에서 스크린에 대해 외부 디스플레이 엑세스를 위해 사용하는 <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIScreen_Class/Reference/UIScreen.html#/apple_ref/occ/cl/UIScreen">UIScreen</a></code> 오브젝트를 참조하는 용어로 사용하는 것을 읽어 봤겠지만 <em class="book-name">iOS Human Interface Guidelines</em>에서는, <em>screen</em>이라는 용어는 대부분의 사용자들이 이해하는 것 처럼 사용된다.
 </p>
 <p class="para">
   
@@ -285,7 +286,7 @@
   	
  	<section id="next_previous" class="">
     		<p class="previous-link"><a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">Designing for iOS 7</a></p>
-  			<p class="next-link"><a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">Starting and Stopping</a></p>
+  			<p class="next-link"><a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작하기와 종료하기</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>

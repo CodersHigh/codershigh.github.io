@@ -213,24 +213,24 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH53-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH53"></a>
-  <h2 class='chapter-name'>Navigation</h2>
+  <h2 class='chapter-name'>네비게이션</h2>
   
   	<section class="section">
   		<p class="para">
-  People tend to be unaware of the navigation experience in an app unless it doesn’t meet their expectations. Your job is to implement navigation in a way that supports the structure and purpose of your app without calling attention to itself.
+  사람들은 자신의 예상에서 벗어나지 않는 이상 앱의 네비게이션 경험을 알아채지 못하는 경향이 있다. 당신이 할 일은 사용자가 네비게이션 그 자체에 주의를 기울이지 않도록 앱의 구조와 목적에 부합하는 방식으로 네비게이션을 구현하는 것이다.
 </p>
 <p class="para">
-  Broadly speaking, there are three main styles of navigation, each of which is well suited to a specific app structure:
+  광범위하게 말해서, 3 종류의 주요 네비게이션 스타일이 있다. 각각은 특정 앱 구조에 잘 맞아 떨어진다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Hierarchical
+  계층적
 </p>
 </li><li class="item"><p class="para">
-  Flat
+  평면적
 </p>
 </li><li class="item"><p class="para">
-  Content- or experience-driven
+  콘텐트 - 또는 경험 - 주도적
 </p>
 </li>
 </ul>
@@ -268,25 +268,25 @@
 	
 </div>
 </figure><p class="para">
-  In some cases, it works well to combine more than one navigation style in an app. For example, the items in one category of a flat information structure might best be displayed in a hierarchy.
+  몇몇 경우에, 하나의 앱에서 하나 이상의 네비게이션 스타일을 결합하는 게 잘 동작할 수 있다. 예를 들어, 평면 정보 구조의 한 카테고리에 해당하는 아이템은 계층적으로 보여주는 게 가장 좋을 수 있다.
 </p>
 <p class="para">
-  <strong class="inline-head">Users should always know where they are in your app and how to get to their next destination.</strong> Regardless of the navigation style that suits the structure of your app, the most important thing is that a user’s path through the content is logical, predictable, and easy to follow. 
-</p>
-<p class="para">
-  
-</p>
-<p class="para">
-  UIKit defines some standard UI elements that make it easy to implement hierarchical and flat navigation styles, in addition to some elements that help you enable content-centric navigation, such as in a book-style or media-viewing app. A game or other app that provides an experience-driven navigation style typically relies on custom elements and behaviors.
-</p>
-<p class="para">
-  <strong class="inline-head">Use a navigation bar to give users an easy way to traverse a hierarchy of data.</strong> The navigation bar’s title can show users their current position in the hierarchy; the back button makes it easy to return to the previous level. To learn more, see <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW3">Navigation Bar</a></span>.
+  <strong class="inline-head">사용자들은 당신의 앱에서 어디쯤에 있는지를 알고 있어야 하며 다음 목적지에 가는 법을 알고 있어야 한다.</strong> 당신 앱의 구조에 적당한 네비게이션 스타일과 상관없이, 가장 중요한 것은 콘텐트를 향한 사용자의 경로가 논리적이고, 예측가능하며 따라가기 쉬워야 한다는 것이다.
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  <strong class="inline-head">Use a tab bar to display several peer categories of content or functionality.</strong> A tab bar is a good way to support a flat information architecture and its persistence lets people switch between categories regardless of their current location. To learn more, see <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW52" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW52">Tab Bar</a></span>.
+  UIKit은 몇몇 표준 UI 요소들을 정의해서 계층적이고 평면적인 네비게이션 스타일을 구현하기 쉽게 하고, 콘텐트-중심의 네비게이션을 가능하도록 돕는, 책 스타일 또는 미디어 보기 앱과 같은 몇 몇 요소 들을 함께 제공한다. 경험-주도적 네비게이션 스타일을 제공하는 앱들 - 게임 같은 - 은 전형적으로 커스텀 요소와 비헤비어들에 의존한다.
+</p>
+<p class="para">
+  <strong class="inline-head">네비게이션바를 이용해서 사용자들이 쉽게 데이터 계층을 넘나들 수 있는 방법을 제공하라.</strong> 네비게이션 바의 타이틀은 사용자에게 계층구조 상의 현재 위치를 보여준다; 백 버튼은 이전 단계로 돌아가는 쉬운 방법을 제공한다. 보다 자세한 정보는 <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW3">Navigation Bar</a></span>를 참고하라.
+</p>
+<p class="para">
+  
+</p>
+<p class="para">
+  <strong class="inline-head">탭 바를 이용해서 콘텐트 또는 기능의 동급 카테고리를 디스플레이 하라.</strong> 탭 바는 사용자들로 하여금 현재 위치와 상관없이 카테고리 사이를 스위치 할 수 있도록 하므로 평면적 정보 설계를 지원하는 좋은 방식이다. 보다 자세한 정보는 <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW52" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW52">Tab Bar</a></span>를 참고하라.
 </p>
 <p class="para">
   
@@ -295,13 +295,13 @@
   
 </p>
 <p class="para">
-  <strong class="inline-head">Use a page control when each app screen represents an individual instance of the same type of item or page.</strong> A page control is good for showing users how many items or pages are available and which one is currently displayed. For example, Weather uses a page control to show how many location-specific weather pages the user has opened. To learn more about the page control, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW6" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW6">Page Control</a></span>.
+  <strong class="inline-head">페이지 컨트롤을 사용해서 여러개의 동급 아이템 또는 콘텐트 화면이 있음을 알려라.</strong> 페이지 컨트롤은 사용자들에게 얼마나 많은 페이지가 있는지를 보여주고 현재 어떤 것이 열려 있는지를 보여주기에 좋다.  For example, Weather uses a page control to show how many location-specific weather pages the user has opened. 보다 자세한 정보는 <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW6" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW6">Page Control</a></span>을 참고하라.
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  <strong class="inline-head">In general, it’s best to give users one path to each screen.</strong> If there’s one screen that users need to see in more than one context, consider using a temporary view, such as a modal view, action sheet, or alert. To learn more, see <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW3">Modal View</a></span>, <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW36" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW36">Action Sheet</a></span>, and <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW2" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW2">Alert</a></span>.
+  <strong class="inline-head">일반적으로, 각각의 스크린으로 가는 하나의 경로를 제공하는 것이 가장 좋다.</strong> 하나 이상의 컨텍스트에서 사용자가 봐야 하는 스크린이 있다면, 모달 뷰, 액션 시트 또는 경고창과 같은 임시 뷰를 사용하는 걸 고려해 보자. 보다 자세한 정보는 <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW3">Modal View</a></span>, <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW36" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW36">Action Sheet</a></span> 그리고 <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW2" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW2">Alert</a></span>를 참고하라.
 </p>
 <p class="para">
   UIKit also provides the following related controls:
@@ -311,7 +311,7 @@
   <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW27" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW27">Segmented Control</a></span>. A segmented control can give users a way to see different categories or aspects of the content on the screen; it doesn’t enable navigation to a new screen.
 </p>
 </li><li class="item"><p class="para">
-  <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW4">Toolbar</a></span>. Although a toolbar looks similar to a navigation bar or a tab bar, it doesn’t enable navigation. Instead, a toolbar gives users controls that act on the contents of the current screen.
+  <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW4">툴바</a></span>. 툴바가 네비게이션 바나 탭 바와 비슷하게 생겼지만, 네비게이션을 구현하지 않는다. 대신, 툴 바는 현재 스크린 상의 콘텐트에 동작하는 콘트롤을 제공한다.
 </p>
 </li>
 </ul>
@@ -324,7 +324,7 @@
   	
  	<section id="next_previous" class="">
     		<p class="previous-link"><a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">Layout</a></p>
-  			<p class="next-link"><a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">Modal Contexts</a></p>
+  			<p class="next-link"><a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스트</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>
