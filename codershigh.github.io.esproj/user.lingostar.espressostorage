@@ -7,13 +7,13 @@
 	<key>ESProjectWindowState</key>
 	<dict>
 		<key>ContentSize</key>
-		<string>{1106, 567}</string>
+		<string>{1243, 645}</string>
 		<key>ProjectURL</key>
 		<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/codershigh.github.io.esproj/</string>
 		<key>StateType</key>
 		<string>ProjectWindow</string>
 		<key>TopLeftPoint</key>
-		<string>{-2, 778}</string>
+		<string>{10, 776}</string>
 	</dict>
 	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
 	<false/>
@@ -22,7 +22,6 @@
 		<key>ExpandedURLs</key>
 		<array>
 			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/bdnews/2012/Pages</string>
-			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/bdnews/archive</string>
 			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/pages</string>
 		</array>
 	</dict>
@@ -151,6 +150,10 @@
 				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/pages/tutorial02_dragonrider.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
 			</dict>
 		</array>
 	</dict>
