@@ -7,13 +7,13 @@
 	<key>ESProjectWindowState</key>
 	<dict>
 		<key>ContentSize</key>
-		<string>{1243, 645}</string>
+		<string>{1243, 640}</string>
 		<key>ProjectURL</key>
 		<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/codershigh.github.io.esproj/</string>
 		<key>StateType</key>
 		<string>ProjectWindow</string>
 		<key>TopLeftPoint</key>
-		<string>{10, 776}</string>
+		<string>{25, 778}</string>
 	</dict>
 	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
 	<false/>
@@ -152,8 +152,34 @@
 				<string>DefaultTab</string>
 			</dict>
 			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/ColorImagesText.html</string>
 				<key>StateType</key>
-				<string>PreviewTab</string>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Iconography.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/FeedbackCommunication.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Integration.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
 			</dict>
 		</array>
 	</dict>
