@@ -213,44 +213,45 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH32-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH32"></a>
-  <h2 class='chapter-name'>Routing</h2>
+  <h2 class='chapter-name'>길 찾기</h2>
   
   	<section class="section">
   		<p class="para">
-  In iOS 6 and later, Maps displays a list of routing apps—including apps installed on the device and in the App Store—when people want transit information for a route.
+  iOS 6 이후, Maps 는 경로에 대해 교통정보를 원하면 - 장치에 설치된 앱과 앱 스토어의 - 길 찾기
+앱들의 리스트를 디스플레이 한다.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/routing_apps_2x.png" alt="image: ../Art/routing_apps_2x.png" width="224" height="102" />
 </figure><p class="para">
-  A <strong>routing app</strong> provides information about transit options for the currently selected route. People expect routing apps to be quick, easy to use, and—above all—accurate. Following the guidelines in this section helps you give users transit information they can trust and a user experience they appreciate.
+  <strong>길 찾기 앱</strong>은 현재 선택된 경로에 대해 교통 선택사항 정보를 제공한다. 사람들은 길 찾기 앱이 빠르고, 사용하기 쉽고, -무엇보다- 정확하길 원한다. 이 섹션의 가이드라인을 따르면 신뢰할 수 있는 교통 정보와 즐거워하는 사용 경험을 제공하는 데 도움이 될 것이다.
 </p>
 <div class="important clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH32-DontLinkElementID_15"></a>
   <aside class="aside">
-    <p class="aside-title">Important
+    <p class="aside-title">중요
     </p>
-    <p class="para">Maps gives people driving and walking directions for their route. Routing apps provide <strong>transit information</strong>, which focuses on step-by-step directions that use alternate modes of transportation—such as bus, train, subway, ferry, bike, pedestrian, shuttle, and so on. 
+    <p class="para">Maps는 사람들에게 경로에 대해 운전과 도보 길을 알려준다. 길 찾기 앱은 <strong>교통 정보</strong>를 제공해서 운송수단을 환승할 수 있는 단계별 길 안내에 집중한다.운송수단에는 버스, 기차, 지하철, 페리, 자전거, 도보, 셔틀 등이 있다.
     </p>
     <p class="para">
-  If your app doesn’t provide transit information for the routes that people specify, don’t identify it as a routing app.
+  만약 당신의 앱이 사람들이 지정한 길 찾기 교통 정보를 제공하지 않는다면, 해당 길 찾기 앱으로 정의하지 마라.
 </p>
 
   </aside>
 </div>
 <p class="para">
-  <strong class="inline-head">Deliver the functionality your app promises.</strong> When people see your app in the transit list, they assume that it can help them reach their destination. But if your app can’t provide information about the selected route—or it doesn’t include the type of transit it appears to include—people are unlikely to give it a second chance. It’s essential to represent your app’s capabilities accurately; otherwise, your app can look like it’s intentionally misleading users. 
+  <strong class="inline-head">당신의 앱이 약속하는 기능을 제공하라. </strong> 사람들이 교통정보 리스트에서 당신의 앱을 보면, 그 앱이 자기가 목적지까지 가는 걸 도와줄 거라고 생각한다. 하지만 당신 앱이 선택한 경로에 대한 정보를 제공하지 못하거나 - 포함되어야 할 교통수단의 종류가 없다면 - 사람들은 다시 기회를 주지 않을 수도 있다. 당신 앱의 능력을 정확ᄅ히 나타내는 것은 아주 중요하다 ; 아니면, 당신의 앱은 의도적으로 사용자들을 허위로 꾄다고 볼 수도 있다.
 </p>
 <p class="para">
-  There are two main ways you can give users confidence in your routing app:
+  사용자에게 당신의 길찾기 앱에 대해 확신을 줄 수 있는 두가지 중요한 방식이 있다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Define the geographic regions you support as precisely as possible. For example, if your app helps people get information about bus routes in Paris, your supported region should be Paris, not Île-de-France, and not France.
+  당신이 지원하는 최대한 정확하게 지리학적 영역을 정의하라. 예를 들어, 당신 앱이 파리의 버스 경로에 대해 사람들이 정보를 얻도록 돕는다면, 당신의 지원되는 영역은 파리이지, 일-드-프랑스나 프랑스가 아니다.
 </p>
 </li><li class="item"><p class="para">
-  Be specific about the types of transit that you support. For example, if you specialize in subway information, don’t imply that you provide information about all rail-based transit types.
+  지원하는 교통수단의 종류를 지정하라. 예를 들어, 당신이 지하철 정보에 특화되어 있다면, 모든 철로 기반의 교통수단 종류에 대한 정보를 제공한다는 식으로 암시하지 마라.
 </p>
 </li>
 </ul>
@@ -265,65 +266,66 @@
   </aside>
 </div>
 <p class="para">
-  <strong class="inline-head">Streamline the UI for ease of use.</strong> Ease of use is especially important for routing apps because people tend to use them under challenging conditions—such as in bright sunlight or in the dim interior of a train, on a bumpy ride, and when they’re in a hurry. Make sure that your text is easy to read in any light and that buttons are easy to tap accurately even when the ride is not smooth.
+  <strong class="inline-head">사용을 쉽게 하기 위해 UI를 단순화하라.</strong> 길 찾기 앱에 있어서 사용성이 쉬운 것은 특히 중요하다. 왜냐하면, 사람들은 - 밝은 햇빛, 열차의 어두운 실내, 험한 길을 달리며 또는 아주 바쁠 때 등 열악한 상황에서 주로 사용하기 때문이다. 텍스트가 어떤 조명 아래에서도 읽기 쉽고 부드러운 주행을 하는 게 아니라도 버튼들은 탭 하기 쉬워야 한다.
 </p>
 <p class="para">
-  <strong class="inline-head">Focus on the route.</strong> Although auxiliary information can be useful, your app should focus on giving users step-by-step directions they can follow to their destination. In particular, you want users to know which step they’re in and how to get to the next step. You can provide additional data—such as timetables and system maps—but don’t make this data more prominent than the transit information.
+  <strong class="inline-head">길 찾기에 집중하라.</strong> 부가적인 정보가 유용하다 하더라도, 당신의 앱은 사용자가 목적지에 도착하기 위해 따르는 단계별 길 안내를 제공하는 데 집중해야 한다. 특히, 사용자들이 현재 어떤 단계에 와 있는지와 다음 단계로 어떻게 갈 수 있는지를 알 수 있게 해야 한다. 당신은 -시간표와 시스템 맵과 같은 추가적인 데이터를 제공할 수 있지만 이런 데이터들이 길 찾기 정보보다 두드러지면 안된다.
 </p>
 <p class="para">
-  <strong class="inline-head">Provide information for every step of a route.</strong> People should never feel abandoned by your app. But even when you accurately report your supported region, you can’t assume that users are already at the first transit stop in a route, or that the last transit stop is at the same location as their destination. To handle this situation, first examine the distances at the beginning and end of the route. If the distances are short enough, provide walking directions from the user’s current location to the first transit stop and from the last transit stop to the user’s final destination. If walking is not a reasonable choice, try to describe the user’s other options. If necessary, you can give users a way to open Maps to get walking or driving directions for these portions of the route.
+  <strong class="inline-head">길 찾기의 모든 단계에 대한 정보를 제공하라.</strong> 사람들은 당신 앱으로부터 버림받았다는 느낌을 받으면 안된다. 당신이 정보 제공 영역을 정확하게 알렸다고 하더라도, 사용자가 이미 경로상의 첫 번째 환승역에 있다거나 마지막 환승 역이 목적지와 같다거나 하는 것을 예상할 수 없다. 이런 상황을 다루기 위해, 먼저 경로의 시작점과 끝 점을 분석하라. 거리가 충분히 짧다면, 사용자의 현재 위치에서 첫 번째 환승역까지, 마지막 환승역에서 목적지까지 걸을 수 있는 길 안내를 제공하라. 걷는 것이 합리적인 선택이 아니라면, 사용자의 다른 선택을 설명하도록 시도하라. 필요하다면, Maps를 열도록 해서 걷거나 운전하는 길 찾기중 일 부분의 안내를 줄 수 있다.
 </p>
 <p class="para">
-  <strong class="inline-head">When users transition to your app from Maps, don’t ask them to reenter information.</strong> If users are coming from Maps, you already know the start and end points of the route they’re interested in, so you can present the appropriate transit information as soon as your app opens. If users start your app from the Home screen, provide an easy way for them to enter route details.
+  <strong class="inline-head">Maps에서 당신 앱으로 전환해 왔을 때, 정보를 다시 입력하도록 하지 마라. </strong> 사용자가 Maps로부터 왔다면, 이미 관심을 가지는 경로의 시작점과 끝점을 알고 있으므로, 적당한 교통 정보를 당신 앱이 열리자 마자 바로 제공할 수 있다. 만약 홈 스크린에서 당신 앱을 실행했다면, 경로의 자세한 정보를
+제공할 수 있는 쉬운 방법을 제공하라.
 </p>
 <p class="para">
-  <strong class="inline-head">Display transit information both graphically and textually.</strong> A map view helps people see their complete route in a larger, physical context; a list of steps helps people focus on the actions they must take to arrive at their destination. It’s best when you support both of these tasks and make it easy for users to switch between them. 
+  <strong class="inline-head">교통 정보를 그림과 글자로 디스플레이 하라.</strong> 맵 뷰는 전체 경로를 크고 물리적인 컨텍스트에서 볼 수 있도록 한다 ; 단계별 리스트는 사람들이 목적지에 도달하기 위해 해야 하는 액션에 사람들이 집중하게 한다. 두 가지를 모두 제공하고 그 둘 간의 전환을 쉽게 할 수 있도록 하는 게 가장 좋다. 
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH32-SW3"></a>
   <aside class="aside">
-    <p class="aside-title">Note
+    <p class="aside-title">노트
     </p>
-    <p class="para">Regardless of format, it’s crucial that you always display the same transit information for the user’s route. For example, if a route consists of five steps, both the map and the list view of the route must describe the same five steps.
+    <p class="para">포맷에 상관없이, 사용자의 경로에 대해 항상 동일한 교통 정보를 디스플레이 하는 것은 매우 중요하다. 예를 들어, 경로가 다섯 단계를 가진다면, 맵과 리스트 뷰는 모두 동일한 다섯 단계를 설명해야 한다.
     </p>
     
   </aside>
 </div>
 <p class="para">
-  When your app is chosen from the transit list, it works well to start by displaying the complete route—including walking paths to and from the transit stops, if appropriate—in a map view. A map view gives users an overview of the various steps in their journey and shows them how their route fits into the surrounding geographical area. 
+  교통 리스트에서 당신의 앱이 선택되었다면, 가능한 맵부에서 - 정거장까지/에서 걷는 길을 포함해서 전체 경로를 표시하는 것으로 시작하는 것이 좋다. 맵 뷰는 사용자의 여정에 대해 다양한 단계에 대한 오버뷰를 제공하며 그들의 경로가 어떤 지리적 영역에 둘러싸여 있는지를 보여준다.
 </p>
 <p class="para">
-  <strong class="inline-head">Enrich map views with additional information.</strong> People expect the maps in your app to behave similarly to other maps they’ve used. In addition to letting users zoom and pan, you should display annotations that give users the information they need. For example, you could display pins that represent the user’s current location, the destination, and transfers or points of interest along the way. Be sure to avoid displaying only a single pin, because it’s hard for users to tell what it represents if there’s no additional context. For more information about using map views in your app, see <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW134" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW134">Map View</a></span>.
+  <strong class="inline-head">부가적인 정보로 맵 뷰를 풍부하게 하라.</strong> 사람들은 당신 앱 안의 맵이 그들이 지금껏 사용해 온 다른 맵들과 유사하게 동작할 것으로 예상한다. 사용자가 줌과 팬을 하도록 하는 것 외에도, 사용자들이 필요로 하는 어노테이션 정보를 디스플레이 하는 게 좋다. 예를들어, 사용자의 현재 위치, 목적지, 환승지 또는 경로상의 관심지점을 나타내는 핀을 디스플레이 할 수 있다. 핀 하나만 달랑 표시하는 것을 삼가라. 왜냐하면, 부가적인 컨텍스트가 없다면 사용자들은 그것이 무엇을 나타내는지 알기 어렵기 때문이다. 보다 자세한 정보는 <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW134" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW134">Map View</a></span>를 보라.
 </p>
 <p class="para">
-  As much as possible, integrate static maps—such as a subway system map—with a map view. A good way to do this is to overlay the static image on the map view so that users can see how their route and their current location relate to the larger transit system.
+  가능하다면, 지하철 노선도와 같은 스태틱 맵을 맵뷰와 융합하라. 이렇게 하는 좋은 방법은 맵 뷰위에 스태틱 이미지를 오버레이 함으로서 사용자들이 그들의 경로가 어떻게 되는지와 지금 어디에 있는지를 보다 큰 교통 시스템과 연계해서 볼 수 있기 때문이다.
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH32-SW4"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">If you decide to display a static map image by itself, be sure to use a high-resolution image that maintains good quality when users zoom into it.
+    <p class="para">만약 스태틱 맵 이미지만 표시하기로 마음 먹었다면, 고 해상도 이미지를 사용해서 사용자가 줌인을 했을 때도 좋은 화질을 유지하도록 하라.
     </p>
     
   </aside>
 </div>
 <p class="para">
-  <strong class="inline-head">Give users different ways to sort multiple transit options.</strong> Lots of factors influence people’s transit decisions—such as time of day, weather, and how much they’re carrying—so it’s important to make it easy to compare transit options. For example, you could let users sort transit options by start or end time, amount of walking required, number of stops along the way, or number of transfers or different transit types required. Regardless of the order in which you display multiple transit options, make sure that users can instantly distinguish the differences between the options.
+  <strong class="inline-head">사용자들에게 다중의 교통 선택사항들을 정렬하는 다른 방식을 제공하라.</strong> 사람들이 교통관련 결정을 하는 데에는 많은 요소들이 영향을 준다. 예를 들어, 사용자들이 시작 또는 끝 시간으로 교통 옵션을 정렬하도록 할 수도 있고, 걷는 정도를 기준으로, 정류장의 갯수를 기반으로, 또는 환승 횟수나 다른 교통수단 종류가 필요한지를 기준으로 정렬하고 싶을 수 있다. 다중 교통 옵션을 디스플레이하는 순서에 상관없이, 사용자들이 옵션들간의 차이점을 즉시 알아챌 수 있도록 하라.
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  <strong class="inline-head">Consider using push notifications to give people important information about their route.</strong> As much as possible, let people know when transit information changes, so that they can adjust their plans. For example, if a train is delayed or a bus line is temporarily unavailable people might need to choose a different route to their destination. And in a route that includes long stops between steps, people might appreciate being notified when their transport is about to depart for the next part of the journey. 
+  <strong class="inline-head">경로에 대해 중요한 정보가 있다면 푸시 노티피케이션 사용을 고려해 보라. </strong> 가능한, 교통 정보가 변경되는지를 사용자들이 알 수 있도록 해서, 계획을 조정할 수 있도록 하라. 예를 들어, 기차가 연착하거나 버스가 일시적으로 운행을 못하면 사람들은 목적지까지 다른 경로를 이용해야 한다. 그리고 단계들 중에 긴 시간 정차하는 경우, 사람들은 언제 그들의 다음 운송수단이 출발하는지에 대해 통지 받는 것을 감사할 것이다.
 </p>
 
 		</section> 
   
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a></p>
-  			<p class="next-link"><a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">Social Media</a></p>
+    		<p class="previous-link"><a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a></p>
+  			<p class="next-link"><a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>

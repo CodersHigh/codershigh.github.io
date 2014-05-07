@@ -213,7 +213,7 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH58-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH58"></a>
-  <h2 class='chapter-name chapter-name-short'>Color and Typography</h2>
+  <h2 class='chapter-name chapter-name-short'>컬러와 타이포그라피</h2>
     <section id="mini_toc" class="hideInXcode" role="navigation">
 	<div id="mini_toc_button">
   	<p>On This Page</p>
@@ -222,7 +222,7 @@
   		<li class="item">
   			<p class="para">
 	  			<a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW2">
-	  				Color Enhances Communication
+	  				컬러는 소통을 돕는다
 	  			</a>
   			</p>
   		</li>
@@ -239,72 +239,72 @@
   
   <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH58-SW2"></a>
-  <h3 class="section-name" tabindex="0">Color Enhances Communication</h3>
+  <h3 class="section-name" tabindex="0">컬러는 소통을 돕는다</h3>
   <p class="para">
-  In iOS 7, color helps indicate interactivity, impart vitality, and provide visual continuity. The built-in apps use a family of pure, clean colors that look great individually and in combination, and on both light and dark backgrounds.
+  iOS 7에서, 컬러는 인터렉티비티를 표시하고, 생기를 주고, 시각적인 연속성을 제공하는 것을 돕는다. 빌트인 앱들은 맑고 깨끗한 컬러 패밀리를 사용하고 있는데, 어두운 배경이나 밝은 배경 위에서, 개별적으로도 근사하게 보이지만 모아놔도 멋지다.
 </p><figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/color_family_a_2x.png" alt="image: ../Art/color_family_a_2x.png" width="325" height="167" />
 </figure><p class="para">
-  <strong class="inline-head">If you create multiple custom colors, make sure they work well together.</strong> For example, if pastels are essential to your app’s style, you should create a family of coordinating pastels that can be used throughout the app.
+  <strong class="inline-head">여러개의 커스텀 컬러를 만든다면, 잘 어울리도록 하라.</strong> 예를들어, 파스텔 컬러가 당신 앱의 주요한 스타일이라면, 앱 전체에 걸쳐서 사용하는 파스텔 풍의 컬러 패밀리를 만들어야 할 것이다.
 </p><p class="para">
-  <strong class="inline-head">Pay attention to color contrasts in different contexts.</strong> For example, if there’s not enough contrast between the navigation bar background and the bar-button titles, the buttons will be hard for users to see. A rule of thumb is to start with a contrast of at least 50% between colors that need to be distinguishable. Test the result by viewing it on a device in different lighting conditions, including outdoors on a sunny day. 
+  <strong class="inline-head">다른 컨텍스트에서는 컬러의 콘트라스트에 주의를 기울여라.</strong> 예를 들어, 네비게이션 바 배경과 바-버튼의 타이틀간의 콘트라스트가 충분하지 않다면, 사용자가 버튼을 발견하기 어려울 것이다. 첫 번째 원칙은 구별해야 하는 것들 사이에는 최소한 50%의 콘트라스트로 시작하는 것이다. 결과를 야외나 햇볕 좋은 날을 포함해, 여러 다른 조명 상태에서 확인하라. 
 </p><div class="tip clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH58-DontLinkElementID_6"></a>
   <aside class="aside">
-    <p class="aside-title">Tip
+    <p class="aside-title">팁
     </p>
-    <p class="para">One way to discover areas that need higher contrast is to desaturate the UI and look at it in grayscale. If you have trouble telling the difference between interactive and noninteractive elements or backgrounds in the grayscale version, you probably need to increase the contrast between these elements.
+    <p class="para">콘트라스트를 높일 필요가 있는 영역을 찾아내는 방법은 UI의 채도를 없애서 회색조로 보는 것이다. 인터렉티브한 부분과 인터렉티브 하지 않은 부분, 그리고 배경을 구별하기가 어렵다면, 그 요소들 간의 콘트라스트를 높일 필요가 있다.
     </p>
     
   </aside>
 </div><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">Take bar translucency and app content into account when you use a custom bar tint.</strong> If you need to create a bar tint that matches a specific color, such as a color in an existing brand, you may have to experiment with various colors before you get the results you want. A bar’s appearance is affected by both the translucency that iOS provides and the appearance of the app content that can be behind the bar.
+  <strong class="inline-head">커스텀 바 틴트를 이용할 때는 바의 투명함과 앱 콘텐트를 신경써라.</strong>브랜드에 있는 컬러 같은, 특정 컬러에 맞춘 바 틴트를 만들어야 한다면, 원하는 결과를 얻을 때까지 다양한 컬러 실험을 해야 할 것이다. 바의 외형은 iOS가 제공하는 투명함과 바 뒤에 있는 앱의 콘텐트의 외형에 영향을 받는다.
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH58-SW5"></a>
   <aside class="aside">
-    <p class="aside-title">API Note
+    <p class="aside-title">API 노트
     </p>
-    <p class="para">To tint bar button items, use the <code class="code-voice">tintColor</code> property; to tint the bar itself, use the <code class="code-voice">barTintColor</code> property. To learn more about these bar properties, see <em class="u-book"><a href="../../../UIKit/Reference/UINavigationBar_Class/Reference/UINavigationBar.html#/apple_ref/doc/uid/TP40006887" target="_self">UINavigationBar Class Reference</a></em>, <em class="u-book"><a href="../../../UIKit/Reference/UITabBar_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007521" target="_self">UITabBar Class Reference</a></em>, <em class="u-book"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006927" target="_self">UIToolbar Class Reference</a></em>, and <em class="u-book"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/doc/uid/TP40007529" target="_self">UISearchBar Class Reference</a></em>.
+    <p class="para">바 버튼 아이템을 틴트하기 위해서는, <code class="code-voice">tintColor</code> 프라퍼티를 사용하라; 바 그 자체를 틴트하기 위해서는,<code class="code-voice">barTintColor</code> 프라퍼티를 사용하라. 바 프라퍼티에 대해 보다 자세한 내용은 <em class="u-book"><a href="../../../UIKit/Reference/UINavigationBar_Class/Reference/UINavigationBar.html#/apple_ref/doc/uid/TP40006887" target="_self">UINavigationBar Class Reference</a></em>, <em class="u-book"><a href="../../../UIKit/Reference/UITabBar_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40007521" target="_self">UITabBar Class Reference</a></em>, <em class="u-book"><a href="../../../UIKit/Reference/UIToolbar_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006927" target="_self">UIToolbar Class Reference</a></em>, 와 <em class="u-book"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/doc/uid/TP40007529" target="_self">UISearchBar Class Reference</a></em>을 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  <strong class="inline-head">Be aware of color blindness.</strong> Most color blind people have difficulty distinguishing red from green. Test your app to make sure that there are no places where you use red and green as the only way to distinguish between two states or values (some image-editing software includes tools that can help you proof for color-blindness). In general, it’s a good idea to use more than one way to indicate an element’s interactivity (to learn more about indicating interactivity in iOS 7, see <span class="x-name"><a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW4">Interactive Elements Invite Touch</a></span>).
+  <strong class="inline-head">색맹을 염두에 두라.</strong> 색맹이 있는 사람의 대부분은 빨간색과 녹색을 구별하기 어려워한다. 빨간색과 녹색으로만 상태 변화나 값의 변동을 구별하는 곳이 없는지를 테스트하라 (몇몇 이미지 편집 프로그램은 색맹을 위한 검증 툴을 가지고 있다). 일반적으로, 요소의 인터렉티비티를 알리는 하나 이상의 방식을 이용하는 것이 좋다 (iOS 7에서 인터렉티비티 알리기에 대해서는, <span class="x-name"><a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW4">Interactive Elements Invite Touch</a></span>)를 보라.
 </p><p class="para">
-  <strong class="inline-head">Consider choosing a key color to indicate interactivity and state.</strong> Key colors in the built-in apps include yellow in Notes and red in Calendar. If you define a key color to indicate interactivity and state, make sure that the other colors in your app don’t compete with it.
-</p><p class="para">
-  
+  <strong class="inline-head">인터렉티비티와 상태를 표시하는 키 컬러를 선택하라.</strong> 빌트인 앱에서의 키 컬러는 Notes에서 노란색, Calendar에서 빨간색이다. 인터렉티비티와 상태를 표시하기 위해 키 컬러를 선택한다면, 앱 안에서 다른 컬러들이 그 컬러와 경쟁하지 않도록 한다.
 </p><p class="para">
   
 </p><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">Avoid using the same color in both interactive and noninteractive elements.</strong> Color is one of the ways that a UI element indicates its interactivity. If interactive and noninteractive elements have the same color, it’s harder for users to know where to tap.
+  
 </p><p class="para">
-  <strong class="inline-head">Color communicates, but not always in the way you intend.</strong> Everyone sees color differently, and many cultures differ in how they assign meanings to colors. Spend time to research how your use of color might be perceived in other countries and cultures. As much as possible, you want to be sure that the colors in your app send the appropriate message.
+  <strong class="inline-head">인터렉티브한 요소와 넌인터렉티브한 요소에 같은 컬러를 사용하지 마라.</strong> 컬러는 UI요소가 인터렉티비티를 표시하는 하나의 방법이다. 인터렉티브한 요소와 넌인터렉티브한 요소가 같은 컬러를 사용한다면, 사용자들은 어디를 탭해야 할지 구별하기 어려울 것이다.
 </p><p class="para">
-  <strong class="inline-head">In most cases, don’t let color distract users.</strong> Unless color is essential to your app’s purpose, it usually works well to use color as a subtle enhancement.
+  <strong class="inline-head">컬러는 소통한다. 하지만 항상 당신이 의도하는 대로는 아니다.</strong> 모든 사람이 컬러를 다르게 보며, 많은 문화는 컬러에 다른 의미를 부여한다. 다른 국가나 문화권에서 당신의 컬러 사용이 어떤 의미로 받아들여지는지에 대해 시간을 들여서 조사하라. 최대한, 당신의 앱에서의 컬러가 적당한 메세지를 전달할 수 있도록 하라.
+</p><p class="para">
+  <strong class="inline-head">대부분의 경우, 컬러로 사용자를 산만하게 하지 마라.</strong> 컬러가 당신 앱의 목적이 아니라면, 컬러를 이용해 미세한 향상을 이루도록 하는 게 잘 먹힌다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH58-SW3"></a>
-  <h3 class="section-name" tabindex="0">Text Should Always Be Legible</h3>
+  <h3 class="section-name" tabindex="0">텍스트는 항상 읽을 수 있어야 한다</h3>
   <p class="para">
-  Above all, text must be legible. If users can’t read the words in your app, it doesn’t matter how beautiful the typography is. When you adopt Dynamic Type in an iOS 7 app, you get:
+  무엇보다, 텍스트는 읽을 수 있어야 한다. 사용자가 당신 앱의 단어를 읽을 수 없다면, 타이포그라피가 얼마나 아름다운지는 상관이 없다. iOS 7 앱에서 다이나믹 타입을 도입하면 당신은 다음을 얻을 수 있다:
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Automatic adjustments to letter spacing and line height for every font size
+  모든 서체 크기에 대해 자간과 높이에 대한 자동 조정
 </p>
 </li><li class="item"><p class="para">
-  The ability to specify different text styles for semantically distinct blocks of text, such as <code class="code-voice">Body</code>, <code class="code-voice">Footnote</code>, or <code class="code-voice">Headline</code>
+  <code class="code-voice">Body</code>, <code class="code-voice">Footnote</code>, or <code class="code-voice">Headline</code>과 같은 의미적으로 구분되는 텍스트 블럭에 대한 다른 텍스트 스타일 정의 기능 
 </p>
 </li><li class="item"><p class="para">
-  Text that responds appropriately to changes the user makes to text-size settings (including accessibility text sizes)
+  사용자가 설정한 텍스트 사이즈에 맞게 반응하는 텍스트 (엑세서빌리티-손쉬운 사용 텍스트 크기 포함)
 </p>
 </li>
 </ul><div class="note">
@@ -312,64 +312,64 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">If you use a custom font, you can still scale type according to the system setting for text size. Your app is responsible for responding appropriately when the user changes the setting.
+    <p class="para">만약 커스텀 폰트를 사용한다면, 여전히 시스템에 세팅한 텍스트 사이즈에 따라 크기를 조정할 수 있다. 당신의 앱은 사용자가 세팅을 변경하면 적절하게 반응해야 한다.
     </p>
     
   </aside>
 </div><p class="para">
-  Adopting Dynamic Type requires some work on your part. To learn how to use text styles and ensure that your app gets notified when the user changes the text size setting, see <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">“Text Styles”</a> in <em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">Text Programming Guide for iOS</a></em>.
+  다이나믹 타입을 도입하기 위해서 당신이 해야 할 일들이 좀 있다. 텍스트 스타일 사용법을 공부하고 당신의 앱이 사용자가 텍스트 사이즈 세팅을 변경하면 통지를 받도록 해야 한다. <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">“Text Styles”</a> in <em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">Text Programming Guide for iOS</a></em> 을 보라.
 </p><p class="para">
   
 </p><div class="two-columns">
   <div class="left-column">
     <p class="para">
-  <strong class="inline-head">Prioritize content when responding to text-size changes.</strong> Not all content is equally important to users. When users choose a larger text size, they want to make the content they care about easier to read; they don’t always want every word on the screen to be larger. 
+  <strong class="inline-head">텍스트 사이즈 변경에 대응할 때는 우선순위를 정하라.</strong> 모든 콘텐트가 사용자에게 중요하진 않다. 사용자가 더 큰 텍스트 사이즈를 선택하는것은, 그들이 읽고 싶어하는 콘텐트를 보다 잘 읽기 위해서이다; 화면위의 모든 단어들이 더 커지길 원하는 게 아니다. 
 </p><p class="para">
-  For example, when users choose a large accessibility text size, Mail displays the subject and body of the message in the large size but leaves the less important text—such as the date and the sender—in a smaller size.
+  예를 들어, 사용자들이 큰 엑세서빌리티 텍스트 크기를 선택한다면, Mail 앱은 제목과 메세지 본문을 더 큰 크기로 표시하겠지만 덜 중요한 텍스트-날짜와 보낸사람 같은-들은 작은 사이즈로 남겨 둘 것이다.
 </p>
   </div>
   <div class="right-column">
     <img class="inline-graphic" src="Art/mail_message_axlarge_2x.png" alt="image: ../Art/mail_message_axlarge_2x.png" width="224" height="383" />
   </div>
 </div><p class="para">
-  <strong class="inline-head">When appropriate, adjust the layout when the user chooses a different text size.</strong> For example, you might want to change a one-column layout of body text to a two-column layout when the user chooses a small text size. If you decide to adjust the layout for different text sizes, you might choose to do so for subsets of sizes—such as small, medium, and large—rather than change the layout for every possible size.
+  <strong class="inline-head">가능하다면, 사용자가 다른 텍스트 사이즈를 선택하면 레이아웃을 조정하라.</strong> 예를 들어, 사용자가 작은 텍스트 크기를 선택하면 본문을 한 컬럼 레이아웃에서 두 컬럼 레이아웃으로 바꾸어야 할 수도 있다. 다른 텍스트 크기에 레이아웃을 맞추기로 결정했다면, 모든 가능한 사이즈에 대해 레이아웃을 변경하는 것보다, 사이즈의 서브셋 - small, medium, large등 - 에 대해 선택하는 것이 좋다.
 </p><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">Make sure all styles of a custom font are legible at different sizes.</strong> One way to do this is to emulate some of the ways iOS displays font styles at different text sizes. For example:
+  <strong class="inline-head">커스텀 폰트의 모든 스타일이 서로 다른 사이즈에서 읽을 수 있도록 확인하라.</strong> 이렇게 하는 한 가지 방법은 다른 텍스트 사이즈들에 대해 iOS가 표시하는 폰트 스타일 방식을 에뮬레이트 하는 것이다, 예를 들어 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Text should never be smaller than 11 points, even when the user chooses the extra-small text size. For comparison, the body style uses a font size of 17 points at the large size, which is the default text-size setting.
+ 사용자가 extra-small 텍스트 사이즈를 선택한다하더라도, 텍스트는 22포인트 이하가 되면 안된다. 비교를 위해 얘기하자면, 디폴트 텍스트-사이즈 설정에서, large 사이즈의 본문 스타일은 34 포인트의 폰트 사이즈를 사용한다.
 </p>
 </li><li class="item"><p class="para">
-  In general, font size and leading values differ by one point per text-size setting. Exceptions to this are the two caption styles, which use the same font size, leading, and tracking at the extra-small, small, and medium settings.
+  일반적으로, 폰트 사이즈와 리딩(leading)값은 텍스트-사이즈 설정 당 2포인씩 다르다. 여기에 대한 예외는 두가지 캡션 스타일이다. 이건 extra-small, small 그리고 medium설정에 대해 동일한 폰트 사이즈, 리딩, 그리고 트래킹을 사용한다.
 </p>
 </li><li class="item"><p class="para">
-  At the smallest three text sizes, tracking values are relatively large; at the largest three text sizes, tracking values are relatively tight.
+  세종류의작은사이즈에서,트래킹값은상대적으로크다;세종류큰사이즈에서 트래킹 값은 상대적으로 좁다.
 </p>
 </li><li class="item"><p class="para">
-  The headline and body styles use the same font size. To distinguish it from the body style, the headline style uses a heavier weight.
+  헤드라인과 본문 스타일은 동일한 폰트 크기를 가진다. 본문 스타일과 구별할 수 있는 방법은, 헤드라인 스타일은 보다 무겁다.
 </p>
 </li><li class="item"><p class="para">
-  Text in a navigation controller uses the same font size that body style text uses for the large setting (specifically, 17 points).
+  네비게이션 컨트롤러의 텍스트는 large 설정에서 본문 스타일과 같은 크기를 가진다(정확히는 17포인트).
 </p>
 </li><li class="item"><p class="para">
-  Text always uses either regular or medium weight; it doesn’t use light or bold.
+  텍스트는 항상 reguler또는 medium 무게를 가진다; light나 bold는 사용하지 않는다.
 </p>
 </li>
 </ul><p class="para">
-  <strong class="inline-head">In general, use a single font throughout your app.</strong> Mixing several different fonts can make your app seem fragmented and sloppy. Instead, use one font and just a few styles and sizes. Use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code> text styles API to define different areas of text according to semantic usage, such as body or headline.
+  <strong class="inline-head">일반적으로, 앱 전체에 걸쳐 하나의 폰트를 사용하라.</strong> 몇 종류의 폰트를 섞어쓰는 것은 당신의 앱을 산만하고 날림으로 보이게 한다. 그러므로, 하나의 폰트와 몇 개의 스타일과 사이즈를 사용하라. <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code> 의 텍스트 스타일 API를 이용해 헤드라인이나 본문 등 의미적 사용처에 따라 다른 텍스트를 정의한다.
 </p><section class="rec-container">
 	<div class="blurb">
 		
 	</div>
 
 	<section class="left-container">
-			<p class="container-label recommended">Recommended</p>
+			<p class="container-label recommended">권장함</p>
 		<img class="inline-graphic" src="Art/font_choice_rec_2x.png" alt="image: ../Art/font_choice_rec_2x.png" width="246" height="420" />
 	</section>
 		<section class="right-container">
-				<p class="container-label not-recommended">Not Recommended</p>
+				<p class="container-label not-recommended">권장하지 않음</p>
 			<img class="inline-graphic" src="Art/font_choice_not-rec_2x.png" alt="image: ../Art/font_choice_not-rec_2x.png" width="246" height="420" />
 		</section>
 </section>
@@ -378,8 +378,8 @@
 
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">Branding</a></p>
-  			<p class="next-link"><a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">Icons and Graphics</a></p>
+    		<p class="previous-link"><a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">브랜딩</a></p>
+  			<p class="next-link"><a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>
