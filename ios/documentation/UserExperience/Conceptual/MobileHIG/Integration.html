@@ -351,42 +351,42 @@
   <span class="caption"></span>
   <img src="Art/default_orientation_2x.png" alt="image: ../Art/default_orientation_2x.png" width="618" height="396" />
 </figure></li><li class="item"><p class="para">
-  <strong class="inline-head">Avoid displaying a UI element that tells people to rotate the device.</strong> Running in the supported orientation clearly tells people to rotate the device, if required, without adding unnecessary clutter to the UI.
+  <strong class="inline-head">사람들이게 장치를 회전시키라고 말하는 UI요소를 표시하는 것을 피하라.</strong> 필요하다면, 불필요한 UI요소 덩어리들을 더할 필요 없이, 지원하는 방향으로 앱을 실행하는 것만으로 사용자들에게 장치를 회전시키도록 명확히 말할 수 있다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Support both variants of an orientation.</strong> For example, if an app runs only in landscape, people should be able to use it whether they’re holding the device with the Home button on the right or on the left. And if people rotate the device 180 degrees while using the app, it’s best if the app responds by rotating its content 180 degrees.
+  <strong class="inline-head">양방향을 모두 지원하라.</strong> 예를들어, 어떤 앱이 landscape만 지원한다면, 홈 버튼을 오른쪽에 두든 왼쪽에 두든 사용할 수 있어야 한다. 그리고 만약 사용자가 앱 사용 중 장치를 180도 회전 시켰다면, 앱도 그 콘텐트를 180도 회전시킴으로서 반응하는 것이 좋다.
 </p>
 </li>
 </ul><p class="para">
-  <strong class="inline-head">If your app interprets changes in device orientation as user input, handle rotation in app-specific ways.</strong> For example, a game that lets people move game pieces by rotating the device can’t respond to device rotation by rotating the screen. In a case like this, you should launch in both variants of the required orientation and allow people to switch between the variants until they start the main task of the app. As soon as people begin the main task, begin responding to device movement in app-specific ways.
+  <strong class="inline-head">만약 당신의 앱이 장치 방향 변화를 사용자 입력의 하나로 해석한다면, 앱에서 정한 방식으로 다루어라.</strong> 예를들어, 장치를 회전시킴으로서 게임 조각들을 움직이는 게임이 있다면, 화면을 회전시키는 방식으로 장치 회전에 대해 응답할수 없을 것이다.이와같은 경우에, 시동시에는 요구되는 방향에서 양방향을 지원하고 그 앱의 중요한 테스크가 실행되기 전에는 스위치(좌/우) 할 수 있도록 한다. 메인 테스크를 시작하면, 앱이 정하는 방식대로 장치의 움직임에 대한 응답을 시작한다.
 </p><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">On iPhone, anticipate users’ needs when you respond to a change in device orientation.</strong> Users often rotate their devices to landscape orientation because they want to “see more.” If you respond by merely scaling up the content, you fail to meet users’ expectations. Instead, respond by rewrapping lines of text and—if necessary—adjusting the layout of the UI so that more content fits on the screen.
+  <strong class="inline-head">아이폰에서는, 장치의 방향 변화에 응답할 때 사용자의 요구사항을 예측하라.</strong> 사용자들은 " 더 보고" 싶을 때 종종 장치를 landscape로 회전시킨다. 만약 단지 콘텐트를 확대하는 수준으로 응답한다면, 사용자의 예상 수준을 맞추지 못한 것이다. 그 대신, 필요하다면 문서의 줄들을 다시 감싸고 UI의 레이아웃을 조정해서 스크린에 콘텐트를 더 잘 맞춰야 한다.
 </p><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">On iPad, strive to satisfy users’ expectations by supporting all orientations.</strong> The iPad screen mitigates people’s desire to rotate the device to landscape to “see more.” And because people don’t pay much attention to the minimal frame of the device or the location of the Home button, they don’t tend to view the device as having a default orientation. 
+  <strong class="inline-head">아이패드에서는, 모든 방향을 지원할 것이라는 사용자의 예상에 맞추려 노력하라.</strong> 아이패드 스크린은 장치를 landscape로 회전시켜서 "더 보고"싶은 사람들의 욕구를 좀 누그러뜨린다. 그리고 사람들이 장치의 최소 프레임이라던지 홈 버튼의 위치에 별로 신경을 쓰지 않기 때문에, 장치를 기본 방향으로 보려고 하지 않는다.
 </p><p class="para">
-  Follow these guidelines as you design how your iPad app should provide a great experience in all orientations:
+  다음 디자인 가이드라인을 따라서 모든 방향에서 멋진 경험을 제공하기 위해 당신의 아이패드 앱이 제공해야 하는 것들을 배운다:
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Consider changing how you display auxiliary information or functionality.</strong> While keeping the most important content always in focus, you can respond to rotation by changing the way you provide secondary content. 
+  <strong class="inline-head">부가적인 정보나 기능을 어떻게 변경해서 표시할지를 고민하라.</strong> 가장 중요한 것에 항상 포커스를 두는 동안, 두번째로 중요한 콘텐트의 제공 방식을 변경함으로서 회전에 대응할 수 있다. 
 </p>
 <p class="para">
-  For example, an iPad game that displays a rectangular game board in landscape orientation needs to redraw the board to fit well in portrait orientation. Instead of vertically stretching the game board in portrait orientation—or leaving empty space above or below it—the game could display supplemental information or objects in the additional space.
+  예를 들어, landscape에서 사각형 게임 보드를 표시하는 아이패드 게임은 portrait 방향에에서는 잘 맞도록 다시 그려야 한다. portrait 방향에 맞추기 위해 세로로 크기를 늘이거나 위 아래에 빈 공백을 두는 것 보다 그 공간에 게임의 추가적인 정보나 오브젝트를 표시할 수 있다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Avoid gratuitous changes in layout.</strong> A comparable experience in all orientations allows people to maintain their usage patterns when they rotate the device. For example, if your iPad app displays images in a grid while in landscape, it’s not necessary to display the same information in a list while in portrait (although you might adjust the dimensions of the grid). 
+  <strong class="inline-head">레이아웃에서 이유없는 변화를 피하라.</strong> 장치를 회전했을 때 모든 방향에서 비슷한 경험을 얻게 되면 사람들은 사용 패턴을 유지할 수 있다. 예를 들어, 만약 당신의 아이패드 앱이 landscape일 때 격자 안에 이미지들을 표시했다면, portrait라고 해서 동일한 정보를 리스트에 표시해야 하는 것은 아니다( 격자 공간은 조정해야겠지만).
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">As much as possible, avoid reformatting information and rewrapping text on rotation.</strong> Strive to maintain a similar format in all orientations. If people are reading text in an app, it’s especially important to help them keep their place when they rotate the device. 
+  <strong class="inline-head">가능한, 회전시에 정보를 재 포매팅하거나 텍스트를 다시 감싸는 것을 피하라.</strong> 모든 방향에 대해 비슷한 포맷을 유지하기 위해 노력하라. 사람들이 앱에서 텍스트를 읽는다면, 장치를 회전시켰을 때 그 위치를 유지시키는 게 특히 중요하다.
 </p>
 <p class="para">
-  If some reformatting is unavoidable, use animation to help people track the changes. For example, if you add or remove a column of text in different orientations, you can hide the movement of columns and simply fade in the new arrangement. To help you design appropriate rotation behavior, think about how you’d expect your content to behave if you were physically interacting with it in the real world.
+  만약 약간의 재 포매팅을 피할 수 없다면, 사람들이 그 변화를 인지할 수 있도록 애니메이션을 사용하라. 예를 들어, 방향에 따라 하나의 텍스트 컬럼을 더하거나 없애야 한다면, 컬럼들의 움직임을 숨기고 새로운 배열을 페이드 인 할 수 있다. 회전 비헤비어에 대해 적당한 디자인을 하도록 돕기 위해서, 만약 당신이 현실세계에서 물리적으로 인터렉팅 한다면 어떤 동작을 예상하는지 생각해보라.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Provide a unique launch image for each orientation.</strong> When each orientation has a unique launch image, people experience a smooth app start regardless of the current device orientation. The iPad Home screen supports all orientations, so people are likely to start your app in the same orientation in which they used the previous app. 
+  <strong class="inline-head">각 방향에 대해 독특한 런치 이미지를 제공하라.</strong> 방향이 독특한 런치 이미지를 가지면, 현재 방향에 상관없이 사람들은 부드러운 앱 시동 경험을 가진다. 아이패드 홈 스크린은 모든 방향을 지원하기 때문에, 사람들은 이전 앱에서 사용한 방향 그대로 당신의 앱을 시작하려고 할 것이다. 
 </p>
 </li>
 </ul>
@@ -394,34 +394,35 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH61-SW5"></a>
-  <h3 class="section-name" tabindex="0">Downplay File and Document Handling</h3>
+  <h3 class="section-name" tabindex="0">파일과 문서 관리를 경시하기</h3>
   <p class="para">
-  iOS apps can help people create and manipulate files, but this doesn’t mean that people should have to think about the file system on an iOS device. 
+  iOS 앱들은 사람들이 파일을 만들고 수정할 수 있지만, 사용자들이 iOS 장치의 파일 시스템에
+  대해 생각해야 한다는 것을 의미하지는 않는다. 
 </p><p class="para">
-  There is no iOS app analogous to the OS X Finder, and people shouldn’t be asked to interact with files as they do on a computer. In particular, people shouldn’t be faced with anything that encourages them to think about file metadata or locations, such as:
+  OS X의 파인더에 해당하는 iOS 앱은 없으며, 사람들은 컴퓨터에서 하던 것과 같은 방식으로 파일과 인터렉트하도록 요청되지 않는다. 특히, 사람들은 다음과 같은 파일 메타데이터나 위치에 대해 생각하도록 하는 어떠한 것도 만나서는 안된다:
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  An open or save dialog that exposes a file hierarchy
+  파일 계층구조를 노출시키는 열기/저장 대화창
 </p>
 </li><li class="item"><p class="para">
-  Information about the permissions status of files
+  파일의 권한 상태에 대한 정보
 </p>
 </li>
 </ul><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">As much as possible, let people manage documents without opening iTunes on their computer.</strong> Consider using iCloud to help users access their content on all of their devices. For some tips on how to provide a great iCloud experience in your app, see <span class="x-name"><a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a></span>.
+  <strong class="inline-head">가능한, 사람들이 컴퓨터의 아이튠즈 없이 문서를 관리할 수 있도록 하라.</strong> 모든 장비들에서 그들의 콘텐트에 접근할 수 있도록 하기 위해서 iCloud 사용을 고려하라. 앱에서 멋진 iCloud 경험을 제공하기 위한 팁은 <span class="x-name"><a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a></span>를 보라.
 </p><p class="para">
-  If your app helps people create and edit documents, it’s appropriate to provide some sort of document picker that lets them open an existing document or create a new one. Ideally, such a document picker:
+  만약 당신의 앱이 사람들이 문서를 만들고 편집하는 것을 돕는다면, 문서 선택기 같은 것을 제공해서 존재하는 것을 열거나 새로운 것을 만들 수 있도록 하는 게 좋다. 이러한 문서 선택기는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Is highly graphical.</strong> People should be able to easily identify the document they want by looking at visual representations of the documents onscreen.
+  <strong class="inline-head">아주 그래피컬하다. </strong> 사람들은 화면 위의 도큐멘트 대표 비주얼을 보는 것만으로 원하는 도큐멘트를 구별할 수 있어야 한다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Lets people make the fewest possible gestures to do what they want.</strong> For example, people might scroll horizontally through a carousel or grid of existing documents and open the desired one with a tap.
+  <strong class="inline-head">그들이 원하는 것을 하기 위해 최소한의 가능한 제스처들을 만들도록 하라.</strong> 예를들어, 사람들은 존재하는 문서들을 회전 또는 격자를 통해 수평으로 스크롤 할 수 있고 원하는 것을 한 번의 탭으로 열 수 있어야 한다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Includes a new document function.</strong> Instead of making people go somewhere else to create a new document, a document picker can allow them to tap a placeholder image to create a new document.
+  <strong class="inline-head">새 문서 만들기 기능을 포함하라.</strong> 새 문서를 만들기 위해 어딘가로 가야할 필요없이, 문서 선택기가 새로운 문서를 만드는 플레이스 홀더 이미지를 탭 할 수 있도록 제공하라.
 </p>
 </li>
 </ul><div class="tip clear">
@@ -429,48 +430,49 @@
   <aside class="aside">
     <p class="aside-title">Tip
     </p>
-    <p class="para">You can use the Quick Look Preview feature to let people preview documents within your app, even if your app can’t open them. To learn how to provide this feature in your app, see <span class="x-name"><a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a></span>.
+    <p class="para">Quick Look 미리보기 기능을 이용해 앱 안에서 열 수 없는 경우라도 문서 미리보기 기능을 제공할 수 있다. 이 기능을 제공하는 방법을 배우려면 <span class="x-name"><a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a></span>을 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  <strong class="inline-head">Give people confidence that their work is always preserved unless they explicitly cancel or delete it.</strong> If your app helps people create and edit documents, don’t require them to take an explicit save action. iOS apps should take responsibility for saving people’s input, both periodically and when they open a different document or switch away from the app.
+  <strong class="inline-head">직접 삭제하거나 취소하지 않는 이상 그들의 작업이 항상 저장되고 있다는 확신을 줘라.</strong> 만약 당신의 앱이 문서를 만들거나 편집하는 앱이라면, 사용자들에게 명시적으로 저장을 하도록 요구하지 마라. iOS 앱들은 주기적으로 그리고 다른 문서를 열거나 앱에서 떠날 때 사용자의 입력을 저장할 책임을 져야 한다.
 </p><p class="para">
-  If the main function of your app isn’t content creation—but you allow people to switch between viewing information and editing it—it can make sense to ask them to save their changes. In this scenario, it often works well to provide an Edit button in the view that displays the information. When people tap the Edit button, replace it with a Save button and add a Cancel button. The transformation of the Edit button helps remind people that they’re in an editing mode and might need to save changes, and the Cancel button gives them the opportunity to exit without saving their changes. 
+  만약 당신 앱의 주요 기능이 콘텐트 생산이 아니라면 - 하지만, 사람들이 정보를 보는 것과 그것을 편집하는 것 사이를 오간다면 - 변경사항을 저장할 것인지 묻는 게 가능하겠다. 이 시나리오의 경우, 그 정보를 표시하는 뷰에 Edit버튼을 제공하는 게 동작에 좋다. 사람들이 Edit버튼을 탭하면, Save 버튼으로 대체하고 Cancel 버튼을 더하라. Edit 버튼의 변화는, 사람들에게 수정 모드에 있고 변경사항을 저장해야 할지도 모른다는 것을 상기시킨다. 그리고 Cancel 버튼은 변경사항들을 저장하지 않고 빠져 나올 수 있는 기회를 제공한다. 
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH61-SW6"></a>
-  <h3 class="section-name" tabindex="0">Be Configurable If Necessary</h3>
+  <h3 class="section-name" tabindex="0">필요하다면 설정 가능하라</h3>
   <p class="para">
-  Some apps might need to give users a way to make setup or configuration choices, but most apps can avoid or delay doing this. Successful apps work well for most people right away and offer some ways to adjust the user experience within the main UI.
+  어떤 앱들은 사용자들이 설정을 하거나 설정값 변경을 할 수 있도록 해야 하지만, 대부분의 앱들은 이것을 피하거나 늦출 수 있다. 성공적인 앱들은 대부분의 사람들이 바로 앱을 사용할 수 있도록 하고 메인 UI에서 사용자 경험을 조정할 수 있는 방법을 제공한다.
+  
 </p><p class="para">
-  <strong class="inline-head">If possible, avoid sending users to Settings.</strong> It’s important to remember that users can’t open the Settings app without first switching away from your app, and you don’t want to encourage this action.
+  <strong class="inline-head">가능한 사용자를 Settings 앱으로 보내는 것을 피하라.</strong> 사용자들이 Settings 앱으로 가기 위해서는 먼저 당신의 앱에서 빠져나갈 수 밖에 없다는 것을 중요하게 기억하라. 이렇게 하도록 권장해선 안된다.
 </p><p class="para">
-  When you design your app to function the way most of your users expect, you decrease the need for settings. If you need information about the user, query the system for it instead of asking users to provide it. If you decide you must provide app settings that users rarely need to change, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW7" target="_self">“The Settings Bundle”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em> to learn how to support them in your code.
+  대부분의 사용자들이 예상하는 방식대로 기능하도록 앱을 디자인 하면, 설정의 필요성을 줄일 수 있다. 사용자의 정보가 필요하다면 사용자에게 제공해 달라고 요청하는 것보다 시스템에 질의 하라. 만약 사용자들이 거의 하지 않을 변경사항을 위한 앱 설정을 제공하고자 한다면, <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>의 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW7" target="_self">“The Settings Bundle”</a>에서 코드를 통해 제공하는 방법을 배우라.
 </p><p class="para">
-  <strong class="inline-head">If necessary, let users set behaviors they want within your app.</strong> Integrating configuration options into your app lets you react dynamically to changes because people don’t have to leave your app to set them.
+  <strong class="inline-head">필요하다면, 앱 내에서 비헤비어를 설정하도록 하라.</strong> 설정 옵션을 당신 앱에 넣는 것은, 설정을 위해 앱을 나가지 않아도 되기 때문에 다이나믹하게 변경사항에 대응할 수 있도록 한다.
 </p><p class="para">
-  <strong class="inline-head">As much as possible, offer configuration options in the main UI.</strong> Putting options in the main UI can make sense if they represent a primary task and if people might want to change them frequently. If people are likely to change an app’s configuration only occasionally, it makes sense to put them in a separate view.
+  <strong class="inline-head">최대한, 설정 옵션들을 메인 UI에서 제공하라.</strong> 메인 UI에 옵션을 넣는 것은 주요 테스크인 경우이고 사용자가 그것을 자주 바꾸려 할 것이라면 이해될 것이다. 만약 사람들이 앱의 설정을 가끔씩 변경할 것 같으면, 분리된 뷰에 넣는 게 맞다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH61-SW8"></a>
-  <h3 class="section-name" tabindex="0">Take Advantage of iOS Technologies</h3>
+  <h3 class="section-name" tabindex="0">iOS 기술을 활용하기</h3>
   <p class="para">
-  iOS provides a wealth of technologies that support common tasks and scenarios in ways that users expect. This expectation means that it’s almost always better to integrate system-supported technologies into your app than it is to design a custom approach.
+  iOS는 일반적인 작업을 지원하는 기술들과 사용자들이 예상하는 방식의 시나리오를 풍성하게 제공한다. 이 예상은, 거의 항상 시스템이 지원하는 기술을 당신 앱에 통합하는 것이 커스텀 접근방법을 디자인하는 것보다 낫다는 것을 의미한다.
 </p><p class="para">
-  Some iOS technologies—such as <span class="x-name"><a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a></span> and <span class="x-name"><a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a></span>—are system features that all apps should incorporate. Others enable specific app functionality, such as handling tickets and gift cards (<span class="x-name"><a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a></span>), enabling user purchases within an app (<span class="x-name"><a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a></span>), displaying in-app advertising (<span class="x-name"><a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a></span>), integrating with <span class="x-name"><a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">Game Center</a></span>, and supporting <span class="x-name"><a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a></span>. 
+  몇 몇 iOS 기술들은 - <span class="x-name"><a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a></span> 과 <span class="x-name"><a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a></span>와 같은- 모든 앱이 함께 해야 할 시스템의 기능이다. 다른 것들은 특정한 앱의 기능을 가능하게 한다. 예를들어 티켓이나 기프트카드를 관리한다던가(<span class="x-name"><a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a></span>), 앱 내 구매를 가능하게 한다던가(<span class="x-name"><a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">인-앱 구매</a></span>), 앱-내 광고를 표시한다거나(<span class="x-name"><a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a></span>), <a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a></span>와 융합하고, <span class="x-name"><a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a></span>를 지원하는 것이다.
 </p>
   
 </section>
 
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">Terminology and Wording</a></p>
-  			<p class="next-link"><a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">Design Principles</a></p>
+    		<p class="previous-link"><a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a></p>
+  			<p class="next-link"><a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>
