@@ -213,46 +213,47 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH33-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH33"></a>
-  <h2 class='chapter-name'>Passbook</h2>
+  <h2 class='chapter-name'>패스북</h2>
   
   	<section class="section">
   		<p class="para">
-  The Passbook app helps people view and manage passes, which are digital representations of physical items such as boarding passes, coupons, membership cards, and tickets. In your app, you can create a pass, distribute it to users, and update it when things change.
+  패스 북 앱은 사람들이 패스를 보고 관리하는 것을 도와준다. 패스는 탑승권이나 멤버십 카드 또는 티켓 같은 물리적인 아이템의 디지털적인 재현이다. 당신의 앱에서, 패스를 만들어서, 사용자에게 배포하고, 변경사항이 있을 때는 업데이트 한다.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/pass_example_2x.png" alt="image: ../Art/pass_example_2x.png" width="224" height="383" />
 </figure><p class="para">
-  The Pass Kit framework makes it easy to use custom content to assemble a pass and to access a pass when it’s in the user’s pass library. (To learn about the key concepts of Passbook technology and how to use the Pass Kit APIs in your app, see <em class="u-book"><a href="../PassKit_PG/Chapters/Introduction.html#/apple_ref/doc/uid/TP40012195" target="_self">Passbook Programming Guide</a></em>.) The following guidelines can help you create a pass that people appreciate having in their pass library and enjoy using.
+  Pass Kit 프레임워크는 커스텀 컨텐트를 이용해 패스를 조립하는 데 사용하고 패스가 사용자의 패스 라이브러리에 있을 때 패스에 엑세스 하는 것을 돕는다. (패스북 기술의 주요 컨셉트와 앱에서 Pass Kit API를 사용하는 방법에 대해서는 <em class="u-book"><a href="../PassKit_PG/Chapters/Introduction.html#/apple_ref/doc/uid/TP40012195" target="_self">Passbook Programming Guide</a></em>를 참조한다.) 다음 가이드라인들은 사람들이 자신의 패스 라이브러리에 보관하고 사용하는 것을 즐길 패스를 만드는 것을 도와준다.
 </p>
 <p class="para">
-  <strong class="inline-head">As much as possible, avoid simply reproducing an existing physical pass.</strong> Passbook has an established design aesthetic and passes that coordinate with this aesthetic tend to look best. Instead of replicating the appearance of a physical item, take this opportunity to design a clean, simple pass that follows the form and function of Passbook.
+  <strong class="inline-head">가능한, 단순히 존재하는 물리적인 패스를 재생산하는 것을 피하라. </strong> 패스북은 미적인 아름다움 세워두고 있으며 패스들은 가장 멋지게 보이기 위해 이 미적인 기준과 함께 한다. 물리적인 아이템의 외형을 복제하는 대신, 이번 기회를 이용해 Passbook의 기능과 형태를 따르는 깨끗하고 단순한 패스를 만들어 보라.
 </p>
 <p class="para">
-  <strong class="inline-head">Be selective about the information you put on the front of a pass.</strong> People expect to be able to glance at a pass and quickly get the information they need, so the front of a pass should be uncluttered and easy to read. If there’s additional information that you think people might need, it’s better to put it on the back of the pass than to squeeze it onto the front.
+  <strong class="inline-head">패스의 전면에 넣는 정보를 선별하라. </strong> 사람들은 패스를 힐끗만 봐도 빠르게 자신이 원하는 정보를 얻을 수 있을 것으로 예상하기 때문에, 패스의 앞 부분은 산만하지 않고 읽기 쉬워야 한다. 만약 사람들이 필요할 것 같은 부가적인 정보가 있다면, 앞 면에 구겨넣는 것보다는 뒷면을 이용하는 것이 차라리 낫다.
+
 </p>
 <p class="para">
-  <strong class="inline-head">In general, avoid using a plain white background.</strong> A pass tends to look best when its background is a vivid, solid color or displays an image that uses strong, vibrant colors. As you design the background, always make sure that it doesn’t interfere with the readability of the content.
+  <strong class="inline-head">일반적으로, 평범한 백색 배경화면 사용을 삼가라.</strong> 패스는 배경색이 청명한 단일색상이거나 진하고 생생한 컬러로 이미지를 표시할 때 가장 좋아보인다. 배경을 디자인 할 때, 콘텐트의 가독성을 거스르지 않도록 항상 확인하라.
 </p>
 <p class="para">
-  <strong class="inline-head">Use the logo text field for your company name.</strong> Text in the logo text field is rendered in a consistent font on all passes. To avoid clashing with other passes in the user’s pass library, it’s recommended that you enter text into the logo text field instead of using a custom font.
+  <strong class="inline-head">회사 이름을 위해서는 로고 텍스트 필드를 이용해라.</strong> 로고 텍스트 필드의 텍스트는 모든 패스들에 걸쳐서 일관된 폰트로 렌더 된다. 사용자 패스 라이브러리의 다른 패스들과의 충돌을 방지하기 위해, 다른 커스텀 폰트를 사용하지 말고 로고 텍스트 필드에 텍스트를 입력하는 것을 권한다.
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH33-SW2"></a>
   <aside class="aside">
-    <p class="aside-title">Note
+    <p class="aside-title">노트
     </p>
-    <p class="para">It’s best to use the appropriate pass fields for all of the text in your pass and avoid embedding text in images or using custom fonts. Using the fields benefits you in two important ways: It allows VoiceOver users to get all the information in your pass and it gives your pass a consistent appearance.
+    <p class="para">패스의 모든 텍스트에 걸쳐서, 이미지로 텍스트를 삽입하거나 커스텀 폰트를 사용하는 것 보다 적당한 패스 필드를 사용하는 게 가장 좋다. 적당한 필드를 사용하는 것은 두 가지 중요한 이익을 준다 : VoiceOver 사용자가 패스의 모든 정보를 얻을 수 있게 도와주며, 패스가 일관된 모양을 가지도록 한다.
     </p>
     
   </aside>
 </div>
 <p class="para">
-  <strong class="inline-head">Use a white company logo.</strong> The logo image is placed in the upper-left corner of the pass, next to your company name. For best results, supply a white, monochrome version of your logo that doesn’t include text. If you want to engrave the logo so that it matches the rendered logo text, add a black drop shadow with a 1 pixel y offset, a 1 pixel blur, and 35% opacity.
+  <strong class="inline-head">흰색의 회사 로고를 사용하라. </strong> 로고 이미지는 패스의 좌상단에 회사 이름 옆에 위치한다. 최상의 결과를 위해, 텍스트를 포함하지 않는 흰색 모노크롬 버전의 이미지를 제공하라. 만약 로고를 각인해서 렌더된 로고 텍스트와 일치하도록 하려면, 검은 색 그림자를 y 축으로 1픽셀 이동하고, 1 픽셀의 블러효과와 35%의 불투명도를 적용하라.
 </p>
 <p class="para">
-  <strong class="inline-head">Use a rectangular barcode when possible.</strong> Because of the layout of a pass, a rectangular barcode—such as PDF417—tends to look better than a square barcode. As shown below on the right, a square barcode creates empty gutters on both sides and can vertically crowd the fields above and below it. 
+  <strong class="inline-head">가능하면 직사각형 바코드를 사용하라.</strong> 패스의 레이아웃 때문에, 직사각형 바코드-PDF417 같은-가 정사각현 바코드보다 더 나아보인다. 아래 그림의 오른쪽처럼, 정사각형 바코드는 양쪽에 빈 공간을 만들고 위와 아래의 필드들을 복잡하게 만든다. 
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -260,26 +261,26 @@
 	</div>
 
 	<section class="left-container">
-			<p class="container-label a-rectangular-barcode-fits-well-in-the-layout">A rectangular barcode fits well in the layout</p>
+			<p class="container-label a-rectangular-barcode-fits-well-in-the-layout">직사각형 바코드는 레이아웃에 잘 어울린다</p>
 		<img class="inline-graphic" src="Art/rect_barcode_2x.png" alt="image: ../Art/rect_barcode_2x.png" width="234" height="298" />
 	</section>
 		<section class="right-container">
-				<p class="container-label a-square-barcode-can-crowd-other-fields">A square barcode can crowd other fields</p>
+				<p class="container-label a-square-barcode-can-crowd-other-fields">정사각형 바코드는 다른 필드들을 복잡하게 만든다</p>
 			<img class="inline-graphic" src="Art/square_barcode_2x.png" alt="image: ../Art/square_barcode_2x.png" width="234" height="298" />
 		</section>
 </section><p class="para">
-  <strong class="inline-head">Optimize images for performance.</strong> Because users often receive passes via email or Safari, it’s important to make downloads as fast as possible. To improve the user experience, use the smallest image files that achieve the desired visual appearance.
+  <strong class="inline-head">이미지를 성능에 최적화 하라. </strong> 사용자들은 패스를 주로 이메일이나 사파리를 통해 받기 때문에, 다운로드를 가능한 빠르게 만드는 것은 중요하다. 사용자 경험을 개선하기 위해, 원하는 시각적 모양을 이루는 최소 크기의 이미지를 사용하라.
 </p>
 <p class="para">
-  <strong class="inline-head">Enhance the utility of a pass by updating it when appropriate.</strong> Even though a pass represents a physical item that doesn’t typically change, your digital pass can provide a better experience by reflecting real-world events. For example, you can update an airline boarding pass when a flight is delayed so that people always get current information when they check the pass.
+  <strong class="inline-head">필요할 때 업데이트 함으로서 패스의 유용성을 배가하라.</strong> 비록 패스가 잘 변하지 않는 물리적인 아이템을 재현하지만, 당신의 디지털 패스는 실제 이벤트를 반영함으로서 보다 나은 경험을 제공할 수 있다. 예를 들어, 비행이 연기되면 항공기 탑승권을 업데이트 함으로서 사람들이 패스를 체크할 때 항상 현재의 정보를 얻을 수 있도록 할 수 있다.
 </p>
 
 		</section> 
   
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">Running on iPhone 5</a></p>
-  			<p class="next-link"><a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a></p>
+    		<p class="previous-link"><a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">iPhone 5에서 실행하기</a></p>
+  			<p class="next-link"><a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>

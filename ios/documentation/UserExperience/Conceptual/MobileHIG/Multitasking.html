@@ -213,75 +213,76 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH38-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH38"></a>
-  <h2 class='chapter-name'>Multitasking</h2>
+  <h2 class='chapter-name'>멀티테스킹</h2>
   
   	<section class="section">
   		<p class="para">
   
 </p>
 <p class="para">
-  Multitasking allows people to switch quickly among recently used apps. 
+  멀티테스킹은 사용자들이 최근에 사용한 앱들 사이를 빠르게 전환할 수 있도록 한다. 
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/multitasking_2x.png" alt="image: ../Art/multitasking_2x.png" width="224" height="383" />
 </figure><p class="para">
-  To support this experience, multitasking allows an app to enter a suspended state in the background when users switch away from it. When users switch back to the app, the app can resume quickly because it doesn’t have to reload its UI. People use the <strong>multitasking UI</strong> (shown above) to choose a recently used app.
+  이 경험을 지원하기 위해서, 멀티테스킹은 사용자가 앱에서 떠났을 때 백그라운드에서 서스펜디드 상태에 들어가도록 한다. 사용자가 다시 앱으로 돌아오면, 앱은 UI를 다시 로드할 필요가 없기 때문에 앱을 빠르게 계속 사용할 수 있다. 사람들은 <strong>멀티테스킹 UI</strong>(위에 보이는)를 최근에 사용한 앱을 선택하기 위해 사용한다.
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH38-SW2"></a>
   <aside class="aside">
-    <p class="aside-title">API Note
+    <p class="aside-title">API 노트
     </p>
-    <p class="para">To learn how to support multitasking in your code, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html#/apple_ref/doc/uid/TP40007072-CH4" target="_self">“App States and Multitasking”</a>.
+    <p class="para">코드에서 멀티테스킹을 지원하는 방법을 배울려면 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html#/apple_ref/doc/uid/TP40007072-CH4" target="_self">“App States and Multitasking”</a>을 보라.
     </p>
     
   </aside>
 </div>
 <p class="para">
+  멀티테스킹 환경에서 성공하는 것은 장치 내의 다른 앱들과 조화롭게 공존하는 것을 이루느냐에 달려있다. 하이 레벨에서, 이 것은 앱들이 다음과 같다는 것을 의미한다 :
   Thriving in a multitasking environment hinges on achieving a harmonious coexistence with other apps on the device. At a high level, this means that all apps should:
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Handle interruptions or audio from other apps gracefully
+  다른 앱으로부터의 인터럽션이나 오디오를 우아하게 다룬다
 </p>
 </li><li class="item"><p class="para">
-  Stop and restart—that is, transition to and from the background—quickly and smoothly
+  멈추고 재시작 즉, 백그라운드로 들어가고 나오는 것-을 빠르고 부드럽게 하기
 </p>
 </li><li class="item"><p class="para">
-  Behave responsibly when not in the foreground
+  포어그라운드에 있지 않을 때는 책임질 수 있게 행동하기
 </p>
 </li>
 </ul>
 <p class="para">
-  The following specific guidelines help your app succeed in the multitasking environment.
+  다음의 가이드라인은 당신의 앱이 멀티테스킹 환경에서 성공하도록 한다.
 </p>
 <p class="para">
-  <strong class="inline-head">Be prepared for interruptions, and be ready to resume.</strong> Multitasking increases the probability that a background app will interrupt your app. Other features, such as the presence of ads and faster app-switching, can also cause more frequent interruptions. The more quickly and precisely you can save the current state of your app, the faster people can relaunch it and continue from where they left off. To give users a seamless restart experience, take advantage of UIKit’s state preservation and restoration functionality (for more information, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/StatePreservation/StatePreservation.html#/apple_ref/doc/uid/TP40007072-CH11" target="_self">“State Preservation and Restoration”</a>).
+  <strong class="inline-head">인터럽션과 재시작에 준비하라.</strong> 멀티테스킹은 백그라운드의 앱이 당신 앱에 인터럽트를 걸 가능성을 높인다. 광고가 존재한다거나 패스트 앱 스위칭같은 다른 기능들이 더 빈번한 인터럽션을 만들 수 있다. 앱의 현재 상태에 대해 보다 빠르고 정확하게 저장할 수 있다면, 사람들은 더 빨리 떠난 곳에서 재시작 할 수 있다. 사용자에게 매끄러운 재시작 경험을 제공하기 위해, UIKit의 state preservation과 restoration 기능을 사용하라. ( 보다 자세한 정보는 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/StatePreservation/StatePreservation.html#/apple_ref/doc/uid/TP40007072-CH11" target="_self">“State Preservation and Restoration”</a>을 보라).
 </p>
 <p class="para">
-  <strong class="inline-head">Make sure your UI can handle the double-high status bar.</strong> The double-high status bar appears during events such as in-progress phone calls, audio recording, and tethering. In unprepared apps the extra height of this bar can cause layout problems. For example, the UI can become pushed down or covered. In a multitasking environment, it’s especially important to be able to handle the double-high status bar properly because there are likely to be more apps that can cause it to appear. 
+  <strong class="inline-head">UI가 두배 높이의 상태 바를 다룰 수 있도록 하라.</strong> 두 배 높이의 상태 바는 통화중, 오디오 녹음 중, 그리고 테더링 같은 이벤트일 때 보인다. 준비되지 않은 앱에서는 상태바의 높이가 추가되면 레이아웃에 문제를 일으킬 수 있다. 예를들어, UI가 밀려 내려가거나 덮여버릴 수 있다. 멀티테스킹 환경에서, 두 배 높이의 상태바를 다룰 수 있는 것은 더욱 중요해 졌다. 이런 상태를 만들 수 있는 앱들이 더 많아졌기 때문이다. 
 </p>
 <p class="para">
-  <strong class="inline-head">Be ready to pause activities that require people’s attention or active participation.</strong> For example, if your app is a game or a media-viewing app, make sure your users don’t miss any content or events when they switch away from your app. When people switch back to a game or media viewer, they want to continue the experience as if they’d never left it.
+  <strong class="inline-head">사용자의 주의를 요하거나 능동적인 참여를 필요로 하는 활동에서 일시멈춤을 준비하라.</strong> 예를 들어, 당신의 앱이 게임이거나 미디어를 보는 앱이라면, 당신 앱의 사용자들이 앱에서 나갔을 때 콘텐츠나 이벤트를 하나라도 놓치게 하고 싶지 않을 것이다.사람들이 게임이나 미디어 뷰어에 다시 돌아왔을 때, 그들은 마치 떠났던 적이 없는 것처럼 계속 경험을 이어갈 수 있길 원한다.
 </p>
 <p class="para">
-  <strong class="inline-head">Ensure that your audio behaves appropriately.</strong> Multitasking makes it more likely that other media activity is occurring while your app is running. It also makes it more likely that your audio will have to pause and resume to handle interruptions. For specific guidelines that help you make sure your audio meets people’s expectations and coexists properly with other audio on the device, see <span class="x-name"><a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a></span>.
+  <strong class="inline-head">당신의 오디오가 적절하게 동작하는 지 확인하라.</strong>멀티테스킹은 당신의 앱이 동작 중일 때 다른 미디어 활동이 발생하는 확률을 더 높게 한다. 또한 당신의 오디오가 인터럽션을 처리하기 위해 멈추고 재생해야 하는 확률도 높인다. 당신의 오디오가 사람들의 예상에 맞게 동작하고, 장치내의 다른 오디오와 적절하게 공존하는 법에 대한 특정한 가이드라인은 <span class="x-name"><a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a></span>를 보라.
 </p>
 <p class="para">
-  <strong class="inline-head">Use local notifications sparingly.</strong> An app can arrange for local notifications to be sent at specific times, whether the app is suspended, running in the background, or not running at all. For the best user experience, avoid pestering people with too many notifications, and follow the guidelines for creating notification content described in <span class="x-name"><a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">Notification Center</a></span>.
+  <strong class="inline-head">로컬 노티피케이션을 아껴써라.</strong> 앱은 서스펜드 되어 있거나, 백그라운드 동작 상태이거나 심지어 전혀 실행되지 않은 상태에서도 로컬 노티피케이션을 몇 번이나 보내도록 어레인지 할 수 있다. 최고의 사용자 경험을 위해, 너무 많은 노티피케이션으로 사용자를 괴롭히지 말고, 노티피케이션 콘텐트를 만드는 방법에 대한 <span class="x-name"><a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">Notification Center</a></span>( 페이지 107) 가이드라인을 따르라.
 </p>
 <p class="para">
-  <strong class="inline-head">When appropriate, finish user-initiated tasks in the background.</strong> When people initiate a task, they usually expect it to finish even if they switch away from your app. If your app is in the middle of performing a user-initiated task that does not require additional user interaction, you should complete it in the background before suspending.
+  <strong class="inline-head">가능한, 사용자가 시작한 테스크는 백그라운드에서 완료하라.</strong> 사람들은 테스크를 하나 시작하면, 앱으로부터 나가더라도 그 작업이 완료될 것으로 보통 예상한다. 만약 앱이 사용자가 시작한 테스크를 수행중에 있고 더 이상 사용자의 인터렉션이 필요하지 않다면, 앱이 서스펜딩 되기 전에 백그라운드에서 완료하라.
 </p>
 
 		</section> 
   
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a></p>
-  			<p class="next-link"><a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a></p>
+    		<p class="previous-link"><a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a></p>
+  			<p class="next-link"><a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>
