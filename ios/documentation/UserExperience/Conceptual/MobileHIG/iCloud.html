@@ -217,51 +217,45 @@
   
   	<section class="section">
   		<p class="para">
-  iCloud lets people access the content they care about regardless of which device they’re currently using. When you integrate iCloud into your app, users can use different instances of your app on different devices to view and edit their personal content without performing explicit synchronization. 
+  iCloud는 지금 어떤 장치를 사용하고 있든 중요하게 생각하는 콘텐트에 엑세스 할 수 있도록 한다. 앱에 아이클라우드를 융합하면, 사용자들은 다른 장치에 설치된 앱에서 개인적인 콘텐트를 직접 싱크 시키지 않고도 보고 편집할 수 있다. 
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/iCloud_intro_2x.png" alt="image: ../Art/iCloud_intro_2x.png" width="394" height="342" />
 </figure><p class="para">
-  To provide this user experience, it’s likely that you’ll need to reexamine the ways in which you store, access, and present information—especially user-created content—in your app. To learn how to enable iCloud in your app, see <em class="u-book"><a href="../../../General/Conceptual/iCloudDesignGuide/Chapters/Introduction.html#/apple_ref/doc/uid/TP40012094" target="_self">iCloud Design Guide</a></em>.
+  이 사용자 경험을 제공하기 위해, 당신의 앱에서 현재 정보-특히 사용자가 만든 콘텐트-에 저장하고
+접근하고 제공하는 방식을 재점검할 필요가 있다. 보다 자세한 정보는 <em class="u-book"><a href="../../../General/Conceptual/iCloudDesignGuide/Chapters/Introduction.html#/apple_ref/doc/uid/TP40012094" target="_self">iCloud Design Guide</a></em>를 보라.
 </p>
 <p class="para">
-  A fundamental aspect of the iCloud user experience is transparency: Ideally, users don’t need to know where their content is located and they should seldom have to think about which version of the content they’re currently viewing. The following guidelines can help you give users the iCloud experience they’re expecting.
-</p>
-<p class="para">
-  
-</p>
-<p class="para">
-  <strong class="inline-head">If appropriate, make it easy for users to enable iCloud for your app.</strong> On their iOS devices, users log into their iCloud account in iCloud Settings, and for the most part, they expect their apps to work with iCloud automatically. But if you think users might want to choose whether to use iCloud with your app, you can provide a simple option that they can set when they open your app for the first time. In most cases, this option should provide a choice between using iCloud with all the content that users access in your app or not at all. 
-</p>
-<p class="para">
-  <strong class="inline-head">Respect the user’s iCloud space.</strong> It’s important to remember that iCloud is a finite resource for which users pay. You should use iCloud for storing information that users create and understand, and avoid using it to store app resources or content that you can regenerate. Also, note that when the user’s iCloud account is active, iCloud automatically backs up the contents of your app’s Documents folder. To avoid using up too much of the user’s space, it’s best to be picky about the content you place in the Documents folder.
-</p>
-<p class="para">
-  <strong class="inline-head">Avoid asking users to choose which documents to store in iCloud.</strong> Typically, users expect all the content they care about to be available via iCloud. Most users don’t need to manage the storage of individual documents, so you shouldn’t assume that your app needs to support this experience. To provide a good user experience, you might want to rearchitect the way your app handles and exposes content so that you can perform more file-management tasks for the user.
-</p>
-<p class="para">
-  <strong class="inline-head">Determine which types of information to store in iCloud.</strong> In addition to storing user-created documents and other content, you can also store small amounts of data such as the user’s current state in your app or their preferences. To store this type of information you use iCloud key-value storage. For example, if people use your app to read a magazine, you might use iCloud key-value storage to store the last page they viewed so that when they reopen the issue on a different device, they can continue reading from where they left off.
-</p>
-<p class="para">
-  If you use iCloud key-value storage to store preferences, be sure that the preferences are ones that users are likely to want to have applied to all their devices. For example, some preferences are more useful in a work environment than they are in a home environment. In some cases, it can make sense to store preferences on your app’s server, instead of in the user’s iCloud account, so that the preferences are available regardless of whether iCloud is enabled.
-</p>
-<p class="para">
-  <strong class="inline-head">Make sure that your app behaves reasonably when iCloud is unavailable.</strong> For example, if users log out of their iCloud account, turn off iCloud usage for your app, or enter Airplane mode, iCloud becomes unavailable. In these cases, users performed an action that turned off access to iCloud, so your app does not need to tell them about it. However, it can be appropriate to show users that the changes they make will not be visible on their other devices until they restore access to iCloud.
-</p>
-<p class="para">
-  <strong class="inline-head">Avoid giving users the option to create a &quot;local” document.</strong>Regardless of whether you support iCloud in your app, you should not encourage users to think in terms of a device-specific file system. Instead, you want users to focus on the pervasive availability of their content through iCloud.
-</p>
-<p class="para">
-  <strong class="inline-head">When appropriate, update content automatically.</strong> It’s best when users don’t have to take any action to ensure that they’re accessing the most up-to-date content in your app. However, you need to balance this experience with respect for the user’s device space and bandwidth constraints. If your users work with very large documents, it can be appropriate to give them control over whether to download an update from iCloud. If you need to do this, design a way to indicate that a more recent version of the document is available in iCloud. When the user chooses to update the document, be sure to provide subtle feedback if the download takes more than a few seconds.
+  iCloud 사용자 경험의 기반이 되는 면은 투명함이다 : 이상적으로, 사용자들은 자신의 콘텐트가 어디에 저장되는지 알 필요가 없고,지금 현재 보고 있는 콘텐트의 버전이 무엇인지에 대해 거의 생각할 필요가 없어야 한다. 다음의 가이드라인은 사용자들이 기대하는 iCloud 경험을 제공하도록 도와줄 것이다.
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  
+  <strong class="inline-head">가능하다면, 앱에서 iCloud를 사용가능하게 하는 걸 쉽게 하라.</strong> 사용자들의 iOS 장치에서, 사용자들은 iCloud Settings에서 그들의 iCloud로 로긴을 했으며, 대부분의 경우, 앱이 자동적으로 iCloud와 동작하길 기대한다. 하지만 만약 사용자가 iCloud를 사용할 지 선택하길 원할 것 같으면, 앱을 처음 열 때 설정할 수 있도록 간단한 옵션을 제공할 수 있다. 대부분의 경우, 이 옵션은 앱에서 사용자가 접근하는 모든 콘텐트를 iCloud를 사용할 것인지, 아니면 아예 사용하지 않을지에 대한 선택이어야 한다.
 </p>
+<p class="para">
+  <strong class="inline-head">사용자의 iCloud 공간을 존중하라.</strong> iCloud는 사용자가 돈을 내는 유한자원이라는 것을 기억하는 것이 중요하다. iCloud를 사용자가 만든 콘텐트를 저장하는 데에만 사용하고 다시 생산할 수 있는 앱 리소스나 콘텐트 저장에 사용하지 마라. 또한, 사용자의 iCloud 계정이 활성화 되어 있으면, iCloud는 자동적으로 앱의 도큐멘트 폴더를 백업한다. 사용자의 공간을 너무 많이 써 버리는 것을 막기 위해, Documents 폴더에 위치시키는 콘텐트에 대해서는 까다롭게 구는 게 좋다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자에게 iCloud에 저장할 문서를 선택하도록 요구하지 마라.</strong> 전형적으로, 사용자들은 모든 콘텐트가 iCloud를 통해 이용가능하다고 예상한다. 대부분의 사용자들은 개별 문서들의 저장공간을 관리할 필요가 없으므로, 당신의 앱도 이런 경험을 지원하는 것을 가정할 필요가 없다. 좋은 사용자 경험을 위해, 당신의 앱이 콘텐트를 다루고 노출하는 방식을 다시 설계해서 사용자를 위한 파일 관리 테스크를 더 수행하도록 할 수 있다.
+</p>
+<p class="para">
+  <strong class="inline-head">iCloud에 어떤 종류의 정보를 저장할지 결정하라.</strong> 사용자가 만든 문서와 다른 콘텐트들을 저장하는 것 외에, 앱에서 사용자의 현재 상태 또는 환경설정 같은 조그만 양의 데이터를 저장할 수도 있다. 이런 종류의 정보를 저장하기 위해서는 iCloud의 키-값 저장소를 사용한다. 예를 들어, 사람들이 앱을 이용해 잡지를 읽는다면, 사용자가 마지막 본 페이지를 키-값 저장소에 저장해서, 다른 장치에서 해당 발행물을 열더라도, 떠났던 그 페이지부터 다시 읽을 수 있도록 할 수 있다.
+</p>
+<p class="para">
+  iCloud 키-값 저장소를 환경설정 저장에 사용한다면, 환경설정은 사용자가 모든 장치에 동일하게 가지길 원하는 경향이 있다는 것을 염두에 둬라. 예를 들어, 어떤 환경설정은 집에 환경보다 작업 환경에 적당하다. 어떤 경우, 사용자의 iCloud 계정에 저장하는 것 보다 앱의 서버에 저장함으로서, 환경설정이 iCloud 사용여부에 상관없이 사용가능하도록 하는 것이 좋을 때도 있다.
+</p>
+<p class="para">
+  <strong class="inline-head">iCloud를 사용할 수 없을 때는 앱이 합리적으로 동작해야 한다.</strong> 예를 들어, 사용자가 iCloud 계정에서 로그아웃하면, 앱의 iCloud 사용을 끈다. 또는 에어플레인 모드로 진입하면, iCloud는 사용불가가 된다. 이런 경우, 사용자가 iCloud 접근을 끄는 액션을 취했기 때문에, 앱은 여기에 대해 이야기 할 필요가 없다. 그러나, 다시 iCloud에 접근을 회복하기 전까지는 수정하는 내용이 다른 장치에서는 보이지 않을 것임을 보여주는 게 적당하다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자에게 &quot;로컬" 문서를 만드는 옵션을 주지 마라.</strong>앱 에서 iCloud를 지원하는 것과 별개로, 사용자가 장비에 특정한 파일 시스템을 생각하도록 하면 안된다. 대신, 사용자들이 iCloud를 통해 그들의 콘텐트가 여기저기 나타나는 기능에 초점을 맞추도록 하라.
+</p>
+<p class="para">
+  <strong class="inline-head">가능하다면, 콘텐트를 자동으로 업데이트 하라.</strong> 사용자들이 앱의 콘텐트가 최신-업데이트인지를 보장하는 어더한 액션도 취할 필요가 없는 게 가장 좋다. 그러나, 이 경험은 사용자의 장치 공간과 대역폭 제한을 고려하며 균형을 잡아야 한다. 만약 사용자가 굉장히 큰 문서를 작업한다면, 사용자에게 iCloud로부터 업데이트를 다운로드 할 것인지를 결정하도록 하는 게 좋을 것이다. 이렇게 해야 한다면, iCloud에 보다 이 문서의 보다 최신 버전이 있다는 것을 알리는 방법을 디자인해야 한다. 사용자가 문서의 업데이트를 선택하면, 다운로드가 몇 초 이상 걸릴 것 같으면 잔잔한 피드백을 제공하라.
 <p class="para">
   
 </p>
@@ -269,13 +263,19 @@
   
 </p>
 <p class="para">
-  <strong class="inline-head">Warn users about the consequences of deleting a document.</strong> When a user deletes a document in an iCloud-enabled app, the document is removed from the user’s iCloud account and all other devices. It’s appropriate to display an alert that describes this result and to get confirmation before you perform the deletion.
+  
 </p>
 <p class="para">
-  <strong class="inline-head">Tell users about conflicts as soon as possible, but only when necessary.</strong> Using the iCloud programming interfaces, you should be able to resolve most conflicts between different versions of a document without involving the user. In cases where this is not possible, make sure that you detect conflicts as soon as possible so that you can help users avoid wasting time on the wrong version of their content. You need to design an unobtrusive way to show users that a conflict exists; then, make it easy for users to differentiate between versions and make a decision.
+  
 </p>
 <p class="para">
-  <strong class="inline-head">Be sure to include the user’s iCloud content in searches.</strong> Users with iCloud accounts tend to think of their content as being universally available, and they expect search results to reflect this perspective. If your app allows people to search their content, make sure you use the appropriate APIs to extend search to their iCloud accounts.
+  <strong class="inline-head">문서 삭제의 결과에 대해 사용자에게 경고하라.</strong> iCloud를 사용하는 앱에서 문서를 삭제하면, 그 문서는 사용자의 iCloud 계정을 비롯한 모든 장치들에서 제거된다.삭제를 실행하기 전에 얼러트를 디스플레이해서 이 결과를 설명하고 확인을 받는 것이 적당하다.
+</p>
+<p class="para">
+  <strong class="inline-head">충돌에 대해 최대한 빨리 설명하되, 꼭 필요한 경우에만 하라.</strong> iCloud 프로그래밍 인터페이스를 사용하다보면, 사용자의 개입없이 문서의 다른 버전간 충돌의 대부분을 해결할 수 있을 것이다. 이것이 불가능한 경우, 최대한 빨리 충돌을 감지해서 사용자가 잘못된 버전의 콘텐트로 시간을 낭비하는 일이 없도록 도와야 한다. 충돌이 있다는 걸 거추장스럽지 않게 알리는 방식을 디자인 해야 한다; 그러면 사용자가 버전을 다르게 가져가는 것과 결정을 내리는 것이 편하다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자의 iCloud 콘텐트가 검색에 포함되게 하라.</strong> iCloud 계정을 가진 사용자들은 그들의 콘텐트가 어디에서나 가능하다고 생각하며, 검색 결과 또한 이런 관점을 반영할 것으로 예상한다. 앱이 콘텐트를 검색하도록 한다면, 적당한 API를 사용해 iCloud 계정으로 검색을 확장한다.
 </p>
 
 		</section> 

@@ -213,31 +213,31 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH34-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH34"></a>
-  <h2 class='chapter-name'>Social Media</h2>
+  <h2 class='chapter-name'>소셜 미디어</h2>
   
   	<section class="section">
   		<p class="para">
-  People expect to have access to their favorite social media accounts regardless of their current context. iOS makes it easy to integrate social media interactions into your app in ways that people appreciate.
+  사람들은 현재의 컨텍스트에 상관없이 그들이 좋아하는 소셜 미디어 계정에 접근할 수 있길 기대한다. iOS는 사람들이 좋아하는 방식을 당신 앱에 손 쉽게 소셜 미디어 인터렉션을 융합할 수 있도록 한다.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/social_media_sharing_2x.png" alt="image: ../Art/social_media_sharing_2x.png" width="256" height="438" />
 </figure><p class="para">
-  <strong class="inline-head">Give users a convenient way to compose a post without leaving your app.</strong> As much as possible, you want to integrate social media support into your app so users can post content to their account without switching to another app to do so. The Social framework provides a compose view controller that allows you to present users with a view in which they can edit a post. Optionally, you can prepopulate the compose view with custom content before you present it to users for editing (after you present the view to users, only they can edit the content). To learn about the programming interfaces of the Social framework—including the <code class="code-voice u-api"><a href="../../../NetworkingInternet/Reference/SLComposeViewController_Class/Reference/Reference.html#/apple_ref/occ/cl/SLComposeViewController">SLComposeViewController</a></code> class—see <em class="u-book"><a href="../../../Social/Reference/Social_Framework/_index.html#/apple_ref/doc/uid/TP40012233" target="_self">Social Framework Reference</a></em>.
+  <strong class="inline-head">당신 앱을 떠나지 않고도 포스트를 작성할 수 있는 편리한 방식을 제공하라. </strong> 가능한, 사용자들이 그들의 계정으로 콘텐트를 포스트할 수 있도록 소셜 미디어 지원을 앱에 융합해서 사용자들이 다른 앱으로 스위칭하지 않아도 되도록 하라. Social Framework은 당신이 사용자에게 제공할 수 있는 컴포즈 뷰 컨트롤러와 포스트를 편집할 수 있는 뷰를 제공한다. 추가적으로 ,사용자에게 편집을 위해 작성 뷰를 제공하기 전에 커스텀 콘텐트를 미리 작성해 둘 수 있다. (사용자에게 뷰를 제공하고 나면, 오직 사용자만 콘텐트를 수정할 수 있다). Social Framework에 대한 보다 깊은 프로그래밍 인터페이스를 배우려면 <em class="u-book"><a href="../../../Social/Reference/Social_Framework/_index.html#/apple_ref/doc/uid/TP40012233" target="_self">Social Framework Reference</a></em>의 <code class="code-voice u-api"><a href="../../../NetworkingInternet/Reference/SLComposeViewController_Class/Reference/Reference.html#/apple_ref/occ/cl/SLComposeViewController">SLComposeViewController</a></code> 클래스를 보라.
 </p>
 <p class="para">
-  <strong class="inline-head">When possible, avoid asking users to sign into a social media account.</strong> The Social framework works with the Accounts framework to support a single sign-on model, so you can get authorization to access the user’s account without asking them to reauthenticate. If the user hasn’t already signed into an account, you can present UI that allows them to do so.
+  <strong class="inline-head">가능한 사용자에게 소셜 미디어 계정에 사인-인 하도록 요청하지 마라.</strong> 소셜 프레임워크는 Account 프레임워크와 함께 동작해서 싱글 사인-온 모델을 지원하므로, 사용자의 어카운트에 재인증을 요구하지 않고도 접근권한을 얻을 수 있다. 만약 사용자가 아직 계정에 사인-인하지 않았다면, 그것을 위한 UI를 제시해서 하도록 할 수 있다.
 </p>
 <p class="para">
-  <strong class="inline-head">Consider using an activity view controller to help users choose one of their social media accounts.</strong> By default, an activity view controller—that is, a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActivityViewController_Class/Reference/Reference.html#/apple_ref/occ/cl/UIActivityViewController">UIActivityViewController</a></code> object—lists several system-provided services that act upon the currently selected content, including sending the content via Mail or Messages and posting the content to social media accounts. When you use an activity view controller, you don’t have to provide a custom service that interacts with a social media account and you benefit from the user’s familiarity with the Share button that reveals the list of services. For guidelines on how to use an activity view controller in your app, see <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW121" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW121">Activity View Controller</a></span>.
+  <strong class="inline-head">액티비티 뷰 컨트롤러를 이용해 사용자들의 소셜 미디어 계정중 하나나를 선택하도록 하라.</strong> 기본적으로, 액티비티 뷰 컨트롤러- <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIActivityViewController_Class/Reference/Reference.html#/apple_ref/occ/cl/UIActivityViewController">UIActivityViewController</a></code> 오브젝트 - 몇 가지 시스템이 제공하는 현재 선택된 콘텐트에 액션을 수행할 수 있는 서비스를 나열해서, 그 콘텐트를 Mail이나 Message 로 보내는 것을 포함해서 소셜 미디어 계정에 포스팅할 수 있도록 한다. 액티비티 뷰 컨트롤러를 이용하면, 소셜 미디어 계정과 인터렉트 하는 커스텀 서비스를 제공할 필요가 없으며, 사용자에게 친숙한 Share 버튼으로 서비스의 리스트를 드러낼 수 있는 이점이 있다. 액티비티 뷰 컨트롤러에 대한 가이드라인은 <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW121" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW121">Activity View Controller</a></span>를 보라.
 </p>
 
 		</section> 
   
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a></p>
+    		<p class="previous-link"><a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a></p>
   			<p class="next-link"><a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
