@@ -7,13 +7,13 @@
 	<key>ESProjectWindowState</key>
 	<dict>
 		<key>ContentSize</key>
-		<string>{1243, 636}</string>
+		<string>{840, 635}</string>
 		<key>ProjectURL</key>
 		<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/codershigh.github.io.esproj/</string>
 		<key>StateType</key>
 		<string>ProjectWindow</string>
 		<key>TopLeftPoint</key>
-		<string>{15, 778}</string>
+		<string>{16, 778}</string>
 	</dict>
 	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
 	<false/>
@@ -46,6 +46,12 @@
 			<dict>
 				<key>DocumentURL</key>
 				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Process.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/DesktopToiOS.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>
