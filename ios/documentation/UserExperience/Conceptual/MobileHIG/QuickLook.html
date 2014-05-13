@@ -213,24 +213,24 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH43-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH43"></a>
-  <h2 class='chapter-name'>Quick Look</h2>
+  <h2 class='chapter-name'>퀵 룩</h2>
   
   	<section class="section">
   		<p class="para">
-  Using Quick Look, users can preview a document within your app, even if your app can’t open the document. For example, you might allow users to preview documents that they download from the web or receive from other sources. 
+  퀵 룩을 사용하면, 사용자들은 앱이 그 문서를 열수는 없더라도 프리뷰는 앱 안에서 볼 수 있다. 예를 들어, 사용자들이 웹에서 다운로드 하거나 다른 소스로부터 받은 문서를 미기보기 하도록 할 수 있다. 
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/attached_doc_2x.png" alt="image: ../Art/attached_doc.jpg" width="99" height="79" />
 </figure><p class="para">
-  To learn more about how to support Quick Look document preview in your app, see <em class="u-book"><a href="../../../FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010403" target="_self">Document Interaction Programming Topics for iOS</a></em>.
+  앱에서 퀵 룩 미리보기를 지원하는 방법을 배우려면, <em class="u-book"><a href="../../../FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010403" target="_self">Document Interaction Programming Topics for iOS</a></em>를 보라.
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  Before users preview a document in your app, they can see information about the document in a custom view that you create. For example, after users download a document attached to an email message, Mail displays the document’s icon, title, and size in a custom view within the message. Users can tap this view to preview the document.
+  앱에서 문서의 미리보기를 하기전에, 당신이 만든 커스텀 뷰에서 문서에 대한 정보를 볼 수 있다. 예를 들어, 사용자가 이메일 메시지에 첨부된 문서를 다운로드 한 뒤, Mail 은 문서의 아이콘, 제목 그리고 사이즈를 메세지 안에서 커스텀 뷰로 보여준다. 사용자는 문서를 미리보기 하기 위해 이 뷰를 탭 할 수 있다.
 </p>
 <figure class="figure">
   
@@ -240,16 +240,16 @@
   
 </p>
 <p class="para">
-  You can present a document preview in a new view in your app, or in a full-screen, modal view. The presentation method you choose depends on which device your app runs on.
+  당신 앱의 새로운 뷰, 풀 스크린, 모달 뷰에서 문서의 프리뷰를 제공할 수 있다. 프레젠테이션 수단은 앱이 동작하는 장치에 따라 선택할 수 있다.
 </p>
 <p class="para">
-  <strong class="inline-head">On iPad, display a document preview modally.</strong> The large iPad screen is appropriate for displaying a document preview in an immersive environment that users can easily leave. The zoom transition is especially well-suited to reveal the preview.
+  <strong class="inline-head">아이패드에서, 모달하게 문서 프리뷰를 디스플레이 하라.</strong>아이패드의 큰 화면은 사용자가 언제라도 떠날 수 있는, 몰입형 환경에서 문서를 프리뷰하는 것이 적합하다. 줌 장면전환은 프리뷰를 드러내기에 특히 잘 맞춰져 있다.
 </p>
 <p class="para">
-  <strong class="inline-head">On iPhone, display a document preview in a dedicated view, preferably a navigation view.</strong> Doing this allows users to navigate to and from the document preview without losing context in your app. Although it’s possible to display a document preview modally in an iPhone app, it’s not recommended. (Note that the zoom transition is not available on iPhone.)
+  <strong class="inline-head">아이폰에서, 문서 프리뷰는 내비게이션 뷰와 같은, 전용 뷰에서 디스플레이 하라.</strong> 이렇게 하는 것은 앱에서 사용자가 콘텍스트를 잃지 않고 문서 프리뷰로 네비게이션 들어갔다 나올 수 있도록 한다. 아이폰 앱에서 모달하게 문서 프리뷰를 디스플레이 하는 것도 가능하지만, 권장하지 않는다. (아이폰에서는 줌 장면전환이 없다는 것을 기억하라.)
 </p>
 <p class="para">
-  Also, note that displaying a document preview in a navigation view allows Quick Look to place preview-specific navigation controls in the navigation bar. (If your view already contains a toolbar, Quick Look places the preview navigation controls in the toolbar, instead.)
+  또한, 문서 프리뷰를 네비게이션 뷰 안에서 디스플레이하는 것은 퀵 룩이 프리뷰에 특정한 네비게이션 컨트롤들을 네비게이션 바에 위치시킬 수 있다는 것을 의미한다. (만약 뷰가 이미 툴바를 가지고 있다면, 퀵 룩이 프리뷰 네비게이션 컨트롤들을 그 툴 바에 대신 위치시킨다.)
 </p>
 <p class="para">
   
@@ -262,8 +262,8 @@
   
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">Accessing User Data</a></p>
-  			<p class="next-link"><a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a></p>
+    		<p class="previous-link"><a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a></p>
+  			<p class="next-link"><a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a></p>
   <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
   </p>
   </section>

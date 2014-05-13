@@ -213,125 +213,125 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH44-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH44"></a>
-  <h2 class='chapter-name'>Sound</h2>
+  <h2 class='chapter-name'>사운드</h2>
   
   	<section class="section">
   		<p class="para">
-  Whether sound is a primary part of your app’s user experience or an optional enhancement, you need to know how users expect sound to behave and how to meet those expectations.
+  사운드가 앱의 중요한 UX 이거나 부수적인 개선일 뿐이라도, 사용자가 사운드에 있어서 어떤 예상을 하는지와 그 예상에 맞추는 방법은 알고 있어야 한다.
 </p>
 
 		</section> 
   <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH44-SW15"></a>
-  <h3 class="section-name" tabindex="0">Understand User Expectations</h3>
+  <h3 class="section-name" tabindex="0">사용자의 예상을 이해하기</h3>
   <p class="para">
-  People can use device controls to affect sound, and they might use wired or wireless headsets and headphones. People also have various expectations for how their actions impact the sound they hear. Although you might find some of these expectations surprising, they all follow the principle of user control in that the user, not the device, decides when it’s appropriate to hear sound.
+  사람들은 사운드에 영향을 끼치기 위해서 디바이스 컨트롤들을 사용할 수 있으며, 유 무선 헤드셋과 헤드폰을 사용한다. 사람들은 또한 그들의 액션이 그들이 듣는 사운드에 어떤 영향을 줄 지 다양한 예상을 한다. 그 예상들 중 몇 가지는 놀라울 수 있겠지만, 그 모든 것들은 사용자 콘트롤의 원칙을 따르고 있다. 즉, 장치가 아니라 사용자가 사운드를 듣는 적당한 시기를 결정한다는 것이다.
 </p><p class="para">
-  <strong class="inline-head">Users switch their devices to silent when they want to</strong>:
+  <strong class="inline-head">사용자들은 다음과 같은 경우 장치를 묵음으로 둔다</strong>:
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Avoid being interrupted by unexpected sounds, such as phone ringtones and incoming message sounds
+  전화 벨 소리나 메세지 수신 사운드와 같은 예상치 못한 사운드에 의해 방해받고 싶지 않을 때
 </p>
 </li><li class="item"><p class="para">
-  Avoid hearing sounds that are the byproducts of user actions, such as keyboard or other feedback sounds, incidental sounds, or app startup sounds
+  키보드 또는 다른 피드백 사운드, 부차적인 사운드들이나 앱 시동 사운드등 사용자 액션에 의한 부산물로서의 사운드를 듣기 싫을 때
 </p>
 </li><li class="item"><p class="para">
-  Avoid hearing game sounds that are not essential to using the game, such as sound effects and soundtracks
+  부차적인 사운드들과 사운드 트랙 게임에 필수적이지 않은 게임 사운드를 듣기 싫을 때
 </p>
 </li>
 </ul><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH44-SW2"></a>
   <aside class="aside">
-    <p class="aside-title">Note
+    <p class="aside-title">노트
     </p>
-    <p class="para">People switch their devices to silent using either the Ring/Silent switch (on iPhone) or the Silent switch (on iPad).
+    <p class="para">사람들은 벨/무음 스위치(아이폰) 또는 무음 스위치(아이패드)를 사용해서도 장치를 무음으로 만든다.
     </p>
     
   </aside>
 </div><p class="para">
-  For example, in a theater users switch their devices to silent to avoid bothering other people in the theater. In this situation, users still want to be able to use apps on their devices, but they don’t want to be surprised by sounds they don’t expect or explicitly request, such as ringtones or new message sounds.
+  예를 들어, 극장에서는 다른 사람들을 방해하지 않기 위해 장치를 무음으로 스위치 한다. 이런 상황에서, 여전히 앱을 사용하기를 원하지만, 예상치 못한 사운드나 명백히 원하지 않은 벨 소리나 메세지 사운드와 같은 것에 의해 놀라고 싶지 않다.
 </p><p class="para">
-  The Ring/Silent (or Silent) switch does <em>not</em> silence sounds that result from user actions that are solely and explicitly intended to produce sound. For example:
+  벨/무음(또는 무음) 스위치는 다음과 같이 명백히 의도적으로 사운드를 재생하기 위한 사용자 액션에 의한 결과 사운드를 무음으로 만들지는 <em>않는다</em> :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Media playback in a media-only app is not silenced because the media playback was explicitly requested by the user.
+  미디어만 있는 앱에서 미디어 재생은 무음이 되지 않는다. 왜냐하면 미디어 재생은 명백히 사용자에 의해 요청되었기 때문이다.
 </p>
 </li><li class="item"><p class="para">
-  A Clock alarm is not silenced because the alarm was explicitly set by the user.
+  클락 알람은 무음이 되지 않는다. 왜냐하면 알람은 명백히 사용자에 의해 설정되었기 때문이다.
 </p>
 </li><li class="item"><p class="para">
-  A sound clip in a language-learning app is not silenced because the user took explicit action to hear it.
-</p>
+  어학용 앱에서 사운드 클립은 무음이 되지 않는다. 왜내하면 사용자가 명백히 그것을 듣기 위한 액션을 취했기 때문이다.
 </li><li class="item"><p class="para">
-  Conversation in an audio chat app is not silenced because the user started the app for the sole purpose of having an audio chat.
+  오디오 챗 앱의 대화는 무음이 되지 않는다. 왜냐하면 사용자가 오디오 챗을 할 단일한 목적으로 앱을 시작했기 때문이다.
+
 </p>
 </li>
 </ul><p class="para">
-  <strong class="inline-head">Users use the device’s volume buttons to adjust the volume of all sounds their devices can play,</strong> including songs, app sounds, and device sounds. Users can use the volume buttons to quiet any sound, regardless of the position of the Ring/Silent (or Silent) switch. Using the volume buttons to adjust an app’s currently playing audio also adjusts the overall system volume, with the exception of the ringer volume.
+  <strong class="inline-head">사용자들은 장치의 볼륨 버튼을 이용해 장치가 재생할 수 있는 모든 사운드의 볼륨을 조정할 수 있다.</strong> 노래, 앱 사운드, 그리고 디바이스 사운드를 포함해서. 사용자들은 링/무음 스위치의 위치에 상관없이 볼륨 버튼을 이용해 모든 사운드를 끌 수 있다. 볼륨 버튼을 이용해 앱의 현재 재생중인 오디오의 볼륨을 조정하는 것은 시스템 전체의 볼륨을 조정하는 것과 같다. 벨소리 볼륨을 제외하고.
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH44-SW3"></a>
   <aside class="aside">
     <p class="aside-title">iPhone
     </p>
-    <p class="para">Using the volume buttons when no audio is currently playing adjusts the ringer volume.
+    <p class="para">현재 재생중인 오디오가 없는 상황에서 볼륨 버튼을 이용하면 벨 소리 볼륨을 조정하는 것이다.
     </p>
     
   </aside>
 </div><p class="para">
-  <strong class="inline-head">Users use headsets and headphones to hear sounds privately and to free their hands.</strong> Regardless of whether these accessories are wired or wireless, users have specific expectations for the user experience.
+  <strong class="inline-head">사용자들은 소리를 혼자 듣고 손을 자유롭게 하기 위해 헤드폰과 헤드셋을 사용한다.</strong> 유선이든 무선이든, 사용자들은 경험에 대한 특정한 예상을 가지고 있다.
 </p><p class="para">
-  When users plug in a headset or headphones, or connect to a wireless audio device, they intend to continue listening to the current audio, but privately. For this reason, they expect an app that is currently playing audio to continue playing without pause.
+  사용자가 헤드셋이나 헤드폰을 꽂거나 무선 오디오 장치에 연결하면, 그들은 현재의 오디오를 계속, 개인적으로 듣기 원한다. 이런 이유 때문에, 현재 오디오를 재생하는 앱이 멈춤없이 계속 재생하길 원한다.
 </p><p class="para">
-  When users unplug a headset or headphones, or disconnect from a wireless device (or the device goes out of range or turns off), they don’t want to automatically share what they’ve been listening to with others. For this reason, they expect an app that is currently playing audio to pause, allowing them to explicitly restart playback when they’re ready.
+  사용자가 헤드셋이나 헤드폰을 뽑꺼나 무선 장치로부터 연결 해제하면 (또는 장치가 범위 바깥으로 나가거나 꺼지면), 그들은 듣고 있던 것을 다른 사람들과 자동으로 공유되길 원하지 않는다. 이런 이유로, 그들은 현재 오디오를 재생하고 있는 앱이 멈추기를 바라고, 준비가 되면 명백히 재생을 다시 시작하도록 한다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH44-SW4"></a>
-  <h3 class="section-name" tabindex="0">Define the Audio Behavior of Your App</h3>
+  <h3 class="section-name" tabindex="0">앱의 오디오 동작을 정의하기</h3>
   <p class="para">
-  <strong class="inline-head">If necessary, you can adjust relative, independent volume levels to produce the best mix in your app’s audio output.</strong> But the volume of the final audio output should always be governed by the system volume, whether it’s adjusted by the volume buttons or a volume slider. This means that control over an app’s audio output remains in users’ hands, where it belongs.
+  <strong class="inline-head">필요하다면, 상대적이거나 독립적으로 볼륨 레벨을 조정해서 당신 앱의 오디오 출력과 최상의 믹스를 만들어 낼 수 있다.</strong> 볼륨 버튼이나 볼륨 슬라이더로 조정을 했다 하더라도, 최종 오디오 출력 볼륨은 항상 시스템 볼륨에 의해 통제된다. 앱의 오디오 출력을 통제하는 것은 여전히 그것이 속해 있는 사용자의 손에 달려있다는 것을 의미한다.
 </p><p class="para">
-  <strong class="inline-head">Ensure that your app can display the audio route picker, if appropriate.</strong> (An <strong>audio route</strong> is an electronic pathway for audio signals, such as from a device to headphone or from a device to speakers.) Even though people don’t physically plug in or unplug a wireless audio device, they still expect to be able to choose a different audio route. To handle this, iOS automatically displays a control that allows users to pick an output audio route (use the <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> class to allow the control to display in your app). Because choosing a different audio route is a user-initiated action, users expect currently playing audio to continue without pause.
+  <strong class="inline-head">가능하다면, 당신의 앱이 오디오 경로 선택을 할 수 있도록 보장하라. </strong> ( <strong>오디오 루트</strong>는 장치에서 헤드폰 또는 장치에서 스피커 와 같이, 오디오 신호를 위한 전자적인 경로이다.) 사람들이 유선 오디오 장치를 꽂꺼나 뽑은 게 아니라 할지라도, 그들은 여전히 다른 오디오 루트를 선택할 수 있기를 기대한다. 이것을 다루기 위해, iOS는 자동적으로 출력 오디오 경로를 사용자가 선택하도록 하는 컨트롤을 디스플레이 한다(앱에서 컨트롤을 디스플레이 하기 위해서는 <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> 클래스를 사용하라). 다른 오디오 경로를 선택하는 것은 사용자로부터 시작되는 액션이며, 사용자는 현재 재생중인 오디오를 멈춤없이 계속 듣기를 원한다.
 </p><p class="para">
-  <strong class="inline-head">If you need to display a volume slider,</strong> be sure to use the system-provided volume slider available when you use the <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> class. Note that when the currently active audio output device does not support volume control, the volume slider is replaced by the appropriate device name.
+  <strong class="inline-head">볼륨 슬라이더를 디스플레이 할 필요가 있다면,</strong> 시스템 제공 볼륨 슬라이더를 <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> 클래스를 통해 사용할 수 있다는 것을 알고 있어라. 현재 동작중인 오디오 출력 장치가 볼륨 컨트롤을 제공하지 않는다면, 볼륨 슬라이더는 적당한 장치 이름으로 대체될 것이다.
 </p><p class="para">
-  <strong class="inline-head">If your app produces only UI sound effects that aren’t essential to its functionality, use System Sound Services.</strong> System Sound Services is the iOS technology that produces alerts and UI sounds and invokes vibration; it is unsuitable for any other purpose. When you use System Sound Services to produce sound, you cannot influence how your audio interacts with audio on the device, or how it should respond to interruptions and changes in device configuration. For a sample project that demonstrates how to use this technology, see <em class="u-book"><a href="../../../../samplecode/SysSound/Introduction/Intro.html#/apple_ref/doc/uid/DTS40008018" target="_self">Audio UI Sounds (SysSound)</a></em>.
+  <strong class="inline-head">앱이 그 기능에 부차적인 UI 효과음만 만든다면, System Sound Services를 이용하라.</strong> 시스템 사운드 서비스는 얼러트와 UI 사운드를 만들고 진동을 일으키는 iOS 기술이다; 그 외의 다른 목적에는 적당하지 않다. 사운드를 만들기 위해 시스템 사운드 서비스를 이용하면, 장치의 오디오와 당신의 오디오가 어떻게 인터렉트 할 것인지 또는 장치 설정 변화와 인터럽션에 어떻게 응답해야 할지에 영향을 받지 않을 수 있다. 이 기술을 사용하는 방법을 시연한 샘플 프로젝트는 <em class="u-book"><a href="../../../../samplecode/SysSound/Introduction/Intro.html#/apple_ref/doc/uid/DTS40008018" target="_self">Audio UI Sounds (SysSound)</a></em> 를 보라.
 </p><p class="para">
-  <strong class="inline-head">If sound plays an important role in your app, use Audio Session Services</strong> or the <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/occ/cl/AVAudioSession">AVAudioSession</a></code> class. These programming interfaces do not produce sound; instead, they help you express how your audio should interact with audio on the device and respond to interruptions and changes in device configuration. 
+  <strong class="inline-head">만약 사운드 재생이 당신 앱에서 중요한 역할을 차지한다면</strong>, Audio Session Services 또는 <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/occ/cl/AVAudioSession">AVAudioSession</a></code> class를 이용하라. 이 프로그래밍 인터페이스들은 사운드를 만들어내지는 않는다; 대신, 그들은 당신의 오디오가 어떻게 장치의 오디오와 인터렉트 해야 하는지 그리고 장치 설정 변화와 인터럽션에 어떻게 응답해야 할지를 표현하는 데 도움을 준다.
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH44-SW5"></a>
   <aside class="aside">
     <p class="aside-title">iPhone
     </p>
-    <p class="para">No matter what technology you use to produce audio or how you define its behavior, the phone can always interrupt the currently running app. This is because no app should prevent people from receiving an incoming call.
+    <p class="para">어떤 기술을 이용하거나 그 동작을 어떤게 정의하는 지에 무관하게, 전화기능은 항상 현재 동작중인 앱을 인터럽트 한다.왜냐하면, 어떤 앱도 걸려오는 전화를 받는 것을 막을 수 없기 때문이다.
     </p>
     
   </aside>
 </div><p class="para">
-  In Audio Session Services, the <strong>audio session</strong> functions as an intermediary for audio between your app and the system. One of the most important facets of the audio session is the <strong>category</strong>, which defines the audio behavior of your app.
+  오디오 세션 서비스에서, <strong>오디오 세션</strong>은 당신 앱의 오디오와 시스템 사이에서 중개 역할을 한다. 오디오 세션의 가장 중요한 일면은 <strong>카테고리</strong>로서, 당신 앱의 오디오 동작을 정의한다.
 </p><p class="para">
-  To realize the benefits of Audio Session Services and provide the audio experience users expect, you need to select the category that best describes the audio behavior of your app. This is the case whether your app plays only audio in the foreground or can also play audio in the background. Follow these guidelines as you make this selection:
+  오디오 세션 서비스의 이점을 이용하고 사용자가 예상하는 오디오 경험을 제공하기 위해, 당신 앱의 오디오 동작을 가장 잘 설명하는 카테고리를 선택해야 한다.이것은 당신의 앱이 전면에서만 오디오를 재생할 것인지 또는 배경에서도 오디오를 재생할 것이지에 대한 경우의 문제이다. 다음 가이드라인을 따라 이 선택을 하라 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Select an audio session category based on its semantic meaning, not its precise set of behaviors.</strong> By selecting a category whose purpose is clear, you ensure that your app behaves according to users’ expectations. In addition, it gives your app the best chance of working properly if the exact set of behaviors is refined in the future.
+  <strong class="inline-head">동작의 세밀한 세트가 아니라, 단어의 의미에 기초해서 오디오 세션 카테고리를 선택하라. </strong> clear를 목적으로 카테고리를 선택할 때, 앱이 사용자의 예상에 따라 동작하도록 확인하라. 뿐만아니라, 이렇게 하면 미래에 그 동작의 세트가 다듬어 졌을때 정확하게 동작할 수 있는 기회를 얻는다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">In rare cases, add a property to the audio session to modify a category’s standard behavior.</strong> A category’s standard behavior represents what most users expect, so you should consider carefully before you change that behavior. For example, you might add the ducking property to make sure your audio is louder than all other audio (except phone audio), if that’s what users expect from your app. (To learn more about audio session properties, see <a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionBasics/AudioSessionBasics.html#/apple_ref/doc/uid/TP40007875-CH3-SW2" target="_self">“Fine-Tuning the Category”</a> in <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="">Audio Session Programming Guide</a></em>.)
+  <strong class="inline-head">드문 경우, 카테고리의 표준 동작을 수정하기 위해 오디오 세션에 프라퍼티를 더하라.</strong> 카테고리의 표준 동작은 사용자가 가장 예상할만한 것들을 나타내므로, 그것을 변경할 때는 조심스럽게 생각해야 한다. 예를 들어, 사용자가 당신 앱에서 예상하는 동작이라면, ducking 프라퍼티를 더해서 당신의 앱이 다른 모든 오디오보다 소리가 크게(전화 소리를 제외하고) 만들 수 있다. (오디오 세션 프라퍼티에 대해 더 알고 싶으면 <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="">Audio Session Programming Guide</a></em>의 <a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionBasics/AudioSessionBasics.html#/apple_ref/doc/uid/TP40007875-CH3-SW2" target="_self">“Fine-Tuning the Category”</a>를 보라.)  
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Consider basing your category selection on the current audio environment of the device.</strong> This might make sense if, for example, users can use your app while listening to other audio instead of to your soundtrack. If you do this, be sure to avoid forcing users to stop listening to their music or make an explicit soundtrack choice when your app starts.
+  <strong class="inline-head">장치의 현재 오디오 환경에 기반해서 카테고리 선택을 하라.</strong> 이것은, 예를들어, 사용자가 당신 앱의 사운드 트랙이 아니라 다른 오디오를 들으면서 앱을 사용할 수 있도록 해 준다. 이렇게 하면, 사용자에게 강제로 듣던 음악을 중단시키거나 앱이 시작할 때 명백하게 사운드 트랙을 선택하도록 하는 것을 방지한다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">In general, avoid changing categories while your app is running.</strong> The primary reason for changing the category is if your app needs to support recording and playback at different times. In this case, it can be better to switch between the Record category and the Playback category as needed, than to select the Play and Record category. This is because selecting the Record category ensures that no alerts—such as an incoming text message alert—will sound while the recording is in progress.
+  <strong class="inline-head">일반적으로, 앱이 동작중일때는 카테고리를 변경하지 마라.</strong> 카테고리를 변경하는 주된 이유는 앱이 레코딩과 재생을 따로 지원할 필요가 있는 경우이다. 이 경우, 필요에 따라 Record 카테고리와 Playback 카테고리를 스위치 하는 게 Play and Record 카테고리를 선택하는 것 보다 낫다. 왜냐하면, Record 카테고리는 녹음 중에는 얼러트-문자 수신 얼러트 같은-가 없도록 보장하기 때문이다.
 </p>
 </li>
 </ul><p class="para">
-  <span class="x-name-no-link">Table 30-1</span> lists the audio session categories you can use. Different categories allow sounds to be silenced by the Ring/Silent or Silent switch (or device locking), to mix with other audio, or to play while the app is in the background. (For the actual category and property names as they appear in the programming interfaces, see <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="_self">Audio Session Programming Guide</a></em>.)
+  <span class="x-name-no-link">표 30-1</span>은 사용가능한 오디오 세션 카테고리를 보여준다. 서로 다른 카테고리들은 벨/무음 스위치에 의해 무음이 될 수 있고, 다른 오디오와 믹스가 되고, 또는 앱이 백그라운드에 있을 때 재생하도록 한다. (프로그래밍 인터페이스에서 나타나는 실제 카데고리 이름과 프라퍼티들은 <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="_self">Audio Session Programming Guide</a></em>를 보라.)
 </p><div class="tableholder">
   <a name="//apple_ref/doc/uid/TP40006556-CH44-SW6"></a>
   <table class="graybox" border="0" cellspacing="0" cellpadding="5">
-    <caption class="tablecaption"><strong class="caption-number">Table 30-1</strong>Audio session categories and their associated behaviors</caption>
+    <caption class="tablecaption"><strong class="caption-number">표 30-1</strong>오디오 세션 카테고리와 연관 동작들</caption>
     <thead>
         <tr>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
