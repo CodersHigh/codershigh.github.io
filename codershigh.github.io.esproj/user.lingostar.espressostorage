@@ -7,13 +7,13 @@
 	<key>ESProjectWindowState</key>
 	<dict>
 		<key>ContentSize</key>
-		<string>{840, 635}</string>
+		<string>{1080, 612}</string>
 		<key>ProjectURL</key>
 		<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/codershigh.github.io.esproj/</string>
 		<key>StateType</key>
 		<string>ProjectWindow</string>
 		<key>TopLeftPoint</key>
-		<string>{16, 778}</string>
+		<string>{0, 778}</string>
 	</dict>
 	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
 	<false/>
@@ -21,8 +21,8 @@
 	<dict>
 		<key>ExpandedURLs</key>
 		<array>
-			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/bdnews/2012/Pages</string>
-			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG</string>
+			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/pages</string>
+			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/stylesheets</string>
 		</array>
 	</dict>
 	<key>com.macrabbit.Espresso.Publisher.DisclosureCollapsed</key>
@@ -52,6 +52,24 @@
 			<dict>
 				<key>DocumentURL</key>
 				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/DesktopToiOS.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/stylesheets/style_curriculum.css</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/stylesheets/style_author.css</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/stylesheets/style_common.css</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>
