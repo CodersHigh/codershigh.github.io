@@ -13,7 +13,7 @@
 		<key>StateType</key>
 		<string>ProjectWindow</string>
 		<key>TopLeftPoint</key>
-		<string>{0, 1002}</string>
+		<string>{0, 778}</string>
 	</dict>
 	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
 	<false/>
@@ -21,8 +21,7 @@
 	<dict>
 		<key>ExpandedURLs</key>
 		<array>
-			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/pages</string>
-			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/stylesheets</string>
+			<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG</string>
 		</array>
 	</dict>
 	<key>com.macrabbit.Espresso.Publisher.DisclosureCollapsed</key>
@@ -70,6 +69,108 @@
 			<dict>
 				<key>DocumentURL</key>
 				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/stylesheets/style_common.css</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Animation.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Alerts.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Anatomy.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/AppIcons.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/BarIcons.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: From Concept to Product</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/DesktopToiOS.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: From Concept to Product</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Process.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Web Clip Icons</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/WebClipIcons.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Running on iPhone 5</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Principles.html</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>iOS Human Interface Guidelines: Design Principles</string>
+				<key>URL</key>
+				<string>file:///Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/lingostar/Documents/codershigh.github.io/ios/documentation/UserExperience/Conceptual/MobileHIG/InteractivityInput.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>
