@@ -316,9 +316,9 @@
   
   <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW122"></a>
-  <h3 class="section-name" tabindex="0">Activity</h3>
+  <h3 class="section-name" tabindex="0">액티비티</h3>
   <p class="para">
-  An <strong>activity</strong> represents a system-provided or custom service—accessible through an activity view controller—that can act on some specified content.
+  <strong>액티비티</strong>는 특정 한 콘텐트에 대해 -액티비티 뷰 컨트롤러를 이용해 - 시스템이 제공하거나 커스텀하게 제공되는 서비스를 나타낸다. 
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -328,18 +328,18 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining an activity in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIActivity_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40011974" target="_self">UIActivity Class Reference</a></em>; to learn how incorporate an activity view controller into your app, see <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW121" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW121">Activity View Controller</a></span>.
+    <p class="para">코드로 액티비티를 정의하는 법을 배우고 싶으면, <em class="u-book"><a href="../../../UIKit/Reference/UIActivity_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40011974" target="_self">UIActivity 클래스 레퍼런스</a></em>를 보라. 액티비티 뷰 컨트롤러를 앱에서 활용하는 법을 알고 싶으면, <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW121" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW121">“Activity View Controller”(페이지 153)</a></span>을 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  An <strong>activity</strong>:
+  <strong>액티비티는</strong>:
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Is a customizable object representing a service that an app can perform while users are in the app
+  사용자가 앱 안에서 수행할 수 있는 서비스에 대한, 커스터마이즈 가능한 오브젝트를 나타낸다.
 </p>
 </li><li class="item"><p class="para">
-  Is represented by an icon that looks similar to a bar button icon
+  바 버튼 아이콘과 유사해 보이는 아이콘에 의해서 제공된다.
 </p>
 </li>
 </ul><figure class="figure">
@@ -347,34 +347,34 @@
   <span class="caption"></span>
   <img src="Art/activity_view_2x.png" alt="image: ../Art/activity_view_2x.png" width="256" height="438" />
 </figure><p class="para">
-  Users initiate a service by tapping its activity icon in the activity view controller. In response, the activity either performs the service immediately, or if the service is complicated, it can request more information before performing the service.
+  사용자가 액티비티 뷰 컨트롤러에 있는 액티비티 아이콘을 탭하면 서비스를 시작할 수 있다. 그 결과로, 액티비티는 서비스를 곧바로 시작하거나, 서비스가 복잡하다면, 서비스를 시작하기 전에 보다 많은 정보를 요청할 수 있다.
 </p><p class="para">
-  Use an activity to give users access to a custom service that your app can perform. Note that iOS provides several built-in services, such as Print, Twitter, Message, and AirPlay. You don’t need to create a custom activity that performs a built-in service.
+  앱이 수행할 수 있는 커스텀 서비스에 엑세스할 수 있도록 하기 위해 액티비티를 사용한다. iOS는 프린트, 트위터, 메세지 그리고 에어플레이와 같은 몇 가지 빌트-인 서비스를 제공한다는 것을 기억하라. 빌트-인 서비스를 수행하는 커스텀 액티비티를 만들 필요가 없다.
 </p><p class="para">
-  <strong class="inline-head">Create a streamlined template image that represents your service.</strong> A template image is an image that iOS uses as a mask to create the final icon that users see. To create a template image that looks good in the final icon, follow these guidelines:
+  <strong class="inline-head">서비스를 나타내는 단순화한 템플리트이미지를 사용하라.</strong> 템플리트 이미지는 사용자가 볼 최종 아이콘을 만들기 위해 iOS가 사용하는 마스크이다. 최종 아이콘이 예쁘게 보이기 위해서 템플리트 이미지를 만들기 위해서는 다음 가이드라인을 따르라 : 
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Use black or white with appropriate alpha transparency.
+  적당한 알파 투명도값을 가지는 흑/백을 사용
 </p>
 </li><li class="item"><p class="para">
-  Don’t include a drop shadow.
+  그림자 효과를 사용하지 않는다
 </p>
 </li><li class="item"><p class="para">
-  Use antialiasing.
+  안티 앨리어싱을 사용한다
 </p>
 </li>
 </ul><p class="para">
-  An activity template image should be centered in an area that measures about 70 x 70 pixels (high resolution).
+  액티비티 템플리트 이미지는 (고해상도 기준) 70*70 픽셀로 측정되는 영역의 정 중앙에 위치해야 한다.
 </p><p class="para">
-  <strong class="inline-head">Craft an activity title that succinctly describes your service.</strong> The title is displayed below the activity’s icon in the activity view controller. A short title is best, because it looks better onscreen and it’s easier to localize. When a title is too long, iOS first shrinks the text and then—if the title is still too long—truncates it. In general, it’s a good idea to avoid including your company or product name in the activity title.
+  <strong class="inline-head">당신의 서비스를 간단명료하게 설명하는 액티비티 제목을 만들어라.</strong> 타이틀은 액티비티 뷰 컨트롤러에서 액티비티 아이콘 아래에 표시된다. 화면에서 잘 보이고 로컬라이즈 하기 쉽기 때문에 짧은 타이틀이 가장 좋다.타이틀이 너무 길면, iOS는 먼저 텍스트를 압착시키고- 그래도 길면- 잘라버린다. 일반적으로, 회사 이름이나 제춤 이름을 액티비티 제목에 넣지 않는 게 좋다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW121"></a>
-  <h3 class="section-name" tabindex="0">Activity View Controller</h3>
+  <h3 class="section-name" tabindex="0">액티비티 뷰 컨트롤러</h3>
   <p class="para">
-  An <strong>activity view controller</strong> presents a transient view listing system-provided and custom services that can act on some specified content.
+  <strong>액티비티 뷰 컨트롤러</strong>는 특정 콘텐트에 동작할 수 있는 시스템 제공과 커스텀 서비스들을 나열하는 임시 뷰를 제공한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -384,32 +384,32 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining an activity view controller in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIActivityViewController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40011976" target="_self">UIActivityViewController Class Reference</a></em>; to learn how to design an activity that provides a custom service, see <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW122" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW122">Activity</a></span>.
+    <p class="para">코드로 액티비티 뷰 컨트롤러를 정의하는 방법을 배우고 싶다면 <em class="u-book"><a href="../../../UIKit/Reference/UIActivityViewController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40011976" target="_self">UIActivityViewController의 클래스 레퍼런스</a></em>를 보라; to learn how to design an activity that provides a custom service, see <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW122" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW122">Activity</a></span>.
     </p>
     
   </aside>
 </div><p class="para">
-  An activity view controller:
+  액티비티 뷰 컨트롤러는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays a configurable list of services that users can perform on the specified content
+  특정 콘텐트에 수행할 수 있는 설정가능한 서비스의 리스트를 표시한다.
 </p>
 </li><li class="item"><p class="para">
-  Appears in an action sheet on iPhone; on iPad, it appears in a popover
+  아이폰에서는 액션 시트에서 나타나고; 아이패드에서는 팝오버에서 나타난다.
 </p>
 </li>
 </ul><p class="para">
-  Use an activity view controller to give people a list of services they can perform on content that is specified in some way. The services can be system-provided—such as Copy, Twitter, and Print—or custom. A common way to use an activity view controller is to allow users to post selected content to a social media account.
+  어떤 방식으로 지정된 콘텐트에 수행할 수 있는 서비스의 리스트를 사용자에게 제공하기 위해 액티비티 뷰 컨트롤러를 이용한다. 서비스는 복사나 트위터 그리고 프린트와 같은 시스템 제공 서비스일 수도 있고 커스텀일 수도 있다. 액티비티 뷰 컨트롤러를 사용하는 일반적인 방법은 선택한 콘텐트를 소셜 미디어 계정에 올리도록 하는 것이다. 
 </p><p class="para">
-  <strong class="inline-head">Don’t create a custom button that reveals an activity view controller.</strong> People are accustomed to accessing system-provided services when they tap the Share button. You want to take advantage of this learned behavior and avoid confusing users by providing an alternative way to do the same thing.
+  <strong class="inline-head">액티비티 뷰 컨트롤러를 나타내는 커스텀 버튼을 만들지 마라. </strong> 사람들은 시스템이 제공하는 서비스들을 Share 버튼을 통해 접근하는 것에 익숙해져 있다. 이러한 학습된 동작을 이용하길 바라지, 같은 일을 하는 다른 방식을 제공함으로서 사용자를 혼란에 빠뜨리지 않도록 한다.
 </p><p class="para">
-  <strong class="inline-head">Ensure that the listed services are appropriate in the current context.</strong> You can change the services listed in an activity view controller by specifying system-provided services to exclude and by identifying custom services to include. For example, to prevent users from printing an image, you exclude the Print activity from the activity view controller.
+  <strong class="inline-head">나열된 서비스들이 현재의 컨텍스트에 적당한지를 보장하라. </strong> 시스템이 제공하는 서비스 중 배제할 것과 포함할 커스텀 서비스를 지정함으로서 액티비티 뷰 컨트롤러에 나열된 서비스들을 바꿀 수 있다. 예를 들어, 사용자가 이미지를 프린트 하지 못하도록 하기 위해서, 액티비티 뷰 컨트롤러에서 프리늩 액티비티를 배제할 수 있다. 
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW128"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">You can’t change the order in which the system-provided services are listed in an activity view controller. Also, all system-provided services appear above any custom services.
+    <p class="para">액티비티 뷰 컨트롤러에 나열된 시스템 제공 액티비티의 순서를 바꿀 수는 없다. 그리고, 모든 시스템 제공 액티비티들은 모든 커스텀 서비스의 앞에 온다.
     </p>
     
   </aside>
@@ -418,9 +418,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW127"></a>
-  <h3 class="section-name" tabindex="0">Collection View</h3>
+  <h3 class="section-name" tabindex="0">콜렉션 뷰</h3>
   <p class="para">
-  A <strong>collection view</strong> manages an ordered collection of items and presents them in a customizable layout.
+  <strong>콜렉션 뷰</strong>는 순서있는 아이템의 콜렉션을 커스터마이즈 가능한 레이아웃에 관리한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -430,99 +430,100 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a collection view in your code, see <em class="u-book"><a href="../../../WindowsViews/Conceptual/CollectionViewPGforIOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40012334" target="_self">Collection View Programming Guide for iOS</a></em>.
+    <p class="para">코드로 콜렉션 뷰를 정의하는 방법을 배우고 싶으면 <em class="u-book"><a href="../../../WindowsViews/Conceptual/CollectionViewPGforIOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40012334" target="_self">iOS를 위한 콜렉션 뷰 프로그래밍 가이드</a></em>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A collection view:
+  콜렉션 뷰는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Can contain optional views that visually distinguish subsets of items or provide decorative items, such as custom backgrounds
+  아이템들의 서브셋을 시각적으로 구별할 수 있는 부가적인 뷰를 포함하거나 배경 같은 장식 아이템을 제공한다.
 </p>
 </li><li class="item"><p class="para">
-  Supports custom animated transitions between layouts (by default, a collection view provides animations when users insert, move, or delete items)
+  레이아웃 간의 커스텀 애니메이션 되는 장면 전환을 지원한다 ( 기본값으로, 콜렉션 뷰는 사용자가 아이템을 삽입하고, 움직이고 삭제할 때 애니메이션을 제공한다 )
 </p>
 </li><li class="item"><p class="para">
-  Supports the addition of gesture recognizers to perform custom actions. By default, a collection view recognizes tap (to select an item) and touch-and-hold (to edit an item).
+  커스텀 액션을 수행하기 위해 제스처 인식기를 더하는 것을 지원한다, 기본적으로, 컬렉션 뷰는 탭(아이템을 선택)과 터치-앤-홀드( 아이템을 수정 )을 인식한다.
 </p>
 </li>
 </ul><p class="para">
-  Use a collection view to give users a way to view and manipulate a set of items that don’t need to be displayed in a list. Because a collection view doesn’t enforce a strictly linear layout, it’s particularly well suited to display items that differ in size.
+  콜렉션 뷰를 사용해 사용자에게 리스트에 표시할 필요없이, 아이템의 세트를 보고 다룰 수 있는 방법을 제공하라. 컬렉션 뷰는 엄격하게 직선 레이아웃을 강요하지 않기 때문에, 사이즈가 다른 아이템들을 표시하는 데에 특히 잘 맞다.
 </p><p class="para">
-  A collection view supports extensive customization, so it’s essential to avoid becoming distracted by your ability to create radical new designs. You want a collection view to enhance the user’s task; you don’t want a collection view to become the focus of the user experience. The following guidelines can help you create collection views that people appreciate.
+  콜렉션 뷰는 매우 확장적인 커스터마이즈를 지원하므로 과격한 새 디자인을 만들수 있는 능력 때문에 산만해지는 것을 피하는 게 중요하다. 콜렉션 뷰가 사용자의 테스크를 개선시키길 원하지; 콜렉션 뷰가 사용자 경험의 초점이 되길 원하지는 않는다. 다음의 가이드라인은 사람들이 좋아하는 콜렉션 뷰를 만드는 것을 도와준다.
 </p><p class="para">
-  <strong class="inline-head">Don’t use a collection view when a table view is a better choice.</strong> Sometimes it’s easier for people to view and understand information when it’s presented in a list. For example, it can be simpler and more efficient for people to view and interact with textual information when it’s in a scrolling list.
+  <strong class="inline-head">테이블 뷰가 더 좋은 선택인 경우 콜렉션 뷰를 사용하지 말라.</strong> 때때로, 리스트에 나타내는 게 사람들이 정보를 보고 이해하는 데 더  쉬울 수 있다. 예를 들어, 문자 위주의 정보의 경우 스크롤되는 리스트에 있는 경우에 사람들이 보고 이해하기가 더 쉽다.
 </p><p class="para">
-  <strong class="inline-head">Make it easy for people to select an item.</strong> If it’s hard for users to tap an item in your collection view, they’re less likely to enjoy using your app. As with all UI objects that users might want to tap, ensure that the minimum target area for each item in a collection view is 44 x 44 points.
+  <strong class="inline-head">사람들이 아이템을 선택하기 쉽게 하라.</strong> 콜렉션 뷰안의 아이쳄을 탭 하기가 어렵다면, 사용자들은 당신 앱을 사용하는 것을 즐거워하지 않을 것이다. 사용자가 탭하려는 모든 UI 오브젝트들이 그러하듯이, 콜렉션 뷰 안의 각 아이템의 최소 타겟 영역이 44*44 포인트이 되도록 하라.
 </p><p class="para">
-  <strong class="inline-head">Use caution if you make dynamic layout changes.</strong> A collection view allows you to change the layout of items while users are viewing and interacting with them. If you decide to dynamically adjust a collection view’s layout, be sure that the change makes sense and is easy for users to track. Changing a collection view’s layout without an obvious motivation can give people the impression that your app is unpredictable and hard to use. And if the current focus or context is lost during a dynamic layout change, users are likely to feel that they’re no longer in control of your app.
+  <strong class="inline-head">다이나믹하게 레이아웃을 변경하려면 주의깊게 하라.</strong> 콜렉션 뷰는 사용자가 아이템을 보고 인터렉션하는 동안에도 레이아웃을 바꿀 수 있도록 한다. 만약 당신이 콜렉션 뷰의 레이아웃을 다이나믹하게 조정하고자 한다면, 그 변화가 의미가 통하도록 하고, 사용자들이 추적하기 쉽게 하라. 콜렉션 뷰의 레이아웃을 아무런 명백한 동기 없이 변경하는 것은 사람들에게 당신 앱이 예측불가능하고 사용하기 어렵다는 인상을 준다. 다이나믹 레이아웃 변경 중에 현재의 초점이나 컨텍스트를 잃었다면, 사용자들은 당신의 앱을 더 이상 다룰 수 없다고 느낀다. 
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW111"></a>
-  <h3 class="section-name" tabindex="0">Container View Controller</h3>
+  <h3 class="section-name" tabindex="0">콘테이너 뷰 컨트롤러</h3>
   <p class="para">
-  A <strong>container view controller</strong> manages and presents its set of child views—or view controllers—in a custom way. Examples of system-defined container view controllers are tab bar view controllers, navigation view controllers, and split view controllers (you can learn more about these elements in <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW52" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW52">Tab Bar</a></span>, <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW3">Navigation Bar</a></span>, and <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW51" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW51">Split View Controller (iPad Only)</a></span>).
+  <strong>콘테이너 뷰 컨트롤러</strong>는 커스텀한 방식으로 자식 뷰 또는 뷰 컨트롤러들을 관리하고 제공한다. 시스템이 정의한 콘테이너 뷰 컨트롤러들은 <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW52" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW52">탭 바 컨트롤러</a></span>, <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW3">네비게이션 바 컨트롤러</a></span>, 그리고 <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW51" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW51">스필릿 뷰 콘트롤러</a></span>이다. (각각의 링크에서 자세히 배울 수 있다.)
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW8"></a>
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a custom container view controller in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIViewController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006926" target="_self">UIViewController Class Reference</a></em>.
+    <p class="para">코드로 커스텀 콘테이너 뷰 컨트롤러를 정의 하는 방법을 더 알고 싶으며, <em class="u-book"><a href="../../../UIKit/Reference/UIViewController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006926" target="_self">UIViewController 클래스의 레퍼런스</a></em>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A container view controller has no predefined appearance or behavior.
+  콘테이너 뷰 컨트롤러는 기정의된 외관이나 동작이 없다.
 </p><p class="para">
-  Use a container view controller to present content through which users navigate in a custom way. 
+  콘테이너 뷰를 이용해 사용자가 커스텀한 방식으로 네비케이트 하는 콘텐트를 표시하는 데 사용하라.
 </p><p class="para">
-  <strong class="inline-head">Ask yourself whether a custom container view controller is really necessary.</strong> Users are comfortable with the appearance and behavior of standard container view controllers, such as split view controllers and tab bar view controllers. You need to be sure that the potential advantages of your custom container view outweigh the fact that users won’t recognize it or instantly know how it works.
+  <strong class="inline-head">커스텀 콘테이너 뷰 컨트롤러가 정말 필요한지 스스로에게 물어보라.</strong>  사용자들은 스필릿 뷰 컨트롤러나 탭 바 뷰 컨트롤러처럼 표준 콘테이너 뷰 컨트롤러의 외관과 동작에서 편안함을 느낀다.당신의 커스텀 콘테이너 뷰가 가지는 잠재적인 이익이, 사용자가 그것을 알아보지 못하거나 즉각적으로 동작방식을 알지 못하는 것보다 커야 한다.
 </p><p class="para">
-  <strong class="inline-head">Make sure that your custom container view controller works in both orientations.</strong> It’s important to design a container view controller that gives users a consistent experience in both portrait and landscape.
+  <strong class="inline-head">당신의 커스텀 콘테이너 뷰 컨트롤러가 양쪽 방향에서 다 잘 동작하는지 확인하라.</strong> 콘테이너 뷰 컨트롤러를 portrait와 landscape 모두에서 일관된 경험을 사용자에게 제공하도록 디자인하는 것은 매우 중요하다.
 </p><p class="para">
-  <strong class="inline-head">In general, avoid flashy view transitions.</strong> When you use storyboards to design a custom view controller, it’s easy to define custom animations for the transitions between content views. But in most cases, flamboyant view transitions distract people from their task and often decrease the aesthetic appeal of your app.
+  <strong class="inline-head">일반적으로, 껌뻑거리는 뷰 장면전환을 삼가라. </strong>커스텀 뷰 컨트롤러를 디자인 하기 위해 스토리보드를 사용하면, 콘텐트 뷰 들간의 장면전환을 위한 커스텀 애니메이션을 제공하는 것이 쉽다. 하지만 대부분의 경우, 화려한 뷰 장면전환은 사용자들이 그들의 테스크에 집중하는 데 거슬리고 당신 앱의 미적인 감각을 떨어뜨린다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW137"></a>
-  <h3 class="section-name" tabindex="0">Image View</h3>
+  <h3 class="section-name" tabindex="0">이미지 뷰</h3>
   <p class="para">
-  An <strong>image view</strong> displays one image or an animated series of images.
+  <strong>이미지 뷰</strong>는 하나 또는 일련의 애니메이션 이미지를 표시한다.
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW9"></a>
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining an image view in your code, see <a href="../UIKitUICatalog/UIImageView.html#/apple_ref/doc/uid/TP40012857-UIImageView" target="_self">“Image Views”</a>.
+    <p class="para">코드를 알고 싶으면 <a href="../UIKitUICatalog/UIImageView.html#/apple_ref/doc/uid/TP40012857-UIImageView" target="_self">“Image Views”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  An image view:
+  이미지 뷰는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Has no predefined appearance and it doesn’t enable user interaction by default
+  기정의된 모양이 없으며 기본적으로 사용자 인터렉션도 지원하지 않는다.
 </p>
 </li><li class="item"><p class="para">
-  Examines properties of both the image and its parent view to determine whether the image should be stretched, scaled, sized to fit, or pinned to a specific location
+  이미지가 늘어나거나, 크기조정되거나 딱 맞게 되거나 특정 위치에 핀이 되어야 한다면, 이미지 뷰와 그 부모 뷰 모두의 프라퍼티를 점검하라.
 </p>
 </li>
 </ul><p class="para">
-  In iOS 7, an image view that contains a template image applies the current tint color to the image.
+  iOS 7에서, 템플리트 이미지를 가진 이미지 뷰는 이미지에 현재 틴트 컬러를 적용한다.
+(점검해 봐야 할 내용)
 </p><p class="para">
-  <strong class="inline-head">As much as possible, ensure that all images in an image view have the same size and use the same scale.</strong> If your images have different sizes, the image view will adjust them separately; if your images use different scale factors, they may render incorrectly.
+  <strong class="inline-head">가능한한, 이미지 뷰의 모든 이미지들은 같은 크기와 같은 스케일을 가지도록 하라.</strong> 만약 이미지가 다른 사이즈를 가지면, 이미지 뷰는 그것들을 각각 조정한다; 이미지들이 다른 스케일 값을 가진다면, 비 정상적으로 렌더될 것이다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW134"></a>
-  <h3 class="section-name" tabindex="0">Map View</h3>
+  <h3 class="section-name" tabindex="0">맵 뷰</h3>
   <p class="para">
-  A <strong>map view</strong> presents geographical data and supports most of the functionality provided by the built-in Maps app (shown below in Photos).
+  <strong>맵 뷰</strong>는 지리학적인 데이터를 제공하며 빌트-인 Maps 앱이 제공하는 대부분의 기능을 지원한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -532,7 +533,7 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a map view in your code, see <em class="u-book"><a href="../../../MapKit/Reference/MapKit_Framework_Reference/_index.html#/apple_ref/doc/uid/TP40008210" target="_self">Map Kit Framework Reference</a></em>.
+    <p class="para"><em class="u-book"><a href="../../../MapKit/Reference/MapKit_Framework_Reference/_index.html#/apple_ref/doc/uid/TP40008210" target="_self">Map Kit 프레임워크를 봐라</a></em>.
     </p>
     
   </aside>
@@ -540,30 +541,31 @@
   A map view:
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays a geographical area using standard map data, satellite imagery, or a combination of both
+  표준 맵 데이터, 위성 이미지 또는 둘을 합친 정보를 이용해 지리학적인 영역을 표시한다.
 </p>
 </li><li class="item"><p class="para">
-  Can display annotations (which mark single points) and overlays (which delineate paths or two-dimensional areas)
+  애노테이션(한 점을 표시하는 것)과 오버레이(경로의 윤곽이나 이 차원적인 영역)을 표시할 수 있다.
 </p>
 </li><li class="item"><p class="para">
-  Supports both programmatic and user-controlled zooming and panning
+  프로그램적으로 또는 사용자 컨트롤에 의한 줌과 패닝을 지원
 </p>
 </li>
 </ul><p class="para">
-  Use a map view to give users an interactive view of a geographical area. If you’re developing a routing app, use a map view to display the user’s route (for more information about creating a routing app, see <span class="x-name"><a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a></span>).
+  지리학적 영역의 인터렉티브한 뷰를 사용자에게 제공하기 위해 맵 뷰를 사용한다. 길 찾기 앱을 만들고 있다면, 맵 뷰를 이용해 사용자의 길을 표시하라. ( 길 찾기 앱을 만드는 보다 많은 정보는 95 페이지의 <span class="x-name"><a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">“Routing”</a></span>을 보라.)
 </p><p class="para">
-  <strong class="inline-head">In general, let users interact with the map.</strong>  People are accustomed to interacting with the built-in Maps app, and they expect to be able to interact with your map in similar ways.
+  <strong class="inline-head">일반적으로, 사용자가 맵과 인터렉트 하도록 하라.</strong> 사람들은 빌트-인 Maps 앱과 인터렉팅 하는 것에 익숙해져 있으며, 당신의 맵에서도 비슷한 방식으로 인터렉션 가능할 것으로 예상한다.
+
 </p><p class="para">
-  <strong class="inline-head">Use the standard pin colors in a consistent way.</strong> A map pin shows the location of a point of interest in your map. People are familiar with the pin colors in the built-in Maps app, so it’s best to avoid redefining the meaning of these colors in your app. When you use the standard pin colors, be sure to use them in the following ways:
+  <strong class="inline-head">일관된 방식으로 표준 핀 컬러를 사용하라. 맵 핀은 당신의 맵에서 관심지점(POI)의 위치를 보여준다. </strong> 사람들은 빌트-인 Maps 앱의 핀 컬러에 익숙하기 때문에, 당신의 앱에서 그 의미를 재정의하지 않는 것이 좋다. 표준 핀 컬러를 사용하는 경우, 다음과 같은 방식으로 사용한다 : 
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Use red for a destination point
+  빨간색은 목적지를 위해 사용
 </p>
 </li><li class="item"><p class="para">
-  Use green for a starting point
+  녹색은 출발점을 위해 사용
 </p>
 </li><li class="item"><p class="para">
-  Use purple for a user-specified point
+  보라색은 사용자 지정 포인트에 사용
 </p>
 </li>
 </ul>
@@ -571,9 +573,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW141"></a>
-  <h3 class="section-name" tabindex="0">Page View Controller</h3>
+  <h3 class="section-name" tabindex="0">페이지 뷰 컨트롤러</h3>
   <p class="para">
-  A <strong>page view controller</strong> uses one of two styles to manage transitions through multipage content—scrolling or page-curl. Here’s how a page curl looks in iOS 7 Simulator:
+  <strong>페이지 뷰 컨트롤러</strong>는 두 가지- 스크롤링이나 페이지 넘기기- 중 하나의 스타일을 이용해 다중 페이지 콘텐트를 관리해 나간다. iOS 7 시뮬레이터에서 페이지 컬은 아래 그림과 같이 생겼다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -583,40 +585,39 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a page view controller in your code, see <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/PageViewControllers.html#/apple_ref/doc/uid/TP40011313-CH4" target="_self">“Page View Controllers”</a>.
+    <p class="para"><a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/PageViewControllers.html#/apple_ref/doc/uid/TP40011313-CH4" target="_self">Page View Controller 를 보라</a>.
     </p>
     
   </aside>
 </div><p class="para">
-  A page view controller:
+  페이지 뷰 컨트롤러는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Has no default appearance for the scrolling style
+  스크롤링 스타일에 대해서는 기본적인 외형이 없다.
 </p>
 <p class="para">
-  For the page curl style, a page view controller can add the appearance of the inside of a book spine between pairs of pages
-</p>
+   페이지 컬 스타일에서는, 페이지 뷰 컨트롤러가 책 안쪽의 두 페이지 사이의 모양을 더할 수 있다.
 </li><li class="item"><p class="para">
-  Animates the transition from one page to another, according to the specified style
+  지정된 스타일에 따라, 한 페이지에서 다른 페이지로 장면전환 애니메이션 한다.
 </p>
 <p class="para">
-  For the scrolling style, the current page scrolls to the next page; for the page curl style, the current page appears to turn like a page in a book or a notepad.
+  스크롤링 스타일에서는, 현재 페이지에서 다음 페이지로 스크롤 이동한다; 페이지 컬 스타일에서는, 현재 페이지가 책이나 노트패드의 페이지처럼 젖혀지는 것 처럼 보인다.
 </p>
 </li>
 </ul><p class="para">
   
 </p><p class="para">
-  Use a page view controller to present content that users access in a linear fashion (such as the text of a story) or content that naturally breaks into chunks (such as a calendar).
+  페이지 뷰 컨트롤러는 사용자가 직선적인 방법으로 (이야기의 텍스트처럼) 접근하거나 자연스럽게 덩어리로 나눌 수 있는 콘텐트(칼렌더 처럼)를 제공하는 데 사용하라..
 </p><p class="para">
-  <strong class="inline-head">If necessary, create a custom way to let users access content in a nonlinear way.</strong> A page view controller lets users move from one page to the next or previous page; it doesn’t give users a way to jump among nonadjoining pages. If you want to use a page view controller to present content that users might access in a nonlinear fashion—such as a dictionary or a book’s table of contents—you must implement a custom way to let users move to different areas of the content.
+  <strong class="inline-head">필요하다면, 사용자가 비선형적인 방식으로 콘텐츠에 접근할 수 있도록 커스텀한 방식을 만들어라. </strong> 페이지 뷰 컨트롤러는 사용자들이 항 페이지에서 이전 또는 다음 페이지로 이동하도록 한다; 이는 인접하지 않은 페이지로 점프할 수 있는 방법을 제공하지 않는다. 만약 페이지 뷰 컨트롤러가 비 선형적인 방식으로 사용자들에게 콘텐트를 제공하길 원한다면 (사전이나 책의 목차처럼) 콘텐트의 다른 영역으로 이동할 수 있는 커스텀한 방식을 직접 구현해야 한다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW19"></a>
-  <h3 class="section-name" tabindex="0">Popover (iPad Only)</h3>
+  <h3 class="section-name" tabindex="0">팝오버 (아이패드만 가능)</h3>
   <p class="para">
-  A <strong>popover</strong> is a transient view that can be revealed when people tap a control or tap in an onscreen area.
+  <strong>팝오버</strong>는 사용자가 컨트롤을 탭하거나 화면상의 특정 영역을 탭했을 때 나타나는 임시 뷰이다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -626,67 +627,68 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a popover in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIPopoverController_class/Reference/Reference.html#/apple_ref/doc/uid/TP40009306" target="_self">UIPopoverController Class Reference</a></em> and <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/Popovers.html#/apple_ref/doc/uid/TP40011313-CH5" target="_self">“Popovers”</a>.
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIPopoverController_class/Reference/Reference.html#/apple_ref/doc/uid/TP40009306" target="_self">UIPopover 클래스 레퍼런스</a></em> 와 <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/Popovers.html#/apple_ref/doc/uid/TP40011313-CH5" target="_self">“Popovers”</a>를 보라.
     </p>
     
   </aside>
 </div><div class="important clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-DontLinkElementID_7"></a>
   <aside class="aside">
-    <p class="aside-title">Important
+    <p class="aside-title">중요 : 
     </p>
-    <p class="para">Popovers are available in iPad apps only.
+    <p class="para">팝오버는 아이패드에서만 사용가능하다.
     </p>
     
   </aside>
 </div><p class="para">
-  A popover:
+  팝오버는 : 
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Is a self-contained view that hovers above the contents of a screen
+  화면의 콘텐트 위를 덮는 셀프-컨테인드 뷰이다.
 </p>
 </li><li class="item"><p class="para">
-  Always displays an arrow that indicates the point from which it emerged
+  항상 자신이 나타난 위치를 가리키는 화살표를 표시한다.
 </p>
 </li><li class="item"><p class="para">
-  Has a translucent background that blurs content behind it
+  뒤편의 콘텐트를 흐리게 만드는 반투명 백그라운드를 가진다
 </p>
 </li><li class="item"><p class="para">
-  Can contain a wide variety of objects and views, such as:
+  폭 넓은 오브젝트와 뷰들을 가질 수 있다 : 
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Table, image, map, text, web, or custom views
+  테이블, 이미지, 맵, 텍스트, 웹 또는 커스템 뷰들
 </p>
 </li><li class="item"><p class="para">
-  Navigation bars, toolbars, or tab bars
+  네비게이션 바, 툴바, 탭 바
 </p>
 </li><li class="item"><p class="para">
-  Controls or objects that act upon objects in the current app view
+  현재 앱 뷰의 오브젝트에 따라 행동하는 컨트롤이나 오브젝트들
 </p>
 </li>
 </ul>
 <p class="para">
-  (By default, table views, navigation bars, and toolbars in a popover use a transparent background to let the popover’s blurring show through.)
+  (기본적으로, 팝오버 안의 테이블 뷰, 네비게이션 바, 그리고 툴바들은 팝오버의 블러링이 보이도록 투명한 백그라운드를 사용한다.)
 </p>
 </li>
 </ul><p class="para">
-  In iPad apps, an action sheet always appears inside a popover.
+  아이패드 앱에서, 액션 시트는 항상 팝오버 안에서 나타난다.
 </p><p class="para">
-  Use a popover to:
+  팝오버는 다음을 위해 사용한다 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Display additional information or a list of items related to the focused or selected object.
+  초점이 맞춰지거나 선택된 오브젝트에 관련된 부가적인 정보 또는 아이템의 리스트를 표시하기 위해.
 </p>
 </li><li class="item"><p class="para">
-  Display an action sheet containing a short list of options that are closely related to something on the screen.
+  스크린 상의 무엇인가와 매우 관련이 깊은 옵션들의 리스트를 포함하는 액션 시트를 표시하기 위해
 </p>
 </li><li class="item"><p class="para">
   Display the contents of the left pane when a split-view–based app is in portrait. If you do this, you either provide an appropriately titled button that displays the popover—preferably in a navigation bar or toolbar at the top of the screen—or allow people to make the swipe gesture to hide and reveal it.
+ = 스필릿-뷰-기반의 앱이 portrait일 때, 왼쪽 팬의 콘텐트를 표시하기 위해. 이렇게 한다면, 당신은 팝오버를 표시하는 적당한 제목이 붙은 버튼을-아마도 네비게이션 바나 화면 상단의 툴바를 통해 - 제공하거나 사용자들이 숨기거나 보이기 위해 스와이프 제스처를 사용할 수 있도록 해야 한다. (두번째껀 무슨 소리지?)
 </p>
 </li>
 </ul><p class="para">
-  <strong class="inline-head">Avoid providing a “dismiss popover” button.</strong> A popover should close automatically when its presence is no longer necessary. To determine when a popover’s presence is no longer necessary, consider the following scenarios:
+  <strong class="inline-head">“디스미스 팝오버" 버튼을 제공하지 마라. </strong> 팝오버는 더 이상 그 존재가 필요없게 되면 자동으로 닫혀야 한다. 팝 오버가 더 이상 필요없는 순간을 판단하기 위해, 다음 시나리오를 생각해 보자.
 </p><div class="tableholder">
   
   <table class="graybox" border="0" cellspacing="0" cellpadding="5">
@@ -694,40 +696,40 @@
     <thead>
         <tr>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  If a popover…
+  만약 팝오버가…
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Do this...
+  이렇게 하라
 </p></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td scope="row"><p class="para">
-  Provides options that affect the main view, but doesn’t implement an inspector
+  메인 뷰에 영향을 주는 옵션들을 제공하지만, 인스펙터를 구현하지는 않는다면 
 </p></td>
             <td><p class="para">
-  Close the popover as soon as people make a choice or when they tap anywhere outside its bounds, including the control that reveals the popover.
+  사람들이 결정을 하거나 팝오버를 드러낸 그 콘트롤을 포함한 그 영역 밖의 어디든 탭한다면 팝오버를 닫는다.
 </p></td>
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Implements an inspector
+  인스펙터를 구현한다면
 </p></td>
             <td><p class="para">
-  Close the popover when people tap anywhere outside its bounds, including the control that reveals the popover.
+  사용자가 팝오버를 드러낸 그 콘트롤을 포함한 그 영역 밖의 어디든 탭한다면 팝오버를 닫는다.
 </p><p class="para">
-  In this scenario, don’t close the popover as soon as people make a choice, because they might want to make an additional choice or change the attributes of the current choice.
+  이 시나리오에서, 사용자들이 결정을 하자마자 팝오버를 닫지는 마라. 왜냐면 추가적인 선택을 하거나 현재 선택에 대해 애트리뷰트 변경을 할 수 있기 때문이다.
 </p></td>
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Enables a task
+  데스크를 가능하게 한다면
 </p></td>
             <td><p class="para">
-  Close the popover when people complete or cancel the task by tapping a button in the popover, such as Done or Cancel.
+  사용자가 Done이나 Cancel 같은 팝오버 내의 버튼을 탭해서 테스크를 완료하거나 취소하면 팝오버를 닫는다.
 </p><p class="para">
-  In this scenario, you may not want to close the popover when people tap outside its borders, because it might be important that people finish—or explicitly abandon—the task. Otherwise, save people’s input when they tap outside a popover’s borders, just as you would if they tapped Done.
+  이 시나리오에서, 사용자가 영역 바깥을 탭한다고 해도 팝오버를 닫지 않을 것이다. 왜냐하면 사용자들이 그 테스크를 끝내는 - 또는 명백히 버리는 - 것이 중요할 수 있기 때문이다. 또는, 마치 Done을 탭 한것 처럼 팝오버의 경계 바깥을 탭 했을 때 사용자의 입력 내용을 저장하라. 
 </p></td>
         </tr>
     </tbody>
@@ -735,27 +737,28 @@
 </div><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">In general, save users’ work when they tap outside a popover’s borders.</strong> Not every popover requires an explicit dismissal, so people might dismiss them mistakenly. Discard the work people do in a popover only if they tap a Cancel button.
+  <strong class="inline-head">일반적으로, 사용자가 팝오버의 경계 바깥을 탭하면 사용자의 작업을 저장하라.</strong> 팝오버들이 명백한 닫기(dismissal)를 요구하지는 않기 때문에, 사용자들은 실수로 닫아버릴 수가 있다. 팝오버 내에서의 사용자의 작업은 Cancel 버튼을 탭 한 경우에만 무시하라.
+
 </p><p class="para">
-  <strong class="inline-head">Make the popover arrow point as directly as possible to the element that revealed it.</strong> Doing this helps people remember where the popover came from and what task or object it’s associated with.
+  <strong class="inline-head">팝오버 화살표를 그것을 나타낸 요소에 가능한 직접적으로 지시하도록 하라. </strong> 이렇게 함으로서 사용자들에게 팝오버가 나타난 위치를 기억하게 하 연관된 테스크나 오브젝트가 무엇인지 알게 한다. 
 </p><p class="para">
-  <strong class="inline-head">Make sure people can use a popover without seeing the app content behind it.</strong> A popover obscures the content behind it, and people can’t drag a popover to another location.
+  <strong class="inline-head">사람들이 뒤에 있는 앱 콘텐트를 보지 않고 팝오버를 사용할 수 있도록 하라.</strong> 팝오버는 그 뒤의 콘텐트를 가진다. 그리고 사용자들은 팝오버를 다른 위치로 드래그 할 수 없다.
 </p><p class="para">
-  <strong class="inline-head">Ensure that only one popover is visible onscreen at a time.</strong> You shouldn’t display more than one popover (or custom view designed to look and behave like a popover) at the same time. In particular, you should avoid displaying a cascade or hierarchy of popovers simultaneously, in which one popover emerges from another.
+  <strong class="inline-head">한 번에 하나의 팝오버만 볼 수 있다.</strong> 한 번에 하나를 초과하는 팝오버(또는 팝오버와 비슷하게 보이고 동작하는 커스텀 뷰)를 표시할 수 없다. 특히, 동시에 하나의 팝오버에서 다른 것이 나타나는 계층적이거나 연속적인 팝오버들을 표시하는 것을 삼가야 한다.
 </p><p class="para">
-  <strong class="inline-head">Don’t display a modal view on top of a popover.</strong> Except for an alert, nothing should be displayed on top of a popover.
+  <strong class="inline-head">팝오버 위에서 모달 뷰를 디스플레이 하지 마라. </strong> 경고를 제외하고, 팝오버 위에는 어떤 것도 올라오면 안된다.
 </p><p class="para">
-  <strong class="inline-head">When possible, allow people to close one popover and open a new one with one tap.</strong> This behavior is especially desirable when several different bar buttons each open a popover, because it prevents people from having to make extra taps.
+  <strong class="inline-head">가능하다면, 사용자가 하나의 팝오버를 닫고 새로운 것을 여는 것을 한 탭으로 할 수 있게 하라.</strong> 이 동작은 여러개의 바 버튼이 다른 팝오버를 열 때 특히 바람직하다. 사용자들이 추가적인 탭을 하는 것을 방지하기 때문이다. 
 </p><p class="para">
-  <strong class="inline-head">Avoid making a popover too big.</strong> A popover shouldn’t appear to take over the entire screen. Instead, it should be just big enough to display its contents and still point to the place it came from.
+  <strong class="inline-head">팝오버를 너무 크게 만들지 말라.</strong> 팝오버는 전체 스크린 크기만큼으로 나타나면 안된다. 그대신에, 그 콘텐츠를 표시하기에 충분한 크기를 가지면서 나타난 위치를 지시할 수 있으면 된다.
 </p><p class="para">
-  Ideally, the width of a popover should be at least 320 points, but no greater than 600 points. The height of a popover is not constrained, so you can use it to display a long list of items. In general, though, you should try to avoid scrolling in a popover that enables a task or that presents an action sheet. Note that the system might adjust both the height and the width of a popover to ensure that it fits well on the screen.
+  이상적으로, 팝오버의 너비는 최소한 320 포인트 이상이지만 600 포인트 이상은 넘지 않는 게 좋다. 팝오버의 높이는 제한되어 있지 않으므로, 아이템의 긴 리스트를 디스플레이하는 데 사용할 수 있다. 하지만 일반적으로, 어떤 작업을 수행하거나 액션 시트를 제공하는 팝오버에서 스크롤은 지양해야 한다. 시스템이 팝오버의 너비와 높이를 화면에 잘 맞게 조정할 수 있다는 것을 염두에 두라.
 </p><p class="para">
-  <strong class="inline-head">Use standard UI controls and views within a popover.</strong> In general, popovers look best, and are easier for users to understand, when they contain standard controls and views.
+  <strong class="inline-head">팝오버 안에서는 표준 UIControl과 뷰들을 사용하라.</strong> 일반적으로, 표준 컨트롤과 뷰들을 포함하고 있을 때 팝오버가 보기에 가장 좋고, 사용자들이 이해하기도 쉽다.
 </p><p class="para">
-  <strong class="inline-head">Make sure a custom popover still looks like a popover.</strong> Although it’s easy to customize many of the visual aspects of a popover by using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIPopoverBackgroundView_class/Reference/Reference.html#/apple_ref/occ/cl/UIPopoverBackgroundView">UIPopoverBackgroundView</a></code> APIs, avoid creating a design that people might not recognize as a popover. If you change the appearance of a popover too much, users can’t rely on their prior experience to help them understand how to use it in your app.
+  <strong class="inline-head">커스텀 팝오버도 팝오버처럼 보이게 만들어라.</strong> <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIPopoverBackgroundView_class/Reference/Reference.html#/apple_ref/occ/cl/UIPopoverBackgroundView">UIPopoverBackgroundView</a></code> API를 이용해 팝오버의 시각적인 면들을 커스터마이즈 하는 게 쉽지만, 사람ㄷ르이 팝오버라고 인식하기 어려운 디자인을 만드는 것은 삼가라. 만약 팝오버의 모양을 너무 많이 바꾸면, 사용자들의 이전 경험이 당신 앱을 사용하는 방ㄹ법을 이해하는 데 도움이 되지 못하게 된다.
 </p><p class="para">
-  <strong class="inline-head">If appropriate, change a popover’s size while it remains visible.</strong> You might want to change a popover’s size if you use it to display both a minimal and an expanded view of the same information. When you adjust the size of a visible popover, it’s usually a good idea to animate the change because it avoids giving the impression that a new popover has replaced the old one.
+  <strong class="inline-head">가능하다면, 팝오버의 크기는 보이는 동안에 변경하라.</strong> 동일한 정보에 대해 미니멀한 뷰와 확장된 뷰를 보여주는 데 팝오버를 사용한다면 팝오버의 크기를 변경해야 할 것이다. 팝오버의 사이즈를 조정할 때는, 그 변화를 애니메이션하는 게, 팝오버가 새로운 것으로 교체되었다는 느낌을 주지 않기 때문에 좋다. 
 </p><p class="para">
   
 </p>
@@ -763,9 +766,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW138"></a>
-  <h3 class="section-name" tabindex="0">Scroll View</h3>
+  <h3 class="section-name" tabindex="0">스크롤 뷰</h3>
   <p class="para">
-  A <strong>scroll view</strong> helps people see content that is larger than the scroll view’s boundaries (the image shown below is both taller and wider than the scroll view that contains it).
+  <strong>스크롤 뷰</strong>는 사용자들이 스크롤 뷰의 경계영역보다 큰 콘텐트를 볼 수 있도록 한다. (아래 그림처럼 스크롤뷰보다 넓고 높은 이미지를 표시할 수 있다.)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -775,43 +778,43 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a scroll view in your code, see <a href="../UIKitUICatalog/UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView" target="_self">“Scroll Views”</a>.
+    <p class="para">코드는 <a href="../UIKitUICatalog/UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView" target="_self">“Scroll Views”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A scroll view:
+  스크롤 뷰는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Has no predefined appearance
+  미리 정의된 모양은 없다
 </p>
 </li><li class="item"><p class="para">
-  Flashes transient scroll indicators when it first appears or when users interact with it
+  임시 스크롤 인디테이를 처음 나타날 때와 사용자가 인터렉트할 때 잠깐 깜빡인다.
 </p>
 </li><li class="item"><p class="para">
-  Responds to the speed and direction of gestures to reveal content in a way that feels natural to people
+  제스처의 속도와 방향에 따라 사용자가 자연스럽게 느끼는 방식으로 콘텐트를 드러낸다. 
 </p>
 <p class="para">
-  When users drag content in a scroll view, the content follows the touch; when users flick content, the scroll view reveals the content quickly and stops scrolling when the user touches the screen or when the end of the content is reached.
+  스크롤 뷰의 콘텐트를 드래그하면, 콘텐트는 터치를 따라온다; 콘텐트를 플릭하면, 스크롤 뷰는 콘텐트를 빠르게 드러내고 사용자가 화면을 터치하거나 콘텐트의 끝에 닿으면 멈춘다.
 </p>
 </li><li class="item"><p class="para">
-  Can operate in paging mode, in which each drag or flick gesture reveals one app-defined page of content
+  페이징 모드로 동작할 수 있다. 드래그나 플릭 제스처는 콘텐트의 앱에서 정의된 페이지 하나만큰 드러내는 방식이다.
 </p>
 </li>
 </ul><p class="para">
   
 </p><p class="para">
-  Use a scroll view to give people access to large views—or to large numbers of views—in a constrained space. 
+  제한된 영역에 큰 뷰-또는 많은 수의 뷰들-를 사용자가 접근할 수 있도록 스크롤 뷰를 사용하라.
 </p><p class="para">
-  <strong class="inline-head">Support zoom behavior appropriately.</strong> If it makes sense in your app, let users pinch or double-tap to zoom into and out of a scroll view. When you enable zoom, you should also set maximum and minimum scale values that make sense in the context of the user’s task. For example, letting users zoom in on text until one character fills the screen is unlikely to make it easier for them to read the content.
+  <strong class="inline-head">줌 기능을 적당히 제공하라.</strong> 당신의 앱에서 의미적으로 통한다면, 사용자가 핀치나 더블-탭을 이용해 스크롤뷰안에서 줌 인 - 아웃을 할 수 있도록 만들어라. 줌을 가능하게 만들면, 최대와 최소 스케일 값을 설정해서 컨텍스트 안에서 사용자의 테스크가 의미가 통하게끔 하라. 예를 들어, 사용자가 텍스트를 문자 하나가 화면을 채울 정도로 줌-인할 수 있도록 하는 것은 콘텐트를 읽기 쉽게 만드는 것은 아니다.
 </p><p class="para">
-  <strong class="inline-head">Consider using a page control with a paging-mode scroll view.</strong> When you want to display content that’s divided into pages, screenfuls, or other chunks, you can use a page control to show users how many chunks are available and which one they’re currently viewing.
+  <strong class="inline-head">페이징-모드 스크롤 뷰에는 페이지 컨트롤 사용을 고려하라.</strong> 콘텐트를 페이지나, 화면크기나 다른 어떤 크기로 나누어서 표시하길 원한다면, 얼마나 많은 덩어리들이 있는 지와 지금 현재 보고 있는게 어디쯤에 있는지를 알려주기 위해서 페이지 컨트롤을 사용할 수 있다.
 </p><p class="para">
-  When you use a page control with a paging-mode scroll view, it’s a good idea to disable the scroll indicator that’s on the same axis as the page control. Removing the scroll indicator focuses attention on the page control and gives people one unambiguous way to page through the content. For more information about using a page control in your app, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW6" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW6">Page Control</a></span>.
+  페이징-모드의 스크롤 뷰와 함께 페이지 컨트롤을 사용한다면, 페이지 컨트롤과 같은 축 방향의 스크롤 인디케이터는 사용하지 않는 게 좋다. 스크롤 인디케이터를 없애는 건 페이지 컨트롤에 주의를 기울이도록 하며, 콘텐트에 걸처 모호하지 않은 페이지를 제공한다. 페이지 컨트롤에 대한 보다 자세한 정보는 <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW6" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW6">“Page Control”(페이지 181)</a></span>을 보라.
 </p><p class="para">
-  <strong class="inline-head">In general, display only one scroll view at a time.</strong> People often make large swipe gestures when they scroll, so it can be difficult for them to avoid interacting with a neighboring scroll view on the same screen. If you decide to put two scroll views on one screen, consider allowing them to scroll in different directions so that one gesture is less likely to scroll both views. For example, Stocks in portrait orientation on iPhone displays stock quotes in a vertically scrolling view above company-specific information, which is in a horizontally scrolling view.
+  <strong class="inline-head">일반적으로, 한 번에 하나의 스크롤 뷰만 표시하라.</strong> 사람들은 이따금씩 스크롤할 때 큰 스와이프 제스처를 만들기 때문에, 한 화면에 이웃한 스크롤 뷰와 인터렉트 하지 않도록 하는 것은 어려울 수 있다. 만약 한 화면에 두개의 스크롤 뷰를 넣기로 결정했다면, 서로 다른 방향으로 스크롤 하도록 해서 하나의 제스처가 두 뷰 모두를 스크롤 하지 않도록 한다. 예를 들어, 아이폰의 portrait 방향에서 Stocks 앱은 주식 시세를 , 수평으로 스크롤하는 회사-특징 정보 위에, 수직으로 스크롤하는 뷰에 표시한다.
 </p><p class="para">
-  
+  ** 위에서 People을 사용자로 많이 번역했는데, 사람들로 번역하는 게 맞다고 봄. HIG 문서는 인간에 대한 탐구이기 때문에 굳이 사용자로 번역하는 게 좋지 않은 듯.
 </p><p class="para">
   
 </p>
@@ -819,9 +822,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW51"></a>
-  <h3 class="section-name" tabindex="0">Split View Controller (iPad Only)</h3>
+  <h3 class="section-name" tabindex="0">스필릿 뷰 컨트롤러 (아이패드에서만)</h3>
   <p class="para">
-  A <strong>split view controller</strong> is a full-screen view controller that manages the presentation of two side-by-side view controllers.
+  <strong>스필릿 뷰 컨트롤러</strong>는 풀-스크린 뷰 컨트롤러로서 두개의 옆으로 나란한 뷰 컨트롤러를 관리한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -831,37 +834,37 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">Each child view controller of a split view controller is responsible for managing the display of one pane. The split view controller itself presents these child view controllers and manages transitions between different orientations. To learn more about defining a split view controller in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UISplitViewController_class/Reference/Reference.html#/apple_ref/doc/uid/TP40009277" target="_self">UISplitViewController Class Reference</a></em> and <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/SplitViewControllers.html#/apple_ref/doc/uid/TP40011313-CH7" target="_self">“Split View Controllers”</a>.
+    <p class="para">스필릿 뷰 컨트롤러내 각각의 차일드 뷰 컨트롤러는 한 팬의 표시를 관리할 책임이 있다. 스필릿 뷰 컨트롤러 자신은 그 차일드 뷰 컨트롤러를 제공하고 다른 방향들 간의 장면전환을 관리한다. 코드로 스필릿 뷰 컨트롤러를 정의하는 방법을 공부하고 싶다면, <em class="u-book"><a href="../../../UIKit/Reference/UISplitViewController_class/Reference/Reference.html#/apple_ref/doc/uid/TP40009277" target="_self">UISplitViewController 클래스 레퍼런스</a></em>와 <a href="../../../WindowsViews/Conceptual/ViewControllerCatalog/Chapters/SplitViewControllers.html#/apple_ref/doc/uid/TP40011313-CH7" target="_self">“Split View Controllers”</a>를 보라.
     </p>
     
   </aside>
 </div><div class="important clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-DontLinkElementID_8"></a>
   <aside class="aside">
-    <p class="aside-title">Important
+    <p class="aside-title">중요
     </p>
-    <p class="para">Split view controllers are available in iPad apps only.
+    <p class="para">스필릿 뷰 컨트롤러는 아이패드에서만 사용가능하다. 
     </p>
     
   </aside>
 </div><p class="para">
-  A split view controller:
+  스필릿 뷰 컨트롤러는 : 
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays two panes (the width of the left pane is fixed at 320 points in all orientations; you can customize the width of the right pane)
+  두개의 팬을 디스플레이 한다. (왼쪽 팬의 너비는 모든 방향에서 320으로 고정되어 있다; 오른쪽 팬의 너비는 커스터마이즈 가능하다)
 </p>
 </li><li class="item"><p class="para">
-  Can optionally display the left pane in a popover when the device is in portrait orientation
+  장치가 landscape 방향일 때 왼쪽 팬을 팝오버에 표시하는 것도 부가적으로 가능하다.
 </p>
 </li><li class="item"><p class="para">
-  Can contain a wide variety of objects and views, such as:
+  폭 넓은 오브젝트와 뷰들을 포함할 수 있다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Table, image, map, text, web, or custom views
+  테이블, 이미지, 맵, 텍스트, 웹 또는 커스텀 뷰들
 </p>
 </li><li class="item"><p class="para">
-  Navigation bars, toolbars, or tab bars
+  네비게이션 바, 둘바 또는 탭 바
 </p>
 </li>
 </ul>
@@ -871,30 +874,31 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">Even though the left pane is often called the <em>master pane</em> and the right pane is often called the <em>detail pane</em>, this relationship is not enforced in code.
+    <p class="para">왼쪽 팹을 <em>‘마스터 팬’</em> 오른쪽 팬을 <em>‘디테일 팬'</em>으로 종종 부르지만, 코드를 통해 강제된 관계는 아니다.
     </p>
     
   </aside>
 </div><p class="para">
-  Use a split view controller to display persistent information in the left pane and related details or subordinate information in the right pane. In this design pattern, when people select an item in the left pane, the right pane should display the information related to that item. (You’re responsible for making this happen in code.) 
+  스필릿 뷰 컨트롤러를 고정적인 정보를 왼쪽 팬에 표시하고, 관련된 상세 정보 또는 부가적인 정보를 오른쪽 팬에 표시하는 데 사용하라. 이 디자인 패턴에서 사람들이 왼쪽 팬에서 아이템을 선택하면, 오른쪽 팬은 그 아이템과 관련된 정보를 보여준다(이런 일이 일어나도록 코드를 짜야한다)
 </p><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">Avoid creating a right pane that is narrower than the left pane.</strong> If the right pane is narrower than the left pane, the split view controller no longer fills the width of the screen and the overall appearance is unbalanced.
+  <strong class="inline-head">오른쪽 팬이 왼쪽 팬보다 좁게 만들지 마라.</strong> 오른쪽 팬이 왼쪽 팬보다 더 좁으면, 스필릿 뷰 컨트롤러는 화면의 너비를 채울 수 없게 되고 전체적인 외관이 불균형적으로 된다.
 </p><p class="para">
-  <strong class="inline-head">Avoid displaying a navigation bar in both panes at the same time.</strong> Doing this would make it very difficult for users to discern the relationship between the two panes.
+  <strong class="inline-head">네비게이션 바를 양쪽 팬에 동시에 표시하지 마라.</strong> 이렇게 하면 사용자들은 그 두 팬들간의 관계를 구별하기 어렵게 만든다.
 </p><p class="para">
-  <strong class="inline-head">In general, indicate the current selection in the left pane in a persistent way.</strong> Even though the content of the right pane can change, it should always remain related to the item selected in the left pane. This viewing experience helps people understand the relationship between the item in the left pane and the contents of the right pane.
+  <strong class="inline-head">일반적으로, 왼쪽 팬에서 현재 선택을 지속적인 방식으로 표시하라.</strong> 오른쪽 팬의 콘텐트가 바뀔 수 있지만, 그것은 항상 왼쪽 팬에서 선택된 아이템과 관련있는 것이어야 한다. 이런식의 보기 경험은 사람들에게 왼쪽 팬의 아이테마과 오른쪽 팬의 콘텐트 사이의 관계를 이해하는 데 도움을 준다.
 </p><p class="para">
-  <strong class="inline-head">Give people alternative ways to access the left pane, if appropriate.</strong> By default, only the right pane is displayed in portrait orientation and you provide users with a button (typically located in a navigation bar) to reveal and hide the left pane. The split view controller also supports the swipe gesture to perform the reveal/hide action. Unless your app uses the swipe gesture to perform other functions, you should let people swipe to access the left pane.
+  <strong class="inline-head">적당하다면, 왼쪽 팬에 접근할 수 있는 다른 방식을 제공하라.</strong> 기본적으로, portrait 방향에서는 오른쪽 팬만 표시되고, 왼쪽 팬을 보이고 숨길 수 있는 버튼을 (전형적으로 네비게이션 바에) 제공한다. 스필릿 뷰 컨트롤러는 보고 숨기는 액션에 스와이프 제스처도 지원한다. 앱에서 스와이프 제스처를 다른 곳에 사용하지 않는다면, 사람들이 스와이프를 통해 왼쪽 팩에 접근할 수 있도록 한다. 
+(역자 주 ; iOS 7에서 팝오버로 나오지 않으면서 가능해진 제스처)
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW3"></a>
-  <h3 class="section-name" tabindex="0">Table View</h3>
+  <h3 class="section-name" tabindex="0">테이블 뷰</h3>
   <p class="para">
-  A <strong>table view</strong> presents data in a scrolling single-column list of multiple rows. 
+  <strong>테이블 뷰</strong>는 스크롤되는 단일 컬럼의 다중 로우들에 데이터를 제공한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -904,26 +908,27 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a table view in your code, see <em class="u-book"><a href="../TableView_iPhone/TableViewStyles/TableViewCharacteristics.html#/apple_ref/doc/uid/TP40007451" target="_self">Table View Programming Guide for iOS</a></em> and <a href="../UIKitUICatalog/UITableView.html#/apple_ref/doc/uid/TP40012857-UITableView" target="_self">“Table Views”</a>.
+    <p class="para"><em class="u-book"><a href="../TableView_iPhone/TableViewStyles/TableViewCharacteristics.html#/apple_ref/doc/uid/TP40007451" target="_self">Table View Programming Guide for iOS</a></em>와 <a href="../UIKitUICatalog/UITableView.html#/apple_ref/doc/uid/TP40012857-UITableView" target="_self">“Table Views”</a>를 보라
     </p>
     
   </aside>
 </div><p class="para">
-  A table view:
+  테이블 뷰는 : 
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays data in rows that can be divided by section or separated into groups
+  섹션으로 구분되거나 그룹으로 나눌 수 있는 로우들에 데이터를 표시한다. 
 </p>
 </li><li class="item"><p class="para">
-  Provides controls that let users add or remove rows, select multiple rows, see more information about a row item, or reveal another table view
+  사용자가 로우들을 더하거나 삭제하고, 다중 로우를 선택하고, 로우 아이템에 대한 자세한 정보를 보고, 다른 테이블 뷰를 볼 수 있는 컨트롤들을 제공한다.
 </p>
 </li>
 </ul><p class="para">
-  iOS defines two styles of table view:
+  iOS는 두가지 스타일의 테이블 뷰를 정의한다 :
 </p><div class="two-columns">
   <div class="left-column">
     <p class="para">
-  <strong class="inline-head">Plain.</strong> In the plain style, rows can be separated into labeled sections and an optional index can appear vertically along the right edge of the view. A header can appear before the first item in a section, and a footer can appear after the last item.
+  <strong class="inline-head">플레인 스타일.</strong> 플레인 스타일에서, 로우들은 레이블이 붙은 섹션에 의해 분리될 수 있으며 뷰의 오른쪽 모서리를 따라서 부가적인 인덱스가 나타날 수 있다. 섹션의 첫 번재 아이템이 나나기 전에 헤더가 보일 수 있고, 마지막 아이템 뒤에 푸터가 보일 수 있다.</p>
+  <p class="para">(역자 주 ; 슬라이드 자료의 테이블 뷰 그림 교체하기. 인덱스는 그림을 삽입.) 
 </p>
   </div>
   <div class="right-column">
@@ -932,16 +937,16 @@
 </div><div class="two-columns">
   <div class="left-column">
     <p class="para">
-  <strong class="inline-head">Grouped.</strong> In the grouped style, rows are displayed in groups, which can be preceded by a header and followed by a footer. A grouped table view always contains at least one group of list items—one list item per row—and each group always contains at least one item. A grouped table view doesn’t include an index.
+  <strong class="inline-head">그룹드 스타일.</strong> 그룹드 스타일에서, 로우들은 그룹지어서 표시되며 그 그룹 앞에는 헤더가 붙고 뒤에는 푸터가 붙는다. 그룹드 테이블 뷰는 항상 리스트 아이템 그룹을 하나 이상 가지며 - 로우당 하나의 리스트 아이템 - 모든 그룹은 항상 하나 이상의 아이템을 가진다. 그룹드 테이블 뷰는 인덱스를 가지지 못한다.
 </p>
   </div>
   <div class="right-column">
     <img class="inline-graphic" src="Art/grouped_list_2x.png" alt="image: ../Art/grouped_list_2x.png" width="224" height="312" />
   </div>
 </div><p class="para">
-  In both styles, a table row becomes highlighted briefly when a user taps a selectable item. If a row selection results in navigation to a new screen, the selected row becomes highlighted briefly as the new screen slides into place. When the user navigates back to the previous screen, the originally selected row again becomes highlighted briefly to remind the user of the earlier selection (it doesn’t remain highlighted).
+  양쪽 스타일 모두, 사용자가 선택가능한 아이템을 탭하면 테이블 로우는 즉각적으로 하일라이트 된다. 로우 선택이 새로운 화면으로의 네비게이션을 일으킨다면, 선택된 로우는 새로운 스크린이 밀려들어오는 순간 즉각적으로 하일라이트 된다. 사용자가 이전 화면으로 돌아가기하면, 원래 선택되었던 로우가 다시 즉각적으로 하일라이트 되어서 사용자에게 이전 선택을 상기시켜준다. (하일라이트 상태로 남아있지 않는다.)
 </p><p class="para">
-  iOS includes some <strong>table view elements</strong> that can extend the functionality of table views. Unless noted otherwise, these elements are suitable for use with table views only.
+  iOS는 테이블 뷰의 기능을 확장할 수 있는 몇 가지 <strong>테이블 뷰 요소들</strong>을 가지고 있다. 다른 곳에 기록된 것이 없다면, 이 요소들은 테이블 뷰에서만 사용할 수 있다.
 </p><div class="tableholder">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW2"></a>
   <table class="graybox" border="0" cellspacing="0" cellpadding="5">
@@ -949,13 +954,13 @@
     <thead>
         <tr>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Table view element
+  테이블 뷰 요소
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Name
+  이름
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Meaning
+  뜻
 </p></th>
         </tr>
     </thead>
@@ -965,10 +970,10 @@
   <img class="inline-graphic" src="Art/check_2x.png" alt="image: ../Art/check_2x.png" width="13" height="10" />
 </p></td>
             <td><p class="para">
-  Checkmark
+  체크마크
 </p></td>
             <td><p class="para">
-  Indicates that the row is selected.
+  로우가 선택되었다는 것을 나타낸다.
 </p></td>
         </tr>
         <tr>
@@ -976,10 +981,10 @@
   <img class="inline-graphic" src="Art/disclosure_indicator_2x.png" alt="image: ../Art/disclosure_indicator_2x.png" width="8" height="12" />
 </p></td>
             <td><p class="para">
-  Disclosure indicator
+  디스클로저 인디케이터 
 </p></td>
             <td><p class="para">
-  Displays another table associated with the row.
+  그 로우와 다른 테이블이 연결되어 있다는 것을 표시함.
 </p></td>
         </tr>
         <tr>
@@ -987,10 +992,10 @@
   <img class="inline-graphic" src="Art/detail_disclosure_2x.png" alt="image: ../Art/detail_disclosure_2x.png" width="22" height="22" />
 </p></td>
             <td><p class="para">
-  Detail Disclosure button
+  디테일 디스클로저 버튼
 </p></td>
             <td><p class="para">
-  Displays additional details about the row in a new view (for information on how to use this element outside of a table, see <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW19" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW19">Popover (iPad Only)</a></span>).
+  그 로우에 대한 추가적인 정보가 새로운 뷰에 있다는 것을 표시함.(이 요소에 대한 테이블 뷰 바깥의 사용은 <span class="x-name"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW19" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW19">“팝오버"</a></span>)를 보라.
 </p></td>
         </tr>
         <tr>
@@ -998,10 +1003,10 @@
   <img class="inline-graphic" src="Art/row_reorder_2x.png" alt="image: ../Art/row_reorder_2x.png" width="22" height="8" />
 </p></td>
             <td><p class="para">
-  Row reorder
+  로우 재정렬
 </p></td>
             <td><p class="para">
-  Indicates that the row can be dragged to another location in the table.
+  로우가 테이블 내의 다른 곳으로 드래그 될 수 있다는 것을 가리킨다.
 </p></td>
         </tr>
         <tr>
@@ -1009,10 +1014,10 @@
   <img class="inline-graphic" src="Art/row_insert_2x.png" alt="image: ../Art/row_insert_2x.png" width="22" height="22" />
 </p></td>
             <td><p class="para">
-  Row insert
+  로우 삽입
 </p></td>
             <td><p class="para">
-  Adds a new row to the table.
+  테이블에 새로운 로우를 더한다.
 </p></td>
         </tr>
         <tr>
@@ -1020,10 +1025,10 @@
   <img class="inline-graphic" src="Art/delete_control_2x.png" alt="image: ../Art/delete_control_2x.png" width="22" height="22" />
 </p></td>
             <td><p class="para">
-  Delete button control 
+  삭제 버튼 콘트롤
 </p></td>
             <td><p class="para">
-  In an editing context, reveals and hides the Delete button for a row.
+  편집 컨텍스트에서, 로우에 대한 삭제 버튼을 드러내고 숨긴다.
 </p></td>
         </tr>
         <tr>
@@ -1031,24 +1036,24 @@
   <img class="inline-graphic" src="Art/delete_button_2x.png" alt="image: ../Art/delete_button_2x.png" width="49" height="54" />
 </p></td>
             <td><p class="para">
-  Delete button
+  삭제 버튼
 </p></td>
             <td><p class="para">
-  Deletes the row.
+  로우를 지운다.
 </p></td>
         </tr>
     </tbody>
   </table>
 </div><p class="para">
-  In addition to the table-specific elements listed above, iOS defines the refresh control, which gives users the ability to refresh a table’s contents. To learn more about using a refresh control with a table in your app, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW131" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW131">Refresh Control</a></span>.
+  위에 나열된 테이블-전용 요소들에 더해서, iOS는 리프레시 컨트롤을 선언해 두어서, 사용자들이 테이블의 콘텐트를 리프레시 할 수 있도록 하였다. 보다 자세한 정보는 <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW131" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW131">“Refresh Control”</a></span>을 보라.
 </p><p class="para">
-  iOS defines four table cell styles that implement the most common layouts for table rows in both plain and grouped tables. Each cell style is best suited to display a different type of information.
+  iOS는 4 종류의 테이블 뷰 셀 스타일을 선언해 두어서, 플레인과 그룹드 테이블 뷰 모두에서 가장 일반적인 레아웃을 구현한다. 각각의 셀 스일은 다른 종류의 정보 종류에 맞게 맞춰져 있다.
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW66"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">Programmatically, these styles are applied to a table view’s cell, which is an object that tells the table how to draw its rows.
+    <p class="para">프로그램적으로, 그 스타일들은 테이블 뷰의 셀에 적용된다. 셀은 테이블이 그 로우를 그리는 법을 알려주는 오브젝트이다.
     </p>
     
   </aside>
@@ -1058,17 +1063,17 @@
   </div>
   <div class="right-column">
     <p class="para">
-  <strong class="inline-head">Default</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleDefault">UITableViewCellStyleDefault</a></code>). The default cell style includes an optional image in the left end of the row, followed by a left-aligned title.
+  <strong class="inline-head">디폴트</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleDefault">UITableViewCellStyleDefault</a></code>). 디폴트 셀 스타일은 로우의 왼쪽 끝에 부가적인 이미지를 포함하며, 왼쪽 정렬된 제목을 보여준다.
 </p><p class="para">
-  The default style is good for displaying a list of items that don’t need to be differentiated by supplementary information.
+  디폴트 스타일은 추가적인 정보에 의해 구별될 필요가 없는 아이템들의 리스트를 표시하기에 좋다.
 </p>
   </div>
 </div><div class="two-columns">
   <div class="left-column">
     <p class="para">
-  <strong class="inline-head">Subtitle</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleSubtitle">UITableViewCellStyleSubtitle</a></code>). The subtitle style includes an optional image in the left end of the row, followed by a left-aligned title on one line and a left-aligned subtitle on the line below.
+  <strong class="inline-head">서브타이틀</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleSubtitle">UITableViewCellStyleSubtitle</a></code>). 서브타이틀 스타일은 로우의 왼쪽 끝에 부가적인 이미지를 포함하며, 왼쪽 정렬된 제목 한 줄과 그 아래에 왼쪽 정렬된 서브타이틀을 보여준다.
 </p><p class="para">
-  The left alignment of the text labels makes the list easy to scan. This table cell style works well when list items look similar, because users can use the additional information in the detail text labels to help distinguish items named in the text labels.
+  텍스트 레이블의 왼쪽 정렬은 리스트를 훑어보기 쉽게 만든다. 이 테이블 셀 스타일은 리스트 아이템이 비슷하게 생겼을 때 보기에 좋다. 왜냐하면 사용자들은 디테일 텍스트 레이블에서 부가적인 정보 얻어서 텍스트 레이블에 이름 붙은 아이템들을 구별하기가 좋기 때문이다. 
 </p>
   </div>
   <div class="right-column">
@@ -1080,15 +1085,16 @@
   </div>
   <div class="right-column">
     <p class="para">
-  <strong class="inline-head">Value 1</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleValue1">UITableViewCellStyleValue1</a></code>). The value 1 style displays a left-aligned title with, on the same line, a right-aligned subtitle in a lighter font.
+  <strong class="inline-head">밸류 1</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleValue1">UITableViewCellStyleValue1</a></code>). 밸류 1 스타일은 왼쪽 정렬된 제목과 오른쪽 정렬된 부제목이 보다 가벼운 서체로 같은 줄에 있다. 
 </p>
   </div>
 </div><div class="two-columns">
   <div class="left-column">
     <p class="para">
-  <strong class="inline-head">Value 2</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleValue2">UITableViewCellStyleValue2</a></code>). The value 2 style displays a right-aligned title in a blue font, followed on the same line by a left-aligned subtitle in a black font. Images don’t fit well in this style.
+  <strong class="inline-head">밸류 2</strong> (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/c/econst/UITableViewCellStyleValue2">UITableViewCellStyleValue2</a></code>). 밸류 2 스타일은 오른쪽 정렬된 제목은 파란색 서체로, 바로 옆 같은 줄의 왼쪽 정렬된 부제목은 검은색 서체로 표시한다. 이미지는 이 스타일에는 맞지 않는다.
 </p><p class="para">
-  In the value 2 layout, the crisp vertical margin between the text and the detail text helps users focus on the first words of the detail text label. 
+  밸류 2 레이아웃에서, 텍스트와 디테일 텍스트 사이의 미묘한 마진은 사용자들이 디테일 텍스트 레이블의 첫 단어에 집중할 수 있도록 한다. 
+
 </p>
   </div>
   <div class="right-column">
@@ -1099,46 +1105,48 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">All four standard table-cell styles allow the addition of table view elements, such as a checkmark or disclosure indicator. Adding these elements decreases the width of the cell available for the title and subtitle.
+    <p class="para">네 가지 표준 테이블-셀 스타일은 모두 체크마크나 디스클로저 인디케이터 같은 테이블 뷰 요소를 더할 수 있도록 한다. 그런 요소들을 더하면 제목과 부제목에 사용하는 너비를 감소시킨다.
     </p>
     
   </aside>
 </div><p class="para">
-  Use a table view to display large or small amounts of information cleanly and efficiently. For example:
+  테이블 뷰를 이용해 많든 적든 정보를 깨끗하고 효율적으로 표시하라. 예를 들면 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong>Provide a list of options from which users can select.</strong> You can use the checkmark to show users the currently selected options in the list.
+  <strong>사용자가 선택할 수 있는 옵션의 리스트를 제공한다.</strong> 리스트에서 체크마크를 이용해 사용자에게 현재 선택한 옵션을 보여준다.
 </p>
 <p class="para">
-  Use either a plain or a grouped table view to display a list of choices that appears when users tap an item in a table row. Use a plain table view to display a list of choices that appears when users tap a button or other UI element that is <em>not</em> in a table row.
+  사용자가 테이블 로우의 아이템을 탭하면 나타나는 선택의 리스트를 표시하는 데에는 플레인 또는 그룹드 테이블 뷰를 사용하라. 사용자가 버튼이나 테이블 로우에 있지 않은 UI 요소를 선택해서 나타나는 선택의 리스트를 표시하는 데이는 플레인 테이블 뷰를 사용하라. 
 </p>
 </li><li class="item"><p class="para">
-  <strong>Display hierarchical information.</strong> The plain table style is well suited for displaying a hierarchy of information. Each list item can lead to a different subset of information displayed in another list. Users follow a path through the hierarchy by selecting one item in each successive list. The disclosure indicator tells users that tapping anywhere in the row reveals the subset of information in a new list.
+  <strong>계층적인 정보를 표시한다.</strong> 플레인 테이블 스타일은 계층적인 정보를 표시하는 데 잘 맞춰져 있다. 각각의 리스트 아이템은 다른 리스트에 표시되는 다른 정보의 서브셋을 이끌 수 있다. 사용자들은 각각의 연속된 리스트에서 하나의 아이템을 선택함으로서 계층의 경로를 따라 갈 수 있다. 디스클로저 인디케이터는 사용자에게 로우의 어느 부분이든 탭을 하면 새로운 리스트에서 그 정보의 서브셋이 나타날 것이라고 말한다. 
 </p>
 </li><li class="item"><p class="para">
-  <strong>Display conceptually grouped information.</strong> Both table view styles allow you to provide context by supplying header and footer views between sections of information.
+  <strong>개념적으로 그룹화된 정보를 표시하라.</strong> 두 종류의 테이블 뷰 스타일 모두 정보의 섹션들 사이에 헤더와 푸터 뷰를 공급함으로서 컨텍스트를 제공하도록 한다. 
 </p>
 </li>
 </ul><p class="para">
-  In iOS 6.0 and later, you can use a header-footer view—that is, an instance of <code class="code-voice">UITableViewHeaderFooterView</code>—to display text or a custom view in a header or footer. To learn how to use a header-footer view in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UITableViewHeaderFooterView_class/Reference/Reference.html#/apple_ref/doc/uid/TP40012241" target="_self">UITableViewHeaderFooterView Class Reference</a></em>.
+  iOS 6.0 이후에는, 헤더 또는 푸터에서 텍스트 또는 커스텀 뷰를 디스플레이 하기 위해 헤더-푸터 뷰를 설정할 수 있다. - 이는 <code class="code-voice">UITableViewHeaderFooterView</code>의 인스턴스이다 - 자세한 정보는 <em class="u-book"><a href="../../../UIKit/Reference/UITableViewHeaderFooterView_class/Reference/Reference.html#/apple_ref/doc/uid/TP40012241" target="_self">UITableViewHeaderFooterView 클래스 레퍼런스</a></em>.를 보라.
+
 </p><p class="para">
-  Follow these guidelines when you use table views:
+  테이블 뷰를 사용할 때는 다음 가이드라인을 따르라 :
 </p><p class="para">
-  <strong class="inline-head">Always provide feedback when users select a list item.</strong> Users expect a table row to become highlighted briefly when they tap a selectable item in it. After tapping, users expect a new view to appear (or the row to display a checkmark) to indicate that the item has been selected or enabled.
+  <strong class="inline-head">사용자가 리스트 아이템을 선택할 때마다 항상 피드백을 제공하라.</strong> 사용자들은 테이블 로우 안의 선택가능한 아이템을 탭 하면 테이블 로우가 즉각적으로 하일라이트 될 것이라 예상한다. 탭을 하고 나면, 아이템이 선택되거나 사용가능하게 되었다는 것을 가리키기 위해 새로운 뷰가 나타날 것으로 예상한다. ( 또는 로우가 체크마크를 표시)
 </p><p class="para">
-  <strong class="inline-head">If table content is extensive or complex, avoid waiting until all the data is available before displaying anything.</strong> Instead, fill the onscreen rows with textual data immediately and display more complex data—such as images—as they become available. This technique gives users useful information right away and increases the perceived responsiveness of your app. 
+  <strong class="inline-head">테이블 콘텐트가 방대하거나 복잡하다면, 뭔가를 디스플레이하기 전에 모든 데이터가 가용해질 때까지 기다리지 마라.</strong> 그 대신에, 화면 위의 로우들에 문자 데이터를 즉각적으로 채우고 이미지같은 복잡한 데이터는 가능해 질 때 디스플레이 하라. 이 기법은 사용자에게 유용한 정보를 즉각적으로 제공해 줘서 사용자가 받아들이는 앱의 반응성을 높인다.
 </p><p class="para">
-  <strong class="inline-head">Consider displaying “stale” data while waiting for new data to arrive.</strong> Although this technique isn’t recommended for apps that handle frequently changing data, it can help more static apps give users something useful right away. Before you decide to do this, gauge how often the data changes and how much users depend on seeing fresh data quickly.
+  <strong class="inline-head">새로운 데이터를 기다리는 동안, “김 빠진" 데이터를 표시하는 것을 고려해 보라.</strong> 이 기법은 자주 변경되는 데이터를 다루는 앱에는 권장되지 않으나, 보다 고정된 앱들에서는 사용자들에게 유용한 정보를 바로 보여줄 수 있다. 이것을 하기로 마음먹기 전에, 데이터가 얼마나 자주 변경되는지와 사용자들이 새로운 데이터를 빠르게 보는 것에 의존하는 지를 측정해보라. 
 </p><p class="para">
-  <strong class="inline-head">If the data is slow loading or complex, show users that processing is continuing.</strong> If a table contains only complex data, it may be difficult to display anything useful right away. In these rare cases, it's important to avoid displaying empty rows, because empty rows can imply that your app has stalled. Instead, the table should display a spinning activity indicator, along with an informative label (such as “Loading…”) centered in the screen. This behavior reassures users that processing is continuing.
+  <strong class="inline-head">데이터가 로딩이 느리거나 복잡하다면, 처리가 진행중임을 보여줘라</strong> 테이블이 복잡한 데이터만을 가진다면, 뭔가 유용한 정보를 바로 보여주기가 어려울 수 있다. 그러한 드문 경우에는, 텅 빈 로우를 보여주는 것을 피하는 것이 중요하다. 왜냐면, 빈 로우는 당신의 앱이 멈추었다는 것을 암축할 수도 있기 때문이다.  그 대신에, 테이블은 회전하는 액티비티 인디케이터와 정보성 레이블 (“Loading…”같은)을 화면의 중앙에 디스플레이한다. 이런 동작은 진행이 계속되고 있다고 사용자를 안심시킨다.
+
 </p><p class="para">
-  <strong class="inline-head">If appropriate, use a custom title for the Delete button.</strong> If it helps users to better understand the way your app works, you can create a title to replace the system-provided Delete title.
+  <strong class="inline-head">가능하다면, Delete 버튼에는 커스텀 타이틀을 사용하라.</strong>당신 앱의 동작 방식에 대해 더 깊은 이해를 할 수 있게 도울 수 있다면, 시스템-제공 Delete 제목을 대체하는 제목을 만들어라. 
 </p><p class="para">
-  <strong class="inline-head">As much as possible, use succinct text labels to avoid truncation.</strong> Truncated words and phrases can be difficult for users to scan and understand. Text truncation is automatic in all table cell styles, but it can present more or less of a problem, depending on which cell style you use and on where truncation occurs.
+  <strong class="inline-head">최대한, 잘림을 방지하기 위해 간결한 텍스트 레이블을 사용하라. </strong> 잘린 단어와 구문은 사용자가 욽어보고 이해하기 어려울 수 있다. 텍스트 자름은 모든 테이블 셀 스타일에 자동이지만, 어떤 셀 스타일을 사용하고 있고 어디에서 잘리느냐에 따라 크고 작은 문제점을 만들 수 있다.  
 </p><p class="para">
-  <strong class="inline-head">Avoid combining an index with table view elements that are displayed on the right edge of the table.</strong> Table view elements that are displayed on the right edge of the table—such as the disclosure indicator—interfere with the index.
+  <strong class="inline-head">테이블의 오른쪽 모서리에 디스플레이되는 인덱스를 테이블 뷰 요소와 결합하지 마라.</strong> 테이블의 오른쪽에 디스플레이 되는 테이블 뷰 요소들- 디스클로저 인디케이터같은-과 인덱스가 겹쳐보일 수 있다.
 </p><p class="para">
-  <strong class="inline-head">Create a custom table cell style if you want to lay out your table rows in a nonstandard way.</strong> It’s better to create a custom table cell style than to significantly alter a standard one. To learn how to create your own cells, see <a href="../TableView_iPhone/TableViewCells/TableViewCells.html#/apple_ref/doc/uid/TP40007451-CH7-SW18" target="_self">“Customizing Cells”</a> in <em class="u-book"><a href="../TableView_iPhone/TableViewStyles/TableViewCharacteristics.html#/apple_ref/doc/uid/TP40007451" target="">Table View Programming Guide for iOS</a></em>.
+  <strong class="inline-head">비표준 방식으로 테이블 로우들을 레이아웃라고 싶다면 커스텀 테이블 셀 스타일을 만들어라. </strong> 표준을 크게 바꾸는 것 보다는 커스텀 테이블 셀 스타일을 만드는 게 낫다. 직접 셀을 만드는 방법을 배우려면 <em class="u-book"><a href="../TableView_iPhone/TableViewStyles/TableViewCharacteristics.html#/apple_ref/doc/uid/TP40007451" target="">Table View Programming Guide for iOS</a></em> 문서의  <a href="../TableView_iPhone/TableViewCells/TableViewCells.html#/apple_ref/doc/uid/TP40007451-CH7-SW18" target="_self">“Customizing Cells”</a>부분을 보라.
 </p><p class="para">
   
 </p>
@@ -1146,9 +1154,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW16"></a>
-  <h3 class="section-name" tabindex="0">Text View</h3>
+  <h3 class="section-name" tabindex="0">텍스트 뷰</h3>
   <p class="para">
-  A <strong>text view</strong> accepts and displays multiple lines of text.
+  <strong>텍스트 뷰</strong>는 다중라인의 텍스트를 받아들이고 표시한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -1158,32 +1166,32 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a text view in your code, see <a href="../UIKitUICatalog/UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView" target="_self">“Text Views”</a>.
+    <p class="para">코딩하려면 <a href="../UIKitUICatalog/UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView" target="_self">“Text Views”</a>를 봐라.
     </p>
     
   </aside>
 </div><p class="para">
-  A text view:
+  텍스트 뷰는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Is a rectangle of any height
+  어떤 높이의 사각형이다.
 </p>
 </li><li class="item"><p class="para">
-  Supports scrolling when the content is too large to fit inside its bounds
+  콘텐트가 그 바운드보다 크다면 스크롤을 지원한다.
 </p>
 </li><li class="item"><p class="para">
-  Supports custom fonts, colors, and alignments (by default, a text view displays left-aligned system font in black)
+  커스텀 서체, 컬러 그리고 정렬을 지원한다. (기본적으로, 텍스트 뷰는 왼쪽 정렬된 검은 색 시스템 폰트를 디스플레이 한다.)
 </p>
 </li><li class="item"><p class="para">
-  Can support editing, in which case a keyboard appears when the user taps inside the text view (the keyboard’s input method and layout are determined by the user’s language settings)
+  사용자가 텍스트 뷰 안쪽을 터치하면 편집을 지원한다. (키보드의 입력 도구와 레이아웃은 사용자의 언어 설정에 의해 결정된다.)
 </p>
 </li>
 </ul><p class="para">
-  <strong class="inline-head">Always make sure the text is easy to read.</strong> Although you can use attributed strings to combine multiple fonts, colors, and alignments in creative ways, it’s essential to maintain the readability of the text. It’s a good idea to support Dynamic Type and use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code> method <code class="code-voice">preferredFontForTextStyle</code> to get the text for display in a text view. For some guidelines on supporting Dynamic Type, see <span class="x-name"><a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW3">Text Should Always Be Legible</a></span>; for programmatic information, see <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">“Text Styles”</a> in <em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">Text Programming Guide for iOS</a></em>.
+  <strong class="inline-head">항상 텍스트는 읽을 수 있도록 하라</strong> 애트리뷰티드 스트링을 이용해 창의적인 방식으로 다중의 서체, 컬러 그리고 정렬방식을 조합할 수 있지만, 글자를 읽을 수 있도록 하는 게 핵심이다. 텍스트 뷰에 디스플레이 할 텍스트를 얻기 위해 다이나믹 타입을 지원하고 <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code>의<code class="code-voice">preferredFontForTextStyle</code>메소드를사용하는 것은 좋은 생각이다. 다이나믹 타입 지원에 대한 가이드 라인은 <span class="x-name"><a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW3">"Text Should Always Be Legible" 페이지 52</a></span>; 프로그램적인 정보는 <em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">Text Programming Guide for iOS</a></em>문서의 <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">“Text Styles”</a>를 보라.
 </p><p class="para">
-  <strong class="inline-head">Specify different keyboard types to accommodate different types of content you expect users to enter.</strong> For example, you might want to make it easy for users to enter a URL, a PIN, or a phone number. Note, however, that you have no control over the keyboard’s input method and layout, which are determined by the user’s language settings. 
+  <strong class="inline-head">사용자들이 입력할 것으로 예상되는 콘텐트의 타입에 따라 맞추기 위해 다른 키보드 타입을 지정하라.</strong> 예를  들어, 사용자들이 URL, PIN, 전화번호를 쉽게 입력하도록 만들고 싶을 수 있다. 그러나 Note는 사용자의 언어 설정에 따라 결정될 뿐, 입력 메소드와 레이아웃을 제어하지 않는다.
 </p><p class="para">
-  iOS provides several keyboard types, each designed to facilitate a different type of input. To learn about the keyboard types that are available, see the documentation for <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html#/apple_ref/c/tdef/UIKeyboardType">UIKeyboardType</a></code>. To learn more about managing the keyboard in your app, read <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#/apple_ref/doc/uid/TP40009542-CH5" target="_self">“Managing the Keyboard”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>.
+  iOS는 몇 종류의 키보드 타입을 가지고 있는데, 각각은 서로 다른 입력을 위해 디자인 되어 있다. 사용가능한 키보드 타입에 대해 공부하고 싶으면, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html#/apple_ref/c/tdef/UIKeyboardType">UIKeyboardType</a></code> 문서를 보라. 앱에서 키보드를 관리하는 법을 배우려면 <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>의 <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#/apple_ref/doc/uid/TP40009542-CH5" target="_self">“Managing the Keyboard”</a>를 읽으라. 
 </p><p class="para">
   
 </p>
@@ -1191,9 +1199,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH13-SW4"></a>
-  <h3 class="section-name" tabindex="0">Web View</h3>
+  <h3 class="section-name" tabindex="0">웹 뷰</h3>
   <p class="para">
-  A <strong>web view</strong> is a region that can display rich HTML content (shown here between the navigation bar and toolbar in Mail on iPhone).
+  <strong>웹 뷰</strong>는 rich HTML 콘텐트를 디스플레이 할 수 있는 영역이다.( 여기 iPhone 의 Mail 앱에서 보이는 네비게이션 바와 툴 바 사이)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -1203,24 +1211,25 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a web view in your code, see <a href="../UIKitUICatalog/UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView" target="_self">“Web Views”</a>.
+    <p class="para">코드로 공부하려면 <a href="../UIKitUICatalog/UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView" target="_self">“Web Views”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A web view:
+  웹 뷰는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays web content
+  웹 콘텐트를 표시
 </p>
 </li><li class="item"><p class="para">
-  Performs some automatic processing on web content, such as converting a phone number to a phone link
+  전화 번호를 전화 링크로 변환하는 것과 같이, 웹 콘텐트에 대해 자동화된 처리를 수행한다.
 </p>
 </li>
 </ul><p class="para">
-  If you have a webpage or web app, you might decide to use a web view to implement a simple iOS app that provides a wrapper for your webpage or web app. If you plan to use a web view to access web content that you control, be sure to read <em class="u-book"><a href="../../../AppleApplications/Reference/SafariWebContent/Introduction/Introduction.html#/apple_ref/doc/uid/TP40002051" target="_self">Safari Web Content Guide</a></em>.
+  만약 웹 페이지나 웹 앱을 가지고 있다면, 웹 뷰를 이용해 웹 페이지나 웹 앱을 감싸는 것을 제공함으로서 간단한 iOS 앱을 만들 려고 맘 먹을 수도 있다. 웹 뷰를 이용해 당신이 관리하는 웹 콘텐트에 접근하려는 계획이 있다면, <em class="u-book"><a href="../../../AppleApplications/Reference/SafariWebContent/Introduction/Introduction.html#/apple_ref/doc/uid/TP40002051" target="_self">Safari Web Content Guide</a></em>를 반드시 읽으라.
 </p><p class="para">
-  <strong class="inline-head">Avoid using a web view to create an app that looks and behaves like a mini web browser.</strong> People expect to use Safari on iOS to browse web content, so replicating this broad functionality within your app is not recommended.
+  <strong class="inline-head">웹 뷰를 이용해 마치 미니 웹 브라우저처럼 보이고 동작하는 앱을 만드는 것을 지양하라.</strong>사람들은 웹 콘텐트를 브라우즈 하기 위해 iOS 에서는 Safari를 사용하기 때문에, 이 방대한 기능들을 당신의 앱 안에서 반복하는 것은 권장하지 않는다.
+
 </p><p class="para">
   
 </p>

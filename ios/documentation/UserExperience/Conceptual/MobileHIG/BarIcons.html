@@ -217,48 +217,48 @@
   
   	<section class="section">
   		<p class="para">
-  iOS defines lots of standard bar-button icons, such as Refresh, Share, Add, and Favorites. As much as possible, you should use these buttons and icons to represent standard tasks in your app. (To learn more about the standard buttons and icons you can use, see <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW33" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW33">Toolbar and Navigation Bar Buttons</a></span> and <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW34" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW34">Tab Bar Icons</a></span>.)
+  iOS는 Refresh, Share, Add 그리고 Favorite 과 같은 표준 바-버튼 아이콘들을 수 많이 제공한다. 최대한 그 버튼과 아이콘들을 당신의 앱에서 표준 테스크를 나타내기 위해 사용하라. (자세한 사항은 <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW33" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW33">Toolbar and Navigation Bar Buttons</a></span>과 <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW34" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW34">Tab Bar Icons</a></span>를 보라)      
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  If your app includes tasks or modes that can’t be represented by a standard icon—or if the standard icons don’t coordinate with your app’s style—you can design your own bar button icons. At a high level, you should aim for an icon design that is:
+  표준 아이콘에 의해 나타낼 수 없는 테스크나 모드를 가지고 있다면 - 또는 표준 아이콘이 당신 앱의 스타일에 적합하지 않다면 - 당신만의 바 버튼 아이템을 디자인 할 수 있다. 하이 레벨에서, 다음과 같은 목표로 아이콘을 디자인한다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Simple and streamlined.</strong> Too many details can make an icon appear sloppy or indecipherable.
+  <strong class="inline-head">단순하고 간결한.</strong> 너무 많은 디테일은 앱이 단정하지 못해 보이거나 (sloppy: 질척거려) 이해할 수 없게 보인다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Not easily mistaken for one of the system-provided icons.</strong> Users should be able to distinguish your custom icon from the standard icons at a glance.
+  <strong class="inline-head">시스템이 제공하는 아이콘들과 너무 쉽게 착각하지 않도록 한다. </strong> 사용자들은 한 눈에 표준 아이콘과 당신의 커스텀 아이콘을 구별할 수 있어야 한다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Readily understood and widely acceptable.</strong> Strive to create a symbol that most users will interpret correctly and that no users will find offensive.
+  <strong class="inline-head">선뜻 이해 가능하고 폭 넓게 받아들여져야 한다. </strong> 대부분의 사용자들이 정확하게 해석하고 어떤 사용자도 공격성을 찾을 수 없는 심볼을 만들기 위해 노력하라.
 </p>
 </li>
 </ul>
 <div class="important clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH21-DontLinkElementID_2"></a>
   <aside class="aside">
-    <p class="aside-title">Important
+    <p class="aside-title">중요
     </p>
-    <p class="para">Be sure to avoid using images that replicate Apple products in your designs. These symbols are copyrighted and product designs can change frequently.
+    <p class="para">애플 제품의 복제품을 사용하지 마라. 애플 제품을 나타내는 심볼은 카피라이트가 있으며 당신의 아이콘이나 이미지에서 재 생산될 수 없다. 
     </p>
     
   </aside>
 </div>
 <p class="para">
-  Whether you use only custom icons or a mix of custom and standard, all icons in your app should look like they belong to the same family in terms of perceived size, level of detail, and visual weight.
+  커스텀 아이콘들만 사용하든, 커스텀과 표준을 섞어 사용하든, 당신 앱의 모든 아이콘들은 사이즈, 디테일 수준, 그리고 시각적인 무게로 볼 때 같은 가족에 속한 것 처럼 보여야 한다.
 </p>
 <p class="para">
-  For example, take a look at the family of iOS bar icons and notice how the similarities in size, detail, and weight produce a sense of harmonious unity:
+  예를 들어, 아래 iOS 바 아이콘 가족을 보고, 사이즈, 디테일 그리고 무게에 있어서의 유사함이 얼마나 조화로움을 주는지 느껴보라.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/icon_family_2x.png" alt="image: ../Art/icon_family_2x.png" width="507" height="127" />
 </figure><p class="para">
-  To create a coherent family of icons, consistency is key: As much as possible, each icon should use the same perspective and the same stroke weight. To ensure that all icons have a consistent perceived size, you may have to create some icons at different actual sizes. For example, the set of system provided icons shown here all have the same perceived size, even though the Favorites and Voicemail icons are actually a bit larger than the other three icons.
+  일관성(coherent)있는 아이콘의 가족을 만들어 내려면, 일관성(consistency)이 핵심이다 : 가능한, 각각의 아이콘들은 같은 원근감과 동일한 스트록 무게를 가져야 한다. 모든 아이콘이 일관된 인식 사이즈를 가지도록 하기 위해, 어떤 아이콘들은 실제 사이즈에서는 좀 다르게 만들어야 한다. 예를 들어, 아래에 보이는 시스템이 제공한 아이콘 세트를 보면, 모두 같다고 인식되는 크기를 가지지만, Voicemail과 Favorites 아이콘은 다른 세개의 아이콘보다 살짝 크다.
 </p>
 <figure class="figure">
   
@@ -274,7 +274,7 @@
   
 </p>
 <p class="para">
-  If you’re designing a custom tab bar icon, you should provide two versions—one for the unselected appearance and one for the selected appearance. The selected appearance is often a filled-in version of the unselected appearance, but some designs call for variations on this approach. 
+  커스텀 탭 바 아이콘을 디자인한다면, 두가지 버전을 제공해야 한다 - 하나는 선택된 모양이며 다른 하나는 선택되지 않은 모양이다. 선택된 모양은 주로 선택되지 않은 모양을 채운 버전이지만, 이 접근법에도 조금의 디자인 변형을 필요로 한다.
 </p>
 <div class="two-columns">
   <div class="left-column">
@@ -282,7 +282,7 @@
   </div>
   <div class="right-column">
     <p class="para">
-  To create a filled-in version of an icon that has interior details (such as the Radio icon) invert the details so they retain their prominence in the selected version. The Keypad icon also has interior details, but the selected version would be confusing and hard to recognize if its background was filled in and the circles became white outlines.
+  내부적인 디테일을 가진 아이콘의 채움-버전을 만드려면 (라디오 아이콘처럼) 그 디테일을 반전해서 그 특징을 선택된 버전에서도 그대로 유지하도록 한다. 키패드 아이콘 또한 내부적인 디테일이 있지만, 선택된 버전에서 배경이 채워지고 원이 흰색 아웃라인을 가지면 인식하기가 어려워진다.
 </p>
   </div>
 </div>
@@ -292,7 +292,7 @@
   </div>
   <div class="right-column">
     <p class="para">
-  Sometimes, a design needs a slight alteration to look good when it’s selected. For example, because the Timer and Podcasts icons include open areas, the selected versions condense the strokes a bit to fit into a circular enclosure. 
+  이따금씩, 선택되었을 때 좋게 보이려면 약간의 디자인 변경이 필요하다. 예를 들어, 타이머와 팟 캐스트 아이콘은 열린 공간을 포함하기 때문에, 선택된 버전은 스트록을 조금 압축해서 원형 울타리안에 맞춘다.
 </p>
   </div>
 </div>
@@ -302,7 +302,7 @@
   </div>
   <div class="right-column">
     <p class="para">
-  If an icon becomes less recognizable when it’s filled in, a good alternative is to use a heavier stroke to draw the selected version. For example, the selected versions of the Voicemail and Reading List icons are drawn with a 4-pixel stroke, instead of the 2-pixel stroke that was used to draw the unselected versions.
+  만약 아이콘이 채워졌을 때 인식하기 어려워진다면, 좋은 대안은 선택된 버전을 위해 굵은 스트로크를 사용하는 것이다. 예를 들어, 보이스메일과 Reading List 아이콘은 선택되지 않은 버전에서는 2-픽셀 스트로크로 그려졌지만, 선택된 버전에서는 4-픽셀 스트로크로 그려졌다.
 </p>
   </div>
 </div>
@@ -312,7 +312,7 @@
   </div>
   <div class="right-column">
     <p class="para">
-  Sometimes, an icon’s shape has details that don’t look good in a stroked outline. When this is the case—as it is for the Music and Artists icons—you can use the filled-in appearance for both versions of the icon. It’s easy for users to distinguish the selected and unselected appearances of such icons because the selected appearance is darker and gets the tint.
+  가끔, 아이콘의 모양이 디테일을 가지고 있어서 스트로크한 아웃라인으로 좋게 보이지 않는 경우가 있다. 이런 경우 - Music과 Artists아이콘이 이렇다- 양쪽 버전에 모두 채워진 모양의 아이콘을 사용할 수 있다. 사용자들은 선택된 모양과 선택되지 않은 모양을 쉽게 구별할 수 있는데, 선택된 모양이 더 어둡고 틴트를 가지기 때문이다. 
 </p>
   </div>
 </div>
@@ -320,52 +320,52 @@
   
 </p>
 <p class="para">
-  A custom icon that you create for a toolbar, navigation bar, or tab bar is also known as a <strong>template</strong> image, because iOS uses it as a mask to produce the icon you see when your app runs. If you create a full-color template image, iOS ignores the color.
+  툴바나 네비게이션 바, 탭 바를 위해 당신이 만드는 커스텀 아이콘은 <strong>템플리트</strong> 이미지로 알려져 있다. 왜냐하면, iOS가 앱이 동작할 때 당신이 보는 아이콘을 만들기 위한 마스크로 사용하기 때문이다. 만약 풀-컬러의 템플리트 이미지를 만든다면, iOS는 색상을 무시한다.
 </p>
 <p class="para">
-  To design a custom bar icon, follow these guidelines:
+  커스텀 바 아이콘을 만들기 위해서는 다음 가이드라인을 따른다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Use pure white with appropriate alpha transparency.
+  적당한 알파 투명도를 가진 순수한 흰색을 사용
 </p>
 </li><li class="item"><p class="para">
-  Not include a drop shadow.
+  그림자를 주지 않는다.
 </p>
 </li><li class="item"><p class="para">
-  Use antialiasing.
+  앤티 앨리어싱을 사용한다.
 </p>
 </li>
 </ul>
 <p class="para">
-  If you want to create a bar icon that looks like it's related to the iOS 7 icon family, use a very thin stroke to draw it. Specifically, a 2-pixel stroke (high resolution) works well for detailed icons and a 3-pixel stroke works well for less detailed icons.
+  iOS 7의 아이콘 가족의 일부처럼 보이는 바 아이콘을 만들고 싶다면, 아주 얇은 스트로크를 이용해 그려라. 구체적으로, 2-픽셀 스트록 (고해상도)이 디테일한 아이콘에 좋고, 덜 디테일한 아이콘에는 3픽셀이 좋다.
 </p>
 <p class="para">
-  Regardless of the icon’s visual style, create a toolbar or navigation bar icon in the following sizes:
+  아이콘의 시각적인 스타일에 상관없이, 툴바나 네비게이션 바 아이콘을 다음 크기로 만들어라 : 
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  About 44 x 44 pixels
+  44 x 44 픽셀 정도 
 </p>
 </li><li class="item"><p class="para">
-  About 22 x 22 pixels (standard resolution)
+  22 x 22 픽셀 정도 (표준 해상도)
 </p>
 </li>
 </ul>
 <p class="para">
-  Regardless of the icon’s visual style, create a tab bar icon in the following sizes:
+  아이콘의 시각적인 스타일에 상관없이, 탭 바 아이콘을 다음 크기로 만들어라 : 
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  About 50 x 50 pixels (96 x 64 pixels maximum) 
+  50 x 50 픽셀 정도 (최대 96 x 64 픽셀) 
 </p>
 </li><li class="item"><p class="para">
-  About 25 x 25 pixels (48 x 32 pixels maximum) for standard resolution
+  25 x 25 픽셀 정도 (최대 48 x 32 픽셀) 표준 해상도
 </p>
 </li>
 </ul>
 <p class="para">
-  Don’t include text in a custom tab bar icon. Instead, use the tab bar item APIs to set the title for each tab (for example, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITabBarItem_Class/Reference/Reference.html#/apple_ref/occ/instm/UITabBarItem/initWithTitle:image:tag:">initWithTitle:image:tag:</a></code>). If you need to adjust the automatic layout of the title, you can use the title adjustment APIs, such as <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITabBarItem_Class/Reference/Reference.html#/apple_ref/occ/instm/UITabBarItem/setTitlePositionAdjustment:">setTitlePositionAdjustment:</a></code>.
+  커스텀 탭 바 아이콘에 텍스트를 포함시키지 마라. 대신, 탭 바 아이템 API를 이용해 각 탭의 타이틀을 설정하라 (예를 들어, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITabBarItem_Class/Reference/Reference.html#/apple_ref/occ/instm/UITabBarItem/initWithTitle:image:tag:">initWithTitle:image:tag:</a></code>). 타이틀의 자동 레이아웃을 조정할 필요가 있다면, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITabBarItem_Class/Reference/Reference.html#/apple_ref/occ/instm/UITabBarItem/setTitlePositionAdjustment:">setTitlePositionAdjustment:</a></code> 와 같은 타이틀 조정 API들을 사용할 수 있다.
 </p>
 
 		</section> 

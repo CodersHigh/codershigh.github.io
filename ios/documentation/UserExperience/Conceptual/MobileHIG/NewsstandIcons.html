@@ -217,45 +217,46 @@
   
   	<section class="section">
   		<p class="para">
-  If your app uses Newsstand Kit to publish subscription-based periodical content, you need to provide icons for display in the App Store and on people’s devices.
+  앱이 뉴스스탠드 킷을 이용해 구독기반의 기간 콘텐트를 발행한다면, 앱 스토어와 사람들의 장치에서 디스플레이하기 위한 아이콘을 제공할 필요가 있다.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/newsstand_intro_2x.png" alt="image: ../Art/newsstand_intro_2x.png" width="224" height="383" />
 </figure><p class="para">
-  All Newsstand apps need to supply a Newsstand cover icon that represents the default cover art in the App Store. The long edge of this icon should measure at least 1024 pixels (512 pixels for standard-resolution devices). Note that this icon is separate from the app icon that all iOS apps must provide.
+  모든 뉴스스탠드 앱은 앱 스토어에서 뉴스스탠드 표지 아이콘을 공급해야 한다. 이 아이콘의 긴 모서리쪽은 최소한 1024픽셀 (표준 해상도에서는 512 픽셀)이어야 한다.
+이 아이콘은 모든 iOS 앱이 제공해야 하는 앱 아이콘과는 다른 것이라는 것을 염두에 두라. 
 </p>
 <div class="important clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH28-DontLinkElementID_12"></a>
   <aside class="aside">
-    <p class="aside-title">Important
+    <p class="aside-title">중요
     </p>
-    <p class="para">The aspect ratio of all Newsstand icons should be between 1:2 and 2:1. 
+    <p class="para">모든 뉴스스탠드 아이콘들은 종횡비가 1:2 와 2:1 사이에 있어야 한다.
     </p>
     <p class="para">
-  All Newsstand icons must be flat and have 90° corners.
+  모든 뉴스스탠드 아이콘들은 플랫하고(투명도 없는) 90도의 모서리를 가져야 한다.
 </p>
 <p class="para">
-  Don’t add perspective to any of your Newsstand icons.
+  뉴스스탠드 아이콘에 원근감을 더하지 마라.
 </p>
 
   </aside>
 </div>
 <p class="para">
-  A default Newsstand cover icon should be a generalized facsimile of the cover of a typical issue, which focuses on the parts of the cover that are fairly consistent from issue to issue. For example:
+  기본 뉴스스탠드 표지 아이콘은 발행물들 사이에서 일관된 표지 부분에 집중한 전형적인 발행물의 일반화된 복사본이이어야 한다. 예를 들어, 
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Avoid adding to the default cover icon elements that users would never see on an actual cover, such as a message to “tap here for the latest issue”.
+  실제 표지에서 사용자들이 절대 보기 원하지 않는 요소들을 디폴트 표지 아이콘 요소에 더하지 말라. “최신 발행물을 보려면 여기를 탭 하세요” 같은 거.
 </p>
 </li><li class="item"><p class="para">
-  Avoid using artwork or headlines that are seasonal or topical, such as images related to holidays or headlines that refer to current events.
+  시즌적이거나 토픽적인 헤드라인이나 아트워크를 피하라. 휴일에 관련된 이미지 또는 현재 이벤트에 대한 헤드라인.
 </p>
 </li>
 </ul>
 <p class="para">
-  In particular, don’t reuse the cover of a previous issue for your default Newsstand cover icon, because users might confuse your app with a specific issue. For example, default magazine and newspaper icons could look something like this:
+  특히, 이전 발행물의 표지를 현재 뉴스스탠드 표지 아이콘으로 사용하지 마라. 사용자들은 당신의 앱을 특정 발행물로 혼동할 수 있다. 예를 들어, 디폴트 잡지와 신문 아이콘은 이런 식으로 보인다.
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -269,13 +270,13 @@
 			<img class="inline-graphic" src="Art/newspaper_default_2x.png" alt="image: ../Art/newspaper_default.jpg" width="179" height="136" />
 		</section>
 </section><p class="para">
-  In addition to the default Newsstand cover icon, you also need to supply a separate icon that accurately represents each new issue so it can appear on the Newsstand shelf and in the multitasking UI on an iOS device. Unlike the default cover icon, each per-issue icon should display details about the contents of a specific issue. 
+  기본 뉴스스탠드 커버 아이콘외에도, 각각의 새로운 발행물을 나타내는 별도의 아이콘을 공급할 필요가 있다. 이것은 뉴스스탠드 책장과 iOS 장치의 멀티테스킹 UI에 디스플레이 될 것이다.
 </p>
 <p class="para">
-  It’s recommended that you create a single large icon for each issue, and allow iOS to scale it for display in both places.
+  각각의 발행물에 대해 하나의 큰 아이콘을 제작해서 iOS가 크기조정해서 양쪽 공간을 위해 디스플레이 하도록 권한다.
 </p>
 <p class="para">
-  Specifically, you should create a per-issue icon whose long edge measures at least 1024 pixels (512 pixels for standard-resolution devices). To display the current issue’s icon on the Newsstand shelf and in the multitasking UI, iOS scales your large icon to the following sizes:
+  구체적으로, 발행물별 아이콘의 긴 모서리쪽은 최소한 1024픽셀 (표준 해상도에서는 512 픽셀)이어야 한다. 뉴스스탠드 책장과 멀티테스킹 UI에서 현재 발행물의 아이콘을 디스플레이 하기 위해, iOS는 당신의 큰 아이콘을 다음 크기로 조정한다 :
 </p>
 <p class="para">
   
@@ -289,58 +290,58 @@
 <div class="tableholder">
   <a name="//apple_ref/doc/uid/TP40006556-CH28-SW2"></a>
   <table class="graybox" border="0" cellspacing="0" cellpadding="5">
-    <caption class="tablecaption"><strong class="caption-number">Table 43-1</strong>Maximum scaled sizes for per-issue icons</caption>
+    <caption class="tablecaption"><strong class="caption-number">테이블 43-1</strong>발행물별 아이콘의 최대 측정 사이즈</caption>
     <thead>
         <tr>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Device
+  장치 
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Scaled size (Newsstand shelf)
+  조정된 크기 (뉴스스텐드 책장)
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Scaled long-edge size (multitasking UI)
+  조정된 긴 모서리 사이즈 (멀티테스킹 UI)
 </p></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td scope="row"><p class="para">
-  iPhone and iPod touch
+  아이폰과 아이팟터치 
 </p></td>
             <td><p class="para">
-  180 x 160 pixels (90 x 80 pixels for standard resolution)
+  180*160 픽셀 (90*80 표준 해상도)
 </p></td>
             <td><p class="para">
-  120 pixels (60 pixels for standard resolution)
+  120 픽셀 (60 표준해상도)
 </p></td>
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  iPad
+  아이패드 
 </p></td>
             <td><p class="para">
-  252 pixels for long edge (126 pixels for standard resolution)
+  긴 모서리로 252 픽셀 (126 픽셀 표준해상도)
 </p></td>
             <td><p class="para">
-  152 pixels (76 pixels for standard resolution)
+  152 픽셀 (76 픽셀 표준해상도)
 </p></td>
         </tr>
     </tbody>
   </table>
 </div>
 <p class="para">
-  For additional information about setting up a Newsstand app, see <em class="u-book"><a href="../../../LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#/apple_ref/doc/uid/TP40011225" target="_self">iTunes Connect Developer Guide</a></em>.
+  추가적인 정보는 <em class="u-book"><a href="../../../LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#/apple_ref/doc/uid/TP40011225" target="_self">iTunes Connect Developer Guide</a></em>를 보라.
 </p>
 <div class="important clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH28-DontLinkElementID_13"></a>
   <aside class="aside">
-    <p class="aside-title">Important
+    <p class="aside-title">중요
     </p>
-    <p class="para">iOS 7 doesn’t add any visual enhancements—such as the appearance of a stapled edge or multiple pages—to a Newsstand icon.
+    <p class="para">iOS 7은 뉴스스탠드 아이콘에 제본된 모서리나 다중 페이지같은 시각적인 개선을 더하지 않는다.
     </p>
     <p class="para">
-  If your app needs to support earlier versions of iOS, you can add the binding type and binding edge keys to the <code class="code-voice">Info.plist</code> file to define how Newsstand icons should appear on devices running iOS 6.1 and earlier. For more information about these keys and their values, see <a href="../../../General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#/apple_ref/doc/uid/TP40009249-SW15" target="_self">“Contents of the UINewsstandIcon Dictionary”</a> in <em class="u-book"><a href="../../../General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009247" target="">Information Property List Key Reference</a></em>.
+      만약 당신의 앱이 이전 버전의 iOS를 지원해야 한다면, 바인딩 타입과 바인딩 모서리 키를 <code class="code-voice">Info.plist</code>파일에 더해서 iOS 6.1 이전 버전을 구동하는 장치에서 뉴스스탠드 아이콘이 어떻게 보일지를 정의할 수 있다. 보다 자세한 정보는 <em class="u-book"><a href="../../../General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009247" target="">Information Property List Key Reference</a></em>에서 <a href="../../../General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#/apple_ref/doc/uid/TP40009249-SW15" target="_self">“Content of the UINewsstandIcon Dictionary”</a>를 보라.
 </p>
 
   </aside>

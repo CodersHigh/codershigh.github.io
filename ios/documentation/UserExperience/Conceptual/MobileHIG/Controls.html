@@ -351,9 +351,9 @@
   
   <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW2"></a>
-  <h3 class="section-name" tabindex="0">Activity Indicator</h3>
+  <h3 class="section-name" tabindex="0">액티비티 인디케이터</h3>
   <p class="para">
-  An <strong>activity indicator</strong> shows that a task or process is progressing (shown below with text labels).
+  <strong>액티비티 인디케이터</strong>는 테스크나 프로세스가 진행중이라는 것을 보여준다. (아래의 텍스트 레이블과 함께 있는 것)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -363,28 +363,28 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn how to define an activity indicator in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIActivityIndicatorView_Class/Reference/UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40006830" target="_self">UIActivityIndicatorView Class Reference</a></em>.
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIActivityIndicatorView_Class/Reference/UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40006830" target="_self">UIActivityIndicatorView 클래스 레퍼런스</a></em>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  An activity indicator:
+  액티비티 인디케이터는 : 
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Spins while a task is progressing and disappears when the task completes
+  테스크가 진행 중일 때 회전하며 테스크 완료시 사라진다.
 </p>
 </li><li class="item"><p class="para">
-  Doesn’t allow user interaction
+  사용자 인터렉션을 허용하지 않는다.
 </p>
 </li>
 </ul><p class="para">
-  Use an activity indicator in a toolbar or a main view to show that processing is occurring, without suggesting when it will finish. 
+  액티비티 인디케이터는 툴바 또는 메인 뷰에서 처리가 일어나고 있다는 것을, 언제 종료될지에 대한 제안 없이 보여준다.
 </p><p class="para">
-  <strong class="inline-head">Don’t display a stationary activity indicator.</strong> Users associate a stationary activity indicator with a stalled process. 
+  <strong class="inline-head">멈춰있는 액티비티 인디케이터를 디스플레이 하지 마라.</strong> 사용자들은 정지한 액티비티 인디케이터를 멈춰버린 프로세스와 연관지어 생각한다.
 </p><p class="para">
-  <strong class="inline-head">Use an activity indicator to reassure users that their task or process hasn’t stalled.</strong> Sometimes it’s more important to simply reassure users than to suggest when processing will finish.
+  <strong class="inline-head">액티비티 인디케이터를 그들의 테스크나 프로세스가 멈추지 않았다고 안심시키기 위해 사용하라. </strong> 가끔은 언제 처리가 끝날지를 알려주는 것보다 그냥 사용자를 안심시키는 게 더 중요하다.
 </p><p class="para">
-  <strong class="inline-head">Customize an activity indicator to harmonize with the view it’s in.</strong> If appropriate, coordinate the size and color of an activity indicator with the background of the view it’s in.
+  <strong class="inline-head">액티비티 인디케이터를 커스터마이즈해서 들어가는 뷰와 어울리게 하라.</strong> 가능하다면, 액티비티 인디케이터의 크기와 컬러를 들어가는 뷰와 맞춰라.
 </p><p class="para">
   
 </p>
@@ -392,9 +392,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW144"></a>
-  <h3 class="section-name" tabindex="0">Contact Add Button</h3>
+  <h3 class="section-name" tabindex="0">연락처 추가 버튼</h3>
   <p class="para">
-  A <strong>Contact Add button</strong> lets the user add an existing contact to a text field or other text-based view.
+  <strong>연락처 추가 버튼</strong>은 사용자에게 존재하는 연락처를 텍스트 필드 또는 다른 텍스트 기반의 뷰에 더하도록 한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -404,32 +404,32 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn how to define a Contact Add button in your code, see <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>.
+    <p class="para"><a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A Contact Add button:
+  연락처 추가 버튼은 : 
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays a list of the user’s contacts
+  사용자의 연락처 리스트를 디스플레이 한다
 </p>
 </li><li class="item"><p class="para">
-  Helps users add a contact to the view that contains the Contact Add button
+  연락처 추가 버튼을 포함하고 있는 뷰에 연락처를 더하도록 돕는다.
 </p>
 </li>
 </ul><p class="para">
-  Use a Contact Add button to give users an easy way to access a contact without using the keyboard. For example, users can tap the Contact Add button in the To field of the Mail compose view instead of typing a recipient’s name.
+  키보드를 사용하지 않고 연락처에 접근하는 손 쉬운 방법을 사용자에게 제공하기 위해 연락처 추가 버튼을 사용한다. 예를 들어, Mail 작성 뷰에서 To 필드에 수신자의 이름을 타이핑하는 대신에 연락처 추가 버튼을 탭 하면 된다.
 </p><p class="para">
-  Because the Contact Add button functions as an alternative to typing contact information, it’s not appropriate to use the button in a view that doesn’t accept keyboard input. 
+  연락처 추가 버튼은 연락처 정보를 타이핑하는 것에 대한 대안이므로, 키보드 입력을 받지 않는 뷰에는 적당하지 않다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW3"></a>
-  <h3 class="section-name" tabindex="0">Date Picker</h3>
+  <h3 class="section-name" tabindex="0">날짜 피커</h3>
   <p class="para">
-  A <strong>date picker</strong> displays components of date and time, such as hours, minutes, days, and years. 
+  <strong>날짜 피커</strong>는 연, 일, 시, 분 과 같은, 날짜와 시간의 컴포넌트를 디스플레이 한다.  
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -439,47 +439,47 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn how to define a date picker in your code, see <a href="../UIKitUICatalog/UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker" target="_self">“Date Pickers”</a>.
-    </p>
+    <p class="para"><a href="../UIKitUICatalog/UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker" target="_self">“Date Pickers”</a>.
+    를 보라.</p>
     
   </aside>
 </div><p class="para">
-  A date picker:
+  날짜 피커는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays up to four independent wheels, each of which displays values in a single category, such as month or hour
+  최대 네개의 독립된 휠을 디스플레이하며, 각각은 월 또는 시 같은 단일 범주의 값을 디스플레이 한다.
 </p>
 </li><li class="item"><p class="para">
-  Uses dark text to display the current value in the middle of the view
+  현재 값을 어두운 텍스트로 뷰의 중간에 표시한다.
 </p>
 </li><li class="item"><p class="para">
-  Can’t be resized (the size of a date picker is the same size as the iPhone keyboard)
+  사이즈 조정 불가 (날짜 피커의 크기는 아이폰 키보드 크기와 동일)
 </p>
 </li><li class="item"><p class="para">
-  Has four modes, each of which displays wheels containing a set of different values:
+  네가지 모드를 가지고 있으며, 각각은 다른 값의 세트를 포함하는 휠을 디스플레이 한다.
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Date and time.</strong> The date and time mode (the default mode) displays wheels for the calendar date, hour, and minute values, and an optional wheel for the AM/PM designation.
+  <strong class="inline-head">날짜와 시간.</strong> (디폴트 모드) 칼렌더 날짜, 시간, 분 값을 가지며 AM/PM 지정을 위한 부가적인 휠도 있다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Time.</strong> The time mode displays wheels for the hour and minute values, and an optional wheel for the AM/PM designation.
+  <strong class="inline-head">시간.</strong> 시간 모드는 시, 분값을 위한 휠을 디스플레이 하며, AM/PM 지정을 위한 부가적인 휠도 있다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Date.</strong> The date mode displays wheels for the month, day, and year values.
+  <strong class="inline-head">날짜.</strong> 월, 일, 그리고 년 값을 디스플레이하는 휠을 가진다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Countdown timer.</strong> The countdown timer mode displays wheels for the hour and minute. You can specify the total duration of a countdown, up to a maximum of 23 hours and 59 minutes.
+  <strong class="inline-head">카운트다운 타이머.</strong> 시와 분을 위한 휠을 가진다. 최대 23시간 59분까지 카운트 다운의 총 기간을 설정할 수 있다.
 </p>
 </li>
 </ul>
 </li>
 </ul><p class="para">
-  Use a date picker to let users pick—instead of type—a date or time value that consists of multiple parts, such as the day, month, and year.
+  날짜 피커, 년, 월,일의 다중 파트로 구성된, 를 이용해서 사용자가 - 타이프 하지 않고- 날짜 또는 시 값을 선택할 수 있도록 한다. 
 </p><p class="para">
-  <strong class="inline-head">As much as possible, display a date picker inline with the content.</strong> It’s best when users can avoid navigating to a different view to use a date picker. On iPad, a date picker can appear within a popover or inline with content.
+  <strong class="inline-head">가능한 한, 날짜 피커를 콘텐트와 한 줄에 배치하라.</strong> 날짜 피커를 사용하기 위해 사용자가 다른 뷰로 네비게이션하는 것을 피하는 것이 좋다. 아이패드에서, 날짜 피커는 팝오버로 또는 인라인으로 나타날 수도 있고 한 줄로 나타날 수도 있다.
 </p><p class="para">
-  <strong class="inline-head">If it makes sense in your app, change the interval in the minutes wheel.</strong> By default, a minutes wheel displays 60 values (0 to 59). If you need to display a coarser granularity of choices, you can set a minutes wheel to display a larger minute interval, as long as the interval divides evenly into 60. For example, you might want to display the quarter-hour intervals 0, 15, 30, and 45.
+  <strong class="inline-head">앱에서 의미적으로 문제가 없다면, 분 휠의 간격을 변경하라.</strong> 기본적으로, 분 휠은 60개의 값(0~59)을 디스플레이 한다. 보다 성근 선택을 디스플레이할 필요가 있다면, 휠을 60으로 떨어지는 보다 큰 분 간격으로 설정할 수 있다. 예를 들어, ¼ 시간 간격으로 0.15.30.45를 디스플레이 할 수 있다.
 </p><p class="para">
   
 </p>
@@ -487,9 +487,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW4"></a>
-  <h3 class="section-name" tabindex="0">Detail Disclosure Button</h3>
+  <h3 class="section-name" tabindex="0">디테일 디스클로저 버튼</h3>
   <p class="para">
-  A <strong>Detail Disclosure button</strong> reveals additional details or functionality related to an item.
+  <strong>디테일 디스클로저 버튼</strong>은 아이템에 연관된 부가적인 상세함 또는 기능을 드러낸다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -499,16 +499,16 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn how to define a Detail Disclosure button in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006938" target="_self">UITableViewCell Class Reference</a></em> and <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>.
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006938" target="_self">UITableViewCell 클래스 레퍼런스</a></em> 와 <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A Detail Disclosure button reveals a separate view that contains additional information or functionality related to a specific item.
+  디테일 티스클로저 버튼은 특정 아이템에 연관된 부가적인 정보나 기능을 가지는 별도의 뷰를 드러낸다.
 </p><p class="para">
-  When a Detail Disclosure button appears in a table row, tapping elsewhere in the row doesn’t activate the Detail Disclosure button; instead, it selects the row item or results in app-defined behavior.
+ 디테일 티스클로저 버튼이 테이블 뷰 로우에 나타나면, 로우의 다른 영역을 탭하는 것은 디테일 티스클로저 버튼을 동작시키지 못한다; 그 대신, 그것은 로우 아이템을 선택하거나 앱이 정의한 동작을 할 것이다.
 </p><p class="para">
-  Typically, you use a Detail Disclosure button in a table view to give users a way to see more details or functionality related to a list item. However, you can also use this element in other types of views to give users a way to see more information or functionality related to an item in that view.
+  전형적으로, 디테일 티스클로저 버튼을 테이블 뷰에 사용해서 리스트 아이템에 대한 보다 자세한 정보나 기능을 보는 법을 제공한다. 그러나, 이 요소를 다른 타입의 뷰에서도 사용해서 그 뷰 안의 아이템에 연관된 정보나 기능을 보여주는 데 사용하라.
 </p><p class="para">
   
 </p>
@@ -516,9 +516,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW5"></a>
-  <h3 class="section-name" tabindex="0">Info Button</h3>
+  <h3 class="section-name" tabindex="0">정보 버튼</h3>
   <p class="para">
-  An <strong>Info button</strong> reveals configuration details about an app, sometimes on the back of the current view. 
+  <strong>정보 버튼</strong>은 앱에 대한 상세한 설정 정보를 드러내며, 가끔은 현재의 뷰 뒤에 있다. 
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -528,14 +528,14 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining an Info button in your code, see <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>.
+    <p class="para"><a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  iOS includes two styles of Info button: a dark-colored button that looks good on light content and a light-colored button that looks good on dark content.
+  iOS는 두 종류의 정보 버튼 스타일을 가지고 있다. 어두운 색상의 버튼은 밝은 콘텐트 위에서 보기에 좋고, 밝은 색상의 버튼은 어두운 콘텐트 위에서 보기에 좋다.
 </p><p class="para">
-  Use an Info button to reveal configuration details or options about an app. You can use the style of Info button that coordinates best with the UI of your app.
+  정보 버튼을 이용해서 상세 설정 또는 앱에 대한 부가설정을 드러낸다. 정보 버튼의 스타일을 당신 앱의 UI와 가장 잘 어울리는 것으로 사용할 수 있다.
 </p><p class="para">
   
 </p>
@@ -543,9 +543,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW22"></a>
-  <h3 class="section-name" tabindex="0">Label</h3>
+  <h3 class="section-name" tabindex="0">레이블</h3>
   <p class="para">
-  A <strong>label</strong> displays static text.
+  <strong>레이블</strong>은 스태틱한 문자를 디스플레이 한다. 
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -555,24 +555,26 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining labels in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UILabel_Class/Reference/UILabel.html#/apple_ref/doc/uid/TP40006797" target="_self">UILabel Class Reference</a></em>.
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UILabel_Class/Reference/UILabel.html#/apple_ref/doc/uid/TP40006797" target="_self">UILabel 클래스 레퍼런스</a></em>.
     </p>
     
   </aside>
 </div><p class="para">
-  A label:
+  레이블은 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays any amount of static text
+  스태틱 텍스트를 얼마든지 디스플레이 할 수 있다.
 </p>
 </li><li class="item"><p class="para">
-  Doesn’t allow user interaction except, potentially, to copy the text
+  사용자 인터렉션 수신은 하지 않지만, 텍스트 복사를 위해서는 가능하다.
 </p>
 </li>
 </ul><p class="para">
-  Use a label to name or describe parts of your UI or to provide short messages to the user. A label is best suited for displaying a relatively small amount of text.
+  레이블을 이용해 당신 UI의 일부를 설명하거나 이름붙이고, 사용자에게 짧은 메세지를 제공한다. 레이블은 상대적으로 적은 양의 텍스트를 디스플레이 하기에 최적으로 맞춰져 있다.
 </p><p class="para">
-  <strong class="inline-head">Take care to make your labels legible.</strong> It’s best to support Dynamic Type and use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code> method <code class="code-voice">preferredFontForTextStyle</code> to get the text for display in a label. If you choose to use custom fonts, don’t sacrifice clarity for fancy lettering or showy colors. (For guidelines about using text in an app, see <span class="x-name"><a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">Color and Typography</a></span>; to learn more about Dynamic Type, see <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">“Text Styles”</a> in <em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">Text Programming Guide for iOS</a></em>.)
+  <strong class="inline-head">레이블을 읽을 수 있도록 주의를 기울여라.</strong> 레이블에 디스플레이 할 텍스트를 얻기 위해 다이나믹 타입을 지원하고  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code>의 <code class="code-voice">preferredFontForTextStyle</code> 메소드를 사용하는 것은 좋은 생각이다. 커스텀 서체를 사용하기로 마음 먹었다면, 예쁜 레터링이나 화사한 컬러를 위해 명료함을 희생시키지 마라. (<span class="x-name"><a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">“Color and Typography”페이지 51</a></span>을 보라. 다이나믹 타입에 대한 정보는 <em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">Text Programming Guide for iOS</a></em> 문서의 <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">“Text Styles”</a>를 보라.)
+
+
 </p><p class="para">
   
 </p>
@@ -580,9 +582,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW44"></a>
-  <h3 class="section-name" tabindex="0">Network Activity Indicator</h3>
+  <h3 class="section-name" tabindex="0">네트워크 액티비티 인디케이터</h3>
   <p class="para">
-  A <strong>network activity indicator</strong> appears in the status bar and shows that network activity is occurring.
+  <strong>네트워크 액티비티 인디케이터</strong>는 스테이터스 바에 나타나서 네트워크 활동이 일어나고 있음을 보여준다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -592,22 +594,22 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">In your code,  use the <code class="code-voice">UIApplication</code> method <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIApplication_Class/Reference/Reference.html#/apple_ref/occ/instm/UIApplication/isNetworkActivityIndicatorVisible">networkActivityIndicatorVisible</a></code> to control the indicator’s visibility.
+    <p class="para"><code class="code-voice">UIApplication</code>의 <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIApplication_Class/Reference/Reference.html#/apple_ref/occ/instm/UIApplication/isNetworkActivityIndicatorVisible">networkActivityIndicatorVisible</a></code> 메소드를 이용해 인디케이터가 보일지를 결정하라.
     </p>
     
   </aside>
 </div><p class="para">
-  The network activity indicator:
+  네트워크 액티비티 인디케이터는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Spins in the status bar while network activity proceeds and disappears when network activity stops
+  네트워크 활동이 진행중일 때 스테이터스 바에서 회전하며 네트워크 활동이 멈주면 사라진다.
 </p>
 </li><li class="item"><p class="para">
-  Doesn’t allow user interaction
+  사용자 인터렉션을 허용하지 않는다.
 </p>
 </li>
 </ul><p class="para">
-  Display the network activity indicator to provide feedback when your app accesses the network for more than a couple of seconds. If the operation finishes sooner than that, you don’t have to show the network activity indicator, because the indicator is likely to disappear before users notice its presence.
+  앱이 몇 초 이상 네트워크에 접근할 때는 네트워크 액티비티 인디케이터를 디스플레이해서 피드백을 제공하라. 그보다 빨리 동작이 끝난다면, 사용자가 그것을 인지하기도 전에 사라지게 될 것이므로 네트워크 액티비티 인디케이터를 보여줄 필요가 없다.
 </p><p class="para">
   
 </p>
@@ -615,9 +617,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW6"></a>
-  <h3 class="section-name" tabindex="0">Page Control</h3>
+  <h3 class="section-name" tabindex="0">페이지 컨트롤</h3>
   <p class="para">
-  A <strong>page control</strong> indicates the number of open views and which one is currently visible (shown here in Weather).
+  <strong>페이지 컨트롤</strong>은 얼마나 많은 뷰가 열려있는지와 현재 어떤 것이 보이고 있는지를 지시한다. (Weather 앱에서 보이는 것이 아래에 있다)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -627,37 +629,37 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a page control in your code, see <a href="../UIKitUICatalog/UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl" target="_self">“Page Controls”</a>.
+    <p class="para"><a href="../UIKitUICatalog/UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl" target="_self">“Page Controls”</a>을 참고하라.
     </p>
     
   </aside>
 </div><p class="para">
-  A page control:
+  페이지 컨트롤은 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Displays an indicator dot for each open view in an app (from left to right, the dots represent the order in which the views were opened)
+  앱에서 현재 열려있는 개별 뷰마다 점 하나를 디스플레이 한다. (왼쪽에서 오른쪽으로, 점은 뷰가 열려있는 순서를 나타낸다.)
 </p>
 </li><li class="item"><p class="para">
-  By default, uses an opaque dot to represent the currently visible view and translucent dots to represent all other open views
+  기본적으로, 불투명한 점을 사용해 현재 보이는 뷰를 나타내고 반투명한 점으로 다른 모든 뷰들을 나타낸다.
 </p>
 </li><li class="item"><p class="para">
-  Doesn’t allow users to visit views nonsequentially
+  비순차적으로 뷰를 보는 방식을 지원하지 않는다.
 </p>
 </li><li class="item"><p class="para">
-  Doesn’t shrink or squeeze together dots as more views are opened (if you try to display more dots than will fit in the view, the dots are clipped)
+  많은 뷰가 열려있다고 해서 압축되거나 찌그러지지 않는다; 뷰의 크기보다 더 많은 점을 디스플레이 하려고 하면, 점들은 잘릴 것이다. 
 </p>
 </li><li class="item"><p class="para">
   Doesn’t enable navigation between views by default; you must implement view-to-view navigation and update the page control’s state appropriately
 </p>
 </li>
 </ul><p class="para">
-  Use a page control when it’s more important to show users how many views are open than it is to help them choose a specific view. A page control is designed for apps in which each view is a peer of every other view.
+  앱의 각각의 뷰가 다른 모든 뷰들과 동류일 때 페이지 컨트롤을 이용하라.
 </p><p class="para">
-  <strong class="inline-head">Don’t use a page control to display views in a hierarchy or other complex arrangement.</strong> A page control doesn’t show how views are related to each other and it doesn’t indicate which view corresponds to each dot, so it can’t help users navigate to a specific view.
+  <strong class="inline-head">앱의 정보를 뷰의 계층을 이용해 표시하는 경우 페이지 컨트롤을 사용하지 마라.</strong> 페이지 컨트롤은 사용자들이 특정 경로를 통해 되돌아 가는 것을 돕지 않으므로, 계층적인 네비게이션을 가능하게 하지 않는다.
 </p><p class="para">
   <strong class="inline-head">Avoid displaying too many dots.</strong>  More than about 10 dots are hard for users to count at a glance and more than about 20 open views are time consuming to visit in sequence. If users can open more than about 20 peer views in your app, consider displaying the views in a different arrangement that provides more information about the views and enables nonsequential navigation.
 </p><p class="para">
-  <strong class="inline-head">Vertically center a page control between an open view’s bottom edge and the screen’s bottom edge.</strong> In this position, a page control is always visible without getting in users’ way. 
+  <strong class="inline-head">페이지 컨트롤을 화면의 아래 모서리와 열린 뷰의 아래 모서리 사이에 세로 방향으로 중앙정렬 한다. </strong> 이 위치에 있으면, 페이지 컨트롤은 사용자를 가로막지 않으면서 항상 보인다. 현재 화면 방향에 대해 너무 많은 점들을 표시하지 마라. 예를 들어, 세로방향의 아이폰 화면은 20개에 달하는 점을 가질 수 있다.
 </p><p class="para">
   
 </p><p class="para">
@@ -667,9 +669,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW23"></a>
-  <h3 class="section-name" tabindex="0">Picker</h3>
+  <h3 class="section-name" tabindex="0">피커</h3>
   <p class="para">
-  A <strong>picker</strong> displays a set of values from which a user picks one.
+  <strong>피커</strong>는 사용자가 하나를 선택할 수 있는 값의 세트를 디스플레이 한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -679,34 +681,34 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a picker in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIPickerView_Class/Reference/UIPickerView.html#/apple_ref/doc/uid/TP40006842" target="_self">UIPickerView Class Reference</a></em>.
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIPickerView_Class/Reference/UIPickerView.html#/apple_ref/doc/uid/TP40006842" target="_self">UIPickerView 클래스 레퍼런스</a></em>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A picker:
+  피커는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Is a generic version of the date picker (for more information about the date picker, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW3">Date Picker</a></span>)
+  날짜 피커의 일반형 버전 (날짜 피커에 대한 정보가 필요하다면,<span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW3">날짜 피커</a></span>를 보라)
 </p>
 </li><li class="item"><p class="para">
-  Displays one or more wheels, each of which contains a list of values 
+  하나 이상의 휠을 가지고 있으며, 각각은 값의 리스트를 가진다.
 </p>
 </li><li class="item"><p class="para">
-  Uses dark text to display the current value in the middle of the view
+  뷰의 중간에 현재 값을 어두운 글자로 디스플레이 한다.
 </p>
 </li><li class="item"><p class="para">
-  Can’t be resized (the size of a picker is the same size as the iPhone keyboard)
+  크기 조정되지 않는다. (피커의 크기는 아이폰 키보드의 크기와 동일하다)
 </p>
 </li>
 </ul><p class="para">
-  Use a picker to make it easy for people to choose from a set of values. 
+  피커를 이용해 사람들이 값의 세트에서 선택하는 것을 쉽게 한다. 
 </p><p class="para">
-  <strong class="inline-head">In general, use a picker when users are familiar with the entire set of values.</strong> Because many of the values are hidden when the wheel is stationary, it’s best when users can predict what the values are. If you need to provide a large set of choices that aren’t well known to your users, a picker might not be the appropriate control.
+  <strong class="inline-head">일반적으로, 사용자가 세트 값에 전체적으로 익숙한 경우 피커를 사용한다.</strong> 휠이 정지해 있을 때는 많은 값들이 숨겨져 있으므로, 사용자가 그 숨겨진 값들이 어떤 값인지 예상할 수 있으면 좋다. 사용자에게 익숙하지 않은 방대한 세트의 선택지를 제공해야 하는 경우에는, 피커가 적당한 컨트롤이 아닐 수 있다.
 </p><p class="para">
-  <strong class="inline-head">As much as possible, display a picker inline with the content.</strong> It’s best when users can avoid navigating to a different view to use a picker.
+  <strong class="inline-head">가능한, 피커를 콘텐트와 한 줄에 디스플레이 하라.</strong> 사용자가 피커를 사용하기 위해 다른 뷰로 네비게이션하지 않도록 하는 게 좋다.
 </p><p class="para">
-  <strong class="inline-head">Consider using a table view, instead of a picker, if you need to display a very large number of values.</strong> This is because the greater height of a table view makes scrolling faster.
+  <strong class="inline-head">아주 많은 양의 값을 디스플레이 해야 하는 경우, 피커 대신 테이블 뷰 사용을 고려하라.</strong> 테이블 뷰의 더 큰 높이가 스크롤을 보다 빠르게 해 주기 때문이다. 
 </p><p class="para">
   
 </p><p class="para">
@@ -718,9 +720,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW7"></a>
-  <h3 class="section-name" tabindex="0">Progress View</h3>
+  <h3 class="section-name" tabindex="0">프로그레스 뷰</h3>
   <p class="para">
-  A <strong>progress view</strong> shows the progress of a task or process that has a known duration (shown here with the Mail toolbar).
+  <strong>프로그레스 뷰</strong>는 알려진 기간을 가지는 테스크나 프로세스의 진행단계를 보여준다.(아래는 Mails 툴바에서 보인 것)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -730,33 +732,33 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a progress view in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIProgressView_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006782" target="_self">UIProgressView Class Reference</a></em>.
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIProgressView_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006782" target="_self">UIProgressView 클래스 레퍼런스</a></em>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
   
 </p><p class="para">
-  A progress view:
+  프로그레스 뷰는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Consists of a track that fills from left to right as the task or process proceeds
+  테스크나 프로세스가 진행되는 것을 왼쪽에서 오른쪽으로 채우는 트랙으로 구성되어 있다.
 </p>
 </li><li class="item"><p class="para">
-  Doesn’t allow user interaction
+  사용자 인터렉션을 허용하지 않는다.
 </p>
 </li>
 </ul><p class="para">
-  iOS defines two styles of progress view:
+  iOS는 두가지 스타일의 프로그레스 뷰를 정의한다.
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Default.</strong> The default style includes an unfilled track appearance so that it can stand alone in a content area.
+  <strong class="inline-head">디폴트.</strong> 디폴트 스타일은 앱의 메인 콘텐트 영역에 적합한 무게를 가진다.
 </p>
 <p class="para">
   <img class="inline-graphic" src="Art/progress_view_default_2x.png" alt="image: ../Art/progress_view_default_2x.png" width="223" height="31" />
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Bar.</strong> The bar style doesn’t include the unfilled track appearance because it’s intended to display with a bar, such as a navigation bar or a toolbar.
+  <strong class="inline-head">바.</strong> 바 스타일은 디폴트 스타일보다 얇아서, 툴바에 적당하게 맞춰져 있다.
 </p>
 <p class="para">
   <img class="inline-graphic" src="Art/progress_view_bar_2x.png" alt="image: ../Art/progress_view_bar_2x.png" width="223" height="31" />
@@ -765,9 +767,9 @@
 </ul><p class="para">
   
 </p><p class="para">
-  Use a progress view to give feedback on a task that has a well-defined duration, especially when it’s important to indicate approximately how long the task will take. 
+  프로그레스 뷰는 잘-정의된 기간을 가지는 테스크에 대해 피드백을 제공하기 위해, 특히 테스크가 얼마나 걸릴지를 대략 알리는 것이 중요할 때 사용한다.  
 </p><p class="para">
-  <strong class="inline-head">If appropriate, coordinate the appearance of a progress view with the style of your app.</strong> By customizing a progress view, you can specify, for example, a custom tint or image for both the track and the fill of a progress view. 
+  <strong class="inline-head">가능하다면, 프로그레스 뷰의 모양을 당신 앱의 스타일과 맞춰라.</strong> 프로그레스 뷰를 커스터마이즈 해서, 트랙과 필을 커스텀 틴트 또는 이미지로 지정할 수 있다. 
 </p><p class="para">
   
 </p>
@@ -775,9 +777,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW131"></a>
-  <h3 class="section-name" tabindex="0">Refresh Control</h3>
+  <h3 class="section-name" tabindex="0">리프레시 컨트롤</h3>
   <p class="para">
-  A <strong>refresh control</strong> performs a user-initiated content refresh—typically in a table (shown here above the mailbox list).
+  <strong>리프레시 컨트롤</strong>은 -주로 테이블 뷰에서-사용자가 시작하는 콘텐트 리프레시를 수행한다. (아래 메일박스 리스트 위에 보이는 것)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -787,47 +789,47 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a refresh control in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIRefreshControl_class/Reference/Reference.html#/apple_ref/doc/uid/TP40012250" target="_self">UIRefreshControl Class Reference</a></em>.
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIRefreshControl_class/Reference/Reference.html#/apple_ref/doc/uid/TP40012250" target="_self">UIRefreshControl 클래스 레퍼런스</a></em>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A refresh control:
+  리프레시 컨트롤은 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Looks similar to an activity indicator
+  액티비티 인디케이터와 비슷하게 보인다.
 </p>
 </li><li class="item"><p class="para">
-  Can display a title
+  타이틀을 디스플레이 할 수 있다.
 </p>
 </li><li class="item"><p class="para">
-  Is hidden by default until the user initiates a refresh action by dragging down from the top edge of a table
+  사용자가 테이블의 위쪽에서 끌어당겨서 리프레시 액션을 시작하기 전까지는 기본적으로 숨겨져 있다.
 </p>
 </li>
 </ul><p class="para">
-  Use a refresh control to give users a consistent way to tell a table or other view to update its contents immediately, without waiting for the next automatic update.
+  리프레시 컨트롤을, 사용자들에게 테이블이나 다른 뷰들이 그 콘텐트를 즉시 업데이트 하라고 말하는 일관된 방식을 제공하기 위해 사용하라. 
 </p><p class="para">
   
 </p><p class="para">
-  <strong class="inline-head">Don’t stop performing automatic content updates just because you provide a refresh control.</strong> Even though users appreciate being able to request that an update be performed <em>now</em>, they still appreciate content that refreshes itself automatically. If you rely on users to initiate all refreshes, users who are unaware of the refresh control are likely to wonder why your app displays stale data. In general, you want to give users the option to refresh contents immediately; you don’t want to make users responsible for every update.
+  <strong class="inline-head">리프레시 컨트롤을 제공했다고 해서 자동 콘텐트 업데이트 기능을 멈추지 마라.</strong> 사용자들이 <em>‘당장'</em> 업데이트를 수행하는 기능을 좋아하겠지만, 콘텐트가 자동으로 리프레시 되는 것 역시 좋아할 것이다. 모든 리프레시를 사용자에게 기대면, 리프레시 컨트롤을 알지 못하는 사용자들은 왜 당신의 앱은 정지한 데이터를 디스플레이하는지 궁금해 할 것이다. 일반적으로, 사용자들에게 즉시 콘텐트를 리프레시 하는 옵션을 주고 싶을 것이다; 모든 업데이트에 대한 책임을 사용자에게 넘기지 않을 것이다.
 </p><p class="para">
-  <strong class="inline-head">Supply a short title only if it adds value.</strong> In particular, don’t use the title to describe how to use the refresh control.
+  <strong class="inline-head">가치가 있다면 짧은 타이틀을 제공하라.</strong> 특히, 타이틀을 이용해 리프레시 컨트롤을 이용하는 방법을 설명하는 데 사용하지 말라. 
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW8"></a>
-  <h3 class="section-name" tabindex="0">Rounded Rectangle Button</h3>
+  <h3 class="section-name" tabindex="0">라운디드 렉 버튼</h3>
   <p class="para">
-  The rounded rectangle button has been deprecated in iOS 7. Instead, use the system button—that is, a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code> of type <code class="code-voice">UIButtonTypeSystem</code>. For guidelines, see <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW10" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW10">System Button</a></span>.
+  라운디드 렉 버튼은 iOS 7에서 디프리케이트 되었다, 대신 시스템 버튼 - <code class="code-voice">UIButtonTypeSystem</code>타입의 <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code>을 사용하라. 가이드라인은 <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW10" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW10">System Button</a></span>을 보라.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW27"></a>
-  <h3 class="section-name" tabindex="0">Segmented Control</h3>
+  <h3 class="section-name" tabindex="0">세그먼티드 컨트롤</h3>
   <p class="para">
-  A <strong>segmented control</strong> is a linear set of segments, each of which functions as a button that can display a different view.
+  <strong>세그먼티드 컨트롤</strong> 다른 뷰를 디스플레이 할 수 있는 기능을 가지는 버튼 역할을 하는 세그먼트들의 직선적인 세트이다. 
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -837,30 +839,31 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a segmented control in your code, see <a href="../UIKitUICatalog/UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl" target="_self">“Segmented Controls”</a>.
+    <p class="para">세그먼티드 컨트롤을 코드로 공부하려면 <a href="../UIKitUICatalog/UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl" target="_self">“Segmented Controls”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A segmented control:
+  세그먼티드 컨트롤은 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Consists of two or more segments whose widths are proportional, based on the total number of segments
+  세그먼트의 총 갯수에 기반해서 너비가 균등한, 두 개 이상의 세그먼트로 구성.
 </p>
 </li><li class="item"><p class="para">
-  Can display text or images
+  텍스트나 이미지를 디스플레이 할 수 있다.
 </p>
 </li>
 </ul><p class="para">
-  Use a segmented control to offer choices that are closely related but mutually exclusive. 
+  세그먼티드 컨트롤을 이용해 매우 연관성이 있지만 상호 배타적인 것에 대한 선택사항을 제안하기 위해 사용하라.. 
 </p><p class="para">
-  <strong class="inline-head">Make sure that each segment is easy to tap.</strong> To maintain a comfortable hit region of 44 x 44 points for each segment, limit the number of segments. On iPhone, a segmented control should have five or fewer segments. 
+  <strong class="inline-head">각각의 세그먼트들이 탭 하기 쉬워야 한다.</strong> 각각의 세그먼트에 대해 44 X 44 포인트의 편안한 힛트 영역을 유지기 위해서, 세그먼트의 갯수를 제한하라. 아이폰에서, 세그먼티드 컨트롤은 다섯개 이하의 세그먼트를 가져야 한다.
 </p><p class="para">
-  <strong class="inline-head">As much as possible, make the size of each segment’s contents consistent.</strong> Because all segments in a segmented control have equal width, it doesn’t look good if the content fills some segments, but not others.
+  <strong class="inline-head">가능한한, 각 세그먼트의 콘텐트 사이즈를 일관되게 하라. </strong> 세그먼티드 컨트롤의 모든 세그먼트들은 동일한 너비를 가진다. 콘텐트가 어떤 세그먼트는 꽉 채우고 다른 것은 그렇지 않다면 좋아보이지 않는다. 
 </p><p class="para">
-  <strong class="inline-head">Avoid mixing text and images in a single segmented control.</strong> A segmented control can contain text or images. An individual segment can contain either text or an image, but not both. In general, it’s best to avoid putting text in some segments and images in other segments of a single segmented control.
+  <strong class="inline-head">하나의 세그먼티드 콘트롤에 텍스트와 이미지를 섞어 넣지 마라. </strong> 세그먼티드 컨트롤은 텍스트나 이미지를 가질 수 있다. 개별 세그먼트는 텍스트 또는 이미지를 가질 수 있지만 둘 다 가져서는 안된다. 일반적으로, 하나의 세그먼티드 컨트롤에서 어떤 세그먼트에는 텍스트를 넣고, 다른 세그먼트에는 이미지를 넣는 것을 삼가라.
+
 </p><p class="para">
-  <strong class="inline-head">If necessary, adjust the positioning of content in a customized segmented control.</strong> If you customize the background appearance of a segmented control, make sure that the automatic centering of the control’s content still looks good. Use the bar metrics APIs to adjust the positioning of the content inside a segmented control (to learn more about specifying bar metrics, see the appearance-customization APIs described in <a href="../../../UIKit/Reference/UISegmentedControl_Class/Reference/UISegmentedControl.html#/apple_ref/doc/uid/TP40006807-CH3" target="_self">UISegmentedControl</a>).
+  <strong class="inline-head">필요하다면, 커스터마이즈한 세그먼티드 컨트롤에서 콘텐트의 위치를 조정하라. </strong> 만약 세그먼티드 컨트롤의 배경을 커스터마이즈 했다면, 컨트롤의 콘텐트는 자동으로 중앙정렬하는 것이 여전히 보기에 좋다. 바 메트릭스 API를 이용해 세그먼티드 컨트롤 내부의 콘텐트 위치잡기를 하라. <a href="../../../UIKit/Reference/UISegmentedControl_Class/Reference/UISegmentedControl.html#/apple_ref/doc/uid/TP40006807-CH3" target="_self">UISegmentedControl</a>에 설명되어 있는 모양-커스터마이즈 API를 보라).
 </p><p class="para">
   
 </p>
@@ -868,9 +871,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW57"></a>
-  <h3 class="section-name" tabindex="0">Slider</h3>
+  <h3 class="section-name" tabindex="0">슬라이더</h3>
   <p class="para">
-  A <strong>slider</strong> allows users to make adjustments to a value or process throughout a range of allowed values (shown here with custom images on the left and the right). 
+  <strong>슬라이더</strong> 슬라이더는 허가된 값 범위안에서 사용자가 특정한 값으로 조정을 하거나 처리할 수 있도록 한다. (아래 그림은 좌우에 커스텀 이미지가 있는 것 )
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -880,43 +883,44 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a slider in your code, see <a href="../UIKitUICatalog/UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider" target="_self">“Sliders”</a>.
+    <p class="para"><a href="../UIKitUICatalog/UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider" target="_self">“Sliders”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A slider:
+  슬라이더는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Consists of a horizontal track and a thumb (a circular control that users can slide)
+  수평 트랙과 썸(사용자가 컨트롤할 수 있는 원형 컨트롤)으로 구성.
 </p>
 </li><li class="item"><p class="para">
-  Can include optional images that convey the meaning of the right and left values
+  좌우에 의미를 전달할 수 있는 부가적인 이미지를 포함할 수 있음.
 </p>
 </li><li class="item"><p class="para">
-  Fills the portion of the track between the minimum value (typically on the left) and the thumb
+  최소값과 썸 사이의 트랙 영역을 채움
 </p>
 </li>
 </ul><p class="para">
-  Use a slider to give users fine-grained control over values they can choose or over the operation of the current process.
+  슬라이더를 사용자가 선택 가능한 범위 내에서 값을 미세하게 조정하거나 현재 프로세스의 동작을 선택할 수 있도록 한다.
 </p><p class="para">
-  <strong class="inline-head">If it adds value, create custom appearances for a slider.</strong> For example, you can:
+  <strong class="inline-head">가치가 있다면, 슬라이더의 커스텀 모양을 만들어라.</strong> 예를 들어, :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Define the appearance of the thumb, so that users can see at a glance whether the slider is active
+  썸의 모양을 정의해서, 사용자들이 그 슬라이더가 동작중인지 한 눈에 흘낏 볼 수 있도록 한다.
 </p>
 </li><li class="item"><p class="para">
-  Supply images to appear at both ends of the slider to help users understand what the slider does
+  슬라이더의 양쪽 끝에 이미지를 제공해서 그 슬라이더가 뭘 하는 건지 이해할 수 있도록 한다.
 </p>
 <p class="para">
-  Typically, these custom images correspond to the minimum and maximum values of the value range that the slider controls. A slider that controls image size, for example, could display a very small image at the minimum end and a very large image at the maximum end.
+  전형적으로, 커스텀 이미지들은 슬라이더가 컨트롤하는 값 범위의 최소와 최대값에 해당한다. 예를 들어, 이미지 크기를 제어하는 슬라이더의 경우, 최소쪽 끝에 아주 작은 이미지를, 아주 큰 이미지를 최대쪽 끝에 디스플레이 한다.
 </p>
 </li><li class="item"><p class="para">
-  Define a different appearance for the track, depending on which side of the thumb it is on and which state the control is in
+  어떤 쪽의 썸인지와 어떤 상태의 컨트롤이 있는지에 따라, 트랙에 대해 다른 모양을 정의하라.
 </p>
 </li>
 </ul><p class="para">
-  <strong class="inline-head">Don’t use a slider to display a volume control.</strong> If you need to display a volume slider, use the system provided volume slider available when you use the <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> class. Note that when the currently active audio output device doesn’t support volume control, the volume slider is replaced by the appropriate device name.
+  <strong class="inline-head">슬라이더를 이용해 볼륨 컨트롤을 디스플레이 하지 말라.</strong> 음량 슬라이더를 디스플레이 해야 할 필요가 있다면, <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> 클래스를 이용하면 사용가능한, 시스템이 제공하는 볼륨 슬라이더를 사용하라. 현재 액티브한 오디오 아웃풋 디바이스가 볼륨 컨트롤을 지원하지 않는다면, 볼륨 슬라이더는 적당한 장치 이름으로 대체될 것이다.
+
 </p><p class="para">
   
 </p>
@@ -924,9 +928,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW116"></a>
-  <h3 class="section-name" tabindex="0">Stepper</h3>
+  <h3 class="section-name" tabindex="0">스테퍼</h3>
   <p class="para">
-  A <strong>stepper</strong> increases or decreases a value by a constant amount.
+  <strong>스테퍼</strong>는 일정량 만큼 값을 늘리거나 줄인다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -936,37 +940,37 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a stepper in your code, see <a href="../UIKitUICatalog/UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper" target="_self">“Steppers”</a>.
+    <p class="para"><a href="../UIKitUICatalog/UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper" target="_self">“Steppers”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A stepper:
+  스테퍼는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Is a two-segment control in which one segment displays a plus symbol and the other segment displays a minus symbol by default
+  두 세그먼트를 가지는 컨트롤이다. 하나의 세그먼트는 더하기 심볼을, 다른 세그먼트는 빼기 심볼을 기본적으로 표시하고 있다.
 </p>
 </li><li class="item"><p class="para">
-  Supports custom images
+  커스텀 이미지를 지원한다.
 </p>
 </li><li class="item"><p class="para">
-  Doesn’t display the value that the user changes
+  사용자가 바꾸는 값을 디스플레이 하지는 않는다.
 </p>
 </li>
 </ul><p class="para">
-  Use a stepper when users might need to make small adjustments to a value. 
+  사용자가 조그만 값 조정을 해야 하는 경우, 스테퍼를 사용하라.
 </p><p class="para">
-  <strong class="inline-head">Avoid using a stepper when users are likely to make large changes to a value.</strong> It makes sense to use a stepper to set the number of copies in the Printer Options action sheet, because users rarely change this value by very much. On the other hand, it wouldn’t make sense to use a stepper to help users choose a page range, because even a reasonable page range would require a lot of taps.
+  <strong class="inline-head">사용자가 값에 큰 변경을 할 것 같으면 스테퍼 사용을 하지 마라.</strong> 스테퍼를 사용해 프린터 옵션 액션 시트에서 사본의 수를 설정하는 것은 의미가 통한다 왜냐하면, 사용자가 이 값을 크게 바꾸는 경우는 거의 없기 때문이다. 그 반면에, 페이지 범위 선택에 스테퍼를 사용하는 것은 의미적으로 맞지 않다.왜냐하면 합리적인 페이지 범위인 경우에도 많은 탭을 필요로 하기 때문이다.
 </p><p class="para">
-  <strong class="inline-head">Make it obvious which value the stepper affects.</strong> A stepper doesn’t display any values, so you need to make sure that users know which value they’re changing when they use a stepper.
+  <strong class="inline-head">스테퍼가 영향을 미치는 값을 명백하게 지정하라.</strong> 스테퍼는 값을 표시하지 않기 때문에, 사용자가 스테퍼를 사용해 어떤 값을 변경시키는지를 확실하게 할 필요가 있다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW14"></a>
-  <h3 class="section-name" tabindex="0">Switch</h3>
+  <h3 class="section-name" tabindex="0">스위치</h3>
   <p class="para">
-  A <strong>switch</strong> presents two mutually exclusive choices or states.
+  <strong>스위치</strong>는 두 개의 상호 배타적인 선택 또는 상태를 나타낸다.
 </p><section class="rec-container">
 	<div class="blurb">
 		
@@ -985,24 +989,24 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a switch in your code, see <a href="../UIKitUICatalog/UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch" target="_self">“Switches”</a>.
+    <p class="para"><a href="../UIKitUICatalog/UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch" target="_self">“Switches”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A switch:
+  스위치는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Indicates the binary state of an item
+  아이템의 이진 상태를 나타낸다.
 </p>
 </li><li class="item"><p class="para">
-  Is used in table views only
+  테이블 뷰에서만 사용된다.
 </p>
 </li>
 </ul><p class="para">
-  Use a switch in a table row to give users a way to specify one of two options, such as yes/no or on/off, that govern the state of an item.
+  테이블 로우에서 스위치를 이용해 사용자들에게, 아이템의 상태를 관리하는 yes/no 또는 on/off 같은 두 선택지 중 하나를 지정할 수 있는 방법을 제공한다.
 </p><p class="para">
-  You can use a switch control to change the state of other UI elements in the view. Depending on the choice users make, new list items might appear or disappear, or list items might become active or inactive.
+  <strong>테이블 로우에서 스위치를 이용해 사용자들에게, 아이템의 상태를 관리하는 yes/no 또는 on/off 같은 두 선택지 중 하나를 지정할 수 있는 방법을 제공한다.</strong> 사용자가 만드는 선택에 따라, 새로운 리스트 아이템이 나타나거나 사라지고, 리스트 아이템이 액티브/인액티브가 된다.
 </p><p class="para">
   
 </p>
@@ -1010,9 +1014,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW10"></a>
-  <h3 class="section-name" tabindex="0">System Button</h3>
+  <h3 class="section-name" tabindex="0">시스템 버튼</h3>
   <p class="para">
-  A system button performs an app-specific action.
+  시스템 버튼은 앱-지정 액션을 수행한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -1024,37 +1028,37 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">In iOS 7, <code class="code-voice">UIButtonTypeRoundedRect</code> has been redefined as <code class="code-voice">UIButtonTypeSystem</code>. An app that uses a rounded rectangle button in iOS 6 automatically gets the system button appearance when it links against iOS 7.
-    </p>
-    <p class="para">
-  To learn more about defining a system button in your code, see <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>.
+    <p class="para">iOS 7에서, <code class="code-voice">UIButtonTypeRoundedRect</code>이 <code class="code-voice">UIButtonTypeSystem</code>으로 재정의 되었다.  iOS 6에서 라운디드 렉 버튼을 사용하는 앱들은 iOS 7에 링크되었을 때 자동적으로 시스템 버튼 모양을 가지게 된다. </p>
+    <p class="para">자세한 정보는 <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
 </p>
+
 
   </aside>
 </div><p class="para">
-  A system button:
+  시스템 버튼은  :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Has no border or background appearance by default
+  기본적으로 백그라운드나 경계선을 가지고 있지 않다.
 </p>
 </li><li class="item"><p class="para">
-  Can contain an icon or a text title
+  아이콘이나 텍스트 타이틀을 가질 수 있다.
 </p>
 </li><li class="item"><p class="para">
-  Supports custom decoration, such as a border or background image (to add a custom appearance, use a button of type <code class="code-voice">UIButtonTypeCustom</code> and supply a custom background image)
+  경계선이나 백그라운드 이미지 같은 커스텀 장식을 지원한다. ( 커스텀 모양을 더하려면, <code class="code-voice">UIButtonTypeCustom</code> 타입의 버튼을 이용하고 커스텀 백그라운드 이미지를 제공하라 )
+
 </p>
 </li>
 </ul><p class="para">
-  Use a system button to initiate an action. When you supply a title for a system button, follow this approach:
+  액션을 시작하기 위해 시스템 버튼을 사용하라. 시스템 버튼의 제목을 제공할 때, 다음을 따르라 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong class="inline-head">Use a verb or verb phrase to describe the action the button performs.</strong> An action-specific title shows users that the button is interactive and tells them what will happen when they tap it.
+  <strong class="inline-head">동사나 동사구를 이용해 그 버튼이 수행하는 액션을 묘사하라.</strong> 액션-지정 제목은 버튼이 인터렉티브하묘 그것을 탭 했을 때 어떤 일이 일어날지에 대해 설명한다.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Use title-style capitalization.</strong> Capitalize every word except articles, coordinating conjunctions, and prepositions of four or fewer letters.
+  <strong class="inline-head">제목 스타일의 대문자를 사용하라.</strong> 관사(articles), 등위 접속사, 네 글자 이하의 전치사를 제외한 모든 단어를 대문자화하라.
 </p>
 </li><li class="item"><p class="para">
-  <strong class="inline-head">Avoid creating a title that is too long.</strong> Overly long text gets truncated, which can make it difficult for users to understand it.
+  <strong class="inline-head">타이틀을 너무 길게 만들지 마라.</strong> 지나치게 긴 텍스트는 잘리기 때문에, 사용자들이 이해하기가 어렵다.
 </p>
 </li>
 </ul><p class="para">
@@ -1065,9 +1069,9 @@
   </div>
   <div class="right-column">
     <p class="para">
-  <strong class="inline-head">If appropriate, add a border or background appearance to a system button in a content region.</strong> Most of the time, you can avoid adding ornamentation to a button by crafting a clear call-to-action title, defining a tint, and providing contextual clues. In some content areas, however, it can be appropriate to focus attention on a button by adding a border or background appearance.
+  <strong class="inline-head">가능하다면, 콘텐트 영역에 있는 시스템 버튼에는 외곽선이나 백그라운드를 더하라.</strong> 대부분의 시간동안, 명백한 행동개시(call-to-action) 타이틀을 다듬고, 틴트를 정의하고, 컨텍스추얼 단서들을 제공함으로서 버튼에 장식을 더하는 것을 지양할 수 있었다. 그러나, 어떤 콘텐트 영역에서는 버튼에 초점을 맞추기 위해 외곽선이나 백그라운드가 있는 외형을 만드는 게 적당할 수 있다.
 </p><p class="para">
-  In Phone, for example, the bordered number keys reinforce the mental model of making a call and the background of the Call button gives users an eye-catching target that’s easy to hit.
+  대부분의 시간동안, 명백한 행동개시(call-to-action) 타이틀을 다듬고, 틴트를 정의하고, 컨텍스추얼 단서들을 제공함으로서 버튼에 장식을 더하는 것을 지양할 수 있었다. 그러나, 어떤 콘텐트 영역에서는 버튼에 초점을 맞추기 위해 외곽선이나 백그라운드가 있는 외형을 만드는 게 적당할 수 있다.
 </p>
   </div>
 </div><p class="para">
@@ -1077,9 +1081,9 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH15-SW9"></a>
-  <h3 class="section-name" tabindex="0">Text Field</h3>
+  <h3 class="section-name" tabindex="0">텍스트 필드</h3>
   <p class="para">
-  A <strong>text field</strong> accepts a single line of user input (shown here with a purpose description and placeholder text). 
+  <strong>텍스트 필드</strong>는 한 줄의 사용자 입력을 받아들인다 (아래에는 목적을 설명한 플레이스 홀더 텍스트가 있는 것)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -1089,36 +1093,38 @@
   <aside class="aside">
     <p class="aside-title">API Note
     </p>
-    <p class="para">To learn more about defining a text field and customizing it to display images and buttons, see <a href="../UIKitUICatalog/UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField" target="_self">“Text Fields”</a>.
+    <p class="para"><a href="../UIKitUICatalog/UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField" target="_self">“Text Fields”</a>를 보라.
     </p>
     
   </aside>
 </div><p class="para">
-  A text field:
+  텍스트 필드는 :
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  Is a fixed-height field with rounded corners
+  고정 높이를 가지며 모서리가 둥글다
 </p>
 </li><li class="item"><p class="para">
-  Automatically displays a keyboard when users tap within it
+  사용자가 탭하면 자동적으로 키보드를 디스플레이 한다
 </p>
 </li><li class="item"><p class="para">
-  Can include system provided buttons, such as the Bookmarks button
+  북 마크 버튼 같은 시스템 제공 버튼을 포함할 수 있다
 </p>
 </li><li class="item"><p class="para">
-  Can display text that uses multiple styles (to learn more about this, see <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextView_Class/Reference/UITextView.html#/apple_ref/occ/cl/UITextView">UITextView</a></code>)
+  다중 스타일을 이용하는 텍스트를 디스플레이 할 수 있다 (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextView_Class/Reference/UITextView.html#/apple_ref/occ/cl/UITextView">UITextView</a></code>를 보라) 
 </p>
 </li>
 </ul><p class="para">
-  Use a text field to get a small amount of information from the user. 
+  텍스트 필드는 사용자에게 적은 량의 정보를 얻을 때 이용하라.
 </p><p class="para">
-  <strong class="inline-head">Customize a text field if it helps users understand how they should use it.</strong> For example, you can display custom images in the left or right sides of the text field, or you can add a system-provided button, such as the Bookmarks button. In general, you should use the left end of a text field to indicate its purpose and the right end to indicate the presence of additional features, such as bookmarks.
+  <strong class="inline-head">사용자들이 그것을 사용하는 법을 이해하는 데 도움이 된다면 텍스트 필드를 커스터마이즈 하라.</strong> 예를 들어, 텍스트 필드의 왼쪽 또는 오른쪽에 커스텀 이미지를 디스플레이 하거나 북마크 버튼 같은 시스템 제공 버튼을 더할 수 있다. 일반적으로, 텍스트 필드의 왼쪽 끝에 그 목적을 나타내고, 오른쪽 끝에 북 마크 같은 부가적인 기능의 존재를 나타낸다.
 </p><p class="para">
-  <strong class="inline-head">Display the Clear button in the right end of a text field when appropriate.</strong> When this element is present, tapping it clears the contents of the text field, regardless of any other image you might display over it.
+  <strong class="inline-head">적당하다면 텍스트 필드의 오른쪽 끝에 Clear 버튼을 디스플레이 하라.</strong> 이 요소가 있다면, 이걸 탭하면, 그 위에 어떤 이미지를 디스플레이 하든 상관없이, 텍스트 필드의 콘텐트를 지운다.
 </p><p class="para">
-  <strong class="inline-head">Display a hint in the text field if it helps users understand its purpose.</strong> A text field can display placeholder text—such as Name (or Address)—when there is no other text in the field.
+  <strong class="inline-head">그 목적을 이해하는 데 도움이 된다면, 텍스트 필드에 힌트를 디스플레이 하라. </strong> 텍스트 필드는 다른 텍스트가 필드에 없을 때, Name 또는 Address 같은 플레이스홀더를 디스플레이 할 수 있다.
 </p><p class="para">
-  <strong class="inline-head">Specify a keyboard type that’s appropriate for the type of content you expect users to enter.</strong> For example, you might want to make it easy for users to enter a URL, a PIN, or a phone number. iOS provides several different keyboard types, each designed to facilitate a different type of input. To learn about the keyboard types that are available, see <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html#/apple_ref/c/tdef/UIKeyboardType">UIKeyboardType</a></code> in <em class="u-book"><a href="../../../UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html#/apple_ref/doc/uid/TP40006896" target="_self">UITextInputTraits Protocol Reference</a></em>. To learn more about managing the keyboard in your app, read <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#/apple_ref/doc/uid/TP40009542-CH5" target="_self">“Managing the Keyboard”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>. Note that you have no control over the keyboard’s input method and layout, because these attributes are determined by the user’s language settings.
+  <strong class="inline-head">사용자들이 입력할 것으로 예상되는 콘텐트의 타입에 따라 맞추기 위해 다른 키보드 타입을 지정하라.</strong> 예를  들어, 사용자들이 URL, PIN, 전화번호를 쉽게 입력하도록 만들고 싶을 수 있다. 그러나 Note는 사용자의 언어 설정에 따라 결정될 뿐, 입력 메소드와 레이아웃을 제어하지 않는다.
+</p><p class="para">
+  iOS는 몇 종류의 키보드 타입을 가지고 있는데, 각각은 서로 다른 입력을 위해 디자인 되어 있다. 사용가능한 키보드 타입에 대해 공부하고 싶으면, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html#/apple_ref/c/tdef/UIKeyboardType">UIKeyboardType</a></code> 문서를 보라. 앱에서 키보드를 관리하는 법을 배우려면 <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>의 <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#/apple_ref/doc/uid/TP40009542-CH5" target="_self">“Managing the Keyboard”</a>를 읽으라. 
 </p><p class="para">
   
 </p>

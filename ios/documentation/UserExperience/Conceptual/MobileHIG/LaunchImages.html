@@ -217,53 +217,53 @@
   
   	<section class="section">
   		<p class="para">
-  A launch image is a simple placeholder image that iOS displays when your app starts up. The launch image gives users the impression that your app is fast and responsive because it appears instantly and is quickly replaced by the first screen of your app.
+  런치 이미지는 당신의 앱이 시작할 때 iOS가 디스플레이 하는 단순한 플레이스 홀더 이미지이다. 런치 이미지는 사용자에게 당신의 앱이 엄청 빠르고 방응성이 좋다는 인상을 준다. 왜냐면 이 이미지는 즉각적으로 보이고 곧 앱의 첫 화면으로 대체되기 때문이다.
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH22-SW21"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">You must provide at least one launch image. Typically, an iPhone app includes at least one launch image in portrait orientation; an iPad app includes at least one launch image in portrait orientation and at least one launch image in landscape orientation.
+    <p class="para">적어도 하나의 런치 이미지를 제공해야 한다. 전형적으로, 아이폰 앱은 최소한 portrait 방향으로 하나의 런치 이미지를 가지며, 아이패드 앱은 portrait 방향으로 최소한 하나의 런치 이미지를, 그리고 landscape 방향으로 하나의 런치 이미지를 가진다.
     </p>
     
   </aside>
 </div>
 <p class="para">
-  Because iOS lets you supply different launch images for different uses, you give each image a name that specifies how it should be used. The format of the launch image filename includes modifiers you use to specify the device, resolution, and orientation of the image. To learn how to name launch images appropriately, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW12" target="_self">“App Launch (Default) Images”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="_self">iOS App Programming Guide</a></em>.
+  iOS가 용도에 따라 다른 이미지를 공급할 수 있도록 하기 때문에, 각각의 이미지에 어떻게 사용되는지를 지정하는 이름을 붙여라. 런치 이미지의 파일이름은 이미지의 장치, 해상도, 방향을 지정할 수 있는 수정자를 포함시켜라. 이름 붙이는 법에 대해 자세히 알고 싶으면, <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="_self">iOS App Programming Guide</a></em>의 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW12" target="_self">“App Launch (Default) Images”</a>를 보라.
 </p>
 <p class="para">
-  <strong class="inline-head">Supply a plain launch image that improves the user experience.</strong> In particular, the launch image isn’t an opportunity to provide:
+  <strong class="inline-head">사용자의 경험을 개선시킬 수 있는 보통의 런치 이미지를 제공하라. </strong> 특히, 런치 이미지는 다음과 같은 기회가 아니다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  An “app entry experience,” such as a splash screen
+  스플래시 화면과 같은 “앱 입장 경험”
 </p>
 </li><li class="item"><p class="para">
-  An About window
+  앱 정보 윈도우
 </p>
 </li><li class="item"><p class="para">
-  Branding elements, unless they are a static part of your app’s first screen
+  앱의 첫화면의 스태틱한 파트를 가지지 않는 브랜딩 요소.
 </p>
 </li>
 </ul>
 <p class="para">
-  Because users are likely to switch among apps frequently, you should make every effort to cut launch time to a minimum, and you should design a launch image that downplays the experience rather than drawing attention to it.
+  사용자들은 앱 간에 빠르게 스위치 할 수 있기를 원하기 때문에, 런치 시간을 최소화하는 데 모든 노력을 기울여야 하며, 런치 이미지로 사용자의 주의를 끄는 방향이 아니라 중요시 하지 않는 방향으로 디자인 해야 한다.
 </p>
 <p class="para">
-  <strong class="inline-head">Design a launch image that is identical to the first screen of the app,</strong> except for:
+  <strong class="inline-head">런치 이미지를 앱의 첫 화면과 동일하게 디자인 하라. </strong> 다음을 제외하고 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  <strong>Text.</strong> The launch image is static, so any text you display in it won’t be localized.
+  <strong>텍스트.</strong> 런치 이미지는 고정이기 때문에, 여기에 디스플레이하는 모든 텍스트는 로컬라이즈 되지 않는다.
 </p>
 </li><li class="item"><p class="para">
-  <strong>UI elements that might change.</strong> If you include elements that might look different when the app finishes launching, users can experience an unpleasant flash between the launch image and the first app screen.
+  <strong>변경될 수 있는 UI 요소들.</strong> 앱이 시동을 마쳤을 때 다르게 보일 수 있는 요소들을 포함하면, 사용자들은 런치 이미지와 앱의 첫 화면 사이에 즐겁지 않은 깜빡임을 경험하게 된다.
 </p>
 </li>
 </ul>
 <p class="para">
-  If you think that following these guidelines will result in a plain, boring launch image, you’re right. Remember, the launch image doesn’t provide you with an opportunity for artistic expression. It’s solely intended to enhance the user’s perception of your app as quick to launch and immediately ready for use. For example, Settings and Weather each supply a launch image that is little more than a static background image.
+  이 가이드라인을 따르는 게 평범하고 지루한 런치 이미지를 만들게 생각한다면, 맞다. 런치 이미지가 예술적인 표현의 기회를 제공하는 게 아니라는 것을 기억하라. 이것은 당신의 앱이 매우 빠르게 런치되고 즉각적으로 사용을 준비한다는 사용자의 인식을 개선하기 위한 의도로만 사용된다. 예를 들어, Settings 와 Weather는 각각 고정 백그라운드 이미지에 조금을 더한 이미지를 런치 이미지로 사용한다.
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -282,50 +282,50 @@
   
 </p>
 <p class="para">
-  <strong class="inline-head">Create launch images in different sizes for different devices.</strong> Launch images for all devices must include the status bar region. Create launch images in the following sizes:
+  <strong class="inline-head">런치 이미지를 장치별로 다른 크기로 만들어라. </strong> 모든 장치를 위한 런치 이미지는 스테이터스 바 영역을 가지고 있어야 한다. 다음 크기의 런치 이미지를 만들어라.
 </p>
 <p class="para">
-  For iPhone 5 and iPod touch (5th generation):
+  아이폰 5와 아이팟 터치 (5세대) :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  640 x 1136 pixels
+  640 x 1136 픽셀
 </p>
 </li>
 </ul>
 <p class="para">
-  For other iPhone and iPod touch devices:
+  다른 아이폰과 아이팟 터치 장치들 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  640 x 960 pixels
+  640 x 960 픽셀
 </p>
 </li><li class="item"><p class="para">
-  320 x 480 pixels (standard resolution)
+  320 x 480 픽셀 (표준 해상도)
 </p>
 </li>
 </ul>
 <p class="para">
-  For iPad portrait:
+  아이패드 portrait :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  1536 x 2048 pixels
+  1536 x 2048 픽셀
 </p>
 </li><li class="item"><p class="para">
-  768 x 1024 pixels (standard resolution)
+  768 x 1024 픽셀 (표준 해상도)
 </p>
 </li>
 </ul>
 <p class="para">
-  For iPad landscape:
+  아이패드 landscape :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  2048 x 1536 pixels
+  2048 x 1536 픽셀
 </p>
 </li><li class="item"><p class="para">
-  1024 x 768 pixels (standard resolution)
+  1024 x 768 픽셀 (표준 해상도)
 </p>
 </li>
 </ul>

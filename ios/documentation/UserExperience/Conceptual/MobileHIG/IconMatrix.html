@@ -217,17 +217,18 @@
   
   	<section class="section">
   		<p class="para">
-  Every app needs an app icon and a launch image. In addition, some apps need custom icons to represent app-specific content, functions, or modes in navigation bars, toolbars, and tab bars.
+  모든 앱은 앱 아이콘과 런치 이미지를 필요로 한다. 추가적으로, 어떤 앱들은 앱-특정 콘텐트, 기능 또는 네비게이션 바, 툴바, 탭 바의 모드를 나타내기 위해 커스텀 아이콘을 필요로 한다.
 </p>
 <p class="para">
-  Unlike other custom artwork in your app, the icons and images listed in <span class="x-name-no-link">Table 39-1</span> must meet specific criteria so that iOS can display them properly. In addition, some icon and image files have naming requirements (to learn about naming these files, see <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW1" target="_self">“App Icons”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em> and <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW12" target="_self">“App Launch (Default) Images”</a> in <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>).
+  앱의 다른 아트워크와 달리, <span class="x-name-no-link">표 39-1</span> 에 나열된 아이콘과 이미지들은 iOS가 적절히 디스플레이 하기 위한 특정 규범을 만족시킨다. 추가적으로, 어떤 아이콘과 이미지 파일들은 이름 지을 때 요구사항이 있다 (자세한 사항은 <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>에 있는 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW1" target="_self">“App Icons”</a>과 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW12" target="_self">“App Launch (Default) Images”</a>를 보라.)
+ 
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH27-SW3"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">If you need to support standard-resolution iPhone or iPod touch devices, divide by 2 the high-resolution sizes listed below.
+    <p class="para">만약 표준 해상도의 아이폰 또는 아이팟 터치 장치를 지원할 필요가 있다면, 아래 나열된 고 해상도 사이즈를 2로 나누어라.
     </p>
     
   </aside>
@@ -235,30 +236,30 @@
 <div class="tableholder">
   <a name="//apple_ref/doc/uid/TP40006556-CH27-SW2"></a>
   <table class="graybox" border="0" cellspacing="0" cellpadding="5">
-    <caption class="tablecaption"><strong class="caption-number">Table 39-1</strong>Size (in pixels) of custom icons and images</caption>
+    <caption class="tablecaption"><strong class="caption-number">테이블 39-1</strong>커스텀 아이콘과 이미지들의 사이즈 (픽셀 단위)</caption>
     <thead>
         <tr>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Description
+  설명
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Size for iPhone 5 and iPod touch (high resolution)
+  iPhone 5와 iPod 터치를 위한 크기 (고 해상도)
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Size for iPhone and iPod touch (high resolution)
+  아이폰과 아이팟 터치 (고해상도)
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Size for iPad and iPad mini (high resolution)
+  iPad와 iPad mini(고해상도)
 </p></th>
             <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
-  Size for iPad 2 and iPad mini (standard resolution)
+  iPad 2와 iPad mini (표준 해상도)
 </p></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td scope="row"><p class="para">
-  App icon (<strong>required</strong> for all apps)
+  앱 아이콘 (모든 앱에 <strong>요구됨</strong>)
 </p></td>
             <td><p class="para">
   120 x 120
@@ -275,7 +276,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  App icon for the App Store (<strong>required</strong> for all apps)
+  앱 스토어용 앱 아이콘 (모든 앱에 <strong>요구됨</strong>)
 </p></td>
             <td><p class="para">
   1024 x 1024
@@ -292,7 +293,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Launch image (<strong>required</strong> for all apps)
+  런치 이미지 (모든 앱에 <strong>요구됨</strong>)
 </p></td>
             <td><p class="para">
   640 x 1136
@@ -313,7 +314,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Spotlight search results icon (recommended)
+  스팟라이트 검색 결과 아이콘 (권장)
 </p></td>
             <td><p class="para">
   80 x 80
@@ -330,7 +331,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Settings icon (recommended)
+  Settings 앱 아이콘 (권장)
 </p></td>
             <td><p class="para">
   58 x 58
@@ -347,7 +348,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Toolbar and navigation bar icon (optional)
+  툴바와 네비게이션 바 아이콘 (선택)
 </p></td>
             <td><p class="para">
   About 44 x 44
@@ -364,7 +365,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Tab bar icon (optional)
+  탭 바 아이콘 (선택)
 </p></td>
             <td><p class="para">
   About 50 x 50 (maximum: 96 x 64)
@@ -381,7 +382,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Default Newsstand cover icon for the App Store (<strong>required</strong> for Newsstand apps)
+  앱 스토어용 기본 뉴스스탠드 표지 아이콘 (뉴스스탠드 앱에 요구됨)
 </p></td>
             <td><p class="para">
   At least 1024 pixels on the longest edge
@@ -398,7 +399,7 @@
         </tr>
         <tr>
             <td scope="row"><p class="para">
-  Web clip icon (recommended for web apps and websites)
+  웹 클립 아이콘 (웹 앱이나 웹 사이트에 권장)
 </p></td>
             <td><p class="para">
   120 x 120
@@ -417,13 +418,13 @@
   </table>
 </div>
 <p class="para">
-  For all images and icons, the PNG format is recommended. You should avoid using interlaced PNGs.
+  모든 이미지와 아이콘에 있어서, PNG 포맷이 권장된다. 인터레이스된 PNG를 사용하지 않도록 한다.
 </p>
 <p class="para">
-  The standard bit depth for icons and images is 24 bits—that is, 8 bits each for red, green, and blue—plus an 8-bit alpha channel.
+  아이콘과 이미지에 대한 표준 비트 심도는 24비트이며 - 즉 , 빨강, 녹색, 파랑에 대해 8비트를 가진다- 8 비트의 알파 채널이 더해진다.
 </p>
 <p class="para">
-  You don’t need to constrain your palette to web-safe colors. 
+  팔레트를 웹-안전 컬러로 제한할 필요는 없다. 
 </p>
 
 		</section> 

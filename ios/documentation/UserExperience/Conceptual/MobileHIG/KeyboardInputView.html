@@ -217,23 +217,24 @@
   
   	<section class="section">
   		<p class="para">
-  If appropriate, you can design a custom input view to replace the system-provided onscreen keyboard.
+  적당하다면, 시스템이 제공하는 화면상의 키보드를 대체할 커스텀 입력 뷰를 디자인 할 수 있다.
 </p>
 <p class="para">
-  If you provide a custom input view, be sure its function is obvious to people.
+  커스텀 입력 뷰를 제공한다면, 그 기능이 사람들에게 명백하도록 하라.
 </p>
 <p class="para">
-  You can also provide a custom input accessory view, which is a separate view that appears above the keyboard (or your custom input view). 
+  또한 키보드의 위쪽(또는 당신의 커스텀 입력 뷰)에 나타나는 분리된 뷰인, 커스텀 입력 액세서리 뷰를 제공할 수 있다.
 </p>
 <p class="para">
-  Use the standard keyboard click sound to provide audible feedback when people tap the custom controls in your input view. To learn how to enable this sound in your code, see the documentation for <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIDevice_Class/Reference/UIDevice.html#/apple_ref/occ/instm/UIDevice/playInputClick">playInputClick</a></code> in <em class="u-book"><a href="../../../UIKit/Reference/UIDevice_Class/Reference/UIDevice.html#/apple_ref/doc/uid/TP40006902" target="_self">UIDevice Class Reference</a></em>.
+  사람들이 당신의 입력 뷰안에 있는 커스텀 컨트롤을 탭할 때 표준 키보드 클릭 사운드를 사용해서 청각적인 피드백을 제공하라. 코드로 사운드를 켜는 방법은 <em class="u-book"><a href="../../../UIKit/Reference/UIDevice_Class/Reference/UIDevice.html#/apple_ref/doc/uid/TP40006902" target="_self">UIDevice 클래스 레퍼런스</a></em>의  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIDevice_Class/Reference/UIDevice.html#/apple_ref/occ/instm/UIDevice/playInputClick">playInputClick</a>문서를 보라.</code>
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH48-SW2"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">The standard click sound is available only for custom input views that are currently onscreen. People can turn off all keyboard clicks—including ones that come from your custom input view—in Settings &gt; Sounds.
+    <p class="para">표준 클릭 사운드는 화면상에 나타난 커스텀 입력 뷰에만 사용할 수 있다. 사람들은 Settings &gt; Sounds 에서 - 당신의 커스텀 입력 뷰에서 오는 것을 포함한 - 모든 키보드 클릭을 끌 수 있다.
+
     </p>
     
   </aside>

@@ -217,29 +217,29 @@
   
   	<section class="section">
   		<p class="para">
-  You can create a resizable image to customize the background of several standard UI elements, such as popovers, buttons, navigation bars, tab bars, and toolbars (including the items on these bars). Providing resizable images for these elements can result in better app performance.
+ 팝오버, 버튼, 네비게이션 바, 탭 바 그리고 툴바같은 (그리고 그 바 위의 아이템들 포함) 몇 몇 표준 UI요소들의 배경을 커스터마이즈 하기 위해서 크기조정가능한 이미지를 만든다. 이 요소들을 위해 크기조정가능한 이미지를 제공하는 것은 앱의 퍼포먼스를 좋게 하는 결과를 낳는다.
 </p>
 <p class="para">
-  For many UI elements, you can also specify end caps in addition to a background appearance. An <strong>end cap</strong> defines an area of the image that should not be resized. For example, you might create a resizable image that includes four end caps that define the four corners of a button. When the image is resized to fill the button’s background area, the portions defined by the end caps are drawn unchanged.
+  많은 UI요소들에 있어서, 배경 모양뿐만 아니라 end cap역시 지정할 수 있다. end cap은 크기조정되지 않아야 하는 이미지의 영역을 정의한다. 예를 들어, 네개의 <strong>end cap</strong>으로 정의되는 네 모서리를 가진 버튼을 위한 크기조정 가능한 이미지를 만들수 있도 있다. 이미지가 버튼의 배경 영역을 채우기 위해 크기조정될 때, end cap에 의해 정의된 부분은 바뀌지 않은 채 그려진다.
 </p>
 <p class="para">
-  Depending on the dimensions of the resizable image you supply, iOS either stretches or tiles it as appropriate to fill a UI element’s background area. To <strong>stretch</strong> an image means to scale up the image, without regard for its original aspect ratio. Stretching is performant, but it isn’t usually desirable for a multipixel image that can distort. To <strong>tile</strong> an image is to repeat the original image as many times as necessary to fill the target area. Tiling is less performant than stretching, but it's the only way to achieve a textured or patterned effect.
+  당신이 공급하는 크기조정 가능한 이미지의 크기에 따라, iOS는 늘이거나 타일을 해서 UI요소들의 배경영역을 적당하게 채운다. 이미지를 <strong>늘인다(stretch)</strong>는 것은, 원래의 종횡비를 고려하지 않고,  이미지의 크기를 키우는 것을 의미한다. 늘이는 것은 퍼포먼스가 좋지만, 멀티 픽셀 이미지에는 왜곡을 일으키기 때문에 권장하지 않는다. 이미지를 <strong>타일</strong> 하는 것은 원 이미지를 목표 영역을 채울 때까지 여러번 반복하는 것이다. 타일링은 늘이기보다는 덜 퍼포먼스가 좋지만, 텍스쳐가 있거나 패턴 효과를 만들 수 있는 유일한 방법이다.
 </p>
 <p class="para">
-  As a general rule, you should supply the smallest image (excluding end caps) that will result in the look you want. For example:
+  일반적인 규칙으로, 당신이 원하는 모양을 만들 수 있는 (end cap을 포함해서) 최소 이미지를 제공해야 한다. 예를 들어 : 
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  If you want a solid color with no gradient, create a 1 x 1 point image.
+  그러디언트 없는 솔리드 컬러를 원한다면 1*1 포인트 이미지.
 </p>
 </li><li class="item"><p class="para">
-  If you want a vertical gradient, create an image that has a width of 1 point and a height that matches the height of the UI element’s background.
+  수직 그러디언트를 원한다면, 1포인트 너비에 UI 요소의 배경 높이와 같은 높이를 가지는 이미지를 만들어라.
 </p>
 </li><li class="item"><p class="para">
-  If you want to provide a repeating textured appearance, you need to create an image with dimensions that match the dimensions of the repeating portion of the texture.
+  반복적인 텍스처 모양을 제공하고 싶다면, 반복되는 영역의 크기와 같은 크기의 이미지를 만들어야 한다.
 </p>
 </li><li class="item"><p class="para">
-  If you want to provide a nonrepeating textured appearance, you need to create a static image with dimensions that match the dimensions of the UI element’s background area.
+  반복 없는 텍스쳐 모양을 제공하고 싶다면, UI 요소의 배경 크기와 동일한 크기의 고정 이미지를 만들어야 한다.
 </p>
 </li>
 </ul>
