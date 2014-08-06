@@ -213,24 +213,24 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH49-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH49"></a>
-  <h2 class='chapter-name'>Running on iPhone 5</h2>
+  <h2 class='chapter-name'>iPhone 5에서 실행하기</h2>
   
   	<section class="section">
   		<p class="para">
-  You don’t have to redesign your app for it to look good on iPhone 5. Many apps look good simply by displaying more of their existing UI; others might need to stretch content or background regions. Only some apps—such as games or apps that display lots of custom artwork—are likely to need some additional work to look their best. 
+  아이폰 5에서 잘 보이기 위해서 앱을 새로 디자인할 필요는 없다. 많은 앱들은 가지고 있는 UI를 표시하는 것만으로 좋아 보인다; 몇 몇 앱들은 콘텐트나 배경을 늘려야 한다. 게임이나 커스텀 아트웍을 많이 표시하는 앱들의 경우 가장 잘 보이게 하기 위해서 추가적인 작업을 해야 한다.
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH49-SW2"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">All apps that run on iPhone 5 must include a launch image of the correct size. To learn how to create launch images for iOS devices, see <span class="x-name"><a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a></span>.
+    <p class="para"> 아이폰 5에서 동작하는 모든 앱들은 적당한 사이즈의 런치 이미지를 포함해야 한다. iOS 장치를 위한 런치 이미지 제작에 대해 공부하고 싶으면, <span class="x-name"><a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">“LaunchImages”(페이지 209)를 보라.
     </p>
     
   </aside>
 </div>
 <p class="para">
-  The iPhone 5 display is 176 pixels taller than the display of other iPhone and iPod touch devices. In portrait orientation, the extra height is about the same as the height of two additional rows in a standard table view. For example, Messages running on iPhone 5 displays a taller conversation area than does Messages running on iPhone 4S.
+  아이폰 5의 디스플레이는 다른 아이폰이나 아이팟 터치 장치보다 176픽셀이 더 길다. portrait 방향에서, 추가적인 높이는 표준 테이블 뷰 로우 두개의 높이만큼이다. 예를 들어, Messages는 아이폰 5에서 아이폰 4s보다 더 긴 대화영역을 가진다.  4S.
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -246,7 +246,7 @@
 			<img class="inline-graphic" src="Art/messages_portrait_4_2x.png" alt="image: ../Art/messages_portrait_4_2x.png" width="224" height="322" />
 		</section>
 </section><p class="para">
-  Of course, the additional 176 pixels in height translates into additional lateral space when the device is in landscape orientation. For example, in Messages on iPhone 5 (shown here below Messages on iPhone 4S), the UI stretches to fill the additional width.
+  물론, 높이에서 추가적인 176픽셀은 장치가 landscape 방향일때는 측방향의 공간이 된다. 예를들어, 아이폰 5의 Messages에서 (아이폰 4s Messages 아래 그림), UI는 추가적인 공간을 채우기 해서 늘어난다.
 </p>
 <figure class="figure">
   
@@ -257,23 +257,23 @@
   <span class="caption"></span>
   <img src="Art/messages_landscape_5_2x.png" alt="image: ../Art/messages_landscape_5_2x.png" width="397" height="210" />
 </figure><p class="para">
-  The Messages screens shown above illustrate a crucial point: The minor UI adjustments that were made to accommodate the iPhone 5 display do not change the app’s functionality in any way. The consistency of the user experience—which is evident in all of the apps described in this section—follows a key design principle of iPhone 5: The larger device display enables users to see more of the content they care about; it does <em>not</em> provide an opportunity to squeeze in more app functionality.
+  위의 Messages 스크린은 중요한 점을 예시한다 : 아이폰 5 디스플레이에 맞추기 위해 만들어진 마이너한 UI 조정은 앱의 기능을 전혀 바꾸지 않는다. 사용자 경험의 일관성 - 이 섹션에서 설명하는 모든 앱에서 명백한 - 은 아이폰 5에서도 중요한 디자인 원칙을 따른다 : 큰 장치 화면은 사용자들이 보고 싶어하는 콘텐트를 더 잘 볼 수 있도록 한다; 이것은 앱의 기능을 더 짜내는 기회를 제공하는 것은 <em>아니다.</em>
 </p>
 <p class="para">
-  Because you won’t be changing the functionality of your app, there’s typically very little you have to do to make your app look great on iPhone 5. If you use Auto Layout to design your app’s UI, you might have even less work to do. The following guidelines can help you decide which UI changes are best suited to your app.
+  앱의 기능을 바꾸지는 않기 때문에, 아이폰 5에서 멋지게 보이기 위해 해야하는 일은 보통 매우 적다. 앱의 UI디자인에 오토 레이아웃을 사용한다면, 할 일은 더 적어질 것이다. 다음 가이드라인은 어떤 UI 변경이 당신 앱에 가장 좋을 지 결정하는 데 도움을 준다.
 </p>
 <div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH49-SW3"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    <p class="para">If you don’t make any changes to your app, it runs in a compatibility mode on iPhone 5. When an app runs in compatibility mode, iOS automatically centers the app’s UI by adding slim black bars above and below it.
+    <p class="para">만약 당신의 앱에 아무런 변경을 하지 않는다면, 아이폰 5에서 호환모드로 동작할 것이다. 호환모드에서 동작하는  앱은, iOS 가 자동적으로 위 아래에 검은 바를 더함으로서 앱의 UI를 중간에 둔다.
     </p>
     
   </aside>
 </div>
 <p class="para">
-  <strong class="inline-head">Allow more content to be revealed automatically.</strong> If some of your UI is currently hidden below the bottom edge of the screen—requiring users to scroll—you don’t have to make any changes to allow the increased display height of iPhone 5 to reveal more of your UI. In Settings, for example, users can see additional table rows on iPhone 5 than they do on iPhone 4S.
+  <strong class="inline-head">자동적으로 더 많은 콘텐트가 보이도록 하라. </strong> 만약 당신 UI의 일부가 스크린 아래로 숨겨져 있어서 사용자가 스크롤 해야 한다면, 당신의 UI를 더 많이 보이도록 하기 위해 할 일은 없다. Settings 앱에서, 사용자들은 아이폰 5에서 아이폰 4s보다 추가적인 테이블 로우들을 볼 수 있다.
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -289,7 +289,7 @@
 			<img class="inline-graphic" src="Art/reveal_more_without_scrolling_4_2x.png" alt="image: ../Art/reveal_more_without_scrolling_4_2x.png" width="224" height="322" />
 		</section>
 </section><p class="para">
-  <strong class="inline-head">Stretch content regions.</strong> If you display content in a view, consider vertically expanding the view to show some additional content or to insert more space within the view. For example, users have a  larger message body region in Mail on iPhone 5 than they do in Mail on iPhone 4S.
+  <strong class="inline-head">Stretch content regions.</strong> 콘텐트 영역을 늘려라. 뷰에 콘텐트를 표시한다면, 뷰를 수직방향으로 확장해서 추가적인 콘텐트를 보여주거나 그 뷰에 더 많은 공간을 넣어라. 예를 들어, 사용자들은 iPhone 5의 Mail에서 iPhone 4s 보다 더 큰 메세지 본문 영역을 얻는다.
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -305,7 +305,7 @@
 			<img class="inline-graphic" src="Art/stretch_content_4_2x.png" alt="image: ../Art/stretch_content_4_2x.png" width="224" height="322" />
 		</section>
 </section><p class="para">
-  <strong class="inline-head">Stretch background areas between content regions.</strong> You can make your layout look a bit more relaxed by expanding the vertical space between content views. For example, Weather on iPhone 5 shows more of the background in the upper part of the screen than does Weather on iPhone 4S.
+  <strong class="inline-head">콘텐트 영역 사이에 배경 영역을 늘린다. </strong> 콘텐트 뷰 사이의 공간을 늘림으로서 당신의 레이아웃이 보다 편안하게 보이도록 할 수 있다. 예를 들어, iPhone 5에서의  Weather앱은  iPhone 4S 보다 위쪽 영역의 배경을 더 많이 보여준다.
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -321,7 +321,7 @@
 			<img class="inline-graphic" src="Art/expand_background_4_2x.png" alt="image: ../Art/expand_background_4_2x.png" width="224" height="322" />
 		</section>
 </section><p class="para">
-  <strong class="inline-head">If necessary, recenter dominant visual elements.</strong> After adjusting backgrounds or views to accommodate the additional space, you might want to make sure that principal elements of your UI are still centered appropriately. One way to do this is to first stretch a region near the top of the screen and then adjust the centering of the elements. For example, Compass on iPhone 5 maintains the user’s focus on the compass and heading by keeping these elements centered on the extended background.
+  <strong class="inline-head">필요하다면, 지배적인 시각 요소들을 다시 중앙으로 배치하라. </strong> 뷰를 추가적인 공간에 맞게 조정했다면, UI의 중요한 요소가 여전히 중앙에 잘 자리잡고 있는지를 확인하고 싶을 것이다. 이렇게 하는 한 가지 방법은, 화면 위쪽 근처의 영역을 늘린 후 요소들의 중앙을 맞추는 것이다. 예를 들어, 아이폰 5의 Compass는 확자된 배경에 중간으로 유지함으로서 사용자의 초점을 나침반과 방향에 맞춘다.
 </p>
 <section class="rec-container">
 	<div class="blurb">
@@ -337,10 +337,10 @@
 			<img class="inline-graphic" src="Art/recenter_element_4_2x.png" alt="image: ../Art/recenter_element_4_2x.png" width="224" height="322" />
 		</section>
 </section><p class="para">
-  <strong class="inline-head">In general, avoid increasing control sizes.</strong> If you use the minimum tappable size for controls in your app—that is, no smaller than 44 x 44 points—you should not need to adjust them for iPhone 5. However, you might choose to add a little more space between existing controls.
+  <strong class="inline-head">일반적으로, 컨트롤 크기를 키우는 것을 피하라.</strong> 만약 앱에서 최소 탭 가능 사이즈를 사용하고 있다면-44*44 포인트 이상-아이폰 5를 위해 그것을 조정할 필요는 없다. 그러나, 콘트롤들 간의 조금 더 많은 공간dmf 제공하도록 할 수 는 있다.
 </p>
 <p class="para">
-  <strong class="inline-head">Don’t use the extra space to display an additional bar or banner.</strong> People expect to see more content on iPhone 5. To avoid disappointing your users, resist the temptation to use the extra vertical space for a custom button bar or banner.
+  <strong class="inline-head">추가적인 bar나 배너를 표시하는 데 여분의 공간을 사용하지 마라.</strong> 사람들은 아이폰 5에서 추가적인 콘텐트를 보기 원한다. 사용자들을 실망시키지 않으려면, 커스텀 버튼 바 또는 배너를 위해 여분의 공간을 활용하려는 시도를 피하라.
 </p>
 
 		</section> 

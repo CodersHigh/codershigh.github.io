@@ -217,17 +217,17 @@
   
   	<section class="section">
   		<p class="para">
-  Users initiate an Undo operation by shaking the device, which displays an alert that allows them to:
+  사용자들은 언두 동작을 장치를 흔들어서 발생시킨다. 얼러트를 디스플레이해서 다음을 가능하게 한다 
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  Undo what they just typed
+  방금 타이프 한것을 언두
 </p>
 </li><li class="item"><p class="para">
-  Redo previously undone typing
+  이전에 끝내지않은 타이핑을 리두
 </p>
 </li><li class="item"><p class="para">
-  Cancel the undo operation
+  언두 동작을 취소. 
 </p>
 </li>
 </ul>
@@ -236,41 +236,41 @@
   <span class="caption"></span>
   <img src="Art/undo_intro_2x.png" alt="image: ../Art/undo_intro_2x.png" width="224" height="383" />
 </figure><p class="para">
-  You can support the Undo operation in a more general way in your app by specifying:
+  다음을 지정함으로서 앱의 언두 동작을 보다 일반적인 방식으로 지원할 수 있다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  The actions users can undo or redo
+  사용자가 언두 또는 리두할 수 있는 액션
 </p>
 </li><li class="item"><p class="para">
-  The circumstances under which your app should interpret a shake event as the shake-to-undo gesture
+  앱이 흔들기 이벤트를 흔들어서-언두 제스처로 해석하게 되는 환경
 </p>
 </li><li class="item"><p class="para">
-  How many levels of undo to support
+  얼마나 많은 단계의 언두를 지원하는지
 </p>
 </li>
 </ul>
 <p class="para">
-  To learn how to implement this behavior in code, see <em class="u-book"><a href="../../../Cocoa/Conceptual/UndoArchitecture/UndoArchitecture.html#/apple_ref/doc/uid/10000010i" target="_self">Undo Architecture</a></em>. If you support undo and redo in your app, follow these guidelines to provide a good user experience.
-</p>
+  이 동작을 코드로 배우고 싶으면, <em class="u-book"><a href="../../../Cocoa/Conceptual/UndoArchitecture/UndoArchitecture.html#/apple_ref/doc/uid/10000010i" target="_self">Undo Architecture</a></em>를 보라. 당신 앱에서 언두와 리두를 지원한다면, 다음 가이드라인을 지켜서 좋은 사용자 경험을 제공하라.
+  
 <p class="para">
-  <strong class="inline-head">Supply brief descriptive phrases that tell users precisely what they’re undoing or redoing.</strong> iOS automatically supplies the strings “Undo “ and “Redo “ (including a space after the word) for the undo alert button titles, but you need to provide a word or two that describes the action users can undo or redo. For example, you might supply the text Name or Address Change, to create button titles such as “Undo Name” or “Redo Address Change.” (Note that the Cancel button in the alert cannot be changed or removed.)
+  <strong class="inline-head">그들이 언두또는 리두 하고 있는 것을 정확하게 말하는 간단한 설명 구문을 공급하라. </strong> 자동적으로 "Undo "와 "Redo "(단어 뒤의 공백을 포함해서) 문자열을 언두 얼러트 버튼 타이틀로 공급하지만, 하지만 당신은 한 두단어 정도를 사용자가 언두 또는 리두할 수 있는 액션을 설명하기 위해 제공할 필요가 있다. 예를 들어, Delete Name 또는 Address Change 같은 텍스트를 공급해서, 버튼 타이틀을 "Undo Delete Name" 또는 "Redo Address Change"처럼 만들어라. (얼러트의 Cancel 버튼은 변경하거나 제거할 수 없음을 기억하라)
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/undo_example_2x.png" alt="image: ../Art/undo_example_2x.png" width="192" height="219" />
 </figure><p class="para">
-  <strong class="inline-head">Avoid supplying text that is too long.</strong> A button title that is too long is truncated and is difficult for users to decipher. And because this text is in a button title, use title-style capitalization and do not add punctuation.
+  <strong class="inline-head">너무 긴 텍스트를 공급하지 않도록 하라.</strong> 너무 긴 타이틀은 잘려서 사용자가 해독하기 어렵다. 이 텍스트는 버튼 타이틀에 있기 때문에, 타이틀-스타일 대문자화를 하고 구두점을 더하지 마라.
 </p>
 <p class="para">
-  <strong class="inline-head">Avoid overloading the shake gesture.</strong> Even though you can programmatically set when your app interprets a shake event as shake to undo, you run the risk of confusing users if they also use shake to perform a different action. Analyze user interaction in your app and avoid creating situations in which users can’t reliably predict the result of the shake gesture.
+  <strong class="inline-head">흔들기 제스처에 과부하를 피하라.</strong> 프로그램적으로 언제 앱이 흔들기 이벤트를 흔들어서 언두로 해석할지를 설정할 수 있을지라도, 흔들기를 다른 액션으로 사용할 수 있을 것으로 혼동하는 위험성을 가지고 있다. 앱에서 사용자 인터렉션을 분석해서 사용자가 흔들기 제스처의 결과를 신뢰하지 못하는 상황을 만들지 마라. 
+
+<p class="para">
+  <strong class="inline-head">당신 앱에서 언두와 리두가 기초적인 테스크라면 시스템이 제공하는 언두와 리두 버튼만을 사용하라. </strong> 흔들기 제스처가 언두와 리두를 발생시키는 주요 방식이라는 것과 같은 테스크를 두 가지 다른 방식으로 제공하는 게 혼란을 일으킬 수 있음을 기억하라. 만약 언두와 리두를 위해 명백한 전용 컨트롤을 제공하는 게 중요하다고 결정했다면, 네비게이션 바에 시스템이 제공하는 버튼을 넣어라. (이버튼들에 더 자세히 배우고싶다면 <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW33" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW33">Toolbar and Navigation Bar Buttons</a></span>를 보라.)
 </p>
 <p class="para">
-  <strong class="inline-head">Use the system-provided Undo and Redo buttons only if undo and redo are fundamental tasks in your app.</strong> Remember that the shake gesture is the primary way users initiate undo and redo, and that it can be confusing to offer two different ways to perform the same task. If you decide it’s important to provide explicit, dedicated controls for undo and redo, you can place the system-provided buttons in the navigation bar. (To learn more about these buttons, see <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW33" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW33">Toolbar and Navigation Bar Buttons</a></span>.)
-</p>
-<p class="para">
-  <strong class="inline-head">Clearly relate undo and redo capability to the user’s immediate context, and not to an earlier context.</strong> Consider the context of the actions you allow to be undone or redone. In general, users expect their changes and actions to take effect immediately.
+  <strong class="inline-head">언두와 리두 기능을 사용자의 당장의 콘텍스트에 깔끔하게 연관짓지, 이전 콘텍스트에는 하지 않는다. </strong> undone과 redone되도록 할 액션의 컨텍스트를 생각해보라. 일반적으로, 사용자는 그들의 변경과 액션이 즉각 영향을 미치길 원한다.
 </p>
 
 		</section> 

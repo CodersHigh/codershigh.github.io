@@ -217,38 +217,39 @@
   
   	<section class="section">
   		<p class="para">
-  Using AirPrint, people can wirelessly print content from your app and use Print Center app to check on a print job. 
+  에어 프린트를 이용하면, 당신의 앱에서 무선으로 콘텐트를 프린트 할 수 있으며 Print Center 앱을 이용해서 프린트 업무를 시작할 수 있다.
 </p>
 <figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/print_options_2x.png" alt="image: ../Art/print_options_2x.png" width="224" height="255" />
 </figure><p class="para">
-  You can take advantage of built-in support for printing images and PDF content, or you can use printing-specific programming interfaces to do custom formatting and rendering. iOS handles printer discovery and the scheduling and execution of print jobs on the selected printer.
+  이미지나 PDF 콘텐트를 프린트하는 빌트-인 지원을 이용하거나 커스텀 프린팅이나 렌더링을 위해 프린팅에 특화된 프로그래밍 인터페이스를 사용할 수 있다. iOS는 프린터 찾기와 선택된 프린터에서 프린트 작업을 스케쥴링 하거나 실행하는 것을 다룰 수 있다.
 </p>
 <p class="para">
-  Typically, users tap the standard Share button in your app when they want to print something. When they choose the Print item in the view that appears, they can then select a printer, set available printing options, and tap the Print button to start the job. On iPhone, this view appears in an action sheet that slides up from the bottom of the screen; on iPad, the view appears in a popover that emerges from the button.
+  전형적으로, 사용자들은 프린트하고 싶을 때, 앱에서 표준 Share 버튼을 탭 한다. 나타나는 뷰에서 Print 아이템을 선택하면, 프린터를 선택할 수 있고, 가능한 프린팅 옵션을 설정할 수 있고, Print 버튼을 탭해서 작업을 시작할 수 있다. 아이폰에서, 이 뷰는 화면 아래에서 밀려올라오는 액션시트에서 보인다; 아이패드에서는 버튼으로부터 나오는 팝오버에서 나온다.
 </p>
 <p class="para">
-  Users can check on the print job they requested in the Print Center app, which is a background system app that is available only while a print job is in progress. In Print Center, users can view the current print queue, get details about a specific print job, and even cancel the job.
+  사용자들은 요청한 프린트 작업을 Print Center라는 앱에서 시작할 수 있다. 이 앱은 백그라운드 시스템 앱으로서, 프린트 작업이 진행중일 때만 사용가능한 앱이다. Print Center 에서, 사용자들은 현재 프린트 큐를 보고, 특정 프린트 작업에 대한 상세정보를 얻고, 작업을 취소할 수도 있다.
 </p>
 <p class="para">
-  You can support basic printing in your app with comparatively little additional code (to learn about adding print support to your code, see <em class="u-book"><a href="../../../2DDrawing/Conceptual/DrawingPrintingiOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010156" target="_self">Drawing and Printing Guide for iOS</a></em>). To ensure that users appreciate the printing experience in your app, follow these guidelines:
+  당신의 앱에서 상대적으로 엄청 적은 코드를 추가하는 것으로 기본적인 프린팅을 지원할 수 있다.(상세한 정보는 <em class="u-book"><a href="../../../2DDrawing/Conceptual/DrawingPrintingiOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010156" target="_self">Drawing and Printing Guide for iOS</a></em>를 보라.) 사용자가 당신 앱에서 프린팅 경험을 즐거워 하기 위해, 다음 가이드라인을 따르라 :
 </p>
 <p class="para">
-  <strong class="inline-head">Use the system-provided Share button.</strong> Users are familiar with the meaning and behavior of this button, so it’s a good idea to use it when possible. The main exception to this is if your app does not contain a toolbar or navigation bar. When this is the case, you need to design a custom print button that can appear in the main UI of your app, because the Share button can only be used in a toolbar or navigation bar.
+  <strong class="inline-head">시스템이 제공하는 Share(공유) 버튼을 사용하라. </strong> 사용자들은 이 버튼의 의미와 동작에 친숙하다. 그러므로 가능하면 이 버튼을 사용하는 것이 좋은 생각이다. 여기에 대한 주요한 예외는 앱이 툴바나 네비게이션바를 가지지 않는 경우이다. 이런 경우라면, 당신 앱의 메인 UI에 나타나는 커스텀 프린트 버튼을 디자인할 필요가 있다. Share 버튼은 툴바나 네비게이션 바에서만 사용가능하기 때문이다.
 </p>
 <p class="para">
-  <strong class="inline-head">Display the Print item when printing is a primary function in the current context.</strong> If printing is inappropriate in the current context, or if users are not likely to want to print, don’t include the Print item in the view revealed by the Share button.
+  <strong class="inline-head">현재 컨텍스트에서 프린팅이 주된 기능일 때 Print 아이템을 디스플레이 하라. </strong> 만약 프린팅이 현재 컨텍스트에 적당하지 않거나 , 사용자가 프린트하고 싶어 할 것 같지 않다면, Share 버튼에서 나오는 뷰에 Print 아이템을 포함시키지 마라.
 </p>
 <p class="para">
   
 </p>
 <p class="para">
-  <strong class="inline-head">If appropriate, provide additional printing options to users.</strong> For example, you might allow users to choose a page range or to request multiple copies. 
+  <strong class="inline-head">가능하다면, 사용자들에게 추가적인 프린팅 선택사항을 제공하라. .</strong> 예를 들어, 사용자가 페이지 범위를 선택하도록 하거나 다수의 사본을 요철할 수 있도록 하라.
 </p>
 <p class="para">
-  <strong class="inline-head">Don’t display print-specific UI if users can’t print.</strong> Be sure to check whether the user’s device supports printing before you display UI that offers printing as an option. To learn how to do this in your code, see <em class="u-book"><a href="../../../UIKit/Reference/UIPrintInteractionController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40010141" target="_self">UIPrintInteractionController Class Reference</a></em>.
+  <strong class="inline-head">사용자가 프린트를 할 수 없는 상황이면, 프린트-특화된 UI를 디스플레이 하지 마라. </strong>옵션으로 프린팅 UI를 디스플레이 하기 전에 사용자의 장치가 프린팅을 지원하는 지를 체크하라. 코드로 하는 방법은 <em class="u-book"><a href="../../../UIKit/Reference/UIPrintInteractionController_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40010141" target="_self">UIPrintInteractionController 클래스 레퍼런스</a></em>를 보라.
+ 
 </p>
 
 		</section> 
