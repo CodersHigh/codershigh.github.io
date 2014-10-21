@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,400,700);
+//@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,400,700);
 //@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 //@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 //@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
 //@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 //@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 
-body {
+/*body {
   font-family: "Nanum Gothic","Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   background-color: #f6f3e0;
@@ -13,7 +13,7 @@ body {
   max-width:880px;
   margin-left:auto;
   margin-right:auto;
-}
+}*/
 
 @media print, screen and(max-width: 480px) {
 	body {
@@ -289,7 +289,7 @@ body {
 	padding-left: 50px;
 }
 
-
+/*
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin: 0.5em 0 0 0;
@@ -481,4 +481,4 @@ footer {
   position: relative;
   bottom: 50px;
   clear: both;
-}
+}*/
