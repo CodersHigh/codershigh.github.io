@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+  <title>iOS Human Interface Guidelines: Apple Pay</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1044/CSS/style-1.2.0.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1044/CSS/feedback-1.2.0.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="7fcbb0a2" />
+<meta id="j-version" name="j-version" content="1.2.0" />
+<meta id="build" name="build" content="6cdde52c6cdb8e2ca5f09c462441cb92" />
+<meta id="document-version" name="document-version" content="9.2.21" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="chapterId" name="chapterId" content="TP40006556-CH69">
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-12-18" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1044/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">iOS Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="../../../../Resources/1044/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI Design Basics
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">Designing for iOS</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS App Anatomy</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">Adaptivity and Layout</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">Starting and Stopping</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">Navigation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">Modal Contexts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">Interactivity and Feedback</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Animation.html#/apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">Animation</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">Branding</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">Color and Typography</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">Icons and Graphics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">Terminology and Wording</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Integration.html#/apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">Integrating with iOS</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">Design Strategies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">Design Principles</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Process.html#/apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">From Concept to Product</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">Case Study: From Desktop to iOS</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS Technologies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppExtensions.html#/apple_ref/doc/uid/TP40006556-CH67-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW1">App Extensions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">Multitasking</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">Social Media</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HealthKit.html#/apple_ref/doc/uid/TP40006556-CH68-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH68-SW1">HealthKit</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ApplePay.html#/apple_ref/doc/uid/TP40006556-CH69-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH69-SW1">Apple Pay</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">Game Center</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Printing.html#/apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">AirPrint</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">Accessing User Data</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">Sound</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">Routing</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EditMenu.html#/apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">Edit Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UndoRedo.html#/apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">Undo and Redo</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="KeyboardInputView.html#/apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">Keyboards and Input Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI Elements
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">Content Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">Temporary Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">Icon and Image Design
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">App Icon</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">Bar Button Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NewsstandIcons.html#/apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">Newsstand Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebClipIcons.html#/apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">Web Clip Icons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ResizableImages.html#/apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">Creating Resizable Images</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+          <menu id="bashful" type="toolbar">
+      <div class="shield"></div>
+      <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="ApplePay.html#/apple_ref/doc/uid/TP40006556-CH69-DontLinkElementID_3">Customizing the Payment Sheet</a>
+          </li>
+          <li class="item">
+            <a href="ApplePay.html#/apple_ref/doc/uid/TP40006556-CH69-DontLinkElementID_4">Streamlining the Checkout Process</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+    </menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH69"></a><a name="//apple_ref/doc/uid/TP40006556-CH69-SW1"></a>
+
+  <h2 class='chapter-name'>Apple Pay</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  Apple Pay is an easy, secure, and private way to make payments on iOS devices. When purchasing physical goods and services in apps, people can use Apple Pay to quickly and securely provide their contact, shipping, and payment information.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/apple_pay_2x.png" alt="image: ../Art/apple_pay_2x.png" width="256" height="455" />
+</figure>
+<p class="para">
+  With Apple Pay, users can make purchases without having to create an account or type their information. Apple Pay significantly expedites the checkout process, helping to eliminate up-front registration and providing users with a better experience for browsing your products and making hassle-free purchases. For more information, see <em class="u-book"><!-- a href="" target="_self" -->Apple Pay Programming Guide<!-- /a --></em>.
+</p>
+<p class="para">
+  The Apple Pay UI is clear, streamlined, and unobtrusive. It consists of three pieces that appear in different contexts:
+</p>
+<div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/apple_pay_small_button_2x.png" alt="image: ../Art/apple_pay_small_button_2x.png" width="140" height="48" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  <strong class="inline-head">Button.</strong> The Apple Pay button indicates that users can make a purchase from their immediate context, such as a product page. When users tap the Apple Pay button, they should see the payment sheet and begin their checkout process.
+</p>
+  </div>
+</div>
+<div class="two-columns">
+  <div class="left-column">
+    <p class="para">
+  <strong class="inline-head">Payment mark.</strong> Users expect to see the Apple Pay payment mark when they need to select a payment option and finalize additional information before authorizing a payment. The payment mark should appear only when other payment options are also displayed in the same or similar format.
+</p>
+  </div>
+  <div class="right-column">
+    <img class="inline-graphic" src="Art/apple_pay_payment_marks_2x.png" alt="image: ../Art/apple_pay_payment_marks_2x.png" width="276" height="39" />
+  </div>
+</div>
+<div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/apple_pay_payment_sheet_2x.png" alt="image: ../Art/apple_pay_payment_sheet_2x.png" width="256" height="317" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  <strong class="inline-head">Payment sheet.</strong> Before a user submits an order and the associated payment, Apple Pay displays a payment sheet with the contact, shipping, and payment information relevant to their checkout. Although people can make some changes in the payment sheet—such as selecting a different shipping method—they shouldn’t have to make changes or enter additional information. When users see the payment sheet, they should be able to immediately complete their transaction and authorize a payment.
+</p>
+  </div>
+</div>
+<p class="para">
+  <strong class="inline-head">Don’t display any Apple Pay UI if a user can’t use Apple Pay.</strong> If someone doesn’t have an authenticated card set up or is using a device that doesn’t support Apple Pay, advertising it as a payment option will probably confuse and mislead them. In addition, avoid prompting people to set up Apple Pay if they haven’t done so.
+</p>
+<p class="para">
+  <strong class="inline-head">Display the payment sheet immediately after a user taps the Apple Pay button.</strong> Including additional steps after users have decided to begin their checkout with Apple Pay adds more friction to completing the payment, which can complicate the checkout process and frustrate people. Avoid displaying additional alerts or modal views after a user taps the Apple Pay button.
+</p>
+<p class="para">
+  <strong class="inline-head">Display the Apple Pay button at the same size or larger than other visible payment buttons.</strong> Show the Apple Pay button prominently to help users find it with ease.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/apple_pay_target_2x.png" alt="image: ../Art/apple_pay_target_2x.png" width="256" height="455" />
+</figure>
+<p class="para">
+  For additional guidelines on how to use Apple Pay buttons and payment marks, see <a href="../../../../../../apple-pay/Apple-Pay-Identity-Guidelines.pdf">Apple Pay Identity Guidelines</a>.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH69-DontLinkElementID_3"></a>
+  <h3 class="section-name" tabindex="0">Customizing the Payment Sheet</h3>
+  <p class="para">
+  You can customize what the Apple Pay payment sheet displays depending on the information you need to know to complete the transaction and the information you need to convey to the user about the purchase.
+</p><p class="para">
+  <strong class="inline-head">Make sure to display only the information that’s necessary to complete the transaction on the payment sheet.</strong> Users may get confused or concerned if the Apple Pay payment sheet displays extraneous information. For example, if the merchandise will be delivered or fulfilled electronically, it makes sense to request a contact email address, but not a shipping address. Requesting a shipping address in this case may give users the impression that something will be shipped to their home or work by accident, or cause them concern about their information being accessed needlessly.
+</p><p class="para">
+  <strong class="inline-head">Let users choose their delivery method within the payment sheet.</strong> Users can select a delivery method from any number of methods that you specify within the Apple Pay payment sheet. To specify a shipping method, use a label, a cost, and an optional second line for providing an estimated date of delivery. 
+</p><p class="para">
+  <strong class="inline-head">Use line items for charges that are added to the merchandise being purchased.</strong> A line item consists of a label and a cost, such as “Gift Wrap $5.00” or “Tax $4.53.” You can also add an item with a negative cost, such as “Friday Discount -$2.00.” Avoid using line items to show an itemized list of products.
+</p><p class="para">
+  <strong class="inline-head">As much as possible, create line item labels that can display on a single line.</strong> Line item labels should be specific and easily understood by users. Creating lengthy labels makes it difficult for your users to understand line items at a glance.
+</p><p class="para">
+  <strong class="inline-head">Provide a business name after the word “PAY” on the same line as the total.</strong> This helps reassure users that their payment is going where they think it’s going.
+</p><p class="para">
+  <strong class="inline-head">Make sure to communicate that there might be additional costs if the total cost is unknown at the time the payment is authorized.</strong> Users can authorize Apple Pay payments for services without knowing the exact total amount. For example, car rides based on distance or time might change in value from the time when a payment is authorized to the time when it’s posted. As another possibility, a customer might want to add a tip after their product has been delivered. In these cases, it’s important to explain this clearly within the payment sheet. Use a line item to explain that there might be additional costs, or add text after the business name so that users understand that the total is an estimate. If you are preauthorizing a payment for a specific amount, make sure the payment sheet accurately reflects this information.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH69-DontLinkElementID_4"></a>
+  <h3 class="section-name" tabindex="0">Streamlining the Checkout Process</h3>
+  <p class="para">
+  People appreciate using Apple Pay to make their purchases quickly and easily. The fewer steps in the checkout process and the less information that users have to enter manually, the better. 
+</p><p class="para">
+  <strong class="inline-head">Always use the latest information from Apple Pay.</strong> Assume that users keep their Apple Pay information complete and up to date, and don’t rely on any previously collected information. Even if you previously collected contact, shipping, or payment information from users, fetch the latest information from Apple Pay during checkout. Avoid making people enter any information during checkout that you could have retrieved from Apple Pay.
+</p><p class="para">
+  <strong class="inline-head">Use Apple Pay to accept single-item purchases if your app doesn’t have a shopping cart.</strong> To make a single-item purchase, let users tap the Apple Pay button on a product page to display the payment sheet and proceed with an immediate checkout.
+</p><p class="para">
+  <strong class="inline-head">Use Apple Pay to offer an express checkout.</strong> If your app has a shopping cart and all of the merchandise in that cart must be shipped by the same method to the same address, offer an express checkout using Apple Pay. Display the payment sheet as soon as users are ready to pay for their merchandise, because all of the information needed for the purchase can be set or adjusted within the payment sheet.
+</p><p class="para">
+  Depending on your app’s checkout experience, you may need to collect additional information before beginning the Apple Pay checkout process. When you do, be sure to collect the right information before displaying the payment sheet, and then let the payment sheet take care of the rest.
+</p><p class="para">
+  <strong class="inline-head">Let users specify different shipping methods or different addresses before displaying the payment sheet.</strong> If your app has a shopping cart and offers the ability to ship individual items by different shipping methods or to different addresses, give people a means of entering this information before displaying the Apple Pay payment sheet. Although there is no way to specify multiple shipping methods or addresses in the payment sheet, you should still use Apple Pay to get payment information.
+</p><p class="para">
+  <strong class="inline-head">Let users specify additional information for in-store pickup before displaying the payment sheet.</strong> If your app offers an in-store pickup as a delivery option, give people a means of entering relevant information before displaying the payment sheet, including:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  A name, in case the person picking up the order isn’t the same as the person placing the order
+</p>
+</li><li class="item"><p class="para">
+  A store location (if you need the user to select the store location for pick-up, use Location Services to show them the closest store and have them select one before displaying the payment sheet)
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">Make sure to collect redemption codes for discounts before displaying the payment sheet.</strong> Because there’s no way to input codes within the Apple Pay payment sheet, be sure to collect any codes before displaying the sheet.
+</p><p class="para">
+  <strong class="inline-head">Display an order confirmation or thank you page.</strong> To provide a clear user experience, after the payment is complete, use an order confirmation page to display details about when the merchandise will ship and how users can check the status of their order.
+</p><p class="para">
+  <strong class="inline-head">If appropriate, note Apple Pay on your confirmation page.</strong> Although it’s not necessary to mention Apple Pay on your confirmation screen, if you choose to, use one of these formats:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  “Visa ••••1234 (Apple Pay)”
+</p>
+</li><li class="item"><p class="para">
+  “Paid with Apple Pay”
+</p>
+</li>
+</ul>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">Passbook</a></p>
+  			<p class="next-link"><a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  <a href="RevisionHistory.html#/apple_ref/doc/uid/TP40006556-CH99-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH99-SW1">Updated: 2014-12-18</a>
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/1044/JavaScript/devpubs-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/1044/JavaScript/feedback-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>
