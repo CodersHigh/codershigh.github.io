@@ -319,99 +319,16 @@
 </p>
   
 </section>
-<section class="section">
-  <a name="//apple_ref/doc/uid/TP40006556-CH61-SW2"></a>
-  <h3 class="section-name" tabindex="0">장치의 방향 변화에 대응하라</h3>
-  <p class="para">
-  사람들은 iOS 장치가 어떤 방향에서든 사용할 수 있다고 예상하기 때문에, 그에 맞게 동작하는 것이 좋다.
-</p><p class="para">
-  
-</p><p class="para">
-  
-</p><p class="para">
-  
-</p><p class="para">
-  
-</p><p class="para">
-  
-</p><p class="para">
-  
-</p><p class="para">
-  
-</p><p class="para">
-  <strong class="inline-head">모든 방향에서 주요 콘텐트에 포커스를 유지하라.</strong> 이것이 최우선 사항이다. 사람들은 자신이 관심있어 하는 콘텐트를 보거나 인터렉트하기 위해 당신의 앱을 사용한다.장치가 회전했을 때 포커스를 변경하는 것은 사람들을 어리둥절하게 만들고 앱에 대한 제어를 잃었다고 느끼게 한다.
-</p><p class="para">
-  <strong class="inline-head">일반적으로, 모든 방향에서 동작하라.</strong> 사람들은 당신의 앱을 여러 다른 방향에서 사용할 수 있다고 예상하므로, 그 예상을 충족시킬 수 있다면 최선이다. 특히, 아이패드 사용자는 그들이 장치를 쥐고 있는 어떤 방향에서든 당신의 앱을 사용할 수 있다고 예상한다. 하지만 어떤 앱들은 portrait 또는 landscape 에서만 동작한다. 한 방향에서만 동작하는 것이 당신의 앱에서 필수적이라면, 다음과 같이 해야 한다 :
-</p><ul class="list-bullet">
-  <li class="item"><p class="para">
-  <strong class="inline-head">현재 장치의 방향과 상관없이, 지원하는 방향으로만 앱을 시동시킨다.</strong> 예를들어, 게임이나 미디어를 보는 앱이 landscape에서만 동작한다면, 현재 장치가 portrait 상태에 있다하더라도 landscape로 시동하는 것이 합당하다. 이렇게 하면, portrait 상태로 장치를 들고 앱을 실행시킨 사람들이 콘텐트를 보기 위해 장치를 회전시킨다.
-</p>
-<figure class="figure">
-  
-  <span class="caption"></span>
-  <img src="Art/default_orientation_2x.png" alt="image: ../Art/default_orientation_2x.png" width="618" height="396" />
-</figure></li><li class="item"><p class="para">
-  <strong class="inline-head">사람들이게 장치를 회전시키라고 말하는 UI요소를 표시하는 것을 피하라.</strong> 필요하다면, 불필요한 UI요소 덩어리들을 더할 필요 없이, 지원하는 방향으로 앱을 실행하는 것만으로 사용자들에게 장치를 회전시키도록 명확히 말할 수 있다.
-</p>
-</li><li class="item"><p class="para">
-  <strong class="inline-head">양방향을 모두 지원하라.</strong> 예를들어, 어떤 앱이 landscape만 지원한다면, 홈 버튼을 오른쪽에 두든 왼쪽에 두든 사용할 수 있어야 한다. 그리고 만약 사용자가 앱 사용 중 장치를 180도 회전 시켰다면, 앱도 그 콘텐트를 180도 회전시킴으로서 반응하는 것이 좋다.
-</p>
-</li>
-</ul><p class="para">
-  <strong class="inline-head">만약 당신의 앱이 장치 방향 변화를 사용자 입력의 하나로 해석한다면, 앱에서 정한 방식으로 다루어라.</strong> 예를들어, 장치를 회전시킴으로서 게임 조각들을 움직이는 게임이 있다면, 화면을 회전시키는 방식으로 장치 회전에 대해 응답할 수  없을 것이다. 이와 같은 경우에, 시동시에는 요구되는 방향에서 양방향을 지원하고 그 앱의 중요한 테스크가 실행되기 전에는 스위치(좌/우) 할 수 있도록 한다. 메인 테스크를 시작하면, 앱이 정하는 방식대로 장치의 움직임에 대한 응답을 시작한다.
-</p><p class="para">
-  
-</p><p class="para">
-  <strong class="inline-head">아이폰에서는, 장치의 방향 변화에 응답할 때 사용자의 요구사항을 예측하라.</strong> 사용자들은 " 더 보고" 싶을 때 종종 장치를 landscape로 회전시킨다. 만약 단지 콘텐트를 확대하는 수준으로 응답한다면, 사용자의 예상 수준을 맞추지 못한 것이다. 그 대신, 필요하다면 문서의 줄들을 다시 감싸고 UI의 레이아웃을 조정해서 스크린에 콘텐트를 더 잘 맞춰야 한다.
-</p><p class="para">
-  
-</p><p class="para">
-  <strong class="inline-head">아이패드에서는, 모든 방향을 지원할 것이라는 사용자의 예상에 맞추려 노력하라.</strong> 아이패드 스크린은 장치를 landscape로 회전시켜서 "더 보고"싶은 사람들의 욕구를 좀 누그러뜨린다. 그리고 사람들이 장치의 최소 프레임이라던지 홈 버튼의 위치에 별로 신경을 쓰지 않기 때문에, 장치를 기본 방향으로 보려고 하지 않는다.
-</p><p class="para">
-  다음 디자인 가이드라인을 따라서 모든 방향에서 멋진 경험을 제공하기 위해 당신의 아이패드 앱이 제공해야 하는 것들을 배운다:
-</p><ul class="list-bullet">
-  <li class="item"><p class="para">
-  <strong class="inline-head">부가적인 정보나 기능을 어떻게 변경해서 표시할지를 고민하라.</strong> 가장 중요한 것에 항상 포커스를 두는 동안, 두번째로 중요한 콘텐트의 제공 방식을 변경함으로서 회전에 대응할 수 있다. 
-</p>
-<p class="para">
-  예를 들어, landscape에서 사각형 게임 보드를 표시하는 아이패드 게임은 portrait 방향에에서는 잘 맞도록 다시 그려야 한다. portrait 방향에 맞추기 위해 세로로 크기를 늘이거나 위 아래에 빈 공백을 두는 것 보다 그 공간에 게임의 추가적인 정보나 오브젝트를 표시할 수 있다.
-</p>
-</li><li class="item"><p class="para">
-  <strong class="inline-head">레이아웃에서 이유없는 변화를 피하라.</strong> 장치를 회전했을 때 모든 방향에서 비슷한 경험을 얻게 되면 사람들은 사용 패턴을 유지할 수 있다. 예를 들어, 만약 당신의 아이패드 앱이 landscape일 때 격자 안에 이미지들을 표시했다면, portrait라고 해서 동일한 정보를 리스트에 표시해야 하는 것은 아니다( 격자 공간은 조정해야겠지만).
-</p>
-</li><li class="item"><p class="para">
-  <strong class="inline-head">가능한, 회전시에 정보를 재 포매팅하거나 텍스트를 다시 감싸는 것을 피하라.</strong> 모든 방향에 대해 비슷한 포맷을 유지하기 위해 노력하라. 사람들이 앱에서 텍스트를 읽는다면, 장치를 회전시켰을 때 그 위치를 유지시키는 게 특히 중요하다.
-</p>
-<p class="para">
-  만약 약간의 재 포매팅을 피할 수 없다면, 사람들이 그 변화를 인지할 수 있도록 애니메이션을 사용하라. 예를 들어, 방향에 따라 하나의 텍스트 컬럼을 더하거나 없애야 한다면, 컬럼들의 움직임을 숨기고 새로운 배열을 페이드 인 할 수 있다. 회전 비헤비어에 대해 적당한 디자인을 하도록 돕기 위해서, 만약 당신이 현실세계에서 물리적으로 인터렉팅 한다면 어떤 동작을 예상하는지 생각해보라.
-</p>
-</li><li class="item"><p class="para">
-  <strong class="inline-head">각 방향에 대해 독특한 런치 이미지를 제공하라.</strong> 방향이 독특한 런치 이미지를 가지면, 현재 방향에 상관없이 사람들은 부드러운 앱 시동 경험을 가진다. 아이패드 홈 스크린은 모든 방향을 지원하기 때문에, 사람들은 이전 앱에서 사용한 방향 그대로 당신의 앱을 시작하려고 할 것이다. 
-</p>
-</li>
-</ul>
-  
-</section>
+
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH61-SW5"></a>
   <h3 class="section-name" tabindex="0">파일과 문서 관리를 경시하기</h3>
   <p class="para">
   iOS 앱들은 사람들이 파일을 만들고 수정할 수 있지만, 사용자들이 iOS 장치의 파일 시스템에
   대해 생각해야 한다는 것을 의미하지는 않는다. 
-</p><p class="para">
-  OS X의 파인더에 해당하는 iOS 앱은 없으며, 사람들은 컴퓨터에서 하던 것과 같은 방식으로 파일과 인터렉트하도록 요청되지 않는다. 특히, 사람들은 다음과 같은 파일 메타데이터나 위치에 대해 생각하도록 하는 어떠한 것도 만나서는 안된다:
-</p><ul class="list-bullet">
-  <li class="item"><p class="para">
-  파일 계층구조를 노출시키는 열기/저장 대화창
-</p>
-</li><li class="item"><p class="para">
-  파일의 권한 상태에 대한 정보
-</p>
-</li>
-</ul><p class="para">
+<p class="para">
   
-</p><p class="para">
-  <strong class="inline-head">가능한, 사람들이 컴퓨터의 아이튠즈 없이 문서를 관리할 수 있도록 하라.</strong> 모든 장비들에서 그들의 콘텐트에 접근할 수 있도록 하기 위해서 iCloud 사용을 고려하라. 앱에서 멋진 iCloud 경험을 제공하기 위한 팁은 <span class="x-name"><a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a></span>를 보라.
+
 </p><p class="para">
   만약 당신의 앱이 사람들이 문서를 만들고 편집하는 것을 돕는다면, 문서 선택기 같은 것을 제공해서 존재하는 것을 열거나 새로운 것을 만들 수 있도록 하는 게 좋다. 이러한 문서 선택기는 :
 </p><ul class="list-bullet">
@@ -425,7 +342,15 @@
   <strong class="inline-head">새 문서 만들기 기능을 포함하라.</strong> 새 문서를 만들기 위해 어딘가로 가야할 필요없이, 문서 선택기가 새로운 문서를 만드는 플레이스 홀더 이미지를 탭 할 수 있도록 제공하라.
 </p>
 </li>
-</ul><div class="tip clear">
+</ul>
+<p class="para">
+  예를 들어, 페이지는 그래픽 라이브러리 보기에서 새 문서를 만들 수 있는 쉬운 방법과 함께 사용자 문서를 표시한다.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/document_library_2x.png" alt="image: ../Art/document_library_2x.png" width="537" height="267" />
+</figure>
+<div class="tip clear">
   <a name="//apple_ref/doc/uid/TP40006556-CH61-DontLinkElementID_11"></a>
   <aside class="aside">
     <p class="aside-title">Tip
@@ -435,6 +360,9 @@
     
   </aside>
 </div><p class="para">
+  다른 앱에서 만들어진 문서를 앱에서 사용하고자 한다면, 문서에 접속을 돕는 모달 문서 피커뷰 컨트롤러를 표시할 수 있다. <br>문서 피커뷰 컨트롤러는 사용자의 iCloud 드라이브에 있는 문서 뿐만 아니라 다른 문서-생성이나 문서-저장 앱에 관련된 'Document Provider'확장을 표시할 수 있다.
+  'Document Provider'확장에 대하여 알고 싶다면, <span class="x-name"><a href="AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW5" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW5">Document Provider Extensions</a></span>를 보아라. 문서 피커뷰 컨트롤러에대해 알고 싶다면, <em class="u-book"><a href="../../../FileManagement/Conceptual/DocumentPickerProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014451" target="_self">Document Picker Programming Guide</a></em>를 봐라.
+</p><p class="para">
   <strong class="inline-head">직접 삭제하거나 취소하지 않는 이상 그들의 작업이 항상 저장되고 있다는 확신을 줘라.</strong> 만약 당신의 앱이 문서를 만들거나 편집하는 앱이라면, 사용자들에게 명시적으로 저장을 하도록 요구하지 마라. iOS 앱들은 주기적으로 그리고 다른 문서를 열거나 앱에서 떠날 때 사용자의 입력을 저장할 책임을 져야 한다.
 </p><p class="para">
   만약 당신 앱의 주요 기능이 콘텐트 생산이 아니라면 - 하지만, 사람들이 정보를 보는 것과 그것을 편집하는 것 사이를 오간다면 - 변경사항을 저장할 것인지 묻는 게 가능하겠다. 이 시나리오의 경우, 그 정보를 표시하는 뷰에 Edit버튼을 제공하는 게 동작에 좋다. 사람들이 Edit버튼을 탭하면, Save 버튼으로 대체하고 Cancel 버튼을 더하라. Edit 버튼의 변화는, 사람들에게 수정 모드에 있고 변경사항을 저장해야 할지도 모른다는 것을 상기시킨다. 그리고 Cancel 버튼은 변경사항들을 저장하지 않고 빠져 나올 수 있는 기회를 제공한다. 
@@ -443,7 +371,7 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH61-SW6"></a>
-  <h3 class="section-name" tabindex="0">필요하다면 설정 가능하라</h3>
+  <h3 class="section-name" tabindex="0">필요하다면 설정 가능하게하라</h3>
   <p class="para">
   어떤 앱들은 사용자들이 설정을 하거나 설정값 변경을 할 수 있도록 해야 하지만, 대부분의 앱들은 이것을 피하거나 늦출 수 있다. 성공적인 앱들은 대부분의 사람들이 바로 앱을 사용할 수 있도록 하고 메인 UI에서 사용자 경험을 조정할 수 있는 방법을 제공한다.
   

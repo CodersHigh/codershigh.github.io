@@ -60,7 +60,7 @@
         <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
           <ul class="nav-chapters">
               <li class="nav-chapter">
-                <a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS 7을 위한 디자인</a>
+                <a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS를 위한 디자인</a>
               </li>
               <li class="nav-chapter">
                 <a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
@@ -235,7 +235,8 @@
 </li>
 </ul>
 <p class="para">
-  In a hierarchical app, users navigate by making one choice per screen until they reach their destination. To navigate to another destination, users must retrace some of their steps—or start over from the beginning—and make different choices. Settings and Mail are good examples of apps that use a hierarchical structure.
+  계층적 앱에서, 사용자들의 목적에 도달할 때 까지 스크린 마다 하나의 선택을 한다. 또 다른 목적으로 가기 위해서, 단계별로 그들이 간 선택한 것을 거슬러 올라간 다음, 다른 선택을 한다.
+  '설정'과 '메일'은 계층적 구조를 사용하는 앱의 좋은 예이다.
 </p>
 <figure class="figure">
   
@@ -246,7 +247,7 @@
 	
 </div>
 </figure><p class="para">
-  In an app with a flat information structure, users can navigate directly from one primary category to another because all primary categories are accessible from the main screen. Music and App Store are good examples of apps that use a flat structure.
+  평면적 정보 구조를 사용하는 앱은, 모든 주요 카테고리들이 메인 스크린에서 접속이 가능하기 때문에 하나의 주요 카테고리에서 다른 주요 카테고리로 바로 실행할 수 있다. '음악'과 '앱 스토어'는 평면적 구조를 사용하는 앱의 좋은 예이다.
 </p>
 <figure class="figure">
   
@@ -257,7 +258,7 @@
 	
 </div>
 </figure><p class="para">
-  It’s no surprise that in an app that uses a content- or experience-driven information structure, navigation is also defined by the content or experience. For example, users navigate through a book by moving from one page to the next or by choosing a page in the table of contents; in a game, navigation is often an important part of the experience.
+ 네비게이션이 콘탠트나 경험으로 정의되기 떄문에, 콘텐트 혹은 경험 중심적 정보 구조를 사용하는 앱은 그리 놀라운 일이 아니다. 예를들어, 한 페이지에서 다음 페이지로 옮기거나 콘탠트 목록에서 한 페이지를 선택하는 책을 통한 사용자 네이게이션이 있다. 게임에서, 네비게이션은 종종 경험의 중요한 부분이다.
 </p>
 <figure class="figure">
   
@@ -295,7 +296,8 @@
   
 </p>
 <p class="para">
-  <strong class="inline-head">페이지 컨트롤을 사용해서 여러개의 동급 아이템 또는 콘텐트 화면이 있음을 알려라.</strong> 페이지 컨트롤은 사용자들에게 얼마나 많은 페이지가 있는지를 보여주고 현재 어떤 것이 열려 있는지를 보여주기에 좋다.  For example, Weather uses a page control to show how many location-specific weather pages the user has opened. 보다 자세한 정보는 <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW6" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW6">Page Control</a></span>을 참고하라.
+  <strong class="inline-head">페이지 컨트롤을 사용해서 여러개의 동급 아이템 또는 콘텐트 화면이 있음을 알려라.</strong> 
+  페이지 컷트롤은 얼마나 많은 항목과 페이자가 이용가능하고 현제 어떤 것이 열려있는지 사용자들에서 보여주기 좋다. 예를들어, '날씨'는 사용자가 열어 놓은 많은 지역과 특정 날씨 페이지를 보여주기위해 페이지 컨트롤을 사용한다. 보다 자세한 정보는 <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW6" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW6">Page Control</a></span>을 참고하라.
 </p>
 <p class="para">
   
@@ -304,14 +306,16 @@
   <strong class="inline-head">일반적으로, 각각의 스크린으로 가는 하나의 경로를 제공하는 것이 가장 좋다.</strong> 하나 이상의 컨텍스트에서 사용자가 봐야 하는 스크린이 있다면, 모달 뷰, 액션 시트 또는 경고창과 같은 임시 뷰를 사용하는 걸 고려해 보자. 보다 자세한 정보는 <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW3">Modal View</a></span>, <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW36" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW36">Action Sheet</a></span> 그리고 <span class="x-name"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW2" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW2">Alert</a></span>를 참고하라.
 </p>
 <p class="para">
-  UIKit also provides the following related controls:
+  UIKit은 아래의 관련 컨트롤들을 제공한다.
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
-  <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW27" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW27">Segmented Control</a></span>. A segmented control can give users a way to see different categories or aspects of the content on the screen; it doesn’t enable navigation to a new screen.
+  <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW27" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW27">분할 컨트롤</a></span>. 
+  분할 컨트롤은 사용자들에게 다른 카테고리나 컨텐츠의 다른 측면의 을 보여주기 위한 방법을 제공한다; 이것은 새로운 화면에 네이게이션을 구현하지 않는다.
+  
 </p>
 </li><li class="item"><p class="para">
-  <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW4">툴바</a></span>. 툴바가 네비게이션 바나 탭 바와 비슷하게 생겼지만, 네비게이션을 구현하지 않는다. 대신, 툴 바는 현재 스크린 상의 콘텐트에 동작하는 콘트롤을 제공한다.
+  <span class="x-name"><a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW4" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW4">툴바</a></span>. 툴바가 네비게이션 바, 탭 바와 비슷하게 생겼지만, 네비게이션을 구현하지 않는다. 대신, 툴 바는 현재 스크린 상의 콘텐트에 동작하는 콘트롤을 제공한다.
 </p>
 </li>
 </ul>

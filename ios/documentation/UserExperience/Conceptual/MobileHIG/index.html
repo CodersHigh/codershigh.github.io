@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>  
-  <title>iOS Human Interface Guidelines: Designing for iOS 7</title>
+  <title>iOS Human Interface Guidelines: Designing for iOS</title>
   <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
   <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
   <meta charset='utf-8'> 
@@ -61,16 +61,16 @@
         <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
           <ul class="nav-chapters">
               <li class="nav-chapter">
-              	<a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS 7을 위한 디자인</a>
+              	<a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS 을 위한 디자인</a>
               </li>
               <li class="nav-chapter">
               	<a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
               </li>
               <li class="nav-chapter">
-              	<a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작하고 종료하기</a>
-              </li>
-              <li class="nav-chapter">
               	<a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">레이아웃</a>
+              </li>
+               <li class="nav-chapter">
+                <a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작하고 종료하기</a>
               </li>
               <li class="nav-chapter">
               	<a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
@@ -111,14 +111,13 @@
               <li class="nav-chapter">
 
               	<a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
-
-              </li>
-              <li class="nav-chapter">
-              	<a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">iPhone 5에서 구동하기</a>
               </li>
           </ul>
         <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS Technologies
           <ul class="nav-chapters">
+             <li class="nav-chapter">
+                <a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">앱 확장</a>
+              </li>
               <li class="nav-chapter">
               	<a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
               </li>
@@ -216,7 +215,7 @@
       <article class="chapter">
   <a name="//apple_ref/doc/uid/TP40006556-CH66-SW1"></a>
   <a name="//apple_ref/doc/uid/TP40006556-CH66"></a>
-  <h2 class='chapter-name chapter-name-short'>iOS 7을 위한 디자인</h2>
+  <h2 class='chapter-name chapter-name-short'>iOS를 위한 디자인</h2>
     <section id="mini_toc" class="hideInXcode" role="navigation">
 	<div id="mini_toc_button">
   	<p>On This Page</p>
@@ -249,7 +248,7 @@
   
   	<section class="section">
   		<p class="para">
-  iOS7은 아래와 같은 테마를 가진다 :
+  iOS는 아래와 같은 테마를 가진다 :
 </p>
 <ul class="list-bullet">
   <li class="item"><p class="para">
@@ -268,14 +267,14 @@
 		
 	</div>
 
-	<section class="left-container">
-			<p class="container-label weather-in-ios-7">iOS 7의 날씨 앱</p>
-		<img class="inline-graphic" src="Art/weather_app_7_2x.png" alt="image: ../Art/weather_app_7_2x.png" width="201" height="344" />
-	</section>
-		<section class="right-container">
-				<p class="container-label weather-in-ios-6">iOS 6의 날씨 앱</p>
-			<img class="inline-graphic" src="Art/weather_app_6_2x.png" alt="image: ../Art/weather_app_6_2x.png" width="201" height="344" />
-		</section>
+	<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/weather_app_7_2x_new.png" alt="image: ../Art/weather_app_7_2x.png" width="256" height="438" />
+</figure>
+
+
+
 </section><p class="para">
   새로 디자인하거나 기존 앱을 재 디자인 하는 경우 애플이 내장 앱을 재 디자인 한 사례를 참고하라 :
 </p>
@@ -284,15 +283,15 @@
   먼저 UI를 벗겨내서 앱의 핵심기능이 드러나도록 한 뒤 각각의 적절함을 재확인하라.
 </p>
 </li><li class="item"><p class="para">
-  그후,iOS7의 테마를 사용해 UI와 UX를 만든다. 디테일과 장식들을 다시 가져오되 불필요한 부분이 없도록 주의를 기울여라.
+  그후,iOS 테마를 사용해 UI와 UX를 만든다. 디테일과 장식들을 다시 가져오되 불필요한 부분이 없도록 주의를 기울여라.
 </p>
 </li><li class="item"><p class="para">
-  그렇게 하는 동안, 선례를 부정할 준비를 하고, 가정에 대해 질문하고, 콘텐츠로의 포커스와 기능성이 모든 디자인 결정에 대한 원동력이 되게 하라.
+  마지막으로, 사용가 가능한 많이 즐길 수 있도록 다양한 장치 및 모드에 적용되는지 UI를 확인하라.
 </p>
 </li>
 </ul>
 <p class="para">
-  
+  이러한 과정을 통해, 선례를 부정할 준비를 하고, 가정에 대해 질문하고, 콘텐츠로의 포커스와 기능성이 모든 디자인 결정에 대한 원동력이 되게 하라.
 </p>
 
 		</section> 
@@ -300,12 +299,12 @@
   <a name="//apple_ref/doc/uid/TP40006556-CH66-SW2"></a>
   <h3 class="section-name" tabindex="0">Defer to Content</h3>
   <p class="para">
-  간결하지만 아름다운 UI와 유동적인 움직임은 iOS 7 경험의 하일라이트이고, 사용자 콘텐트가 그 중심에 있다. 
+  간결하지만 아름다운 UI와 유동적인 움직임은 iOS 경험의 하일라이트이고, 사용자 콘텐트가 그 중심에 있다. 
 </p><p class="para">
   당신의 디자인이 기능성을 높이고 콘텐트를 우선시하도록 하는 방법들이 있다.
 </p><div class="two-columns">
   <div class="left-column">
-    <img class="inline-graphic" src="Art/weather_focus_2x.png" alt="image: ../Art/weather_focus_2x.png" width="224" height="383" />
+    <img class="inline-graphic" src="Art/weather_focus_2x_new.png" alt="image: ../Art/weather_focus_2x.png" width="224" height="383" />
   </div>
   <div class="right-column">
     <p class="para">
@@ -327,7 +326,7 @@
   </div>
   <div class="right-column">
     <p class="para">
-  <strong class="inline-head">반투명한 UI 요소들은 그 뒤의 콘텐트에 대한 힌트를 제공한다.</strong> 반투명한 요소들은 - 컨트롤 센터 같은 - 사용자들이 추가적인 콘텐트가 있다는 것을 알 수 있도록 하며 유동적임을 알린다. iOS 7에서, 반투명한 요소들은 바로 그 밑에 있는 콘텐트만 흐리게 하며 - 라이스 페이퍼를 통해 보는 듯한 인상을 주는 - 다른 영역의 화면은 흐리게 하지 않는다.
+  <strong class="inline-head">반투명한 UI 요소들은 그 뒤의 콘텐트에 대한 힌트를 제공한다.</strong> 반투명한 요소들은 - 컨트롤 센터 같은 - 사용자들이 추가적인 콘텐트가 있다는 것을 알 수 있도록 하며 유동적임을 알린다. iOS에서, 반투명한 요소들은 바로 그 밑에 있는 콘텐트만 흐리게 하며 - 라이스 페이퍼를 통해 보는 듯한 인상을 주는 - 다른 영역의 화면은 흐리게 하지 않는다.
 </p>
   </div>
 </div>
@@ -337,7 +336,7 @@
   <a name="//apple_ref/doc/uid/TP40006556-CH66-SW3"></a>
   <h3 class="section-name" tabindex="0">명료함을 제공하기</h3>
   <p class="para">
-  명료함을 제공하는 것은 당신의 앱에서 콘텐트가 꼭대기에 있음을 확인하는 또 다른 방법이다. 가장 중요한 콘텐트와 기능을 깨끗하고 인터렉션하기 쉽게 만드는 법은 다음과 같다.
+  명료함을 제공하는 것은 당신의 앱에서 내용이 제일 중요하다는 것을 보장하는 또 다른 방법이다. 가장 중요한 내용과 기능을 명료하고 인터렉션하기 쉽게 만드는 법은 다음과 같다.
 </p><div class="two-columns">
   <div class="left-column">
     <img class="inline-graphic" src="Art/use_white_space_2x.png" alt="image: ../Art/use_white_space_2x.png" width="224" height="383" />
@@ -350,7 +349,7 @@
 </div><div class="two-columns">
   <div class="left-column">
     <p class="para">
-  <strong class="inline-head">색상을 통해 UI를 단순화 하라.</strong> ‘Notes’에서의 노란색처럼, 키 컬러는 중요한 상태에 주목하게 하고 인터렉티비티를 섬세하게 알린다. 또한 앱에 일관된 시각적 테마를 준다. 내장 앱들은 밝거나 어두운 바탕색 모두에 잘 보이는 깨끗한 단색 시스템 컬러를 사용한다.
+  <strong class="inline-head">색상을 통해 UI를 단순화 하라.</strong> ‘Notes’에서의 노란색처럼, 키 컬러는 중요한 상태를 강조하고, 섬세하게 상호작용을 표시한다. 또한 앱에 일관된 시각적 테마를 준다. 내장 앱들은 밝거나 어두운 바탕색 모두에 잘 보이는 깨끗한 단색 시스템 컬러를 사용한다.
 </p>
   </div>
   <div class="right-column">
@@ -362,17 +361,17 @@
   </div>
   <div class="right-column">
     <p class="para">
-  <strong class="inline-head">시스템 폰트를 이용해 가독성을 확보하라.</strong> iOS7 시스템 폰트는 자동적으로 자간과 행간을 조정하여 사용자가 어떤 크기를 선택하든 읽기 쉽게 만들고 근사하게 보인다. 반드시 다이나믹 타입을 적용하여 사용자가 시스템 폰트를 사용하든 커스텀 폰트를 사용하든, 앱이 사용자가 선택한 다른 사이즈의 텍스트에 대응할 수 있게 하라.
+  <strong class="inline-head">시스템 폰트를 이용해 가독성을 확보하라.</strong> iOS 시스템 폰트는 사용자가 어떤 크기를 선택하든 읽기 쉽고 근사하게 보이기 위해 자동적으로 자간과 행간을 조정한다. 반드시 다이나믹 타입을 적용하여 사용자가 시스템 폰트를 사용하든 커스텀 폰트를 사용하든, 앱이 사용자가 선택한 다른 사이즈의 텍스트에 대응할 수 있게 하라.
 </p>
   </div>
 </div><div class="two-columns">
   <div class="left-column">
     <p class="para">
   <strong class="inline-head">경계선 없는 버튼을 받아들이라.</strong> 
-  베젤에 의존해서 인터렉티비티를 알리기 보다, 의미있는 버튼 제목을 만들고, 키 컬러 또는 시스템 컬러를 이용해 사용자에게 해당 요소가 인터렉티브하다는 것을 보여준다.
-  ‘연락처' 뷰는 시스템 블루 컬러를 이용해 사용자에게 스크린 위의 대부분의 아이템들이 인터렉션에 반응할 것임을 보여준다.ㄹ
-  In iOS 7, all bar buttons are borderless. In content areas, a borderless button uses context, color, and a call-to-action title to indicate interactivity. And when it makes sense, a content-area button can display a thin border or tinted background that makes it distinctive.
-</p>
+
+
+  베젤에 의존해서 인터렉티비티를 알리기 보다, 의미있는 버튼 제목을 만들고, 컬러와 맥락 이용해 사용자에게 해당 요소가 인터렉티브하다는 것을 보여준다. 이러한 의미가 동했을 때, 콘텐트 영역의 버튼은 버튼의 구별을 위해 얇은 경계선이나 옅은 배경
+  을 이용할 수 있다.</p>
   </div>
   <div class="right-column">
     <img class="inline-graphic" src="Art/contact_card_2x.png" alt="image: ../Art/contact_card_2x.png" width="224" height="380" />
@@ -384,14 +383,14 @@
   <a name="//apple_ref/doc/uid/TP40006556-CH66-SW4"></a>
   <h3 class="section-name" tabindex="0">Use Depth to Communicate</h3>
   <p class="para">
-  iOS 7은 종종 콘텐트를 계층과 위치를 제공하는 구별된 레이어에 디스플레이 해서 사용자가 스크린 위의 오브젝트들 간의 관계를 이해할 수 있도록 돕는다.
+  iOS는 종종 콘텐트를 계층과 위치를 제공하는 구별된 레이어에 디스플레이 해서 사용자가 스크린 위의 오브젝트들 간의 관계를 이해할 수 있도록 돕는다.
 </p><div class="two-columns">
   <div class="left-column">
-    <img class="inline-graphic" src="Art/folder_2x.png" alt="image: ../Art/folder_2x.png" width="224" height="383" />
+    <img class="inline-graphic" src="Art/folder_2x_new.png" alt="image: ../Art/folder_2x.png" width="224" height="383" />
   </div>
   <div class="right-column">
     <p class="para">
-  투명한 배경과 홈 스크린 위에 떠 있는 것처럼 보이게 함으로써, 폴더는 폴더 내의 콘텐트를 스크린과 분리시킨다.
+  반투명한 배경과 홈 스크린 위에 떠 있는 것처럼 보이게 함으로써, 폴더는 폴더 내의 콘텐트를 스크린과 분리시킨다.
 </p>
   </div>
 </div><div class="two-columns">
@@ -415,7 +414,7 @@
 </div><div class="two-columns">
   <div class="left-column">
     <p class="para">
-  month 뷰를 선택하면, year뷰는 줌 아웃되고 month 뷰가 그 뒤에서 나타난다. Today’s date remains highlighted and the year appears in the back button, so users know exactly where they are, where they came from, and how to get back. 
+  month 뷰를 선택하면, year뷰에 줌인 되어 month 뷰를 나타난다. 오늘 날짜는 강조되고, 년도는 뒤로가기 버튼에 나타난다. 그래서 사용자들로 하여금 정확히 사용자가 어디있는지, 어디서 왔는지, 그리고 어떻게 돌아가는지를 정확하게 알 수 있다. 
 </p>
   </div>
   <div class="right-column">
