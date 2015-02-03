@@ -365,16 +365,18 @@
   사람들은 알림센터를 업데이트를 위해 잠시 방문하거나 간단한 일을 하기위해 방문하기 떄문에, so it’s best when your Today widget displays the right amount of information and limits interactivity. Specifically:
 </p><ul class="list-bullet">
   <li class="item"><p class="para">
-  사용자가 투데이 위젯에서 모든 정보를 보기 위해 스크롤이나 수직적으로 이동하지 않게 해라. 위젯은 더 많은 정보를 보여주기 위해 주직적 확장을 할 수 있지만, 이것은 다른 투데이 위젯이 보기위해 스크롤 하는 것을 간섭 하기 때문에, 위젯의 높이가 알림 센터의 높이를 초과할 경우 좋지 않다.
+  사용자가 투데이 위젯에서 모든 정보를 보기 위해 스크롤이나 수직적으로 이동하지 않게 해라. 위젯은 더 많은 정보를 보여주기 위해 수직적 확장을 할 수 있지만, 이것은 다른 투데이 위젯이 보기위해 스크롤 하는 것을 간섭 하기 때문에, 위젯의 높이가 알림 센터의 높이를 초과할 경우 좋지 않다.
 </p>
 </li><li class="item"><p class="para">
-  Avoid enabling horizontal swiping or dragging, because it interferes with navigation between Notification Center areas.
+  알릶센터 영역 사이에서의 navigation에 간섭이 되기 때문에, 수평적 이동이나 드레그를 가능하게 하지 말아라.
 </p>
 </li><li class="item"><p class="para">
-  As much as possible, let users perform a task or open your app with a single tap (note that the keyboard is not available within a Today widget).
+  되도록이면, 사용자들이 한번의 터치로 앱이 수행되도록 하여라.(투데이 위젯 내에서는 키보드 사용이 불가한 것을 주의하라.)   
 </p>
 </li><li class="item"><p class="para">
-  Optimize performance so that people get useful information immediately. It&#39;s a good idea to cache information locally so that you can display recent information while you get updates. People expect to spend very little time in the Today view, and iOS may terminate Today widgets that don’t use memory wisely. 
+  사용자가 유용한 정보를 바로 얻을수 있도록 하기위해 최적화 시켜라. 당신이 업데이트를 하는 동안 최신 정보를 표시할 수 있도록 부분적으로 정보를 숨기는 것이 좋다.
+  사람들은 투데이 뷰에 시간을 거의 쓰지 않는다. 그리고 iOS는 투데이 위젯이 메모리를 많이 잡아먹는다면 종료시킬 것이다.
+ 
 </p>
 </li>
 </ul><p class="para">
