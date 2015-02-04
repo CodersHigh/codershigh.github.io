@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+   <title>Coder'sHigh - for iOS Developers</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="../css/table.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style>
+  
+  /* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    
+    /*
+    Label the data
+    */
+    td:nth-of-type(1):before { content: "일정"; }
+    td:nth-of-type(2):before { content: "강좌명"; }
+    td:nth-of-type(3):before { content: "장소"; }
+    td:nth-of-type(4):before { content: "환급"; }
+    td:nth-of-type(5):before { content: "강의신청 페이지"; }
+    
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @  only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+
+  </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"> <img class="img-thumbnail" padding="0px" width="30px" height="100%" src="../images/codershigh_nocolor_head.gif" alt=""> Coder's High</a>           
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                             <a href="item/profile.html">소개</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">콘텐츠<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="item/portfolio-2014_tot.html">프로토타입 결과물</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">교육<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="lingostar_curriculum_1.html">커리큘럼</a>
+                            </li>
+                            <li>
+                                <a href="seminars.html">세미나</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Schedule
+                    <small>2015</small>
+                </h1>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+   
+<center>
+<table>
+    <thead>
+    <tr>
+      <th>일&nbsp&nbsp&nbsp&nbsp정</th>
+      <th>강&nbsp&nbsp좌&nbsp&nbsp명</th>
+      <th>장&nbsp&nbsp&nbsp소</th>
+      <th>환급</th>
+      <th>강의신청 페이지</th>
+     
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr><td>2월 23일 ~ 2월 27일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+
+    <tr><td>3월 9일 ~ 3월 13일</td><td>iOS 앱 개발 고급</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>3월 16일 ~ 3월 20일</td><td>iOS 앱 개발 기본</td><td>메디치</td><td>X</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>4월 20일 ~ 4월 24일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>5월 18일 ~ 5월 22일</td><td>Swift 언어</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>6월 15일 ~ 6월 17일</td><td>Swift 언어</td><td>메디치</td><td>X</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>6월 29일 ~ 7월 3일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>7월 27일 ~ 7월 31일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>8월 24일 ~ 8월 28일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+
+    <tr><td>10월 12일 ~ 10월 16일</td><td>iOS 앱 개발 고급</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>10월 19일 ~ 10월 23일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+
+  </tbody>
+  </table>
+
+  </center>
+
+        <!-- Content Row -->
+        <div class="row">
+        
+
+
+
+
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
