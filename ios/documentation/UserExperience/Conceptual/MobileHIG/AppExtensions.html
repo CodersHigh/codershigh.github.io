@@ -455,38 +455,53 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH67-DontLinkElementID_1"></a>
-  <h3 class="section-name" tabindex="0">Photo Editing Extensions</h3>
+  <h3 class="section-name" tabindex="0">사진 편집 확장</h3>
+
   <p class="para">
-  People can use Photo Editing extensions while they view photos or videos in the Photos app. Typically, a Photo Editing extension helps a user apply a filter or make some other edit to a photo or video. After the user confirms the change, the edited content is available in Photos.
+
+  사진 앱에서 비디오나 사진을 보는 동안 사진 편집 확장을 사용할 수 있다. 전형적으로, 사진 편집 확장은 사용자에게 필터를 제공하거나 사진, 동영상의 편집을 하게한다. 편집 후 변화에 대한 승인 후에는 편집된 항목은 사진앱에서 사용할 수 있다.
 </p><p class="para">
-  Photos provides a modal view that displays the custom UI of your Photo Editing extension. Photos can also display a confirmation view when the user chooses Cancel after applying edits to a photo or video (you’re responsible for enabling this behavior in code).
+  사진은 사진 편집 확장의 커스텀 UI를 표시하는 모달 뷰를 제공한다.
+  사진은 사진, 동영상의 편집 후에 '취소'를 눌렀을 때 확인 메세지를 표시 할 수 있다.
+  (you’re responsible for enabling this behavior in code).
 </p><p class="para">
-  <strong class="inline-head">Avoid using a navigation bar in your Photo Editing extension.</strong> As you can see here, the modal view that encloses your extension’s view already includes a navigation bar; adding another navigation bar would take space away from your UI and be confusing to users. (By default, Photos displays your view at full-screen height, so your content will appear underneath the built-in navigation bar.)
+  <strong class="inline-head">
+    사진 편집 확장에서 네비게이션 바를 사용하지 말아라.</strong> 
+    여기서 볼 수 있는거 처럼, 확장 뷰애 둘러쌓인 모달 뷰는 이미 네비게이션 바를 포함하고 있다; 다른 네비게이션 바를 추가하는 것은 사용자를 혼잔시키고 UI공간을 낭비 할 수있다.(자연스럽게 사진은 화면에 꽉차게 표시해야 하고, 컨텐츠 밑면에 네비게이션 바를 표시한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
   <img src="Art/photo_filter_appex_2x.png" alt="image: ../Art/photo_filter_appex_2x.png" width="256" height="454" />
 </figure><p class="para">
-  <strong class="inline-head">If appropriate, let users preview their edits.</strong> As much as possible, you want to let users see the results of their work before they close your extension and return to Photos.
+  <strong class="inline-head">가능하다면, 사용자들이 편집에 대한 미리보기를 볼 수있게해라.</strong> 
+  사용자가 사진으로 돌아가거나 확장을 끈내기 전에 사용자의 작업에 대한 결과를 볼 수 있게 하길 원한다.
 </p>
   
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH67-SW5"></a>
-  <h3 class="section-name" tabindex="0">Document Provider Extensions</h3>
+  <h3 class="section-name" tabindex="0">문서 제공 확장</h3>
   <p class="para">
-  A Document Provider extension helps people access the documents that your app manages from a wide range of other apps. In a host app, a document picker view controller displays the UI that your extension provides (to learn more about the document picker view controller, see <em class="u-book"><a href="../../../UIKit/Reference/UIDocumentPickerViewController_Class/index.html#//apple_ref/doc/uid/TP40014342" target="_self">UIDocumentPickerViewController Class Reference</a></em>).
+  A Document Provider extension helps people access the documents that your app manages from a wide range of other apps.
+  호스트 앱에서 문서 피커 뷰 컨트롤러는 확장 제공 UI를 표시한다.
+  (문서 피커 뷰 컨트롤러에 대해 더 알고 싶다면, <em class="u-book"><a href="../../../UIKit/Reference/UIDocumentPickerViewController_Class/index.html#//apple_ref/doc/uid/TP40014342" target="_self">UIDocumentPickerViewController Class Reference</a></em> 를 보아라).
 </p><div class="note">
   <a name="//apple_ref/doc/uid/TP40006556-CH67-DontLinkElementID_11"></a>
   <aside class="aside">
-    <p class="aside-title">Note
+    <p class="aside-title">노   트
     </p>
-      <p class="para">A Document Provider extension can consist of two separate parts: a Document Picker View Controller extension and a File Provider extension. The Document Picker View Controller extension contains your custom UI; the File Provider extension implements access to files. For simplicity, this section uses the term <em>Document Provider extension</em> to refer to the UI and experience provided by the Document Picker View Controller part of the extension.
+      <p class="para">
+        문서 재공 확장은 문서 피커 뷰 컨트롤러와 파일 제공 확장, 2개의 부분으로 구성될 수 있다.
+        문서 제공 확장은 커스텀 UI를 포함한다; 파일 제공 확장 도구는 파일에 접근을 이다. 한단함을 위해, 이 색션에서는 문서 피커 뷰 컨트롤러의 확장에 제공과는 UI를 알아보기 위해 <em>문서 제공 확장</em> 용어를 사용한다.
       </p>
     
   </aside>
 </div><p class="para">
-  <strong class="inline-head">Avoid using a navigation bar in your Document Provider extension.</strong> iOS displays your extension’s custom UI within the navigation bar–based interface of the document picker view controller. Displaying a second navigation bar below the built-in bar is confusing to users and takes space away from your content. (By default, the document picker view controller displays your view at full-screen height, so your content appears underneath the built-in navigation bar.)
+  <strong class="inline-head">
+    문서 제공 확장에 네비게이션바의 사용을 피해라.</strong> 
+    iOS는기본문서 피커 뷰 컨트롤러의 인터페이스에 네비계이션바 안에 확장 커스텀 UI를 표시한다.
+    내장된 바 밑에 2번쨰 네이게이션바를 표시하는것은 사용자에게 혼란을 주고 컨텐츠의 공간을 차지한다.
+    (문서 피커 뷰 컨트롤러는 전체 화면으로 당신의 뷰를 표시한다, 그래서 당신의 콘텐츠의 아래쪽에 네비게이션 바를 사용해야 한다.)
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -496,11 +511,13 @@
 </section>
 <section class="section">
   <a name="//apple_ref/doc/uid/TP40006556-CH67-DontLinkElementID_2"></a>
-  <h3 class="section-name" tabindex="0">Custom Keyboards</h3>
+  <h3 class="section-name" tabindex="0">커스텀 키보드</h3>
   <p class="para">
-  People use a keyboard extension to replace the iOS keyboard with a custom keyboard throughout the system. After enabling a keyboard extension, people get the custom keyboard when they enter any text entry area except for secure text entry areas (such as a password field) and phone pad areas (such as a phone number field in Contacts).
+  사람들은 시스템을 통한 커스텀 키보드로 iOS 키보를 대체하기 위해 키보드 확장을 사용한다. 키보드 확장을 가능하게 한 후에, 사람들은 보안 문자 입력 분야(비밀번호 같은)와 과 전화 패드 분야(연락처에 전화번호같은)를 제외한 문자 입력시에 커스텀 키보드를 사용한다.
 </p><p class="para">
-  <strong class="inline-head">Provide an obvious way for users to switch to the next keyboard.</strong> People are very familiar with the iOS globe key, and they expect a similar experience in your keyboard.
+  <strong class="inline-head">
+    사용자들에게 다음 키보드를 바꾸는 명밷한 방법을 제공해라.</strong> 
+    사람들은 iOS 글로벌 키에 매우 익숙해 있고, 커스텀 키보드로 이와 비슷한 경험을 하게되기를 기대한다.
 </p><figure class="figure">
   
   <span class="caption"></span>
