@@ -20,6 +20,7 @@
     <!-- Custom Fonts -->
     <link href="../../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" href="../../css/table.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +53,7 @@
       left: -9999px;
     }
     
-    tr { border: 1px solid #8CBDED; }
+    tr { border: 1px solid #ccc; }
     
     td { 
       /* Behave  like a "row" */
@@ -79,8 +80,6 @@
     td:nth-of-type(1):before { content: "일정"; }
     td:nth-of-type(2):before { content: "강좌명"; }
     td:nth-of-type(3):before { content: "장소"; }
-    td:nth-of-type(4):before { content: "환급"; }
-    td:nth-of-type(5):before { content: "강의신청 페이지"; }
     
   }
   
@@ -169,38 +168,28 @@
         </div>
         <!-- /.row -->
    
-<center>
 <table>
+  <colgroup>
+        <col width="130">
+        <col width="260">
+        <col width="300">
+    </colgroup>
     <thead>
     <tr>
       <th>일&nbsp&nbsp&nbsp&nbsp정</th>
       <th>강&nbsp&nbsp좌&nbsp&nbsp명</th>
       <th>장&nbsp&nbsp&nbsp소</th>
-      <th>환급</th>
-      <th>강의신청 페이지</th>
      
     </tr>
     </thead>
     <tbody>
 
-    <tr><td>2월 23일 ~ 2월 27일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>2월 23일 ~ 2월 27일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td></tr>
 
-    <tr><td>3월 9일 ~ 3월 13일</td><td>iOS 앱 개발 고급</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>3월 16일 ~ 3월 20일</td><td>iOS 앱 개발 기본</td><td>메디치</td><td>X</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>4월 20일 ~ 4월 24일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>5월 18일 ~ 5월 22일</td><td>Swift 언어</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>6월 15일 ~ 6월 17일</td><td>Swift 언어</td><td>메디치</td><td>X</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>6월 29일 ~ 7월 3일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>7월 27일 ~ 7월 31일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>8월 24일 ~ 8월 28일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
-
-    <tr><td>10월 12일 ~ 10월 16일</td><td>iOS 앱 개발 고급</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
-    <tr><td>10월 19일 ~ 10월 23일</td><td>iOS 앱 개발 기본</td><td>삼성 SDS</td><td>O</td><td>asdasdasdasdasd</td></tr>
+    <tr><td>3월 9일 ~ 3월 13일</td><td>iOS 앱 개발 고급</td><td>삼성 SDS</td></tr>
 
   </tbody>
   </table>
-
-  </center>
 
         <!-- Content Row -->
         <div class="row">

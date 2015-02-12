@@ -5,13 +5,13 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
    <title>Coder'sHigh - for iOS Developers</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
@@ -28,28 +28,82 @@
     <![endif]-->
      
 <style type="text/css">
+@media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    
+    /*
+    Label the data
+    */
+    td:nth-of-type(1):before { content: "일정"; }
+    td:nth-of-type(2):before { content: "강좌명"; }
+    td:nth-of-type(3):before { content: "장소"; }
+    
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @  only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 20; 
+      margin: 0; 
+      width: 320px; }
+      
+}
+
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+
+
 body {
 }
 table.morning-session {
-    text-align: center;
+   
 }
 table.afternoon-session thead tr {
     background-color:  #8CBDED;
     color: #fff;
-    text-align: center;
-}
-table.morning-session td {
-    text-align: center;
-}
-tr.header {
-    height: 10px;
-}
-tr.black {
-    background-color: #000;
-}
-tr.keynote, 
-tr.session {
-    background-color: #ececec;
+   
 }
 tr.etc {
     background-color: #F5F6F8;
@@ -58,8 +112,7 @@ tr.etc {
 }
 th, 
 td {
-    padding: 1em;
-    vertical-align: top;
+    padding: 0.7em;
 }
 
 
@@ -963,10 +1016,10 @@ Swift 언어 개발환경을 다룰 줄 안다.           </li>
         </tr>
     </thead>
         <tr class="session">
-        <th class="time" scope="row">Swift 언어의 개요</th>
-        <td class="speaker">
+        <th scope="row">Swift 언어의 개요</th>
+        <td >
             <div>
-                <span class="title">Swift의 특징과 함수형 프로그래밍이 대두된 상황을 이해한다.</span>
+                <span>Sw된 상황을 이해한다.</span>
               </div>
         </td>
                     <td class="speaker">
