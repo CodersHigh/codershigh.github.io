@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+  <title>Apple Watch Human Interface Guidelines: Icon and Image Sizes</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1080/CSS/style-1.2.1.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1080/CSS/feedback-1.2.1.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="789fd41c" />
+<meta id="j-version" name="j-version" content="1.2.0" />
+<meta id="build" name="build" content="7f54c7f8d1cac93ebbe55b6cbd5aec1a" />
+<meta id="document-version" name="document-version" content="2.0.11" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/WatchKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014992" />
+<meta id="chapterId" name="chapterId" content="TP40014992-CH16">
+<meta id="book-title" name="book-title" content="Apple Watch Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2015-02-09" />
+<meta id="description" name="description" content="Provides guidelines for designing a Watch app." />
+<meta id="IndexTitle" name="IndexTitle" content="Apple Watch Human Interface Guidelines" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1080">
+<link id="book-index-page" rel="Start" title="Apple Watch Human Interface Guidelines" type="text/html" href="index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+            &mdash; Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1080/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Apple Watch Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1080/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40014992-CH2-SW1" class="part-name">UI Design Basics
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40014992-CH3-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH3-SW1">Designing for Apple Watch</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchOSAppAnatomy.html#/apple_ref/doc/uid/TP40014992-CH4-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH4-SW1">App Anatomy</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Glances.html#/apple_ref/doc/uid/TP40014992-CH21-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH21-SW1">Glances</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Notifications.html#/apple_ref/doc/uid/TP40014992-CH20-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH20-SW1">Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ModalContexts.html#/apple_ref/doc/uid/TP40014992-CH6-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH6-SW1">Modal Sheets</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Layout.html#/apple_ref/doc/uid/TP40014992-CH22-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH22-SW1">Layout</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ColorandTypography.html#/apple_ref/doc/uid/TP40014992-CH9-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH9-SW1">Color and Typography</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Animation.html#/apple_ref/doc/uid/TP40014992-CH7-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH7-SW1">Animations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Branding.html#/apple_ref/doc/uid/TP40014992-CH8-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH8-SW1">Branding</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40014992-CH11-SW1" class="part-name">UI Elements
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Labels.html#/apple_ref/doc/uid/TP40014992-CH31-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH31-SW1">Labels</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Images.html#/apple_ref/doc/uid/TP40014992-CH25-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH25-SW1">Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Groups.html#/apple_ref/doc/uid/TP40014992-CH23-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH23-SW1">Groups</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Tables.html#/apple_ref/doc/uid/TP40014992-CH24-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH24-SW1">Tables</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Buttons.html#/apple_ref/doc/uid/TP40014992-CH28-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH28-SW1">Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Switches.html#/apple_ref/doc/uid/TP40014992-CH29-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH29-SW1">Switches</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Sliders.html#/apple_ref/doc/uid/TP40014992-CH30-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH30-SW1">Sliders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Maps.html#/apple_ref/doc/uid/TP40014992-CH26-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH26-SW1">Maps</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DatesandTimers.html#/apple_ref/doc/uid/TP40014992-CH32-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH32-SW1">Dates and Timers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Menus.html#/apple_ref/doc/uid/TP40014992-CH14-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH14-SW1">Menus</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40014992-CH15-SW1" class="part-name">Icon and Image Design
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="IconandImageSizes.html#/apple_ref/doc/uid/TP40014992-CH16-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH16-SW1">Icon and Image Sizes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="MenuImages.html#/apple_ref/doc/uid/TP40014992-CH18-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH18-SW1">Menu Images</a>
+              </li>
+          </ul>
+        </li>
+      <li data-id="revision-history" class="part-name">Revision History
+        <ul class="nav-chapters">
+          <li class="nav-chapter"><a href="RevisionHistory.html#/apple_ref/doc/uid/TP40014992-CH99-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH99-SW1">Document Revision History</a></li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="IconandImageSizes.html#/apple_ref/doc/uid/TP40014992-CH16-SW3">Icon Sizes</a>
+          </li>
+          <li class="item">
+            <a href="IconandImageSizes.html#/apple_ref/doc/uid/TP40014992-CH16-SW4">Home Screen Icon</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014992-CH16"></a><a name="//apple_ref/doc/uid/TP40014992-CH16-SW1"></a>
+      <a name="//apple_ref/doc/uid/TP40014992-CH15"></a><a name="//apple_ref/doc/uid/TP40014992-CH15-SW1"></a>
+
+  <h2 class='chapter-name'>Icon and Image Sizes</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  Every app needs a beautiful, memorable home screen icon that uniquely identifies the app to the user. Because apps on the home screen are identified solely by their icon, your icon should be recognizable and similar to your iOS app icon while still conveying the purpose of your app.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/HomeScreen_2x.png" alt="image: ../Art/HomeScreen_2x.png" width="312" height="549" />
+</figure>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014992-CH16-SW3"></a>
+  <h3 class="section-name" tabindex="0">Icon Sizes</h3>
+  <p class="para">
+  Home screen icons are circular and <span class="x-name-no-link">Table 20-1</span> lists the appropriate diameter (in pixels) and the usage for each icon. Create your icons as full-bleed square images using the given dimensions. The system applies the circular mask automatically. (Note that Xcode lists icon sizes in points.) 
+</p><div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40014992-CH16-SW2"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"><strong class="caption-number">Table 20-1</strong>Icon sizes</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Asset
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Apple Watch (38mm)
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Apple Watch (42mm)
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Notification center icon
+</p></td>
+            <td><p class="para">
+  48 pixels
+</p></td>
+            <td><p class="para">
+  55 pixels
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Home screen icon
+</p><p class="para">
+  Long look notification icon
+</p></td>
+            <td><p class="para">
+  80 pixels
+</p></td>
+            <td><p class="para">
+  88 pixels
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Short Look icon
+</p></td>
+            <td><p class="para">
+  172 pixels
+</p></td>
+            <td><p class="para">
+  196 pixels
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  Create all of your image resources as <code class="code-voice">@2x</code> images. There is no need to include non <code class="code-voice">@2x</code> resources in your WatchKit app bundle.
+</p><p class="para">
+  For all images and icons, the PNG format is recommended. Avoid using interlaced PNGs.
+</p><p class="para">
+  The standard bit depth for icons and images is 24 bits—that is, 8 bits each for red, green, and blue. You can include an 8-bit alpha channel but doing so is not required. You can also use PNGs with indexed colors to save space in your image files.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014992-CH16-SW4"></a>
+  <h3 class="section-name" tabindex="0">Home Screen Icon</h3>
+  <p class="para">
+  The Home screen on Apple Watch is unique, yet familiar. Home Screen icons echo those of iOS, but without any accompanying text. At such a small size, these icons must clearly identify the apps they represent. When the functionality of a WatchKit app is very similar to its sibling iOS app, the icon remains virtually the same. But when the WatchKit app acts as a complement or controller to an iOS app, the icon design differs accordingly.
+</p><p class="para">
+  <strong class="inline-head">For the best results, enlist the help of a professional graphic designer.</strong> An experienced graphic designer can help you develop an overall visual style for your app and apply that style to all the icons and images in it.
+</p><p class="para">
+  <strong class="inline-head">Use universal imagery that people will easily recognize.</strong> In general, avoid focusing on a secondary or obscure aspect of an element. For example, the Mail icon uses an envelope, not a rural mailbox, a mail carrier’s bag, or a post office symbol. 
+</p><p class="para">
+  <strong class="inline-head">Embrace simplicity.</strong> In particular, avoid cramming lots of different images into your icon. Find a single element that captures the essence of your app and express that element in a simple, unique shape. Add details cautiously. If an icon’s content or shape is overly complex, the details can become confusing and may appear muddy at smaller sizes. 
+</p><p class="para">
+  <strong class="inline-head">Create an abstract interpretation of your app’s main idea.</strong> Typically, it’s better to interpret reality in an artistic way, because doing so lets you emphasize the aspects of the subject that you want users to notice.
+</p><p class="para">
+  <strong class="inline-head">Make your icon similar to the icon for your iOS app.</strong> Maintaining a similar appearance helps the user associate your WatchKit app with your iOS app. 
+</p><p class="para">
+  <strong class="inline-head">Create different sizes of the home screen icon for both Apple Watch display sizes.</strong> You want to make sure that your icon looks great on both Apple Watch device sizes. For device-specific measurements, see <span class="x-name"><a href="IconandImageSizes.html#/apple_ref/doc/uid/TP40014992-CH16-SW2" data-id="//apple_ref/doc/uid/TP40014992-CH16-SW2">Table 20-1</a></span>.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Menus.html#/apple_ref/doc/uid/TP40014992-CH14-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH14-SW1">Menus</a></p>
+  			<p class="next-link"><a href="MenuImages.html#/apple_ref/doc/uid/TP40014992-CH18-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH18-SW1">Menu Images</a></p>
+  <p class="copyright">Copyright &#x00a9; 2015 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  <a href="RevisionHistory.html#/apple_ref/doc/uid/TP40014992-CH99-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH99-SW1">Updated: 2015-02-09</a>
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/1080/JavaScript/devpubs-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/1080/JavaScript/feedback-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>
