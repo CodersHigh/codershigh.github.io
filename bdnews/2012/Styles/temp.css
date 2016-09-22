@@ -1,0 +1,19 @@
+body {
+}
+
+div {
+	background-color:#eee;
+	opacity:0.8;
+}
+
+div div {
+	background-color:#ddd;
+}
+
+div div div {
+	background-color:#ccc;
+}
+
+section {
+	border: 1px #555 solid;
+}

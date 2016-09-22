@@ -1,0 +1,79 @@
+#background {
+	position:absolute;
+	left:0; top:0;
+	width:729px;
+	height:1032px;
+	background:url("../Images/bd12-1.png") no-repeat;
+}
+
+#info {
+	position:absolute;
+	left:40px; top: 168px;
+	width:650px;
+	height:18px;
+}
+
+#info > div:nth-of-type(1) {
+	position:absolute;
+	left:5px;
+	width:70px;
+}
+
+#info > div:nth-of-type(2) {
+	position:absolute;
+	text-align:center;
+	left:80px;
+	width:185px;
+}
+#info > div:nth-of-type(3) {
+	position:absolute;
+	text-align:right;
+	left:270px;
+	width:375px;
+}
+
+#info > div:nth-of-type(4) {
+	position:absolute;
+	left:480px;
+	width:165px;
+	margin-top:-25px;
+	letter-spacing:0;
+	text-align:right;
+}
+
+.title {
+	position:absolute;
+	top:205px;
+	left:47px;
+	width:140px;
+	height:12px;
+}
+
+.topic1 {
+	position:absolute;
+	top:292px;
+	left:52px;
+	width:420px;
+	column-count:2;
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+}
+
+
+.topic2 {
+	position:absolute;
+	top:800px;	left:80px;
+	width:550px;
+}
+
+.topic2 > p:nth-of-type(1){
+	font-family:'kopub batang', 'kopub batang w', serif;
+	font-size:12px;
+	letter-spacing:0px;
+}
+
+.topic2 > p:nth-of-type(2){
+	margin-top:10px;
+	font-size:12px;
+	letter-spacing:0px;
+}
