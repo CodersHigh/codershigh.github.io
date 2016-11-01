@@ -500,51 +500,50 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 
 <h3 id="haptics">햅틱 피드백</h3>
 
-<p>지원되는 기기에 한해, 햅틱은 사용자가 관심을 끌거나 동작을 강화하는 촉각 피드백으로 물리적으로 사용자를 몰입하게 하는 방법을 제공합니다. picker, switch, slider와 같은 일부 시스템 내장 인터페이스 요소들은 사용자가 상호작용할 때마다 자동으로 햅틱 피드백을 제공합니다.
-	On supported devices, haptics provide a way to physically engage users with tactile feedback that gets attention and reinforces actions. Some system-provided interface elements, such as pickers, switches, and sliders, automatically provide haptic feedback as users interact with them. Your app can also ask the system to generate different types of haptic feedback. iOS manages the strength and behavior of this feedback.</p>
+<p>지원되는 기기에 한해, 햅틱은 사용자가 관심을 끌거나 동작을 강화하는 촉각 피드백으로 물리적으로 사용자를 몰입하게 하는 방법을 제공합니다. picker, switch, slider와 같은 일부 시스템 내장 인터페이스 요소들은 사용자가 상호작용할 때마다 자동으로 햅틱 피드백을 제공합니다. 또한, app에서 시스템에 다른 종류의 햅틱 피드백을 요청할 수 있습니다. iOS는 피드백의 세기과 작동을 관리합니다.</p>
 
 <table>
 <thead>
 <tr>
-  <th><strong>Type</strong></th>
-  <th><strong>Variations</strong></th>
-  <th><strong>Usage</strong></th>
+  <th><strong>유형</strong></th>
+  <th><strong>종류</strong></th>
+  <th><strong>사용</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-  <td><strong>Notification</strong></td>
-  <td>Success, warning, and failure</td>
-  <td>Indicates that a task or action, such as depositing a check or unlocking a vehicle, has completed, failed, or produced a warning of some kind.</td>
+  <td><strong>알림(Notification)</strong></td>
+  <td>성공, 경고, 실패</td>
+  <td>수표를 보내는 것, 자동차 잠금을 해제하는 것과 같은 과업이나 동작이 완료되었는지, 실패했는지, 혹은 어떤 유형의 경고를 생성했는지를 알려줍니다.</td>
 </tr>
 <tr>
-  <td><strong>Impact</strong></td>
-  <td>Light, medium, and heavy</td>
-  <td>Provides a physical metaphor that complements the visual experience. For example, the user might feel a thud when a view slides into place or two objects collide.</td>
+  <td><strong>충격(Impact)</strong></td>
+  <td>가벼움, 중간, 무거움</td>
+  <td>시각 경험을 보완하는 물리적 은유를 제공합니다. 예를 들어, 사용자는 뷰가 미끄러져 들어올때나 두 오브젝트가 충돌할 때 진동을 느낄 수 있습니다.</td>
 </tr>
 <tr>
-  <td><strong>Selection</strong></td>
-  <td>N/A</td>
-  <td>Indicates that the selection is actively changing. For example, the user feels light taps while scrolling a picker wheel. This feedback is intended for communicating movement through a series of discrete values, not making or confirming a selection.</td>
+  <td><strong>선택(Selection)</strong></td>
+  <td>해당 없음</td>
+  <td>선택할 사항들이 반응하며 바뀌는 것을 알려줍니다. 예를 들어, 사용자는 picker wheel을 스크롤할 때 가벼운 두드림을 느낍니다. 이 피드백은 선택을 하지 않은 상황에서 구별된 값들 사이를 움직이는 과정을 알려주기 위해 사용합니다.</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Use haptics judiciously.</strong> Overuse can cause confusion and diminish the significance of feedback.</p>
+<p><strong>햅틱을 신중하게 사용하세요.</strong> 과도한 햅틱 사용은 혼란을 불러일으키고 피드백 효과를 감소시킵니다.</p>
 
-<p><strong>In general, provide haptic feedback in response to user-initiated actions.</strong> It’s easy for people to correlate haptics with actions they initiated. Arbitrary feedback can feel disconnected and be misinterpreted.</p>
+<p><strong>대체적으로, 사용자가 발생시킨 동작에 반응해서 햅틱 피드백을 제공하면 좋습니다.</strong> 실행한 동작과 햅틱을 연관지어주는 것은 쉽습니다. 임의로 주는 피드백은 오해를 불러일으키거나 단절된 느낌을 줄 수 있습니다.</p>
 
-<p><strong>Don’t redefine feedback types.</strong> To ensure a consistent experience, use feedback types as intended. Don’t, for example, use "impact" feedback to notify the user that a task has succeeded. Instead, use the "success" variation of "notification" feedback.</p>
+<p><strong>피드백 유형을 재정의하지 마세요.</strong> 일관된 경험을 확보하기 위해서, 각 피드백 유형이 가지는 의도를 있는 그대로 사용하세요. 예를 들어, "충격(impact)" 피드백은 작업이 완료되었음을 알려줄 때 사용하지 말고, 대신 "알림(Notification)" 피드백의 "성공"을 사용하세요.</p>
 
-<p><strong>Fine tune your visual experience for haptics.</strong> Provide visual and haptic feedback together to create a deeper connection between actions and results. Make sure animations are sharp and precise, to visually match what the user feels.</p>
+<p><strong>시각적 경험과 햅틱을 훌륭하게 조율하세요.</strong> 시각적 피드백과 햅틱 피드백을 같이 제공해서 실행과 결과의 더 깊은 연관성을 만드세요. 애니메이션을 정확하고 날카롭게 만들어 사용자가 느끼는 것과 시각적으로 일치하도록 해야 합니다.</p>
 
-<p><strong>Don’t rely on a single mode of communication.</strong> Not all devices support the full range of haptic feedback, and people can disable the feature entirely in Settings if they choose. In addition, haptic feedback occurs only when the device is active and your app is frontmost. Supplement haptics with visual and audible cues to ensure that important information isn’t missed.</p>
+<p><strong>단일한 형태의 피드백에 의존하지 마세요.</strong> 모든 기기가 모든 범위의 햅틱 피드백을 지원하는 것이 아니고, 사용자가 설정에서 특정 피드백을 비활성화시켰을 수도 있습니다. 게다가 햅틱 피드백은 app이 가장 상위에 있을 때 있고 기기가 활성화된 상태일 때만 발생할 수 있습니다. 햅틱을 시각적 신호와 청각적 신호를 같이 보완하여 사용자가 중요한 정보를 놓치지 않도록 해주세요.</p>
 
-<p><strong>Use haptics when visual feedback may be occluded.</strong> Some interactions, such as dragging an object to a location onscreen, are hidden by the user’s finger. Consider generating feedback that lets the user know when they’ve reached a particular location or value.</p>
+<p><strong>시각 피드백이 차단될 수 있을 때에는 햅틱을 사용하세요.</strong> 오브젝트를 화면에서 드래그하는 것과 같은 일부 상호작용은 손가락에 의해 보이지 않습니다. 특정 위치나 값에 도달했을 때 사용자가 알 수 있도록 피드백을 생성할 수 있을지 고려해보세요.</p>
 
-<p><strong>Prepare the system before initiating feedback.</strong> Because there may be some latency involved when providing haptic feedback, it’s best to get the system ready shortly before requesting the feedback. Otherwise, the haptics might come too late and feel disconnected from the user's actions or what they’re seeing on the screen.</p>
+<p><strong>피드백을 활성화하기 전에 시스템을 준비시키세요.</strong> 햅틱 피드백 반응이 지연되는 현상이 있을 수 있으므로, 피드백을 요청하기 전에 빠르게 시스템이 준비되게 하는 것이 좋습니다. 그렇지 않으면, 햅틱 피드백이 너무 늦어져 사용자의 액션이나 보고 있는 화면에 대해 연결이 끊어진 느낌을 줄 수 있습니다.</p>
 
-<p><strong>Synchronize haptics with accompanying sound.</strong> Haptics don’t automatically synchronize with sounds. If you want an accompanying sound, you’re responsible for synchronizing it.</p>
+<p><strong>햅틱을 사운드와 일치시키세요.</strong> 햅틱은 사운드와 자동적으로 일치되지 않습니다. 사운드를 동반한 햅틱 피드백을 원한다면 직접 일시시켜야 합니다.</p>
 
 					</div>
 				</section>

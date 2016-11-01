@@ -294,7 +294,7 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 			<li><a href="../../resources/index.html#xcode-projects">Xcode Projects</a></li>
 		</ul>
 	</div>
-	
+
 	<div id="dn-cola" class="column">
 
 		<h3>Related Guidelines</h3>
@@ -482,11 +482,11 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 						<div id="file-handling" class="row">
     <div class="col-50">
 
-<h2>File Handling</h2>
+<h2>파일 조작</h2>
 
-<p>People shouldn’t need to think about the file system while creating, viewing, and manipulating files. If your app works with files, downplay file handling as much as possible.</p>
+<p>파일을 만들고, 보고, 조작할 때 굳이 사용자가 파일 시스템에 대해 생각할 필요가 없습니다. 만약 당신의 app이 파일을 통해 작업한다면, 가능하다면 파일 조작을 중요하지 않게 해주세요.</p>
 
-<p><strong>Instill confidence that work is always preserved unless canceled or deleted.</strong> In general, don’t make people explicitly save files. Instead, save changes automatically at regular intervals, when opening and closing files, and when switching to another app. In some cases, such as while editing an existing file, save and cancel options may still make sense for the sake of confirming when the edits are actually captured.</p>
+<p><strong>취소나 삭제될 때를 제외하고, 항상 작업이 보존된다는 신뢰성을 주도록 하세요.</strong> 일반적으로, 사용자가 명시적으로 파일을 저장하게 만들지 마세요. 대신에, 파일을 열거나 닫을 때, 다른 app으로 전환할 때, 그리고 일정한 시간 간격마다 자동적으로 변동사항을 저장해주세요. 원래 있던 파일을 편집하는 것과 같은 일부 경우에는, 편집된 사항을 적용시키는 것을 확인하기 위해서 '저장과 취소 옵션'을 사용하는 것이 좋습니다.</p>
 
 </div>
     <div class="col-50">
@@ -496,13 +496,13 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 </div>
 </div>
 
-<p><strong>Don't provide an option to create local-only files.</strong> Users often expect all of their files to be available on all of their devices. Whenever possible, your app should support cloud-based file storage through a service such as iCloud.</p>
+<p><strong>local-only 파일(기기 전용 파일)을 만드는 옵션을 제공하지 마세요.</strong> 사용자는 보통 자신의 파일이 가지고 있는 모든 디바이스에서 접근가능하기를 기대합니다. 가능하다면 당신의 app은 iCloud와 같은 서비스를 통해 cloud-based 파일 저장를 지원해야 합니다.</p>
 
-<p><strong>Implement an intuitive and graphical file browsing interface.</strong> Ideally, use the system’s familiar document picker for browsing. If you implement a custom file browser, make sure it’s intuitive and efficient. File browsers work best when they’re highly graphical, providing visual representations of files. To speed navigation, minimize gestures, and consider providing a new document button, so people don’t need to go elsewhere to create a new document.</p>
+<p><strong>직관적이고 그래픽으로 구성된 탐색 인터페이스를 제공하세요.</strong> 이상적 상황이라면, 시스템과 친숙한 'document picker'를 탐색을 위해 사용하세요. 만약 당신이 개인화된 파일 탐색기를 제공할 것이라면, 직관적이고 효과적으로 만들어야 합니다. 파일 탐색기는 파일을 나타내는 고도의 시각적 그래픽을 제공할 때 가장 효과가 좋습니다. 탐색하는 속도를 높이기 위해서 동작을 최소화하고, 새로운 문서를 만드는 버튼을 제공해서 사용자가 새 문서를 만들려고 다른 곳으로 갈 필요가 없도록 하세요.</p>
 
-<p><strong>Let users preview files without leaving your app.</strong> You can use Quick Look to let people view the contents of Keynote, Numbers, and Pages documents, PDFs, images, and certain other types of files, even if your app doesn’t actually open them. See <a href="../../features/quick-look/index.html">Quick Look</a>.</p>
+<p><strong>사용자가 app을 떠나지 않고서도 파일을 미리 볼 수 있도록 해주세요.</strong> 'Quick Look'을 사용하면 사용자가 Keynote, Numbers, Pages 문서, PDF, 이미지, 또는 다르 유형의 파일의 내용을 실제로 열지 않고서도 볼 수 있게 할 수 있습니다. <a href="../../features/quick-look/index.html">Quick Look</a>을 보세요.</p>
 
-<p><strong>When appropriate, share files with other apps.</strong> If it makes sense, your app can share its files with other apps through a <a href="../../extensions/document-providers/index.html">document provider extension</a>. Your app can also let people browse and open files from other apps. For implementation details, see <a href="https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/DocumentPickerProgrammingGuide/Introduction/Introduction.html">Document Picker Programming Guide</a>.</p>
+<p><strong>적절한 상황이라면, 다른 app과 파일을 공유하세요.</strong> 당신의 app은 <a href="../../extensions/document-providers/index.html">document provider extension</a>를 통해서 다른 app과 파일을 공유할 수 있습니다. 또한 다른 app의 파일을 탐색하고 열어보게 할 수도 있습니다. 자세한 사항은 <a href="https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/DocumentPickerProgrammingGuide/Introduction/Introduction.html">Document Picker Programming Guide</a>를 보세요.</p>
 
 					</div>
 				</section>
@@ -524,7 +524,7 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 			</a>
 		</section>
 	</aside>
-	
+
 	<!-- Footer -->
 	<section id="globalfooter-wrapper">
 	<footer id="globalfooter" role="contentinfo">
@@ -691,7 +691,7 @@ var s_code=s.t();if(s_code)document.write(s_code)</script>
 			<li><a href="../../resources/index.html#xcode-projects">Xcode Projects</a></li>
 		</ul>
 	</div>
-	
+
 	<div id="dn-cola" class="column">
 
 		<h3>Related Guidelines</h3>
