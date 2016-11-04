@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2277: Networking and Multitasking</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40010841">
+	<meta id="document-version" name="document-version" content="1.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40010841-CH1">
+    <meta id="date" name="date" content="2011-03-30">
+    <meta id="description" name="description" content="TN2277: explains how best to handle multitasking in a network application.">
+    <meta id="book-title" name="book-title" content="Networking and Multitasking">
+    <meta id="book-name" name="book-name" contents="DTS_TN2277_NetworkingandMul">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Topic/Networking & Internet}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2277">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Networking and Multitasking" type="text/html" href="https://developer.apple.com/library/ios/technotes/tn2277/index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40010841" title="Technical Note TN2277"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Networking and Multitasking</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="https://developer.apple.com/library/ios/technotes/tn2277/index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40010841-CH1-DontLinkElementID_2" title="Technical Note TN2277"></a><div class="dtsDocNumber">Technical Note TN2277</div><h1 id="pageTitle">Networking and Multitasking</h1><p>Multitasking was a key feature of iOS 4. Multitasking allows your app to be put into the background and, from there, suspended. This is great for system responsiveness, but can seriously affect your app's ability to work with the network. This technote explains how best to handle multitasking in a network application.</p><p>You should read this technote if you're developing an iOS app that uses the network.</p>
+
+   
+    <div class="outerMiniTOC">
+
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SECTION1">Introduction</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SECTION2">The Basics</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION2">Listening Socket</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION3">Data Socket</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION4">Higher-Level APIs</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SECTION6">Implementation Details</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION6">Beware of the Dog!</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION7">Concurrency</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION8">Run Loops</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION9">Testing Socket Reclaim</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SECTION11">Beyond The Basics</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION11">Background Tasks</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION12">Resumable Transfers</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SECTION14">Multitasking Superpowers</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION14">Background Execution</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION15">VoIP Sockets</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40010841-RevisionHistory-DontLinkElementID_1">Document Revision History</a>
+                
+                
+                
+            </div>
+            
+        
+    </div>
+
+<section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SECTION1" title="Introduction"></a><h2 class="jump">Introduction</h2><p>Multitasking, introduced with iOS 4, adds a new level of complexity for network apps. When iOS puts your app into the background, it may shortly thereafter suspend the app. When the app is suspended, no code within the app's process executes. This makes it impossible for the app to handle incoming network data. Furthermore, while the app is suspended the system may choose to reclaim resources out from underneath a network socket used by the app, thereby closing the network connection represented by that socket.</p><p>While iOS 4 was carefully constructed to minimize the amount of work needed to make a network app compatible with multitasking, it is still necessary to do some work to maintain basic functionality in your app. Moreover, by going beyond the basics you can significantly improve the network behavior of your app in the presence of multitasking.</p><p>This document starts by explaining the basic steps needed to make a network app compatible with multitasking (<span class="content_text"><!--a  -->The Basics<!--/a--></span>), then describes some fiddly implementation details (<span class="content_text"><!--a  -->Implementation Details<!--/a--></span>), and then shows how you can make a network app really shine in a multitasking environment (<span class="content_text"><!--a  -->Beyond The Basics<!--/a--></span>).</p><p>Before going any further, you should familiarize yourself with the iOS app lifecycle, as described in the <span class="content_text"><a href="../../index.html#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html" class="browserLink" >iOS Application Programming Guide</a></span>. Specifically, this technote uses the terms <strong>foreground</strong>, <strong>background</strong> and <strong>suspended</strong> in the technical sense defined in that document.</p><p>Finally, the bulk of this technote is aimed at developers who are creating apps that have no special multitasking capabilities. However, if your app fits into one of the multitasking categories described in the <span class="content_text"><a href="../../index.html#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html" class="browserLink" >iOS Application Programming Guide</a></span>, you should make sure to read the information in <span class="content_text"><!--a  -->Multitasking Superpowers<!--/a--></span>.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SECTION2" title="The Basics"></a><h2 class="jump">The Basics</h2><p>All iOS networking APIs are ultimately implemented in terms of the BSD Sockets API which, for the purposes of this discussion, supports two basic types of sockets:</p><ul class="ul"><li class="li"><p><strong>listening sockets</strong> — A listening socket is used to accept incoming TCP connections.</p></li><li class="li"><p><strong>data sockets</strong> — A data socket is used to transfer data over the network. Data sockets typically represent a TCP connection or give you access to a UDP port.</p></li></ul><p>The following sections describe how to handle multitasking for each type of socket.</p><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION2" title="Listening Socket"></a><h3 class="jump">Listening Socket</h3><p>Handling a listening socket in a multitasking environment is very simple: your app should close the listening socket when it goes into the background and reopen it when it comes back into the foreground. There are two important reasons for this:</p><ul class="ul"><li class="li"><p>Once your app goes into the background, it may be suspended. Once it is suspended, it's unable to properly process incoming connections on the listening socket. However, the socket is still active as far as the kernel is concerned. If a client connects to the socket, the kernel will accept the connection but your app won't communicate over it. Eventually the client will give up, but that might take a while.</p><p>Thus, it's better to close the listening socket when going into the background, which will cause incoming connections to be immediately rejected by the kernel.</p></li><li class="li"><p>If the system suspends your app and then, later on, reclaims the resources from underneath your listening socket, your app will no longer be listening for connections, even after it has been resumed. The app may or may not be notified of this, depending on how it manages the listening socket. It's generally easier to avoid this problem entirely by closing the listening socket when the app is in the background.</p></li></ul><p>Keep in mind that, when your app closes a listening socket, it should also stop any Bonjour registrations for that socket.</p></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION3" title="Data Socket"></a><h3 class="jump">Data Socket</h3><p>The situation with data sockets is more subtle, and the best approach depends on what your data socket is doing. The decision you must make is whether to close your data socket when your app goes into the background, or whether to leave the data socket open while the app is in the background and, more importantly, while the app is suspended. The key factor in this decision is how easy it is to close and reopen your data socket:</p><ul class="ul"><li class="li"><p>If reopening your data socket is simple, cheap, and has no user visible consequences, the best approach is to close the socket when the app goes into the background, and reopen it when it comes back into the foreground. This makes your life very simple; in fact, if you do this, you can ignore the rest of this section entirely!</p></li><li class="li"><p>If reopening your data socket is slow, expensive, or something that the user might notice, you probably want to keep the socket open when you go into the background. This is to account for the common case where the user switches from your app to some other app, and then quickly switches back again. You don't want to subject the user to unnecessary network delays in that case. However, if you leave your data socket open, you must deal with the consequences of that decision, as described in the rest of this section.</p></li></ul><p>If you do leave your data socket open when going into the background, you must correctly handle errors on that socket. Handling errors is not a new requirement, but it is particularly important in this case because, if your app gets suspended, the socket's resources might get reclaimed by the kernel, after which all networking operations on the socket will fail. The only thing you can do with the socket at this point is to close it.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40010841-CH1-DontLinkElementID_3" title="Note"></a><p><strong>Note:</strong>&nbsp;When your app resumes execution the actual error returned by a socket's whose resources have been reclaimed is purposely not specified here to allow for future refinements. However, in many cases the error will be <code>EBADF</code>, which is probably not what you were expecting!  Under normal circumstances <code>EBADF</code> means that the app has passed an invalid file descriptor to a system call. However, in the case of a socket whose resources have been reclaimed, it does not mean that the file descriptor was invalid, just that the socket is no longer usable.</p><p></p></aside></div><p>Unfortunately it was not possible to use a new and unique error code in this situation because system calls have strict constraints as to what errors they may return.</p><p>If the protocol you're speaking over the data socket supports a quiescent mode, you should enable it when going into the background and disable it when moving back to the foreground. For example, IMAP supports an IDLE command that allows clients to be notified asynchronously when a mailbox changes. There's no point having your app receive these notifications while it is suspended, so you definitely want to cancel these IDLE requests when going into the background.</p></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION4" title="Higher-Level APIs"></a><h3 class="jump">Higher-Level APIs</h3><p>The previous section was written in terms of sockets, but the advice applies equally well to higher-level constructs layered on top of sockets. For example:</p><ul class="ul"><li class="li"><p>If you're using an NSStream to manage a TCP connection, that NSStream is toll-free bridged to CFStream (actually a specific flavor of CFStream known as a CFSocketStream) that manages the underlying socket.</p></li><li class="li"><p>If you're using NSURLConnection, it is implemented using a CFStream (a CFHTTPStream) which in turn uses another CFStream (a CFSocketStream this time) which manages the underlying socket.</p></li></ul><p>If the data socket underlying one of these higher-level constructs has its resources reclaimed by the kernel, the higher-level construct will report that as an error. You should detect and process that error as you would for any other network error. For example:</p><ul class="ul"><li class="li"><p>If you're using an NSStream, you will receive an <code>NSStreamEventHasBytesAvailable</code> event. You should respond to this by reading from the stream, at which point <code>-[NSInputStream -read:maxLength:]</code> will return -1, indicating an error. You can then get the actual error by calling <code>-[NSStream streamError]</code>.</p></li><li class="li"><p>If you're using NSURLConnection, the connection will call your <code>-connection:didFailWithError:</code> delegate method to signal the error.</p></li></ul></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SECTION6" title="Implementation Details"></a><h2 class="jump">Implementation Details</h2><p>This section describes some important things to keep in mind while you're planning your app's response to multitasking transitions.</p><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION6" title="Beware of the Dog!"></a><h3 class="jump">Beware of the Dog!</h3><p>As described in the previous section, your app may end up doing important work as it transitions from the foreground to the background, typically in the <code>-applicationDidEnterBackground:</code> delegate method. It's vital that this work be done quickly. If your app spends too long in <code>-applicationDidEnterBackground:</code>, it will be killed by the watchdog.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40010841-CH1-DontLinkElementID_4" title="Note"></a><p><strong>Note:</strong>&nbsp;To understand more about the watchdog, read <span class="content_text"><a href="../../../mac/navigation/topic_details/resourceType_2.html" class="urlLink" rel="external">Technical Note TN2151, 'Understanding and Analyzing iPhone OS Application Crash Reports'</a></span> and <span class="content_text"><a href="https://developer.apple.com/qa/qa2010/qa1693.html" class="urlLink" rel="external">Technical Q&amp;A QA1693, 'Synchronous Networking On The Main Thread'</a></span>.</p><p></p></aside></div><p>In this context any operation that involves waiting for the network is "too long". That's because the network might become unresponsive at exactly the point your app moves to the background. If that happens the app will end up spending too long inside <code>-applicationDidEnterBackground:</code>, and will end up as dog food.</p><p>Not all network operations involve waiting. For example, it's perfectly fine to close a listening socket in your <code>-applicationDidEnterBackground:</code> delegate method; closing a listening socket is always fast. It's even possible to transfer data in this situation. For example, if you want to send a command the puts a connection into quiescent mode, that's OK as long as there's space for the command in the kernel's socket buffer (that is, the socket is not in write-side flow control). In that case sending the command just copies the data to the socket buffer, which won't block for any significant amount of time.</p><p>Where your app can get into trouble is when it tries to send a command and wait for a response. If the network is unresponsive, the response will be delayed and your app will be killed by the watchdog.</p><p>If you must wait for the network in this situation, you should use a background task (created via <code>-[UIApplication beginBackgroundTaskWithExpirationHandler:]</code>) to manage that process. For example, let's say your protocol's quiescent mode is entered by means of a quiesce command whose response you must wait for. In that case your <code>-applicationDidEnterBackground:</code> delegate method should:</p><ol class="ol"><li class="li"><p>start an asynchronous operation to send the quiesce command and wait for the response</p></li><li class="li"><p>begin a background task to request extra time for that operation to complete</p></li><li class="li"><p>return from <code>-applicationDidEnterBackground:</code></p></li></ol><p>This will give your app extra time to execute the quiesce command without spending too long in <code>-applicationDidEnterBackground:</code>.</p><p>Keep in mind that all background tasks must supply an expiration handler which the system calls when it requires the background task to complete immediately. The expiration handler, like the <code>-applicationDidEnterBackground:</code> delegate method, is monitored by the watchdog; if an expiration handler takes too long, the app will be killed. Thus it's only safe to do a network operation from your expiration handler if you can guarantee that it won't wait for the network. This is the point where you might want to unilaterally close a data socket, without attempting to say goodbye to the remote peer.</p></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION7" title="Concurrency"></a><h3 class="jump">Concurrency</h3><p>If you plan to do any useful networking in an iOS app, it's likely that you'll end up using background tasks to continue your work, even if only temporarily, as your app transitions to the background. When you start a background task you must supply an expiration handler that can cancel the background task. The expiration handler runs on the main thread and it must cancel the background task before it returns (because your app will be suspended or terminated soon after). And, as mentioned in the previous section, the expiration handler must execute quickly because, if it takes too long, your app will be killed by the watchdog.</p><p>These requirements place a number of constraints on the design of your app. Most critically, it is hard to meet these requirements if you are using synchronous blocking network APIs on secondary threads. That's because threads make it hard to support cancellation, and a well-implemented expiration handler requires good support for cancellation.</p><p>For example, consider the case where a network thread is listening, in a synchronous blocking fashion, for an incoming connection. In that case the thread would typically be blocked in the <span class="content_text"><a href="x-man-page://2/accept" class="urlLink" rel="external">accept</a></span> system call. When the user presses the Home button, your app is put in the background, and you want it to close down its listening socket. How do you unblock the thread that's waiting inside <code>accept</code>?  The short answer is that there's no good way to do this.</p><p>Alternatively, consider the case where your app is doing a large download in the background and the network is really slow, so slow in fact that the app runs out of background task time. At this point the system runs the background task's expiration handler on the main thread, and the app has to close the connection before returning. How do you do that when there's a thread blocked in <span class="content_text"><a href="x-man-page://2/reda" class="urlLink" rel="external">read</a></span> waiting for data off the network?  Again, the answer is that there's no good way to do this.</p><p>The upshot of this is that, in order to support multitasking well, you will probably want to use asynchronous network APIs. iOS provides a wide variety of APIs to do this—from low-level APIs like GCD to high-level APIs like NSURLConnection, with many stops in between—and we encourage you to use them.</p></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION8" title="Run Loops"></a><h3 class="jump">Run Loops</h3><p>If you use a run loop based networking API, you may find it necessary to run the run loop from within an expiration handler in order to give the run loop based infrastructure the time needed to finish up. If you do this, you must run the run loop in a custom run loop mode; running the run loop in the default run loop mode inside an expiration handler (or, for that matter, within <code>-applicationDidEnterBackground:</code>) is not something that we support. Keep in mind that, if you use this technique, you must schedule all the relevant run loop sources in your custom run loop mode as well as in the default mode.</p></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION9" title="Testing Socket Reclaim"></a><h3 class="jump">Testing Socket Reclaim</h3><p>If you're going to write code that handles a socket's resources being reclaimed by the kernel, you have to figure out how to test it. The exact circumstances under which the system might reclaim a socket's resources are purposely not documented; this gives us the flexibility to improve things in the future. However, on current systems (iOS 4.0 through iOS 4.3), you can get the system to reclaim resources from the sockets in your app by:</p><ol class="ol"><li class="li"><p>putting your app in the background</p></li><li class="li"><p>ensuring that the app is suspended</p></li><li class="li"><p>locking the screen</p></li></ol><p>When your app resumes execution it will find that it's sockets have been reclaimed.</p></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SECTION11" title="Beyond The Basics"></a><h2 class="jump">Beyond The Basics</h2><p>If your app does long-running network transfers, there are two things you can do to improve the user experience:</p><ul class="ul"><li class="li"><p>use a background task to complete the transfer in the background</p></li><li class="li"><p>implement resumable transfers</p></li></ul><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION11" title="Background Tasks"></a><h3 class="jump">Background Tasks</h3><p>Continuing a network transfer is an obvious application of background tasks. If the user starts a large transfer and then switches out of your app, it can start a background task to continue the transfer. If all goes well the transfer will be finished before the user next brings the app to the front.</p><p>When implementing background task support in your app, it's not necessary for you to have separate logic for the "in the background" and "in the foreground" cases. It's perfectly fine for your app to begin a background task every time it starts a long-running operation, even if the app is in the foreground. While the app is in the foreground the background task won't have any effect; however, if the user moves the app to the background, the existence of the background task will automatically keep the app running so that it can complete the operation.</p></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION12" title="Resumable Transfers"></a><h3 class="jump">Resumable Transfers</h3><p>Even if you use a background task to continue long transfers, it's still important that your app support resumable transfers. There are numerous situations where this might be useful:</p><ul class="ul"><li class="li"><p>if it's running on a device that doesn't support multitasking</p></li><li class="li"><p>if the network connection is interrupted during the transfer</p></li><li class="li"><p>if your app asks to start a background task and the system refuses to do so (that is, if <code>-[UIApplication beginBackgroundTaskWithExpirationHandler:]</code> returns <code>UIBackgroundTaskInvalid</code>)</p></li><li class="li"><p>if system resources get low and thus the system must suspend or terminate your app before its background tasks are complete</p></li><li class="li"><p>if the transfer takes more time than the background task will allow</p></li></ul><p>All of these situations will benefit from you implementing resumable transfers.</p><p>Implementing resumable downloads is typically easy. If you're using HTTP, most servers support entity tags and byte ranges, the fundamental building blocks of resumable downloads. Moreover, it's easy to use these features from NSURLConnection. You should read the HTTP protocol specification (<span class="content_text"><a href="http://www.ietf.org/rfc/rfc2616.txt" class="urlLink" rel="external">RFC 2616</a></span>) to learn more about these facilities.</p><p>Resumable HTTP uploads is a little trickier, and it's also dependent on the server that you're uploading too. It may not be possible to implement resumable uploads without modifying your server to accommodate them.</p><p>Implementing resumable FTP downloads is also easy; when resuming the download, you can set the <code>kCFStreamPropertyFTPFileTransferOffset</code> property to instruct CFFTPStream where to start downloading from.</p><p>CFFTPStream does not support resumable FTP uploads 
+			(r. <span class="content_text"><a href="rdar://problem/4086998" class="urlLink" rel="external">4086998</a></span>)
+		. Then again, given FTP's poor security features (the user name, password and data are all transferred as plaintext) it's hard to imagine any use of FTP uploads that is suitable for the modern Internet.</p></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SECTION14" title="Multitasking Superpowers"></a><h2 class="jump">Multitasking Superpowers</h2><p>Some apps have special powers when running on a multitasking system. For example, an audio player app can play music in the background without ever being suspended. This section explains the relationship between networking and these multitasking 'superpowers'.</p><p>There are two types of special powers that relate to networking:</p><ul class="ul"><li class="li"><p>executing code in the background</p></li><li class="li"><p>VoIP sockets</p></li></ul><p>These are discussed in the following sections.</p><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION14" title="Background Execution"></a><h3 class="jump">Background Execution</h3><p>The most common multitasking special power is the ability to execute code in the background. For example, when a music player app is playing music, it will not be suspended upon moving to the background. The bulk of this document has used the term "moves to the background" as shorthand for "becomes eligible for suspension". That's a good rule of thumb, but it breaks down when dealing with apps that can execute in the background. In these apps the act of moving to the background does not automatically make the app eligible for suspension. Rather, the app becomes eligible for suspension when it stops doing the thing that prevented it from being suspend in the first place. To continue the music player example, the app becomes eligible for suspension when it stops playing music.</p><p>Note that background tasks (as discussed in <span class="content_text"><!--a  -->Beware of the Dog!<!--/a--></span> and <span class="content_text"><!--a  -->Beyond The Basics<!--/a--></span>) are a special case of this power. Any app can execute code in the background for a limited amount of time by beginning a background task. Such an app becomes eligible for suspension when its last background task ends.</p></section><section><a name="//apple_ref/doc/uid/DTS40010841-CH1-SUBSECTION15" title="VoIP Sockets"></a><h3 class="jump">VoIP Sockets</h3><p>A VoIP (Voice over IP) app is expected to run continuously so that it can monitor the VoIP control connection; however, to minimize the memory impact on the system, the app is suspended while it's inactive. To make this work the app must register the data socket for its control connection as a VoIP socket. A socket registered in this way has two special features:</p><ul class="ul"><li class="li"><p>While the app is suspended the system monitors the socket on the app's behalf. If any data arrives on the socket, the system resumes execution of the app (albeit in the background), which can then read the data off the socket and take the appropriate action (for example, notifying the user of an incoming call).</p></li><li class="li"><p>The socket's resources are never reclaimed. Thus, the app can safely be suspended without any fear of its socket going deaf.</p></li></ul><p>For more information about how to create a VoIP app, see the <span class="content_text"><a href="../../index.html#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html" class="browserLink" >iOS Application Programming Guide</a></span>.</p></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><br/><hr/><a name="//apple_ref/doc/uid/DTS40010841-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40010841-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2011-03-30</td><td><p>New document that 
+					explains how best to handle multitasking in a network application.</p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2011 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2011-03-30</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

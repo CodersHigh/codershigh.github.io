@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2286: Implementing a Shared iAd Banner</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40011212">
+	<meta id="document-version" name="document-version" content="1.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40011212-CH1">
+    <meta id="date" name="date" content="2011-09-07">
+    <meta id="description" name="description" content="TN2286: describes best practices for implementing a shared iAd banner across multiple views.">
+    <meta id="book-title" name="book-title" content="Implementing a Shared iAd Banner">
+    <meta id="book-name" name="book-name" contents="DTS_TN2286_ImplementingaSha">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Framework/Cocoa Touch Layer/iAd}, {Topic/User Experience/Windows & Views}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2286">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Implementing a Shared iAd Banner" type="text/html" href="index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40011212" title="Technical Note TN2286"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Implementing a Shared iAd Banner</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40011212-CH1-DontLinkElementID_2" title="Technical Note TN2286"></a><div class="dtsDocNumber">Technical Note TN2286</div><h1 id="pageTitle">Implementing a Shared iAd Banner</h1><p>Why you should use a single shared iAd banner, and how to implement it in your application.</p>
+
+   
+    <div class="outerMiniTOC">
+
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011212-CH1-TNTAG1">Introduction</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011212-CH1-TNTAG2">Show and hide your iAd banner</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011212-CH1-TNTAG3">Use a single shared iAd banner</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011212-CH1-TNTAG3-WHY_USE_A_SHARED_BANNER">Why use a shared banner</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40011212-CH1-TNTAG3-HOW_TO_IMPLEMENT_A_SHARED_BANNER">How to implement a shared banner</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011212-RevisionHistory-DontLinkElementID_1">Document Revision History</a>
+                
+                
+                
+            </div>
+            
+        
+    </div>
+
+<section><a name="//apple_ref/doc/uid/DTS40011212-CH1-TNTAG1" title="Introduction"></a><h2 class="jump">Introduction</h2><p>There are two best practices you'll want to implement when integrating iAd into your iOS application. First, show and hide your iAd banner based on inventory availability; second, use a single shared iAd banner across multiple views.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011212-CH1-TNTAG2" title="Show and hide your iAd banner"></a><h2 class="jump">Show and hide your iAd banner</h2><p>You should hide your iAd banner when ad inventory is unavailable. <span class="content_text"><a href="../../index.html#qa/qa1641/_index.html" class="browserLink" >QA1641: Hiding iAd banners when ads are not available</a></span> explains when and how you should hide the iAd banner.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011212-CH1-TNTAG3" title="Use a single shared iAd banner"></a><h2 class="jump">Use a single shared iAd banner</h2><section><a name="//apple_ref/doc/uid/DTS40011212-CH1-TNTAG3-WHY_USE_A_SHARED_BANNER" title="Why use a shared banner"></a><h3 class="jump">Why use a shared banner</h3><p>If your application has multiple tabs or views displaying an iAd banner, you should share a single instance of <code>ADBannerView</code> across each view.</p><p>Using a shared banner allows maximum efficiency in retrieving ad inventory for your app. The longest wait for iAd inventory is when the <code>ADBannerView</code> is instantiated. After that, ad inventory refreshes on a periodic basis. If you delete and recreate the <code>ADBannerView</code> every time the view switches, your wait for inventory is reset and induces a delay in waiting for another ad to become available.</p></section><section><a name="//apple_ref/doc/uid/DTS40011212-CH1-TNTAG3-HOW_TO_IMPLEMENT_A_SHARED_BANNER" title="How to implement a shared banner"></a><h3 class="jump">How to implement a shared banner</h3><ul class="ul"><li class="li"><p>Create an <code>ADBannerView</code> instance belonging to your app delegate soon after your application launches, for example, in <code>-appliction:didFinishLaunchingWithOptions:</code> of your app delegate.</p></li><li class="li"><p>Use your application delegate as the banner's delegate. Have your application delegate tell the current view controller if it should show or hide the banner. You can use <code>UINavigationControllerDelegate</code> or <code>UITabBarControllerDelegate</code> protocol to push the banner to show it. </p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40011212-CH1-DontLinkElementID_3" title="Note"></a><p><strong>Note:</strong>&nbsp;This is important for cases where you do not want to have an ad (such as a modal view controller) – if you get a message while that controller is up, you may not be able to respond correctly if you have no delegate.</p><p></p></aside></div></li><li class="li"><p>Because the banner is owned by your app delegate, there is never a need to either release the banner, nor set its delegate to <code>nil</code>.</p></li></ul></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><br/><hr/><a name="//apple_ref/doc/uid/DTS40011212-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40011212-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2011-09-07</td><td><p>New document that 
+					describes best practices for implementing a shared iAd banner across multiple views.</p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2011 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2011-09-07</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

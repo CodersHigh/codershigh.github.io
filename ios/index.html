@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iOS Developer Library</title>
+    <meta charset="utf-8">
+    <script>
+        var content_page = "navigation";
+        var href = window.location.href;
+        if (window.location.href.match('#')) {
+        	var newhref = href.replace('#', '');
+        	newhref = newhref.replace('%23', '#');
+          window.location.href = newhref;
+        }
+        else {
+            console.log(content_page);
+            console.log(content_page.match("content_page"));
+            if(content_page.match("content_page")) {
+                window.location.href = './navigation';
+            }
+            else {
+                window.location.href = "./" + content_page;
+            }
+        }
+    </script>
+</head>    
+<body>
+</body>
+<script type="text/javascript" src="../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

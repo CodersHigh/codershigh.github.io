@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Auto Layout Guide: Auto Layout by Example</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40010853">
+	<meta id="document-version" name="document-version" content="2.4.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="TP40010853-CH5">
+    <meta id="date" name="date" content="2013-09-18">
+    <meta id="description" name="description" content="Describes the constraint-based system for laying out user interface elements.">
+    <meta id="book-title" name="book-title" content="Auto Layout Guide">
+    <meta id="book-name" name="book-name" content="AutolayoutPG">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}">
+    <meta name="pdf" contents="../AutolayoutPG.pdf" /><link id="book-pdf" media="print" rel="alternate" type="application/pdf" href="../AutolayoutPG.pdf" />
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Auto Layout by Example">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Auto Layout Guide" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="../ImplementingView/ImplementingView.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../ResolvingIssues/ResolvingIssues.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40010853-CH5" title="Auto Layout by Example"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Auto Layout Guide</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../ImplementingView/ImplementingView.html'>Next</a><a class='previousLink' rel='prev' href='../ResolvingIssues/ResolvingIssues.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40010853-CH5-SW1" title="Auto Layout by Example"></a><h1 id="pageTitle">Auto Layout by Example</h1><p>Auto Layout makes it easy to solve many complex layout problems automatically, without the need for manual view manipulation. By creating the right combination of constraints, you can create layouts that are traditionally difficult to manage in code, such as equally spaced views that adjust to changes in orientation or size, elements inside scroll views that affect the size of the scrolling content, or elements inside scroll views that don’t scroll with the rest of the contents.</p><section><a name="//apple_ref/doc/uid/TP40010853-CH5-SW2" title="Using Scroll Views with Auto Layout"></a><h2 class="jump">Using Scroll Views with Auto Layout</h2><p>When you are creating an app using Auto Layout, scroll views can present a unique challenge. The size of the scrolling content must be set correctly so that the user can scroll through all of the available content, for example, and if you need to lock a contextual view in place on top of a scroll view, such as the scale and legend for a map, it’s difficult to ensure that the element doesn’t scroll with the rest of the content.</p><section><a name="//apple_ref/doc/uid/TP40010853-CH5-SW3" title="Controlling Scroll View Content Size"></a><h3 class="jump">Controlling Scroll View Content Size</h3><p>The size of the content inside of a scroll view is determined by the constraints of its descendants.</p><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH5-SW4" title="To set the size of a scroll view"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To set the size of a scroll view</div></div><div class="task-content"><ol><li class="step"><div class="action"><p>Create the scroll view.</p></div></li><li class="step"><div class="action"><p>Place the UI element inside it.</p></div></li><li class="step"><div class="action"><p>Create constraints that fully define the width and height of the scroll view content.</p></div></li></ol></div></div><p>You must make sure you create constraints for all the subviews inside a scroll view. For example, when defining the constraints for a view that doesn’t have an intrinsic content size, you’ll need more than just a leading edge constraint—you must also create trailing edge, width, and height constraints. There cannot be any missing constraints, starting from one edge of the scroll view to the other.</p></section><section><a name="//apple_ref/doc/uid/TP40010853-CH5-SW5" title="Creating Anchored Views Inside a Scroll View"></a><h3 class="jump">Creating Anchored Views Inside a Scroll View</h3><p>You may find you want to create an area inside a scroll view that doesn’t move when a user scrolls the contents of the scroll view. You accomplish this by using a separate <strong>container view</strong>.</p><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH5-SW6" title="To lock a view inside a scroll view"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To lock a view inside a scroll view</div></div><div class="task-content"><ol><li class="step"><div class="action"><p>Create a container view to hold the scroll view.</p></div></li><li class="step"><div class="action"><p>Create the scroll view and place it in the container view with all edges equal to zero points.</p></div></li><li class="step"><div class="action"><p>Create and place a subview inside of the scroll view.</p></div></li><li class="step"><div class="action"><p>Create constraints from the subview to the container view.</p></div></li></ol></div></div><p>The following example uses the steps in the above task to show how to position a text view inside of a scroll view. In this example, the text view stays at the bottom of the scroll view and doesn’t move when the scroll view contents are moved.</p><p>First, create the container view that will contain the scroll view. Set the size of the container view equal to the desired size of the scroll view.</p><figure class="figure"><img src="../Art/sv_containerview.png" alt="../Art/sv_containerview.png" width="337" height="580"></figure><p>After the container view is created, create a scroll view and place it inside of the container view. Resize the scroll view so that all of the edges are flush with the container view’s edges, by setting the distance to 0.</p><figure class="figure"><img src="../Art/sv_scrollview.png" alt="../Art/sv_scrollview.png" width="336" height="580"></figure><p>Create another view and place it inside of the scroll view. In this example, a text view is placed inside of the scroll view.</p><figure class="figure"><img src="../Art/sv_textview.png" alt="../Art/sv_textview.png" width="334" height="580"></figure><p>After placing the text view, create constraints from the text view to the container view. Creating constraints that anchor the text view to the container view (skipping the scroll view) anchors the text view relative to the container view, which ensures that the scroll view won’t scroll the text view.</p><p>To create a constraint that crosses multiple views in the view hierarchy, it is generally easier to Control-drag from the view to the container view in the Interface Builder outline view.</p><figure class="figure"><img src="../Art/sv_constraints.png" alt="../Art/sv_constraints.png" width="270" height="298"></figure><p>In the constraint overlay that appears, set the required constraints for the view.</p><figure class="figure"><img src="../Art/sv_leadconstraint.png" alt="../Art/sv_leadconstraint.png" width="158" height="273"></figure><p>In this example, constraints are created from the leading, trailing, and bottom edges of the text view to the container view. The height of the text view is also constrained.</p><figure class="figure"><img src="../Art/sv_textviewconstraints.png" alt="../Art/sv_textviewconstraints.png" width="333" height="580"></figure><p>The following two figures show the app in iOS Simulator, both in normal and landscape positions. The text view is constrained at the bottom of the scroll view and doesn’t move as the scroll view is moved.</p><figure class="figure"><img src="../Art/uiscrollview_bottom_sideways.png" alt="../Art/uiscrollview_bottom_sideways.png" width="495" height="296"></figure><figure class="figure"><img src="../Art/uiscrollview_bottom_vertical.png" alt="../Art/uiscrollview_bottom_vertical.png" width="296" height="495"></figure></section></section><section><a name="//apple_ref/doc/uid/TP40010853-CH5-SW7" title="Spacing and Wrapping"></a><h2 class="jump">Spacing and Wrapping</h2><p>Auto Layout provides several techniques for automatically spacing views and resizing items based on their content. The following sections describe how to create constraints that keep visible views proportionally spaced based on the orientation of the device.</p><section><a name="//apple_ref/doc/uid/TP40010853-CH5-SW8" title="Creating Equal Spacing Between Views"></a><h3 class="jump">Creating Equal Spacing Between Views</h3><p>To lay out several views that are proportionally spaced based on the orientation of a device, create spacer views between the visible views. Set the constraints of these spacer views correctly to ensure that the visible views are able to stay spaced apart based on the orientation of the device.</p><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH5-SW9" title="To space views proportionally"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To space views proportionally</div></div><div class="task-content"><ol><li class="step"><div class="action"><p>Create the visible views.</p></div></li><li class="step"><div class="action"><p>Create the spacer views equal to the number of visible views plus one.</p></div></li><li class="step"><div class="action"><p>Alternate placing your views, starting with a spacer view.</p></div><div class="elaborations"><p>To space two visible views, place all of the views in the following pattern, starting from the left side of the screen and moving right: </p><p><code>spacer1</code> | <code>view1</code> | <code>spacer2</code> | <code>view2</code> | <code>spacer3</code>.</p></div></li><li class="step"><div class="action"><p>Constrain the spacer views so that their lengths are equal to each other.</p></div><div class="elaborations"><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40010853-CH5-SW10" title="Note"></a><p><strong>Note:</strong>&nbsp;The height of the spacer views can be any value, including <code>0</code>. However, you must create constraints for the height of the views—don’t leave the height ambiguous.</p><p></p></aside></div></div></li><li class="step"><div class="action"><p>Create a leading constraint from the first spacer view to the container view.</p></div></li><li class="step"><div class="action"><p>Create a trailing constraint from the last spacer view to the container view.</p></div></li><li class="step"><div class="action"><p>Create constraints between the spacer views and the visible views.</p></div></li></ol></div></div><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40010853-CH5-SW11" title="Note"></a><p><strong>Note:</strong>&nbsp;When spacing views vertically, start from the top of the screen and place each view below the previous view. Set the heights of the spacer views equal to each other.</p><p></p></aside></div><p>The following example uses the steps in the above task to show how to position two views proportionally spaced. The spacer views are annotated for the example, but are normally left empty with no background. First, create the two views and place them in the storyboard.</p><figure class="figure"><img src="../Art/es_twoviews.png" alt="../Art/es_twoviews.png" width="236" height="310"></figure><p>Add the three spacer views—one to the left of the leftmost view, one between the two views, and one to the right of the rightmost view. The spacer views don’t have to be the same size at this time because their size will be set through constraints.</p><figure class="figure"><img src="../Art/es_spacersadded.png" alt="../Art/es_spacersadded.png" width="235" height="310"></figure><p>Create the following constraints for the spacer views:</p><ul class="ul"><li class="li"><p>Constrain the width of spacer view 2 and spacer view 3 to be equal to the width of spacer view 1.</p></li><li class="li"><p>Constrain the width of spacer view 1 to be greater than or equal to the minimum desired width.</p></li><li class="li"><p>Create a Leading Space to Container constraint from spacer view 1 to the container.</p></li><li class="li"><p>Create a Horizontal Spacing constraint from spacer view 1 to view 1. Set this constraint to be a less-than-or-equal-to constraint with a priority of 1000.</p></li><li class="li"><p>Create Horizontal Spacing constraints from spacer view 2 to view 1 and view 2. Set these constraints to be a less-than-or-equal-to constraint with a priority of 999.</p></li><li class="li"><p>Create a Horizontal Spacing constraint from spacer view 3 to view 2. Set this constraint to be a less-than-or-equal-to constraint with a priority of 1000.</p></li><li class="li"><p>Create a Trailing Space to Container constraint from spacer view 3 to the container.</p></li></ul><p>These constraints create two visible views and three invisible views (spacer views). These spacer views automatically resize as the orientation of the device changes, keeping the visible views proportionally spaced, as shown in the following two figures:</p><figure class="figure"><img src="../Art/es_vertical.png" alt="../Art/es_vertical.png" width="261" height="337"></figure><figure class="figure"><img src="../Art/es_horizontal.png" alt="../Art/es_horizontal.png" width="337" height="261"></figure></section></section><section><a name="//apple_ref/doc/uid/TP40010853-CH5-SW15" title="Animating Changes Made by Auto Layout"></a><h2 class="jump">Animating Changes Made by Auto Layout</h2><p>If you need full control over animating changes made by Auto Layout, you must make your constraint changes programmatically. The basic concept is the same for both iOS and OS X, but there are a few minor differences.</p><p>In an iOS app, your code would look something like the following:</p><a name="//apple_ref/doc/uid/TP40010853-CH5-SW16"></a><div class="codesample clear"><table><tr><td scope="row"><pre>[containerView layoutIfNeeded]; // Ensures that all pending layout operations have been completed<span></span></pre></td></tr><tr><td scope="row"><pre>[UIView animateWithDuration:1.0 animations:^{<span></span></pre></td></tr><tr><td scope="row"><pre>     // Make all constraint changes here<span></span></pre></td></tr><tr><td scope="row"><pre>     [containerView layoutIfNeeded]; // Forces the layout of the subtree animation block and then captures all of the frame changes<span></span></pre></td></tr><tr><td scope="row"><pre>}];<span></span></pre></td></tr></table></div><p>In OS X, use the following code when using layer-backed animations:</p><a name="//apple_ref/doc/uid/TP40010853-CH5-SW17"></a><div class="codesample clear"><table><tr><td scope="row"><pre>[containterView layoutIfNeeded];<span></span></pre></td></tr><tr><td scope="row"><pre>NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {<span></span></pre></td></tr><tr><td scope="row"><pre>     [context setAllowsImplicitAnimation: YES];<span></span></pre></td></tr><tr><td scope="row"><pre>     // Make all constraint changes here<span></span></pre></td></tr><tr><td scope="row"><pre>     [containerView layoutIfNeeded];<span></span></pre></td></tr><tr><td scope="row"><pre>}];<span></span></pre></td></tr></table></div><p>When you aren’t using layer-backed animations, you must animate the constant using the constraint’s animator:</p><a name="//apple_ref/doc/uid/TP40010853-CH5-SW18"></a><div class="codesample clear"><table><tr><td scope="row"><pre>[[constraint animator] setConstant:42];<span></span></pre></td></tr></table></div></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../ImplementingView/ImplementingView.html'>Next</a><a class='previousLink' rel='prev' href='../ResolvingIssues/ResolvingIssues.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-09-18</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>iOS 7 UI Transition Guide: Controls</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="TransitionGuide" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40013174" />
+<meta id="book-title" name="book-title" content="iOS 7 UI Transition Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2013-10-22" />
+<meta id="description" name="description" content="Describes how to transition an iOS 6 app to iOS 7." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">iOS 7 UI Transition Guide</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="TransitionGuide.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40013174-CH12-SW1" class="part-name">Preparing for Transition
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40013174-CH6-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH6-SW1">Before You Start</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Scoping.html#/apple_ref/doc/uid/TP40013174-CH7-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH7-SW1">Scoping the Project</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SupportingEarlieriOS.html#/apple_ref/doc/uid/TP40013174-CH14-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH14-SW1">Supporting iOS 6</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40013174-CH13-SW1" class="part-name">Updating the UI
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppearanceCustomization.html#/apple_ref/doc/uid/TP40013174-CH15-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH15-SW1">Appearance and Behavior</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Bars.html#/apple_ref/doc/uid/TP40013174-CH8-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH8-SW1">Bars and Bar Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH10-SW1">Content Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH9-SW1">Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TempViews.html#/apple_ref/doc/uid/TP40013174-CH11-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH11-SW1">Temporary Views</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40013174-CH9"></a>
+  <h2 class='chapter-name chapter-name-short'>Controls</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW3">
+	  				Date Picker
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW4">
+	  				Contact Add Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW5">
+	  				Detail Disclosure Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW6">
+	  				Info Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW7">
+	  				Label
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW8">
+	  				Page Control
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW9">
+	  				Picker
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW10">
+	  				Progress View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW11">
+	  				Refresh Control
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW12">
+	  				Rounded Rectangle Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW15">
+	  				Segmented Control
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW16">
+	  				Slider
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW17">
+	  				Stepper
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW18">
+	  				Switch
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40013174-CH9-SW19">
+	  				Text Field
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  Controls are UI elements that users either view (to get information) or interact with (to perform an action). All iOS 7 controls have an updated appearance, and most of them also have different metrics.
+</p>
+<p class="para">
+  Because <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIControl_Class/Reference/Reference.html#/apple_ref/occ/cl/UIControl">UIControl</a></code> inherits from <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIView_Class/UIView/UIView.html#/apple_ref/occ/cl/UIView">UIView</a></code>, you can use a control’s <code class="code-voice">tintColor</code> property to tint the control. For more information about tinting views, see <span class="x-name"><a href="AppearanceCustomization.html#/apple_ref/doc/uid/TP40013174-CH15-SW3" data-id="//apple_ref/doc/uid/TP40013174-CH15-SW3">Using Tint Color</a></span>.
+</p>
+<p class="para">
+  By default, system-provided controls support system-defined animations and appearance changes that indicate highlighted and selected states.
+</p>
+
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW3"></a>
+  <h3 class="section-name" tabindex="0">Date Picker</h3>
+  <p class="para">
+  A date picker displays components of date and time, such as minutes, hours, days, and years.
+</p><p class="para">
+  The overall size of a date picker is the same in iOS 7 as it is in iOS 6.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/date_picker_7_2x.png" alt="image: ../Art/date_picker_7_2x.png" width="224" height="124" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/date_picker_6_2x.png" alt="image: ../Art/date_picker_6_2x.png" width="224" height="150" />
+		</section>
+</section><p class="para">
+  iOS 7 apps tend to embed date pickers within the content instead of displaying them in a different view. For example, Calendar dynamically expands a table row to let users specify a time without leaving the event-creation view:
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/inline_date_picker_2x.png" alt="image: ../Art/inline_date_picker_2x.png" width="224" height="383" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW4"></a>
+  <h3 class="section-name" tabindex="0">Contact Add Button</h3>
+  <p class="para">
+  A Contact Add button—that is, a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code> object of type <code class="code-voice">UIButtonTypeContactAdd</code>—lets users add a contact’s information to a text field or other text-based view.
+</p><p class="para">
+  The size and appearance of a Contact Add button have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/contact_add_7_2x.png" alt="image: ../Art/contact_add_7_2x.png" width="36" height="36" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/contact_add_6_2x.png" alt="image: ../Art/contact_add_6_2x.png" width="27" height="29" />
+		</section>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW5"></a>
+  <h3 class="section-name" tabindex="0">Detail Disclosure Button</h3>
+  <p class="para">
+  A Detail Disclosure button—that is, a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code> object of type <code class="code-voice">UIButtonTypeDetailDisclosure</code>—reveals additional details or functionality related to an item in a table or other view. In iOS 7, a Detail Disclosure button uses the same symbol as the Info button.
+</p><p class="para">
+  The size and appearance of a Detail Disclosure button has changed in iOS 7:
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/detail_disclosure_7_2x.png" alt="image: ../Art/detail_disclosure_7_2x.png" width="22" height="22" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/detail_disclosure_6_2x.png" alt="image: ../Art/detail_disclosure_6_2x.png" width="35" height="35" />
+		</section>
+</section><p class="para">
+  When a Detail Disclosure button appears in a table row, tapping elsewhere in the row doesn’t activate the button; instead, it selects the row item or triggers app-defined behavior.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW6"></a>
+  <h3 class="section-name" tabindex="0">Info Button</h3>
+  <p class="para">
+  An Info button—that is, a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code> object of type <code class="code-voice">UIButtonTypeInfoLight</code> or <code class="code-voice">UIButtonTypeInfoDark</code>—reveals configuration details about an app, sometimes on the back of the current view. In iOS 7, an Info button uses the same symbol as a Detail Disclosure button.
+</p><p class="para">
+  The size and appearance of an Info button have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/info_button_2x.png" alt="image: ../Art/info_button_2x.png" width="22" height="22" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6-shown-in-weather">iOS 6 (shown in Weather)</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/info_weather_6_2x.png" alt="image: ../Art/info_weather_6_2x.png" width="29" height="29" />
+		</section>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW7"></a>
+  <h3 class="section-name" tabindex="0">Label</h3>
+  <p class="para">
+  A label displays static text.
+</p><p class="para">
+  By default a label uses the system font, so it looks different in iOS 7 than it does in iOS 6.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/labels_7_2x.png" alt="image: ../Art/labels_7_2x.png" width="257" height="70" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/labels_6_2x.png" alt="image: ../Art/labels_6_2x.png" width="276" height="26" />
+		</section>
+</section><p class="para">
+  Be sure to use the  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code> method <code class="code-voice">preferredFontForTextStyle</code> to get the text for display in a label.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW8"></a>
+  <h3 class="section-name" tabindex="0">Page Control</h3>
+  <p class="para">
+  A page control indicates how many views are open and which one is currently visible.
+</p><p class="para">
+  The size and appearance of a page control have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7-control-shown-in-weather">iOS 7 (control shown in Weather)</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/page_control_weather_7_2x.png" alt="image: ../Art/page_control_weather_7_2x.png" width="62" height="22" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6-control-shown-in-weather">iOS 6 (control shown in Weather)</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/page_control_6_2x.png" alt="image: ../Art/page_control_6_2x.png" width="62" height="22" />
+		</section>
+</section><p class="para">
+  
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW9"></a>
+  <h3 class="section-name" tabindex="0">Picker</h3>
+  <p class="para">
+  A picker displays a set of values from which a user can choose.
+</p><p class="para">
+  The overall size of a picker is the same in iOS 7 as it is in iOS 6; its appearance and behavior in iOS 7 are similar to the appearance and behavior of a date picker.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/picker_7_2x.png" alt="image: ../Art/picker_7_2x.png" width="224" height="151" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/picker_6_2x.png" alt="image: ../Art/picker_6_2x.png" width="224" height="150" />
+		</section>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW10"></a>
+  <h3 class="section-name" tabindex="0">Progress View</h3>
+  <p class="para">
+  A progress view shows the progress of a task or process that has a known duration.
+</p><p class="para">
+  The size and appearance of a progress view—shown here in the Mail toolbar—have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/progress_view_7_2x.png" alt="image: ../Art/progress_view_7_2x.png" width="224" height="27" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/progress_view_6_2x.png" alt="image: ../Art/progress_view_6_2x.png" width="224" height="29" />
+		</section>
+</section><p class="para">
+  If you currently use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIProgressView_Class/Reference/Reference.html#/apple_ref/occ/instp/UIProgressView/trackTintColor">trackTintColor</a></code> property to specify a tint for a progress view’s track, the track continues to use this tint in iOS 7. If you set <code class="code-voice">trackTintColor</code> to <code class="code-voice">nil</code>, the track uses the tint of its parent.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW11"></a>
+  <h3 class="section-name" tabindex="0">Refresh Control</h3>
+  <p class="para">
+  A refresh control performs a user-initiated content refresh, typically in a table.
+</p><p class="para">
+  The size and appearance of a refresh control have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/refresh_control_7_2x.png" alt="image: ../Art/refresh_control_7_2x.png" width="224" height="144" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/refresh_control_6_2x.png" alt="image: ../Art/refresh_control_6.png" width="224" height="145" />
+		</section>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW12"></a>
+  <h3 class="section-name" tabindex="0">Rounded Rectangle Button</h3>
+  <p class="para">
+  The rounded rectangle button is deprecated in iOS 7. Instead, use a system button—that is, a <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code> object of type <code class="code-voice">UIButtonTypeSystem</code>.
+</p><p class="para">
+  iOS 7 system buttons don’t include a bezel or a background appearance. A system button can contain a graphical symbol or a text title, and it can specify a tint color or receive its parent’s color.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7-system-button">iOS 7 system button</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/system_button_2x.png" alt="image: ../Art/system_button_2x.png" width="43" height="11" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6-rounded-rectangle-button">iOS 6 rounded rectangle button</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/rounded_rect_button_2x.png" alt="image: ../Art/rounded_rect_button_2x.png" width="73" height="43" />
+		</section>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW13"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">In iOS 7, <code class="code-voice">UIButtonTypeRoundedRect</code> has been redefined as <code class="code-voice">UIButtonTypeSystem</code>. If an app uses a rounded rectangle button in iOS 6, the system button appearance is applied automatically when it links against iOS 7.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  If you need to display a button that includes a bezel, use a button of type <code class="code-voice">UIButtonTypeCustom</code> and supply a custom background image.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW15"></a>
+  <h3 class="section-name" tabindex="0">Segmented Control</h3>
+  <p class="para">
+  A segmented control is a linear set of segments, in which each segment functions as a button that can display a different view.
+</p><p class="para">
+  The size and appearance of the segmented control have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/segmented_control_7_2x.png" alt="image: ../Art/segmented_control_7_2x.png" width="224" height="34" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/segmented_control_6_2x.png" alt="image: ../Art/segmented_control_6_2x.png" width="213" height="33" />
+		</section>
+</section><p class="para">
+  In iOS 7, the segmented control uses a single style, and the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISegmentedControl_Class/DeprecationAppendix/AppendixADeprecatedAPI.html#/apple_ref/occ/instp/UISegmentedControl/segmentedControlStyle">segmentedControlStyle</a></code> property is unused.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW16"></a>
+  <h3 class="section-name" tabindex="0">Slider</h3>
+  <p class="para">
+  A slider lets users make adjustments to a value or process throughout a range of allowed values.
+</p><p class="para">
+  The size and appearance of the slider have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/slider_7_2x.png" alt="image: ../Art/slider_7_2x.png" width="203" height="25" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/slider_6_2x.png" alt="image: ../Art/slider_6_2x.png" width="201" height="25" />
+		</section>
+</section><p class="para">
+  iOS 7 continues to use the tints you specify for the minimum and maximum track images and for the thumb, using the properties <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISlider_Class/Reference/Reference.html#/apple_ref/occ/instp/UISlider/minimumTrackTintColor">minimumTrackTintColor</a></code>, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISlider_Class/Reference/Reference.html#/apple_ref/occ/instp/UISlider/maximumTrackTintColor">maximumTrackTintColor</a></code>, and <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISlider_Class/Reference/Reference.html#/apple_ref/occ/instp/UISlider/thumbTintColor">thumbTintColor</a></code>. If you set the <code class="code-voice">minimumTrackColor</code> property to <code class="code-voice">nil</code>, the area uses the tint of its parent; if you set the <code class="code-voice">maximumTrackTintColor</code> or <code class="code-voice">thumbTintColor</code> properties to <code class="code-voice">nil</code>, both areas use their default color.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW17"></a>
+  <h3 class="section-name" tabindex="0">Stepper</h3>
+  <p class="para">
+  A stepper increases or decreases a value by a constant amount.
+</p><p class="para">
+  The size and appearance of the stepper have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/stepper_7_2x.png" alt="image: ../Art/stepper_7_2x.png" width="65" height="20" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/stepper_6_2x.png" alt="image: ../Art/stepper_6_2x.png" width="73" height="26" />
+		</section>
+</section><p class="para">
+  In iOS 7, by default, a stepper treats custom increment and decrement images as template images.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW18"></a>
+  <h3 class="section-name" tabindex="0">Switch</h3>
+  <p class="para">
+  A switch presents two mutually exclusive choices or states (typically used only in table views).
+</p><p class="para">
+  The size and appearance of the switch have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7">iOS 7</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/switch_7_2x.png" alt="image: ../Art/switch_7_2x.png" width="39" height="25" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6">iOS 6</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/switch_6_2x.png" alt="image: ../Art/switch_6_2x.png" width="64" height="28" />
+		</section>
+</section><p class="para">
+  iOS 7 continues to use the tints you specify for the on and off—or disabled—states and for the thumb, using the properties <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISwitch_Class/Reference/Reference.html#/apple_ref/occ/instp/UISwitch/onTintColor">onTintColor</a></code>, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISwitch_Class/Reference/Reference.html#/apple_ref/occ/instp/UISwitch/tintColor">tintColor</a></code>, and <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISwitch_Class/Reference/Reference.html#/apple_ref/occ/instp/UISwitch/thumbTintColor">thumbTintColor</a></code>.
+</p><p class="para">
+  In iOS 7, by default, custom on and off images are ignored.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40013174-CH9-SW19"></a>
+  <h3 class="section-name" tabindex="0">Text Field</h3>
+  <p class="para">
+  A text field accepts a single line of user input.
+</p><p class="para">
+  The size and appearance of the text field have changed in iOS 7.
+</p><section class="rec-container">
+	<div class="blurb">
+		
+	</div>
+
+	<section class="left-container">
+			<p class="container-label ios-7-two-text-fields-shown-in-maps">iOS 7 (two text fields shown in Maps)</p>
+		<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/text_fields_7_2x.png" alt="image: ../Art/text_fields_7_2x.png" width="202" height="51" />
+	</section>
+		<section class="right-container">
+				<p class="container-label ios-6-two-text-fields-shown-in-maps">iOS 6 (two text fields shown in Maps)</p>
+			<img class="inline-graphic" src="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TransitionGuide/Art/text_fields_6_2x.png" alt="image: ../Art/text_fields_6_2x.png" width="198" height="52" />
+		</section>
+</section><p class="para">
+  Be sure to use the  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code> method <code class="code-voice">preferredFontForTextStyle</code> to get the text for display in a text view.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="ContentViews.html#/apple_ref/doc/uid/TP40013174-CH10-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH10-SW1">Content Views</a></p>
+  			<p class="next-link"><a href="TempViews.html#/apple_ref/doc/uid/TP40013174-CH11-SW1" data-id="//apple_ref/doc/uid/TP40013174-CH11-SW1">Temporary Views</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2013-10-22
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

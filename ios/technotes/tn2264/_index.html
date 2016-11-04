@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2264: iAd Implementation Best Practices</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40011827">
+	<meta id="document-version" name="document-version" content="1.1.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40011827-CH1">
+    <meta id="date" name="date" content="2013-02-28">
+    <meta id="description" name="description" content="TN2264: Provides an overview of best practices and guidelines designed to help you maximize revenue and customer experience in your app(s).">
+    <meta id="book-title" name="book-title" content="iAd Implementation Best Practices">
+    <meta id="book-name" name="book-name" contents="DTS_TN2264_iAdImplementatio">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Framework/Cocoa Touch Layer/iAd}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2264">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="iAd Implementation Best Practices" type="text/html" href="index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40011827" title="Technical Note TN2264"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>iAd Implementation Best Practices</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40011827-CH1-DontLinkElementID_2" title="Technical Note TN2264"></a><div class="dtsDocNumber">Technical Note TN2264</div><h1 id="pageTitle">iAd Implementation Best Practices</h1><p>Handy checklist of best practices for developers looking to successfully integrate the iAd Network with their iOS app.</p><p>Below is an overview of best practices to follow in order to optimize your participation in the iAd Network. By following these guidelines you will maximize your revenue opportunity and ensure the best customer experience in your app(s).</p>
+
+   
+    <div class="outerMiniTOC">
+
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-AGREE_TO_THE_IAD_NETWORK_CONTRACT_AND_ENABLE_YOUR_APP_FOR_IAD_ADVERTISING_IN_ITUNES_CONNECT">Agree to the iAd Network Contract and Enable Your App for iAd Advertising in iTunes Connect</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-SUPPORT_THE_LATEST_IOS_REQUIREMENTS">Support the Latest iOS Requirements</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-CREATE_UNIVERSAL_APPS">Create Universal Apps</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-DISPLAY_A_SINGLE_IAD_BANNER_PER_SCREEN">Display a Single iAd Banner Per Screen</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-HANDLE_BANNER_ORIENTATION_CHANGES_DYNAMICALLY">Handle Banner Orientation Changes Dynamically</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-HIDE_BLANK_OR_EMPTY_BANNERS">Hide Blank or Empty Banners</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-PREVENT_CALLS_TO_NON_EXISTENT_DELEGATES">Prevent Calls to Non-existent Delegates</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-SHARE_ADBANNERVIEW_INSTANCES_ACROSS_VIEWS">Share ADBannerView Instances Across Views</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-DISPLAY_IAD_BANNERS_FOR_AT_LEAST_30_SECONDS">Display iAd Banners for at Least 30 Seconds</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-ENSURE_YOUR_MEDIATION_LAYER_IS_PROPERLY_CONFIGURED">Ensure Your Mediation Layer is Properly Configured</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-TEST_IAD_BANNERS_MORE_EFFECTIVELY">Test iAd Banners More Effectively</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-REVIEW_THE_EXAMPLES">Review the Examples</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-CH1-A_FINAL_NOTE">A Final Note</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40011827-RevisionHistory-DontLinkElementID_1">Document Revision History</a>
+                
+                
+                
+            </div>
+            
+        
+    </div>
+
+<section><a name="//apple_ref/doc/uid/DTS40011827-CH1-AGREE_TO_THE_IAD_NETWORK_CONTRACT_AND_ENABLE_YOUR_APP_FOR_IAD_ADVERTISING_IN_ITUNES_CONNECT" title="Agree to the iAd Network Contract and Enable Your App for iAd Advertising in iTunes Connect"></a><h2 class="jump">Agree to the iAd Network Contract and Enable Your App for iAd Advertising in iTunes Connect</h2><ol class="ol"><li class="li"><p>Go to <span class="content_text"><a href="http://itunesconnect.apple.com" class="urlLink" rel="external">http://itunesconnect.apple.com</a></span> to review and agree to the iAd Network Contract located within the “Contracts, Tax and Banking Information” module. </p></li><li class="li"><p>Complete the required iAd Network tax forms, and if you have not already done so, set up your banking information. </p></li><li class="li"><p>Enable iAd Network Advertising for your app in the “Manage Your Applications” module and implement the iAd code before submitting it for review. For a comprehensive list of tools available when using iAd in your iOS apps visit <span class="content_text"><a href="../../../../iad/resources/index.html" class="urlLink" rel="external">https://developer.apple.com/iad/resources/</a></span>.</p></li></ol><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-SUPPORT_THE_LATEST_IOS_REQUIREMENTS" title="Support the Latest iOS Requirements"></a><h2 class="jump">Support the Latest iOS Requirements</h2><p>Ads from the iAd Network can only run on iOS apps that are compatible with iOS 4 or later. To ensure optimum ad performance and customer experience, we recommend that apps support the most current version of iOS.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-CREATE_UNIVERSAL_APPS" title="Create Universal Apps"></a><h2 class="jump">Create Universal Apps</h2><p>To ensure your app is capable of displaying iAd banners for all your users, make sure you’ve developed a universal app that supports all possible devices. iPhone apps running in compatibility mode on iPad will not display a test ad in development or live ads in deployed apps.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-DISPLAY_A_SINGLE_IAD_BANNER_PER_SCREEN" title="Display a Single iAd Banner Per Screen"></a><h2 class="jump">Display a Single iAd Banner Per Screen</h2><p>To maximize performance and user engagement, be sure to display only a single iAd banner on each screen of your app. Apps with multiple iAd banners on a screen may be rejected.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-HANDLE_BANNER_ORIENTATION_CHANGES_DYNAMICALLY" title="Handle Banner Orientation Changes Dynamically"></a><h2 class="jump">Handle Banner Orientation Changes Dynamically</h2><p>If your application supports iOS 5.1 or previous, when an orientation change occurs in your application, resize the banner view by setting the currentContentSizeIdentifier to ADBannerContentSizeIdentifierPortrait or ADBannerContentSizeIdentifierLandscape. If your app supports iOS 6 or later, call -sizeThatFits: on the banner view, specifying the bounds of the view that contains your banner, and use the returned size to resize the banner view. A full example of this can be found in the iAdSuite Sample Code at <span class="content_text"><a href="../../_samplecode/iAdSuite/Introduction/ios.html" class="browserLink" >http://developer.apple.com/iphone/library/samplecode/iAdSuite/Introduction/Intro.html</a></span>.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-HIDE_BLANK_OR_EMPTY_BANNERS" title="Hide Blank or Empty Banners"></a><h2 class="jump">Hide Blank or Empty Banners</h2><p>To ensure an empty banner does not run in your live application, configure your banner view's frame to be offscreen, then add or resize your content to reclaim the empty banner space. Follow these steps to hide the banner view whenever ad content is not available:</p><ol class="ol"><li class="li"><p>When the banner view is initially loaded from a .xib or Storyboard: At launch, ad content may not yet be available to your app. You should hide the banner in your view controller's -viewDidLoad method.</p></li><li class="li"><p>When an error occurs: A banner view may fail to load an ad due to the lack of a network connection, inventory availability, or improper banner usage. You must hide the banner in the ADBannerView's bannerView:didFailToReceiveAdWithError: delegate method. </p></li><li class="li"><p>When ADBannerView's bannerLoaded is false: Check the ADBannerView's bannerLoaded property to determine if the banner should be hidden in the sections of code that address layout. </p></li></ol><p>Be sure to review the Technical Q&amp;A: “Hiding iAd banners when ads are not available” at <span class="content_text"><a href="../../index.html#qa/qa1641/_index.html" class="browserLink" >http://developer.apple.com/library/ios/#qa/qa1641/_index.html</a></span> for more details.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-PREVENT_CALLS_TO_NON_EXISTENT_DELEGATES" title="Prevent Calls to Non-existent Delegates"></a><h2 class="jump">Prevent Calls to Non-existent Delegates</h2><p>On iOS 4, to prevent delegate messages from an ADBannerView from being sent to an object that is no longer valid, always set your ADBannerView instance’s delegate property to nil before releasing it. If your application supports iOS 5 or later, the ADBannerView will nil the delegate automatically via the weak reference system.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-SHARE_ADBANNERVIEW_INSTANCES_ACROSS_VIEWS" title="Share ADBannerView Instances Across Views"></a><h2 class="jump">Share ADBannerView Instances Across Views</h2><p>If your application has multiple tabs or views displaying an iAd banner, be sure to share a single instance of ADBannerView across each view to improve your users’ ability to interact with ads. As of iOS 6, the iAd framework takes measures to ensure ads are only served to a single banner view. We recommend you use a central object to act as the ADBannerView’s delegate. Review the “Implementing a Shared iAd Banner” technical note at <span class="content_text"><a href="../../index.html#technotes/tn2286/_index.html" class="browserLink" >http://developer.apple.com/library/ios/#technotes/tn2286/_index.html</a></span> for complete details.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-DISPLAY_IAD_BANNERS_FOR_AT_LEAST_30_SECONDS" title="Display iAd Banners for at Least 30 Seconds"></a><h2 class="jump">Display iAd Banners for at Least 30 Seconds</h2><p>If your application utilizes a timer for rotating advertisements, ensure the timer aligns with the iAd Network’s 30-second minimum rendering time in order to optimize ad performance in your application. </p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-ENSURE_YOUR_MEDIATION_LAYER_IS_PROPERLY_CONFIGURED" title="Ensure Your Mediation Layer is Properly Configured"></a><h2 class="jump">Ensure Your Mediation Layer is Properly Configured</h2><p>If you are integrating with a third party for ad serving, ensure that you are using the latest version of the mediation layer, and prioritize the iAd Network for ad serving. Additionally, configure your app to serve ads only in countries where the iAd Network is live and check to ensure that the framework supports dynamic banner views. If your mediation layer uses a timer for rotating banners, implement a 10-second timeout before cycling to another provider when an ad is not available. Finally, to monitor performance and track revenue, refer to the iAd Network module in iTunes Connect. </p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-TEST_IAD_BANNERS_MORE_EFFECTIVELY" title="Test iAd Banners More Effectively"></a><h2 class="jump">Test iAd Banners More Effectively</h2><p>In iOS 6, you can further test iAd banner functionality in your developer-mode app by setting Fill Rate and Ad Refresh Rate in your device’s Developer Settings. Adjusting “Fill Rate” allows you to test cases when a banner is available and when it is not. By setting “Ad Refresh Rate,” you can more efficiently test how your app handles banner loading and errors. </p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-REVIEW_THE_EXAMPLES" title="Review the Examples"></a><h2 class="jump">Review the Examples</h2><p>The iAdSuite Sample Code at <span class="content_text"><a href="../../_samplecode/iAdSuite/Introduction/ios.html" class="browserLink" >http://developer.apple.com/iphone/library/samplecode/iAdSuite/Introduction/Intro.html</a></span> includes several projects demonstrating iAd banner implementation best practices, including MREC banners for iPad, new in iOS 6. For those implementing full screen banners on iPad, please review the iAdInterstitialSuite at <span class="content_text"><a href="../../index.html#samplecode/iAdInterstitialSuite/Introduction/Intro.html" class="browserLink" >http://developer.apple.com/library/ios/#samplecode/iAdInterstitialSuite/Introduction/Intro.html</a></span>.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40011827-CH1-A_FINAL_NOTE" title="A Final Note"></a><h2 class="jump">A Final Note</h2><p>Be sure review the iAd relevant sections of the <span class="content_text"><a href="https://developer.apple.com/appstore/resources/approval/guidelines.html" class="urlLink" rel="external">https://developer.apple.com/appstore/resources/approval/guidelines.html</a></span> and visit our iAd Network FAQ in <span class="content_text"><a href="http://itunesconnect.apple.com" class="urlLink" rel="external">http://itunesconnect.apple.com</a></span> for further reference.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><br/><hr/><a name="//apple_ref/doc/uid/DTS40011827-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40011827-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2013-02-28</td><td><p>Typo corrections.</p></td></tr><tr><td scope="row">2012-02-13</td><td><p>New document that 
+					provides an overview of best practices and guidelines designed to help you maximize revenue and customer experience in your app(s). </p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-02-28</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

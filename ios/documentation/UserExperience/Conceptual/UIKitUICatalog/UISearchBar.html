@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  <title>UIKit User Interface Catalog: Search Bars</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/874/CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'> 
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="UIKitUICatalog" />
+<meta id="document-version" name="document-version" content="2.1.3" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40012857" />
+<meta id="book-title" name="book-title" content="UIKit User Interface Catalog" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2013-12-16" />
+<meta id="description" name="description" content="Describes the views and controls in UIKit, drawing from the human interface guidelines for more depth." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/874/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="../../../../Resources/874/Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">UIKit User Interface Catalog</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="UIKitUICatalog.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="../../../../Resources/874/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIView1-SW1" class="part-name">Views
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW1">About Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActionSheet.html#/apple_ref/doc/uid/TP40012857-UIActionSheet-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActionSheet-SW1">Action Sheets</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIActivityIndicatorView-SW1">Activity Indicators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIAlertView.html#/apple_ref/doc/uid/TP40012857-UIAlertView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIAlertView-SW1">Alert Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UICollectionView.html#/apple_ref/doc/uid/TP40012857-UICollectionView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UICollectionView-SW1">Collection Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIImageView.html#/apple_ref/doc/uid/TP40012857-UIImageView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIImageView-SW1">Image Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UILabel.html#/apple_ref/doc/uid/TP40012857-UILabel-SW1" data-id="//apple_ref/doc/uid/TP40012857-UILabel-SW1">Labels</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UINavigationBar.html#/apple_ref/doc/uid/TP40012857-UINavigationBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UINavigationBar-SW1">Navigation Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPickerView.html#/apple_ref/doc/uid/TP40012857-UIPickerView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPickerView-SW1">Picker Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIProgressView.html#/apple_ref/doc/uid/TP40012857-UIProgressView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIProgressView-SW1">Progress Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIScrollView-SW1">Scroll Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISearchBar-SW1">Search Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITabBar-SW1">Tab Bars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITableView.html#/apple_ref/doc/uid/TP40012857-UITableView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITableView-SW1">Table Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextView.html#/apple_ref/doc/uid/TP40012857-UITextView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextView-SW1">Text Views</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIWebView.html#/apple_ref/doc/uid/TP40012857-UIWebView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIWebView-SW1">Web Views</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIControl1-SW1" class="part-name">Controls
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UIControl.html#/apple_ref/doc/uid/TP40012857-UIControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIControl-SW1">About Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIButton-SW1">Buttons</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIDatePicker-SW1">Date Pickers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIPageControl-SW1">Page Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISegmentedControl-SW1">Segmented Controls</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITextField-SW1">Text Fields</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISlider-SW1">Sliders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIStepper-SW1">Steppers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch-SW1" data-id="//apple_ref/doc/uid/TP40012857-UISwitch-SW1">Switches</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40012857-UIWebView1-SW1" class="part-name">Attributes Inspector Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ActivityIndicatorView.html#/apple_ref/doc/uid/TP40012857-CH4-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH4-SW1">Activity Indicator View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarButtonItem.html#/apple_ref/doc/uid/TP40012857-CH2-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH2-SW1">Bar Button Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="BarItem.html#/apple_ref/doc/uid/TP40012857-CH1-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH1-SW1">Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Button.html#/apple_ref/doc/uid/TP40012857-CH5-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH5-SW1">Button</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionReusableView.html#/apple_ref/doc/uid/TP40012857-CH28-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH28-SW1">Collection Reusable View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionView.html#/apple_ref/doc/uid/TP40012857-CH29-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH29-SW1">Collection View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CollectionViewCell.html#/apple_ref/doc/uid/TP40012857-CH30-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH30-SW1">Collection View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control.html#/apple_ref/doc/uid/TP40012857-CH9-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH9-SW1">Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DatePicker.html#/apple_ref/doc/uid/TP40012857-CH7-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH7-SW1">Date Picker</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ImageView.html#/apple_ref/doc/uid/TP40012857-CH10-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH10-SW1">Image View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Label.html#/apple_ref/doc/uid/TP40012857-CH11-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH11-SW1">Label</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationBar.html#/apple_ref/doc/uid/TP40012857-CH12-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH12-SW1">Navigation Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigationItem.html#/apple_ref/doc/uid/TP40012857-CH27-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH27-SW1">Navigation Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PageControl.html#/apple_ref/doc/uid/TP40012857-CH22-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH22-SW1">Page Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PickerView.html#/apple_ref/doc/uid/TP40012857-CH16-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH16-SW1">Picker View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProgressView.html#/apple_ref/doc/uid/TP40012857-CH17-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH17-SW1">Progress View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ScrollView.html#/apple_ref/doc/uid/TP40012857-CH6-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH6-SW1">Scroll View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SearchBar.html#/apple_ref/doc/uid/TP40012857-CH15-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH15-SW1">Search Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SegmentedControl.html#/apple_ref/doc/uid/TP40012857-CH18-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH18-SW1">Segmented Control</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Slider.html#/apple_ref/doc/uid/TP40012857-CH19-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH19-SW1">Slider</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Stepper.html#/apple_ref/doc/uid/TP40012857-CH20-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH20-SW1">Stepper</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Switch.html#/apple_ref/doc/uid/TP40012857-CH21-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH21-SW1">Switch</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBar.html#/apple_ref/doc/uid/TP40012857-CH13-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH13-SW1">Tab Bar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TabBarItem.html#/apple_ref/doc/uid/TP40012857-CH3-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH3-SW1">Tab Bar Item</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableView.html#/apple_ref/doc/uid/TP40012857-CH25-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH25-SW1">Table View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TableViewCell.html#/apple_ref/doc/uid/TP40012857-CH26-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH26-SW1">Table View Cell</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TextView.html#/apple_ref/doc/uid/TP40012857-CH24-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH24-SW1">Text View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Toolbar.html#/apple_ref/doc/uid/TP40012857-CH14-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH14-SW1">Toolbar</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="View.html#/apple_ref/doc/uid/TP40012857-CH8-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH8-SW1">View</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WebView.html#/apple_ref/doc/uid/TP40012857-CH23-SW1" data-id="//apple_ref/doc/uid/TP40012857-CH23-SW1">Web View</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar"></a>
+  <h2 class='chapter-name chapter-name-short'>Search Bars</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW5">
+	  				Content of Search Bars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW6">
+	  				Behavior of Search Bars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW3">
+	  				Appearance of Search Bars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW11">
+	  				Using Auto Layout with Search Bars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW12">
+	  				Making Search Bars Accessible
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW13">
+	  				Internationalizing Search Bars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW14">
+	  				Debugging Navigation Bars
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="UISearchBar.html#/apple_ref/doc/uid/TP40012857-UISearchBar-SW15">
+	  				Elements Similar to a Search Bar
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  A search bar provides an interface for text-based searches with a text box and buttons such as search and cancel. A search bar accepts text from users, which can be used as input for a search (shown here with placeholder text). A scope bar, which is available only in conjunction with a search bar—allows users to define the scope of a search (shown here below a search bar).
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_intro_2x.png" alt="image: ../Art/uisearchbar_intro_2x.png" width="318" height="42" />
+</figure><p class="para">
+  <strong class="inline-head">Purpose.</strong> Search bars allow users to:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  Quickly find a value in a large collection
+</p>
+</li><li class="item"><p class="para">
+  Create a scope filter
+</p>
+</li>
+</ul>
+<p class="para">
+  <strong>Implementation.</strong> Search bars are implemented in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/cl/UISearchBar">UISearchBar</a></code> class and discussed in the <em class="u-book"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/doc/uid/TP40007529" target="_self">UISearchBar Class Reference</a></em>.
+</p>
+<p class="para">
+  <strong class="inline-head">Configuration.</strong> Configure search bars in Interface Builder, in the Search Bar section of the Attributes Inspector. A few configurations cannot be made through the Attributes Inspector, so you must make them programmatically. You can set other configurations programmatically, too, if you prefer.
+</p>
+<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_attributes_inspector_plain_2x.png" alt="image: ../Art/uisearchbar_attributes_inspector_plain_2x.png" width="261" height="380" />
+</figure>
+		</section> 
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW5"></a>
+  <h3 class="section-name" tabindex="0">Content of Search Bars</h3>
+  <p class="para">
+  The Text (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/text">text</a></code>) field contains the current search text; you can use it to set an initial search. Don’t use it to provide a description of the search; use placeholder text instead. Placeholder text is specified in the Placeholder (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/placeholder">placeholder</a></code>) field, and is visible only when there is no other text in the search field. Placeholder text is styled differently to communicate its different meaning to the user and it is automatically cleared when the user starts typing. It is suitable for very short descriptions of what the user should enter in the search field.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_attributes_inspector_group-searchterm_captions.png" alt="image: ../Art/uisearchbar_attributes_inspector_group-searchterm_captions.png" width="261" height="75" />
+</figure><p class="para">
+  The prompt text is specified in the Prompt (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/prompt">prompt</a></code>) field. It appears directly above the search bar. Unlike the placeholder text, the prompt text is visible whether or not the user has entered text in the search field, so it is suitable for longer descriptions or directions.
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_attributes_inspector_group-capabilities.png" alt="image: ../Art/uisearchbar_attributes_inspector_group-capabilities.png" width="261" height="78" />
+</figure><p class="para">
+  Search bars can display a number of different buttons. The Cancel button is intended to terminate a search operation; you can display this button by selecting the Shows Cancel Button checkbox. The Search Results and Bookmarks buttons appear in the right side of search bar, and can be toggled to display those respective views. You can display one of these buttons by selecting either the Shows Search Results Button (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/showsSearchResultsButton">showsSearchResultsButton</a></code>) or Shows Bookmarks Button (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/showsBookmarkButton">showsBookmarkButton</a></code>) checkbox. Note that you cannot display both of these buttons simultaneously; if both properties are enabled, only the Search Results button is visible. 
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW21"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">These buttons are merely user interface elements and have no functionality. You must implement the appropriate functionality yourself using the corresponding <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBarDelegate_Protocol/Reference/Reference.html#/apple_ref/occ/intf/UISearchBarDelegate">UISearchBarDelegate</a></code> methods.
+    </p>
+    
+  </aside>
+</div><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_scope_2x.png" alt="image: ../Art/uisearchbar_scope.png" width="320" height="71" />
+</figure><p class="para">
+  A search bar can also display a scope bar, which lets users limit the scope of a search. For example, when searching in an email app, the user could restrict the search to the Inbox or to a particular folder. To display a scope bar, check the Shows Scope Bar (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/showsScopeBar">showsScopeBar</a></code>) box and add an array of scope bar titles as strings to the Scope Titles (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/scopeButtonTitles">scopeButtonTitles</a></code>) field. 
+</p><p class="para">
+  
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_attributes_inspector_group-scope_titles.png" alt="image: ../Art/uisearchbar_attributes_inspector_group-scope_titles.png" width="261" height="90" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW6"></a>
+  <h3 class="section-name" tabindex="0">Behavior of Search Bars</h3>
+  <p class="para">
+  Search bars need a <span class="pediaLink" data-header="Delegation" data-contents="Delegation is a simple and powerful pattern in which one object in a program acts on behalf of, or in coordination with, another object."><a href="../../../General/Conceptual/DevPedia-CocoaCore/Delegation.html#/apple_ref/doc/uid/TP40008195-CH14" target="_self">delegate</a></span> to handle user interaction. You implement the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBarDelegate_Protocol/Reference/Reference.html#/apple_ref/occ/intf/UISearchBarDelegate">UISearchBarDelegate</a></code> protocol on a delegate object to respond to user actions—for example, performing the search. Every search bar needs a delegate object that implements the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBarDelegate_Protocol/Reference/Reference.html#/apple_ref/occ/intf/UISearchBarDelegate">UISearchBarDelegate</a></code> protocol. The delegate is responsible for taking actions in response to user input such as editing the search text, starting or canceling a search, and tapping in the scope bar. At the very minimum, the delegate needs to perform a search after text is entered in the text field.
+</p><p class="para">
+  A user types content into a search bar using a keyboard, which has a number of customization options:
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_attributes_inspector_group-textinput.png" alt="image: ../Art/uisearchbar_attributes_inspector_group-textinput.png" width="261" height="72" />
+</figure><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong>Keyboard layout.</strong> The Keyboard field allows you to select from a number of different keyboard layouts. Match the keyboard layout to the purpose and scope of the search bar. The default keyboard layout is an alphanumeric keyboard in the device’s default language. For a list of possible keyboard types, see <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html#/apple_ref/c/tdef/UIKeyboardType">UIKeyboardType</a></code>.
+</p>
+</li><li class="item"><p class="para">
+  <strong>Capitalization scheme.</strong> The Capitalization field specifies how text should be capitalized in the search bar: no capitalization, every word, every sentence, or every character. The no capitalization scheme is selected by default.
+</p>
+</li><li class="item"><p class="para">
+  <strong>Auto-correction.</strong> The Correction field simply disables or enables auto-correct in the search bar.
+</p>
+</li>
+</ul>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW3"></a>
+  <h3 class="section-name" tabindex="0">Appearance of Search Bars</h3>
+  <p class="para">
+  You can customize the appearance of a search bar by setting the following properties:
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_callouts_2x.png" alt="image: ../Art/uisearchbar_callouts.png" width="529" height="152" />
+</figure><p class="para">
+  To customize the appearance of all search bars in your app, the appearance proxy (for example, <code class="code-voice">[UISearchBar appearance]</code>). For more information about appearance proxies, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW18" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW18">Appearance Proxies</a></span>. 
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW7"></a>
+  <h3 class="section-name" tabindex="0">Style</h3>
+  <p class="para">
+  Bars have two standard appearance styles: translucent white with dark text (default) or translucent black with light text. Use the Style (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/barStyle">barStyle</a></code>) field to select one of these standard styles. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_attributes_inspector_group-appearance.png" alt="image: ../Art/uisearchbar_attributes_inspector_group-appearance.png" width="261" height="50" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW16"></a>
+  <h3 class="section-name" tabindex="0">Tint Color</h3>
+  <p class="para">
+  You can specify a custom tint color for the search bar background using the Tint (<code class="code-voice">barTintColor</code>) field. The default background tint color is white. 
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/uisearchbar_attributes_inspector_group-appearance.png" alt="image: ../Art/uisearchbar_attributes_inspector_group-appearance.png" width="261" height="50" />
+</figure><p class="para">
+  Additionally, you can set a custom tint color for the interactive elements within a search bar—including the scope bar, cancel button, and cursor—programmatically using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/tintColor">tintColor</a></code> property. The search bar will inherit its superview’s tint color if a custom one is set, or show the default system blue color if none is set. For more information, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW17" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW17">Tint Color</a></span>. 
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW8"></a>
+  <h3 class="section-name" tabindex="0">Background Images</h3>
+  <p class="para">
+  A search bar can have a background image that covers the area behind the search field. Use the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/setBackgroundImage:">backgroundImage</a></code> property to set a background image for your search bar. You can also set the background image for a search bar’s scope bar using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/scopeBarBackgroundImage">scopeBarBackgroundImage</a></code> property. Single-pixel images or stretchable images are stretched; otherwise, the image is tiled. If you set one of these background image properties, you should also set the other to give your app interface a consistent look.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW17"></a>
+  <h3 class="section-name" tabindex="0">Translucency</h3>
+  <p class="para">
+  Search bars are translucent by default on iOS 7. Additionally, there is a system blur applied to all search bars. This allows your content to show through underneath the bar. 
+</p><p class="para">
+  These settings automatically apply when you set any style for <code class="code-voice">barStyle</code> or any custom color for <code class="code-voice">barTintColor</code>. If you prefer, you can make the search bar opaque by setting the <code class="code-voice">translucent</code> property to <code class="code-voice">NO</code> programmatically. In this case, the bar draws an opaque background using black if the search bar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleBlack">UIBarStyleBlack</a></code> style, white if the search bar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleDefault">UIBarStyleDefault</a></code>, or the search bar’s <code class="code-voice">barTintColor</code> if a custom value is defined.
+</p><p class="para">
+  If the search bar has a custom background image, the default translucency is automatically inferred from the average alpha values of the image. If the average alpha is less than 1.0, the search bar will be translucent by default; if the average alpha is 1.0, the search bar will be opaque by default. If you set the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/translucent">translucent</a></code> property to <code class="code-voice">YES</code> on a search bar with an opaque custom background image, the search bar makes the image translucent. If you set the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/translucent">translucent</a></code> property to <code class="code-voice">NO</code> on a search bar with a translucent custom background image, the search bar provides an opaque background for the image using black if the search bar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleBlack">UIBarStyleBlack</a></code> style, white if the search bar has <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIKitDataTypesReference/Reference/reference.html#/apple_ref/c/econst/UIBarStyleDefault">UIBarStyleDefault</a></code>, or the search bar’s <code class="code-voice">barTintColor</code> if a custom value is defined.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW9"></a>
+  <h3 class="section-name" tabindex="0">Layout</h3>
+  <p class="para">
+  You can also control certain aspects of the search bar’s layout by providing position adjustments: for icons using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/positionAdjustmentForSearchBarIcon:">positionAdjustmentForSearchBarIcon:</a></code> method, for the background image using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/searchFieldBackgroundPositionAdjustment">searchFieldBackgroundPositionAdjustment</a></code> property, and for search text using the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instp/UISearchBar/searchTextPositionAdjustment">searchTextPositionAdjustment</a></code> property.
+</p>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW11"></a>
+  <h3 class="section-name" tabindex="0">Using Auto Layout with Search Bars</h3>
+  <p class="para">
+  You can create Auto Layout constraints between a search bar and other user interface elements. You can create any type of constraint for a search bar besides a baseline constraint.
+</p><p class="para">
+  For general information about using Auto Layout with iOS views, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW5" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW5">Using Auto Layout with Views</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW12"></a>
+  <h3 class="section-name" tabindex="0">Making Search Bars Accessible</h3>
+  <p class="para">
+  Search bars are accessible by default.
+</p><p class="para">
+  For general information about making iOS views accessible, see <span class="x-name"><a href="index.html#/apple_ref/doc/uid/TP40012857-UIView-SW3" data-id="//apple_ref/doc/uid/TP40012857-UIView-SW3">Making Views Accessible</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW13"></a>
+  <h3 class="section-name" tabindex="0">Internationalizing Search Bars</h3>
+  <p class="para">
+  To internationalize a search bar, you must provide localized strings for the following properties:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/placeholder">placeholder</a></code>
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/prompt">prompt</a></code>
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/text">text</a></code>
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBar_Class/Reference.html#/apple_ref/occ/instm/UISearchBar/scopeButtonTitles">scopeButtonTitles</a></code>
+</p>
+</li>
+</ul><p class="para">
+  For more information, see <em class="u-book"><a href="../../../MacOSX/Conceptual/BPInternational/BPInternational.html#/apple_ref/doc/uid/10000171i" target="_self">Internationalization Programming Topics</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW14"></a>
+  <h3 class="section-name" tabindex="0">Debugging Navigation Bars</h3>
+  <p class="para">
+  When debugging issues with navigation bars, watch for these common pitfalls: 
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong>Specifying conflicting appearance settings.</strong> When customizing search bar appearance with a style or color, use one option or the other, but not both. Conflicting settings for search bar appearance will be resolved in favor of the most recently set value. For example, setting a new style clears any custom tint color you have set. Similarly, setting a custom tint color overrides any style you have set.
+</p>
+</li><li class="item"><p class="para">
+  <strong>Performance issues.</strong> If search operations can be carried out very rapidly, it is possible to update the search results as the user is typing by implementing the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBarDelegate_Protocol/Reference/Reference.html#/apple_ref/occ/intfm/UISearchBarDelegate/searchBar:textDidChange:">searchBar:textDidChange:</a></code> method on the delegate object. However, if a search operation takes more time, you should wait until the user taps the Search button before beginning the search in the <code class="code-voice u-api"><a href="../../../UIKit/Reference/UISearchBarDelegate_Protocol/Reference/Reference.html#/apple_ref/occ/intfm/UISearchBarDelegate/searchBarSearchButtonClicked:">searchBarSearchButtonClicked:</a></code> method. Always perform search operations a background thread to avoid blocking the main thread. This keeps your app responsive to the user while the search is running and provides a better user experience.
+</p>
+</li>
+</ul>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40012857-UISearchBar-SW15"></a>
+  <h3 class="section-name" tabindex="0">Elements Similar to a Search Bar</h3>
+  <p class="para">
+  The following element provides similar functionality to a search bar:
+</p><p class="para">
+  <strong>Toolbar.</strong> A toolbar object contains controls that allow the user to perform actions related to objects onscreen. For more information, see <span class="x-name"><a href="UIToolbar.html#/apple_ref/doc/uid/TP40012857-UIToolbar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIToolbar-SW1">Toolbars</a></span>.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="UIScrollView.html#/apple_ref/doc/uid/TP40012857-UIScrollView-SW1" data-id="//apple_ref/doc/uid/TP40012857-UIScrollView-SW1">Scroll Views</a></p>
+  			<p class="next-link"><a href="UITabBar.html#/apple_ref/doc/uid/TP40012857-UITabBar-SW1" data-id="//apple_ref/doc/uid/TP40012857-UITabBar-SW1">Tab Bars</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2013-12-16
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="../../../../Resources/874/JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../Resources/874/JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

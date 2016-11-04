@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SimpleNetworkStreams: Simplifying Assumptions.txt</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Sample Code">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40008979">
+	<meta id="document-version" name="document-version" content="3.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40008979-Simplifying_Assumptions_txt">
+    <meta id="date" name="date" content="2012-05-09">
+    <meta id="description" name="description" content="Demonstrates networking using the NSStream API.">
+    <meta id="book-title" name="book-title" content="SimpleNetworkStreams">
+    <meta id="book-name" name="book-name" content="DTS_SC1908_SimpleNetworkStr">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Sample Code}, {Topic/Networking & Internet/Sockets & TCP}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Simplifying Assumptions.txt">
+    <meta id="resources-uri" name="resources-uri" content="../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="SimpleNetworkStreams" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="../History/History.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="SendServerController_m.html">
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40008979-Simplifying_Assumptions_txt" title="Simplifying Assumptions.txt"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>SimpleNetworkStreams</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../History/History.html'>Next</a><a class='previousLink' rel='prev' href='SendServerController_m.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40008979-Simplifying_Assumptions_txt-DontLinkElementID_22" title="Simplifying Assumptions.txt"></a>
+    <h1 id="pageTitle">Simplifying Assumptions.txt</h1>
+    <div class="codesample clear"><table><tr><td scope="row"><pre>Simplifying Assumptions<span></span></pre></td></tr><tr><td scope="row"><pre>=======================<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Networking is hard.  To create a sufficiently simple sample, I had to make a number of simplifying assumptions.  This document describes those assumptions and provide hints on how you would modify this sample code for production purposes.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Code Structure<span></span></pre></td></tr><tr><td scope="row"><pre>--------------<span></span></pre></td></tr><tr><td scope="row"><pre>I structured the code to make it easy to understand, rather than to maximize maintainability and flexibility.  Specifically:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o The networking code (in some senses the 'model') is embedded directly in the controller code.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o There's lots of redundant code in the controllers.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>In a real application you would probably separate the networking code out into a 'model' class that's used by each of the controllers.  I didn't do this because I wanted folks to be able to get a good understanding of the overall structure by looking at just one source file.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Asynchrony<span></span></pre></td></tr><tr><td scope="row"><pre>----------<span></span></pre></td></tr><tr><td scope="row"><pre>Networking is inherently asynchronous, and NSOperation is a good way to manage the asynchrony in a network app.  For more information on this, see Technote 2109 "Simple and Reliable Threading with NSOperation" (and its associated ListAdder sample code) and the LinkedImageFetcher sample code.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/ios/#technotes/tn2109/_index.html&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/ios/#samplecode/ListAdder/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/mac/#samplecode/LinkedImageFetcher/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Security<span></span></pre></td></tr><tr><td scope="row"><pre>--------<span></span></pre></td></tr><tr><td scope="row"><pre>This sample pays no attention to security issues, which is totally unrealistic.  Whenever you create production networking software you have to worry about security.  There are many potential problems, including:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o authentication -- Authentication is how you decide who's talking to you at the other end of the network connection.  In many cases, but not always, authentication is tightly bound to authorization (discussed next).  Most people understand that a network server must authenticate its clients; it's less obvious that a network client should authenticate its server.  Without this mutual authentication, you might leak sensitive user data to an impostor server.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o authorization -- Authorization is how you decide whether a particular entity is allowed to do some action.  For example, a simple picture sharing server might allow all users to download and only some users to upload.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>A common practice for iOS developers is to implement authentication and authorization via pairing.  The user must take some action to pair two computers, after which they can communicate without further user interaction.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>There is no direct support for pairing in the iOS SDK, although you can use various APIs (like NSStream's TLS (see below) support and various Security framework APIs) to implement it yourself.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o privacy -- You must assume that malicious users are looking at every piece of data you transfer over the network.  If you ever transfer /any/ data that might be considered personal in the least way, you must ensure that this data is encrypted on the wire.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>In general I recommend that you err on the side of caution and consider all user data to be personal.  This is because data that /you/ might not consider especially sensitive might be very sensitive in certain contexts.  For example, if you're implementing a remote control application for a home media server, you might not consider the names of the tracks to be sensitive, but it's not hard to imagine a scenario where a user might.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Your primary weapon for maintaining privacy is TLS (Transport Layer Security, aka SSL, or the Secure Sockets Layer).  This is directly supported by NSStream, which makes it easy to add on-the-wire encryption to the code from this sample.  The biggest problem, and the reason why this sample does not use TLS, is the issue of identity management.  The Security framework provides some APIs for identity management, but they are not really sufficient for the type of peer-to-peer networking demonstrated by this sample.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o malicious attack -- Whenever you communicate on the public Internet you open yourself up to malicious attack.  In the worst-case scenario an attacker can craft a packet that causes your application to execute arbitrary code, at which point the attacker can take over the machine on which you're running and turn it into a zombie.  You must carefully check all data that you receive from the network to prevent this.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>One specific form of malicious attack is denial of service.  This sample makes no attempt to protect itself from denial of service attacks.  For example, the server currently only supports a single connection and does not implement any timeouts on that connection, so an attacker could prevent any useful work from being done by simply opening a connection to the server and never closing it.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Performance<span></span></pre></td></tr><tr><td scope="row"><pre>-----------<span></span></pre></td></tr><tr><td scope="row"><pre>This sample was designed for simplicity, not performance.  If performance is a serious concern, you have some work to do.  Some obvious things that are likely to improve performance include:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o increasing the buffer size -- The code currently uses 32 KB buffers for both send and receive.  That's probably way too small.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o buffer allocation -- To simplify the code I allocate my transfer buffer as an instance variable (for sending) or on the stack (for receiving).  That's less than ideal, especially as the buffer size gets larger.  You should allocate the buffer on the heap.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o file system I/O -- The code makes no attempt to optimize its use of the file system.  For high-speed networking, especially on the Mac, the performance of file system I/O is as important as the performance of the network I/O.  Also, you would want to overlap network and file system I/O to prevent bubbles in the network 'pipeline'.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o threading -- The code currently uses NSStreams asynchronously on the main thread.  You could probably reduce latency, and hence improve performance, by running the NSStreams on a separate thread.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Before doing any of these things, make sure you actually measure where the performance bottlenecks are in your specific product.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Service Discovery<span></span></pre></td></tr><tr><td scope="row"><pre>-----------------<span></span></pre></td></tr><tr><td scope="row"><pre>The code currently uses a hard-wired Bonjour service name.  This is clearly bogus (for a start, it means you can only run one server on the network at any given time), but it does allow the sample to mostly ignore Bonjour and focus on NSStream.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>A production sample would either use Bonjour service discovery as illustrated by the BonjourWeb sample code, or connect to a globally accessible server via its DNS name (you can create such streams using CFStreamCreatePairWithSocketToHost, as shown in QA1652 "Using NSStreams For A TCP Connection Without NSHost").<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/ios/#samplecode/BonjourWeb/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/ios/#qa/qa1652/_index.html&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Multiple Connections<span></span></pre></td></tr><tr><td scope="row"><pre>--------------------<span></span></pre></td></tr><tr><td scope="row"><pre>To keep things simple the server components of this sample only support a single connection at any given time.  This is likely to be insufficient for your needs.  A real server would typically have some sort of connection object that's instantiated to run a specific connection.  For an example of this, see the RemoteCurrency sample code.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/mac/#samplecode/RemoteCurrency/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Reliability<span></span></pre></td></tr><tr><td scope="row"><pre>-----------<span></span></pre></td></tr><tr><td scope="row"><pre>The sample is reliable within the bounds set by its design.  However, many of those bounds are only appropriate for sample code, not for production code that is to be widely deployed.  Specifically:<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o The protocol used by this sample is trivial.  To send a file, we connect and send data until all of the data is sent.  To receive a file, we connect and then receive data until we get an end-of-file.  This is not appropriate for production code because there's no way to verify that all of the data has been received.  Production code would need to implement some protocol over raw TCP to convey that information.  For example, you could prepend a simple header that includes metadata about the file being transferred.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o TCP is supposed to deliver data reliably.  However, that does not always happen (especially in a world of middleboxes).  Production code should use some sort of end-to-end checksum to ensure that the data has arrived intact.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Note: The PictureSharing sample code shows one way to handle this issue and the previous one.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/mac/#samplecode/PictureSharing/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>o The sample makes no attempt to warn the user when networking is impossible, something that iOS applications are expected to do.  For example, if the device is in Airplane mode, off-device networking is impossible and you should probably tell the user that.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>IPv6<span></span></pre></td></tr><tr><td scope="row"><pre>----<span></span></pre></td></tr><tr><td scope="row"><pre>The client components of this sample should work just fine over IPv6.  The server components are currently IPv4 only.  Adding support for IPv6 in the server components would be relatively; the RemoteCurrency sample code shows the way.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/mac/#samplecode/RemoteCurrency/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Bluetooth<span></span></pre></td></tr><tr><td scope="row"><pre>---------<span></span></pre></td></tr><tr><td scope="row"><pre>Due to changes in the underlying OS, this sample no longer supports transfers over Bluetooth.  See QA1753 "Bonjour over Bluetooth on iOS 5.0" (and its associated DNSSDObjects sample code) for the details.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/ios/#qa/qa1753/_index.html&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/mac/#samplecode/DNSSDObjects/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Putting It All Together<span></span></pre></td></tr><tr><td scope="row"><pre>-----------------------<span></span></pre></td></tr><tr><td scope="row"><pre>For an example of how to put all of this together into a (more-or-less) production quality app, take a look at the MVCNetworking sample code.<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;https://developer.apple.com/library/ios/#samplecode/MVCNetworking/&gt;<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>And for an introduction to the overall problem of networking, watch WWDC 2010 presentation, "Network Apps for iPhone OS", part 1 and 2 (sessions 207 and 208).<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;http://developer.apple.com/videos/wwdc/2010/&gt;<span></span></pre></td></tr></table></div>
+
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../History/History.html'>Next</a><a class='previousLink' rel='prev' href='SendServerController_m.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2012 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2012-05-09</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>
