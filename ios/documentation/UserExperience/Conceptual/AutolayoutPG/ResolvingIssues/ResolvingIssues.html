@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Auto Layout Guide: Resolving Auto Layout Issues</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40010853">
+	<meta id="document-version" name="document-version" content="2.4.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="TP40010853-CH17">
+    <meta id="date" name="date" content="2013-09-18">
+    <meta id="description" name="description" content="Describes the constraint-based system for laying out user interface elements.">
+    <meta id="book-title" name="book-title" content="Auto Layout Guide">
+    <meta id="book-name" name="book-name" content="AutolayoutPG">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience}">
+    <meta name="pdf" contents="../AutolayoutPG.pdf" /><link id="book-pdf" media="print" rel="alternate" type="application/pdf" href="../AutolayoutPG.pdf" />
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Resolving Auto Layout Issues">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Auto Layout Guide" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="../AutoLayoutbyExample/AutoLayoutbyExample.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../AutoLayoutinCode/AutoLayoutinCode.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40010853-CH17" title="Resolving Auto Layout Issues"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Auto Layout Guide</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../AutoLayoutbyExample/AutoLayoutbyExample.html'>Next</a><a class='previousLink' rel='prev' href='../AutoLayoutinCode/AutoLayoutinCode.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40010853-CH17-SW1" title="Resolving Auto Layout Issues"></a><h1 id="pageTitle">Resolving Auto Layout Issues</h1><p>Auto Layout issues occur when you create conflicting constraints, when you don’t provide enough constraints, or when the final layout contains a set of constraints that are ambiguous. When an issue occurs, the Auto Layout system will try to degrade as gracefully as possible so that your app remains usable, but it’s important to understand how to catch layout problems in development. Auto Layout offers several features to help you find and fix the source of errors, including visual hints in Interface Builder that identify which issue is occurring so that you can resolve it with the appropriate solution.</p><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW2" title="Identifying Issues"></a><h2 class="jump">Identifying Issues</h2><p>Interface Builder displays Auto Layout issues in a number of different places:</p><p><strong>In the Issues Navigator.</strong> The Navigator groups issues by type.</p><figure class="figure"><img src="../Art/debug_navigator.png" alt="../Art/debug_navigator.png" width="260" height="254"></figure><p><strong>In the Interface Builder outline view.</strong> If there are any issues in the top-level view that you’re editing on the canvas, the Interface Builder outline view shows a disclosure arrow. This arrow is red if there are conflicts or ambiguities, and yellow if constraints result in view misplacement.</p><figure class="figure"><img src="../Art/red_arrow_in_outline_view_2x.png" alt="../Art/red_arrow_in_outline_view_2x.png" width="271" height="196"></figure><p>Click the disclosure arrow, and you’ll see a list of the issues separated by type, with information about the relevant controls and constraints. Click the error or warning symbol next to any issue to see a description of what’s happening and a recommended course of action.</p><figure class="figure"><img src="../Art/debug_info_view.png" alt="../Art/debug_info_view.png" width="546" height="193"></figure><p><strong>On the canvas.</strong> Misplaced or ambiguous constraints are shown in orange, conflicting constraints are red, and red dotted frames show the predicted runtime positions of misplaced or ambiguous views; these issues are described in the following sections.</p></section><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW3" title="Resolving View Misplacement"></a><h2 class="jump">Resolving View Misplacement</h2><p>In Interface Builder, constraints and frames are separate. If there is a mismatch for a view between the frame you’re seeing on the canvas and the runtime position based on the current set of constraints, you have <strong>view misplacement</strong>.</p><p>Interface Builder shows misplaced views by drawing constraints that are no longer satisfied in orange, with a misplacement delta. It also displays a dotted red frame to show you where the view will be at runtime.</p><figure class="figure"><img src="../Art/misplacement.png" alt="../Art/misplacement.png" width="139" height="149"></figure><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH17-SW4" title="To resolve misplacement"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To resolve misplacement</div></div><div class="task-content"><p class="task-alt-statement">Do one of the following:</p><ul><li class="step"><div class="action"><p>Choose Issues &gt; Update Frames. This causes the element to move back to where it was before it was misplaced. The frames change to satisfy existing constraints.</p></div></li><li class="step"><div class="action"><p>Choose Issues &gt; Update Constraints. This causes the constraints to be updated to the new location of the element. The constraints change to match the current frames.</p></div></li></ul></div></div></section><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW5" title="Resolving Constraint Conflicts"></a><h2 class="jump">Resolving Constraint Conflicts</h2><p><strong>Conflict</strong> occurs when you have a set of constraints that Auto Layout can’t satisfy, such as two different widths for an element. Conflicting constraints show up on the canvas in red, drawn at actual size.</p><figure class="figure"><img src="../Art/conflict.png" alt="../Art/conflict.png" width="129" height="90"></figure><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH17-SW6" title="To resolve a constraint conflict"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To resolve a constraint conflict</div></div><div class="task-content"><ul><li class="step"><div class="action"><p>Delete one of the conflicting constraints.</p></div></li></ul></div></div><div class="tipbox clear"><aside><a name="//apple_ref/doc/uid/TP40010853-CH17-DontLinkElementID_3" title="Tip"></a><img src="../../../../../Resources/874/Images/applehelp/tips_2x.png" alt="tip icon" width="20" height="20" border="0" class="tipicon" /><p><strong>Tip:</strong>&nbsp;If you want to remove <em>all</em> constraints and start over, choose Issues &gt; Clear Constraints.</p><p><div class="clear"></div></aside></div></section><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW7" title="Resolving Ambiguity"></a><h2 class="jump">Resolving Ambiguity</h2><p><strong>Ambiguity</strong> occurs when the constraints you’ve defined result in multiple possible solutions for views’ size and placement; this may be because, for example, there are not enough constraints, or because a view’s content size is undefined.</p><p>Interface Builder shows ambiguity by drawing frames with orange borders; to learn more about the ambiguity, use the Issues navigator. The way you resolve ambiguity depends on the condition that’s causing it.</p><figure class="figure"><img src="../Art/ambiguity_no_vertical.png" alt="../Art/ambiguity_no_vertical.png" width="190" height="170"></figure><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW8" title="One or More Constraints Are Missing"></a><h3 class="jump">One or More Constraints Are Missing</h3><p>In the simplest case, there are just not enough constraints—for example, you constrained the horizontal position of an element, but didn’t add constraints for the vertical position. To resolve the ambiguity, you need to add the missing constraints </p><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH17-SW9" title="To add missing constraints"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To add missing constraints</div></div><div class="task-content"><ul><li class="step"><div class="action"><p>Choose Issues &gt; Add Missing Constraints.</p></div></li></ul></div></div></section><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW10" title="Content Size Is Undefined"></a><h3 class="jump">Content Size Is Undefined</h3><p>Some container views—such as a stack view—depend on the size of their content to determine their own size at run time, which means the size is unknown at design time. To address this problem, you should set placeholder constraints, such as a placeholder minimum width for a view (this placeholder is removed at build time, when your view defines its size).</p><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH17-SW11" title="To create a placeholder constraint"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To create a placeholder constraint</div></div><div class="task-content"><ol><li class="step"><div class="action"><p>Add the desired constraint as  normal.</p></div></li><li class="step"><div class="action"><p>Select the constraint, then open the Attributes inspector.</p></div></li><li class="step"><div class="action"><p>Select the checkbox next to the Placeholder option.</p></div><div class="elaborations"><figure class="figure"><img src="../Art/placeholder.png" alt="../Art/placeholder.png" width="259" height="143"></figure></div></li></ol></div></div></section><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW12" title="The Size of Custom View Content Is Unknown"></a><h3 class="jump">The Size of Custom View Content Is Unknown</h3><p>Unlike standard views, custom views have no defined intrinsic content size. During design time, Interface Builder doesn’t know what size to expect a custom view to be. To address this problem, you should set a <strong>placeholder intrinsic content size</strong> to indicate the custom view’s content size.</p><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH17-SW13" title="To set a view’s placeholder intrinsic content size"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To set a view’s placeholder intrinsic content size</div></div><div class="task-content"><ol><li class="step"><div class="action"><p>With the view selected, open the Size inspector.</p></div><div class="elaborations"><figure class="figure"><img src="../Art/size_inspector.png" alt="../Art/size_inspector.png" width="259" height="21"></figure></div></li><li class="step"><div class="action"><p>Under the Intrinsic Size option, select Placeholder.</p></div></li><li class="step"><div class="action"><p>Set appropriate values for the width and height.</p></div><div class="elaborations"><figure class="figure"><img src="../Art/intrinsic_content_size.png" alt="../Art/intrinsic_content_size.png" width="259" height="143"></figure></div></li></ol></div></div></section></section><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW14" title="Debugging in Code"></a><h2 class="jump">Debugging in Code</h2><p>Broadly speaking, there are two phases to debugging a layout problem:</p><ol class="ol"><li class="li"><p>Map from “this view is in the wrong place” to “this constraint (or these constraints) is (are) incorrect.”</p></li><li class="li"><p>Map from “this constraint is incorrect” to “this code is incorrect.”</p></li></ol><div class="task closed"><a name="//apple_ref/doc/uid/TP40010853-CH17-SW15" title="To debug a problem with Auto Layout"></a><div class="task-name"><img class="taskbullet" src="../../../../../Resources/874/Images/applehelp/task_2x.png" alt="bullet" width="20" height="20" /><div>To debug a problem with Auto Layout</div></div><div class="task-content"><ol><li class="step"><div class="action"><p>Identify the view with an incorrect frame.</p></div><div class="elaborations"><p>It may be obvious which view has the problem; if it is not, you may find it helpful to use the <code>NSView</code> method <code>_subtreeDescription</code> to create a textual description of the view hierarchy. </p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/TP40010853-CH17-DontLinkElementID_4" title="Important"></a><p><strong>Important:</strong>&nbsp;The <code>_subtreeDescription</code> method is not public API; it is, however, permissible to use for debugging purposes.</p><p></p></aside></div></div></li><li class="step"><div class="action"><p>If possible, reproduce the issue while running under the Auto Layout template in Instruments.</p></div></li><li class="step"><div class="action"><p>Find the bad constraint or constraints.</p></div><div class="elaborations"><p>To get the constraints affecting a particular view, use <code><!--a target="_self" -->constraintsAffectingLayoutForOrientation:<!--/a--></code> in OS X or <code><a href="../../../../UIKit/Reference/UIView_Class/UIView/UIView.html#/apple_ref/occ/instm/UIView/constraintsAffectingLayoutForAxis:" target="_self">constraintsAffectingLayoutForAxis:</a></code> in iOS. </p><p>You can then inspect the constraints in the debugger, which prints constraints using the visual format notation described in <span class="content_text"><a href="../VisualFormatLanguage/VisualFormatLanguage.html#/apple_ref/doc/uid/TP40010853-CH3-SW1">“Visual Format Language.”</a></span> If your views have identifiers, they are printed out in the description, like this:</p><div class="codesample clear"><table><tr><td scope="row"><pre>&lt;NSLayoutConstraint: 0x400bef8e0 H:[refreshSegmentedControl]-(8)-[selectViewSegmentedControl] (Names: refreshSegmentedControl:0x40048a600, selectViewSegmentedControl:0x400487cc0 ) &gt;<span></span></pre></td></tr></table></div><p>otherwise the output looks like this:</p><div class="codesample clear"><table><tr><td scope="row"><pre>&lt;NSLayoutConstraint: 0x400cbf1c0 H:[NSSegmentedControl:0x40048a600]-(8)-[NSSegmentedControl:0x400487cc0]&gt;<span></span></pre></td></tr></table></div></div></li><li class="step"><div class="action"><p>If it’s not obvious which constraint is wrong at this point, visualize the constraints on screen by passing the constraints to the window using <code><!--a target="_self" -->visualizeConstraints:<!--/a--></code>.</p></div><div class="elaborations"><p>When you click a constraint, it is printed in the console. In this way you can you can determine which is which, and typically identify which is incorrect.</p><p>At this point you may be informed that the layout is ambiguous.</p></div></li><li class="step"><div class="action"><p>Find the code that’s wrong.</p></div><div class="elaborations"><p>Sometimes, once you have identified the incorrect constraint, you will know what to do to fix it.</p><p>If this is not the case, then use Instruments to search for the pointer of the constraint (or some of its description). This will show you interesting events in that constraint’s lifecycle—its creation, modification, installation into windows, and so on. For each of these you can see the backtrace where it happened. Find the stage at which things went awry, and look at the backtrace.  This is the code with the problem.</p></div></li></ol></div></div></section><section><a name="//apple_ref/doc/uid/TP40010853-CH17-SW16" title="Auto Layout Degrades Gracefully with Unsatisfiable Constraints"></a><h2 class="jump">Auto Layout Degrades Gracefully with Unsatisfiable Constraints</h2><p>It is a programming error to configure constraints that cannot be satisfied. Faced with unsatisfiable constraints, however, the Auto Layout system attempts to degrade gracefully. </p><ol class="ol"><li class="li"><p>The <code><!--a target="_self" -->addConstraint:<!--/a--></code> method (or the <code>setConstant:</code> method of <code>NSLayoutConstraint</code>) logs the mutually unsatisfiable constraints and (because this is a programmer error) throws an exception.</p></li><li class="li"><p>The system catches the exception immediately.</p><p>Although adding a constraint that cannot be satisfied is a programmer error, it’s an error that one can readily imagine occurring on a user’s computer, and from which the system can recover more gracefully than crashing the program. The exception is thrown so that you notice the problem, and caught because it’s easier to debug the constraint system if the system does still function. </p></li><li class="li"><p>To allow layout to proceed, the system selects a constraint from among the mutually unsatisfiable set and lowers its priority from “required” to an internal value that is not required, but that is higher priority than anything you can externally specify. The effect is that as things change going forward, this incorrectly broken constraint is the first that the system attempts to satisfy. (Note that every constraint in the set is required to begin with, because otherwise it wouldn’t be causing a problem.) </p></li></ol><div class="codesample clear"><table><tr><td scope="row"><pre>2010-08-30 03:48:18.589 ak_runner[22206:110b] Unable to simultaneously satisfy constraints:<span></span></pre></td></tr><tr><td scope="row"><pre>(<span></span></pre></td></tr><tr><td scope="row"><pre>    "&lt;NSLayoutConstraint: 0x40082d820 H:[NSButton:0x4004ea720'OK']-(20)-|   (Names: '|':NSView:0x4004ea9a0 ) &gt;",<span></span></pre></td></tr><tr><td scope="row"><pre>    "&lt;NSLayoutConstraint: 0x400821b40 H:[NSButton:0x4004ea720'OK']-(29)-|   (Names: '|':NSView:0x4004ea9a0 ) &gt;"<span></span></pre></td></tr><tr><td scope="row"><pre>)<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>Will attempt to recover by breaking constraint <span></span></pre></td></tr><tr><td scope="row"><pre>&lt;NSLayoutConstraint: 0x40082d820 H:[NSButton:0x4004ea720'OK']-(20)-|   (Names: '|':NSView:0x4004ea9a0 ) &gt;<span></span></pre></td></tr></table></div></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../AutoLayoutbyExample/AutoLayoutbyExample.html'>Next</a><a class='previousLink' rel='prev' href='../AutoLayoutinCode/AutoLayoutinCode.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-09-18</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

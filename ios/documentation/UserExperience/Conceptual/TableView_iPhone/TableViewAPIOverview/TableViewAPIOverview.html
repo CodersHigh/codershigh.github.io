@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table View Programming Guide for iOS: Overview of the Table View API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40007451">
+	<meta id="document-version" name="document-version" content="5.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="TP40007451-CH4">
+    <meta id="date" name="date" content="2013-09-18">
+    <meta id="description" name="description" content="Describes how to create and manage table views for applications running iOS.">
+    <meta id="book-title" name="book-title" content="Table View Programming Guide for iOS">
+    <meta id="book-name" name="book-name" content="TableView_iPhone">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/UIKit}, {Topic/User Experience/Tables}">
+    <meta name="pdf" contents="../TableView_iPhone.pdf" /><link id="book-pdf" media="print" rel="alternate" type="application/pdf" href="../TableView_iPhone.pdf" />
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Overview of the Table View API">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Table View Programming Guide for iOS" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TableView_iPhone/TableViewAndDataModel/TableViewAndDataModel.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../TableViewStyles/TableViewCharacteristics.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40007451-CH4" title="Overview of the Table View API"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Table View Programming Guide for iOS</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TableView_iPhone/TableViewAndDataModel/TableViewAndDataModel.html'>Next</a><a class='previousLink' rel='prev' href='../TableViewStyles/TableViewCharacteristics.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40007451-CH4-SW2" title="Overview of the Table View API"></a><h1 id="pageTitle">Overview of the Table View API</h1><p>The table view programming interface includes several UIKit classes, two formal <span class="pediaLink" data-header="Protocol" data-contents="A protocol declares a programmatic interface that any class may choose to implement. "><a href="../../../../General/Conceptual/DevPedia-CocoaCore/Protocol.html#/apple_ref/doc/uid/TP40008195-CH45" target="_self">protocols</a></span>, and a <span class="pediaLink" data-header="Category" data-contents="You use categories to define additional methods of an existing class—even one whose source code is unavailable to you—without subclassing. "><a href="../../../../General/Conceptual/DevPedia-CocoaCore/Category.html#/apple_ref/doc/uid/TP40008195-CH5" target="_self">category</a></span> added to a Foundation framework class. </p><section><a name="//apple_ref/doc/uid/TP40007451-CH4-SW3" title="Table View"></a><h2 class="jump">Table View</h2><p>A table view itself is an instance of the <code><a href="../../../../UIKit/Reference/UITableView_Class/Reference/Reference.html#/apple_ref/occ/cl/UITableView" target="_self">UITableView</a></code> class. You use its methods to configure the appearance of the table view—for example, specifying the default height of rows or providing a subview used as the header for the table. Other methods give you access to the currently selected row as well as specific rows or cells. You can call other methods of <code><a href="../../../../UIKit/Reference/UITableView_Class/Reference/Reference.html#/apple_ref/occ/cl/UITableView" target="_self">UITableView</a></code> to manage selections, scroll the table view, and insert or delete rows and sections. </p><p><code>UITableView</code> inherits from the <code><a href="../../../../UIKit/Reference/UIScrollView_Class/Reference/UIScrollView.html#/apple_ref/occ/cl/UIScrollView" target="_self">UIScrollView</a></code> class, which defines scrolling behavior for views with content larger than the size of the window. <code>UITableView</code> redefines the scrolling behavior to allow vertical scrolling only.</p></section><section><a name="//apple_ref/doc/uid/TP40007451-CH4-SW6" title="Table View Controller"></a><h2 class="jump">Table View Controller</h2><p>The <code><a href="../../../../UIKit/Reference/UITableViewController_Class/Reference/Reference.html#/apple_ref/occ/cl/UITableViewController" target="_self">UITableViewController</a></code> class manages a table view and adds support for many standard table-related behaviors such as selection management, row editing, table configuration, and others. This additional support is there to minimize the amount of code you have to write to create and initialize your table-based interface. You don’t use this class directly—instead you subclass <code>UITableViewController</code> to add custom behaviors. </p></section><section><a name="//apple_ref/doc/uid/TP40007451-CH4-SW1" title="Data Source and Delegate"></a><h2 class="jump">Data Source and Delegate</h2><p>A <code><a href="../../../../UIKit/Reference/UITableView_Class/Reference/Reference.html#/apple_ref/occ/cl/UITableView" target="_self">UITableView</a></code> object must have a <span class="pediaLink" data-header="Delegation" data-contents="Delegation is a simple and powerful pattern in which one object in a program acts on behalf of, or in coordination with, another object. "><a href="../../../../General/Conceptual/DevPedia-CocoaCore/Delegation.html#/apple_ref/doc/uid/TP40008195-CH14" target="_self">delegate and a data source</a></span>. Following the <span class="pediaLink" data-header="Model-View-Controller" data-contents="The Model-View-Controller (MVC) design pattern assigns objects in an application one of three roles: model, view, or controller. "><a href="../../../../General/Conceptual/DevPedia-CocoaCore/MVC.html#/apple_ref/doc/uid/TP40008195-CH32" target="_self">Model-View-Controller</a></span> design pattern, the data source mediates between the app’s data model (that is, its <span class="pediaLink" data-header="Model object" data-contents="A model object is a type of object that contains the data of an application, provides access to that data, and implements logic to manipulate the data. "><a href="../../../../General/Conceptual/DevPedia-CocoaCore/ModelObject.html#/apple_ref/doc/uid/TP40008195-CH31" target="_self">model objects</a></span>) and the table view. The delegate, on the other hand, manages the appearance and behavior of the table view. The data source and the delegate are often (but not necessarily) the same object, and that object is usually a custom subclass of <code><a href="../../../../UIKit/Reference/UITableViewController_Class/Reference/Reference.html#/apple_ref/occ/cl/UITableViewController" target="_self">UITableViewController</a></code>. (See <span class="content_text"><a href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TableView_iPhone/TableViewAndDataModel/TableViewAndDataModel.html#/apple_ref/doc/uid/TP40007451-CH5-SW4">“Navigating a Data Hierarchy with Table Views”</a></span> for further information.)</p><p>The data source adopts the <code><a href="../../../../UIKit/Reference/UITableViewDataSource_Protocol/Reference/Reference.html#/apple_ref/occ/intf/UITableViewDataSource" target="_self">UITableViewDataSource</a></code> protocol. <code><a href="../../../../UIKit/Reference/UITableViewDataSource_Protocol/Reference/Reference.html#/apple_ref/occ/intf/UITableViewDataSource" target="_self">UITableViewDataSource</a></code> has two required methods. The <code><a href="../../../../UIKit/Reference/UITableViewDataSource_Protocol/Reference/Reference.html#/apple_ref/occ/intfm/UITableViewDataSource/tableView:numberOfRowsInSection:" target="_self">tableView:numberOfRowsInSection:</a></code> method tells the table view how many rows to display in each section, and the <code><a href="../../../../UIKit/Reference/UITableViewDataSource_Protocol/Reference/Reference.html#/apple_ref/occ/intfm/UITableViewDataSource/tableView:cellForRowAtIndexPath:" target="_self">tableView:cellForRowAtIndexPath:</a></code> method provides the cell to display for each row in the table. Optional methods allow the data source to configure multiple sections, provide headers and/or footers, and support adding, removing, and reordering rows in the table.</p><p>The delegate adopts the <code><a href="../../../../UIKit/Reference/UITableViewDelegate_Protocol/Reference/Reference.html#/apple_ref/occ/intf/UITableViewDelegate" target="_self">UITableViewDelegate</a></code> protocol. This protocol has no required methods. It declares methods that allow the delegate to modify visible aspects of the table view, manage selections, support an accessory view, and support editing of individual rows in a table.</p><p>An app can make use of the convenience class <code><a href="../../../../iPhone/Reference/UILocalizedIndexedCollation_Class/UILocalizedIndexedCollation.html#/apple_ref/occ/cl/UILocalizedIndexedCollation" target="_self">UILocalizedIndexedCollation</a></code> to help the data source organize the data for indexed lists and display the proper section when users tap an item in the index. The <code>UILocalizedIndexedCollation</code> class also localizes section titles.</p></section><section><a name="//apple_ref/doc/uid/TP40007451-CH4-SW4" title="Extension to the NSIndexPath Class"></a><h2 class="jump">Extension to the NSIndexPath Class</h2><p>Many table view methods use index paths as parameters or return values. An index path identifies a path to a specific node in a tree of nested arrays, and in the Foundation framework it is represented by an <code><a href="../../../../Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/Reference/Reference.html#/apple_ref/occ/cl/NSIndexPath" target="_self">NSIndexPath</a></code> object. UIKit declares a <span class="pediaLink" data-header="Category" data-contents="You use categories to define additional methods of an existing class—even one whose source code is unavailable to you—without subclassing. "><a href="../../../../General/Conceptual/DevPedia-CocoaCore/Category.html#/apple_ref/doc/uid/TP40008195-CH5" target="_self">category</a></span> on <code>NSIndexPath</code> with methods that return key paths, locate rows in sections, and construct <code><a href="../../../../Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/Reference/Reference.html#/apple_ref/occ/cl/NSIndexPath" target="_self">NSIndexPath</a></code> objects from row and section indexes. For more information, see <em><a href="../../../../UIKit/Reference/NSIndexPath_UIKitAdditions/Reference/Reference.html#/apple_ref/doc/uid/TP40007175" target="_self">NSIndexPath UIKit Additions</a></em>. </p></section><section><a name="//apple_ref/doc/uid/TP40007451-CH4-SW5" title="Table View Cells"></a><h2 class="jump">Table View Cells</h2><p>As noted in <span class="content_text"><a href="TableViewAPIOverview.html#/apple_ref/doc/uid/TP40007451-CH4-SW1">“Data Source and Delegate,”</a></span> the data source must return a cell object for each visible row that a table view displays. These cell objects must inherit from the <code><a href="../../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/occ/cl/UITableViewCell" target="_self">UITableViewCell</a></code> class. This class includes methods for managing cell selection and editing, managing accessory views, and configuring the cell. You can <span class="pediaLink" data-header="Object creation" data-contents="An object comes into runtime existence through a two-step process that allocates memory for the object and sets its state to reasonable initial values. "><a href="../../../../General/Conceptual/DevPedia-CocoaCore/ObjectCreation.html#/apple_ref/doc/uid/TP40008195-CH39" target="_self">instantiate</a></span> cells directly in the standard styles defined by the <code><a href="../../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/occ/cl/UITableViewCell" target="_self">UITableViewCell</a></code> class and give these cells content consisting of one or two strings of text and, in some styles, both image and text. Instead of using a cell in a standard style, you can put your own custom subviews in the content view of an “off-the-shelf” cell object. You may also subclass <code>UITableViewCell</code> to customize the appearance and behavior of table view cells. These approaches are all discussed in <span class="content_text"><a href="../TableViewCells/TableViewCells.html#/apple_ref/doc/uid/TP40007451-CH7-SW1">“A Closer Look at Table View Cells.”</a></span> </p></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='https://developer.apple.com/library/ios/documentation/userexperience/conceptual/TableView_iPhone/TableViewAndDataModel/TableViewAndDataModel.html'>Next</a><a class='previousLink' rel='prev' href='../TableViewStyles/TableViewCharacteristics.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2013 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2013-09-18</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../../../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

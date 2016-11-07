@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Technical Note TN2151: Understanding and Analyzing iOS Application Crash Reports</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40008184">
+	<meta id="document-version" name="document-version" content="7.0.0">
+    <meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133">
+    <meta id="chapterId" name="chapterId" content="DTS40008184-CH1">
+    <meta id="date" name="date" content="2012-12-13">
+    <meta id="description" name="description" content="TN2151: Essential information for developers explaining how to symbolicate, understand, and interpret crash reports.">
+    <meta id="book-title" name="book-title" content="Understanding and Analyzing iOS Application Crash Reports">
+    <meta id="book-name" name="book-name" contents="DTS_TN2151_CrashReportingfo">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="iOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Note}, {Topic/Languages & Utilities}">
+    
+    
+    <meta id="generator" name="generator" content="Gutenberg 003a3034">
+    <meta name='numbat' content='aa879094b666337fdcde744b62fbff30'>
+    <meta id="copyright" name="copyright" content="Copyright 2014 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Note TN2151">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/874">
+    <link id="book-index-page" rel="Start" title="Understanding and Analyzing iOS Application Crash Reports" type="text/html" href="index.html">
+    <link id="next-page" rel="Next" type="text/html" href="">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/screen.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../Resources/874/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/DTS40008184" title="Technical Note TN2151"></a>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode phone">
+            <a id="ssi_LibraryTitle" href='../../navigation/index.html'>iOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='../../../../index.html'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search iOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Understanding and Analyzing iOS Application Crash Reports</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40008184-CH1-DontLinkElementID_2" title="Technical Note TN2151"></a><div class="dtsDocNumber">Technical Note TN2151</div><h1 id="pageTitle">Understanding and Analyzing iOS Application Crash Reports</h1><p>When an application crashes, a "crash report" is created which is very useful for understanding what caused the crash. This document contains essential information about how to symbolicate, understand, and interpret crash reports.</p>
+
+   
+    <div class="outerMiniTOC">
+
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40008184-CH1-INTRODUCTION">Introduction</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40008184-CH1-UNDERSTANDING_LOW_MEMORY_REPORTS">Understanding Low Memory Reports</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40008184-CH1-ANALYZING_CRASH_REPORTS">Analyzing Crash Reports</a>
+                
+                
+                
+                    <div class="nestedMiniTOC">
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40008184-CH1-ANALYZING_CRASH_REPORTS-SYMBOLICATION">Symbolication</a>
+                            
+                        </div>
+                        
+                    
+                        
+                        <div>
+                            <a href="_index.html#/apple_ref/doc/uid/DTS40008184-CH1-ANALYZING_CRASH_REPORTS-EXCEPTION_CODES">Exception codes</a>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40008184-CH1-RELATED_DOCUMENTS">Related Documents</a>
+                
+                
+                
+            </div>
+            
+        
+			
+            <div>
+                <a href="_index.html#/apple_ref/doc/uid/DTS40008184-RevisionHistory-DontLinkElementID_1">Document Revision History</a>
+                
+                
+                
+            </div>
+            
+        
+    </div>
+
+<section><a name="//apple_ref/doc/uid/DTS40008184-CH1-INTRODUCTION" title="Introduction"></a><h2 class="jump">Introduction</h2><p>When an application crashes on an iOS device, a "crash report" is created and stored on the device. Crash reports describe the conditions under which the application terminated, in most cases including a complete stack trace for each executing thread, and are typically very useful for debugging issues in the application. If you are an iOS developer, you should look at these crash reports to understand what crashes your application is having, and then try to fix them.</p><p>Low memory reports differ from other crash reports in that there are no stack traces in this type of reports. When a low memory crash happens, you must investigate your memory usage patterns and your responses to low memory warnings. This document points to you several memory management references that you might find useful.</p><p>Crash reports with stack traces need to be <strong>symbolicated</strong> before they can be analyzed. Symoblication replaces memory addresses with human-readable function names and line numbers. If you get crash logs off a device through Xcode's Organizer window, then they will be symbolicated for you automatically after a few seconds. Otherwise you will need to symbolicate the <code>.crash</code> file yourself by importing it to the Xcode Organizer. See <span class="content_text"><!--a  -->Symbolication<!--/a--></span> for details. </p><p>This document also talks about exception codes, another useful information for identifying the cause of the crash.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40008184-CH1-UNDERSTANDING_LOW_MEMORY_REPORTS" title="Understanding Low Memory Reports"></a><h2 class="jump">Understanding Low Memory Reports</h2><p>When a low-memory condition is detected, the virtual memory system in iOS relies on the cooperation of applications to release memory. Low-memory notifications are sent to all running applications and processes as a request to free up memory, hoping to reduce the amount of memory in use. If memory pressure still exists, the system may terminate background processes to ease memory pressure. If enough memory can be freed up, your application will continue to run and no crash report will be generated. If not, your application will be terminated by iOS because there isn't enough memory to satisfy the application's demands, and a low memory report will be generated and stored on the device.</p><p>The format of a low memory report differs from other crash reports in that there are no stack traces for the application threads. Memory usage of each process is reported in terms of number of memory pages, which as of this writing are 4KB each. You will see "(jettisoned)" next to the name of any process terminated by iOS to free up memory. If you see it next to your application's name, that confirms the application was terminated for using too much memory. Otherwise, the cause of the crash was not memory pressure. Look for a <code>.crash</code> file (described in the <span class="content_text"><!--a  -->next section<!--/a--></span>) for more information.</p><p>When you see a low memory crash, rather than be concerned about what part of your code was executing at the time of termination, you should investigate your memory usage patterns and your responses to low memory warnings. <span class="content_text"><a href="../../index.html#recipes/instruments_help-memory-allocations-help/Eliminating_Messages_To_Deallocated_Objects/06_Eliminating_Messages_To_Deallocated_Objects.html%23/apple_ref/doc/uid/TP40011396-CH4-SW1" class="urlLink" rel="external">Memory Allocations Help</a></span> lists detailed steps on how to use the Leaks Instrument to discover memory leaks, and how to use the Allocations Instrument's Mark Heap feature to avoid abandoned memory. <span class="content_text"><a href="../../../mac/index.html#documentation/Performance/Conceptual/ManagingMemory/ManagingMemory.html%23/apple_ref/doc/uid/10000160i" class="urlLink" rel="external">Memory Usage Performance Guidelines</a></span> discusses the proper ways to respond to low-memory notifications as well as many tips for using memory effectively. It is also recommended that you check out the WWDC 2010 session, <span class="content_text"><a href="../../../../videos/wwdc/2010/index-id=311.html" class="urlLink" rel="external">Advanced Memory Analysis with Instruments</a></span>.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40008184-CH1-DontLinkElementID_3" title="Important"></a><p><strong>Important:</strong>&nbsp;The Leaks and Allocations instruments do not track graphics memory. You need to run your application with the VM Tracker instrument (included in the Instruments Allocations template) to see your graphics memory usage. VM Tracker is disabled by default. To profile your application with VM Tracker, click the instrument, check the "Automatic Snapshotting" flag or press the "Snapshot Now" button manually.</p><p></p></aside></div><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40008184-CH1-ANALYZING_CRASH_REPORTS" title="Analyzing Crash Reports"></a><h2 class="jump">Analyzing Crash Reports</h2><p>Unlike the low memory reports, most crash reports contain stack traces for each thread at the time of termination. This section discusses these reports.</p><section><a name="//apple_ref/doc/uid/DTS40008184-CH1-ANALYZING_CRASH_REPORTS-SYMBOLICATION" title="Symbolication"></a><h3 class="jump">Symbolication</h3><p>The most interesting part of a crash report is the stack trace of your application at the time execution halted. This trace is similar to what you would see when stopping execution in the debugger, except that you are not given the method or function names, known as symbols. Instead, you have hexadecimal addresses and executable code - your application or system frameworks - to which they refer. You need to map these addresses to symbols. The logs do not contain symbol information when they're written out. You have to symbolicate the logs before you can analyze them.</p><p>Symbolication - resolving stack trace addresses to source code methods and lines - requires the application binary that was uploaded to the App Store and the <code>.dSYM</code> file that was generated when that binary was built. This must be an exact match - otherwise, the report cannot be fully symbolicated. It is essential that you keep each build distributed to users (regardless of the details of that distribution) with its <code>.dSYM</code> file. </p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40008184-CH1-DontLinkElementID_4" title="Important"></a><p><strong>Important:</strong>&nbsp;You must keep both the application binary and the <code>.dSYM</code> file in order to be able to fully symbolicate crash reports. You should archive these files for every build that you submit to iTunes Connect. The <code>.dSYM</code> and application binary are specifically tied together on a per-build-basis, and subsequent builds, even from the same source files, will not interoperate with files from other builds. If you use the “Build and Archive” command then they will be placed in a suitable location automatically. Otherwise any location searchable by Spotlight (such as your home directory) is fine.</p><p></p></aside></div><p>Xcode's "Archive" command makes it easy keeping the matching binary and the <code>.dSYM</code>. When you use the "Archive" command (by choosing "Archive" from the "Product" menu or by pressing <code>Shift+Command+B</code>), Xcode will gather the application binary and the <code>.dSYM</code> containing symbol information together and store them in a location in your home folder. You can find all of your archived applications in the Xcode Organizer under the "Archived" section. Xcode will automatically search archived applications when symbolicating crash reports, and you can submit archived applications directly to iTunes Connect ensuring that the application and <code>.dSYM</code> that you have archived match what you release.</p><p>Xcode will automatically symbolicate all crash reports that it encounters, if it has the <code>.dSYM</code> and application binary that produced the crash report. Given a crash report, the matching binary, and its <code>.dSYM</code> file, all you need to do for symbolication is to add the crash report to the Xcode Organizer. Open the Xcode Organizer, select the “Devices” tab, select “Device Logs” under “LIBRARY” on the top of the sidebar, click the "Import" button and select the <code>.crash</code> file. When it's done, Xcode will automatically symbolicate the crash report and display the results.</p></section><section><a name="//apple_ref/doc/uid/DTS40008184-CH1-ANALYZING_CRASH_REPORTS-EXCEPTION_CODES" title="Exception codes"></a><h3 class="jump">Exception codes</h3><p>In the crash log is a line that starts with the text <code>Exception Codes:</code> followed by one or more hexadecimal values. These are processor-specific codes that may give you more information on the nature of the crash. </p><ul class="ul"><li class="li"><p>The exception code <code>0xbaaaaaad</code> indicates that the log is a stackshot of the entire system, not a crash report. To take a stackshot, push the home button and any volume button. Often these logs are accidentally created by users, and do not indicate an error.</p></li><li class="li"><p>The exception code <code>0xbad22222</code> indicates that a VoIP application has been terminated by iOS because it resumed too frequently.</p></li><li class="li"><p>The exception code <code>0x8badf00d</code> indicates that an application has been terminated by iOS because a watchdog timeout occurred. The application took too long to launch, terminate, or respond to system events. One common cause of this is doing <span class="content_text"><a href="../../qa/qa1693/index.html" class="browserLink" >synchronous networking on the main thread</a></span>. Whatever operation is on <code>Thread 0:</code> needs to be moved to a background thread, or processed differently, so that it does not block the main thread.</p></li><li class="li"><p>The exception code <code>0xc00010ff</code> indicates the app was killed by the operating system in response to a thermal event. This may be due to an issue with the particular device that this crash occurred on, or the environment it was operated in. For tips on making your app run more efficiently, see <span class="content_text"><a href="../../../../videos/wwdc/2011/index-id=312.html" class="urlLink" rel="external">iOS Performance and Power Optimization with Instruments</a></span> WWDC session.</p></li><li class="li"><p>The exception code <code>0xdead10cc</code> indicates that an application has been terminated by iOS because it held on to a system resource (like the address book database) while running in the background.</p></li><li class="li"><p>The exception code <code>0xdeadfa11</code> indicated that an application has been force quit by the user. Force quits occur when the user first holds down the On/Off button until "slide to power off" appears, then holds down the Home button. It's reasonable to assume that the user has done this because the application has become unresponsive, but it's not guaranteed - force quit will work on any application.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40008184-CH1-DontLinkElementID_5" title="Note"></a><p><strong>Note:</strong>&nbsp;Terminating a suspended app by removing it from the multitasking tray does not generate a crash log. Once an app has suspended, it is eligible for termination by iOS at any time, so no crash log will be generated.</p><p></p></aside></div></li></ul></section><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40008184-CH1-RELATED_DOCUMENTS" title="Related Documents"></a><h2 class="jump">Related Documents</h2><p>For information about how to acquire a crash report, see <span class="content_text"><a href="../../index.html#qa/qa1747/_index.html" class="urlLink" rel="external">Debugging Deployed iOS Apps</a></span>.</p><p>For information about how to use the Instruments Zombies template to fix memory overrelease crashes, see <span class="content_text"><a href="../../index.html#recipes/instruments_help-memory-allocations-help/Eliminating_Messages_To_Deallocated_Objects/06_Eliminating_Messages_To_Deallocated_Objects.html" class="urlLink" rel="external">Finding Messages Sent To Deallocated Objects</a></span>.</p><p>For more information about application archiving, see the <span class="content_text"><a href="../../index.html#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/DistApps/DistApps.html" class="urlLink" rel="external">Distributing Applications</a></span> section of the Xcode 4 User Guide and <span class="content_text"><a href="../../qa/qa1764/_index.html" class="urlLink" rel="external">Testing Workflow with Xcode's Archive feature</a></span>.</p><p>For more information about interpreting crash logs, see <span class="content_text"><a href="../../../../videos/wwdc/2010/index-id=317.html" class="urlLink" rel="external">Understanding Crash Reports on iPhone OS WWDC 2010 Session</a></span>.</p><div class="back_to_top"><a href="_index.html#top">Back to Top</a></div></section><br/><hr/><a name="//apple_ref/doc/uid/DTS40008184-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40008184-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br/><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145" /></colgroup><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2012-12-13</td><td><p>Added information about  more exception codes. </p></td></tr><tr><td scope="row">2012-03-28</td><td><p>Added information about low memory crash reports and more exception codes. Updated for Xcode 4.</p></td></tr><tr><td scope="row">2011-03-01</td><td><p>Updated to reflect changes for iOS 4.0 and later.</p></td></tr><tr><td scope="row">2010-07-06</td><td><p>Fixed bug in the documentation.</p></td></tr><tr><td scope="row">2010-05-18</td><td><p>Updated to reflect changes for the iPhone OS 3.2 SDK and Xcode 3.2.2.</p></td></tr><tr><td scope="row">2009-06-01</td><td><p>Added stronger emphasis about the need to save not only .dSYM files, but application binaries as well.</p></td></tr><tr><td scope="row">2009-04-30</td><td><p>Updated for iTunes Connect crash log service.</p></td></tr><tr><td scope="row">2009-02-18</td><td><p>Updated to include a workaround for an issue that prevents application code from being symbolicated.</p></td></tr><tr><td scope="row">2009-01-29</td><td><p>New document that 
+					essential information for developers explaining how to symbolicate, understand, and interpret crash reports. </p></td></tr></table><br/>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2012 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2012-12-13</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../Resources/874/JavaScript/lib/prototype.js"></script>
+    <script src="../../Resources/874/JavaScript/library.js"></script>
+    <script src="../../Resources/874/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>
