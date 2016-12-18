@@ -1,93 +1,297 @@
-<!doctype html>
-<html>
-  <head>
-	<meta name="google-site-verification" content="vq1O0YC3_pVJ3578194714XkKdz29EzlHDsuYNOt2IQ" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Coder'sHigh by CodersHigh - 코더스하이 앱 제작 튜토리얼 뽀모도로 타이머</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Coder'sHigh - for iOS Developers</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-  
-    <div class="wrapper">
-      <header>
-      
-        <img src="images/logo_codershigh.png" alt="coders high logo" style="width: 300px;" /><br/>        
 
-		<div class="github-link"><p class="view"><a class="view" href="https://github.com/CodersHigh">View My GitHub Profile</a></p></div>
+</head>
 
-        <p><small>Official Pages for Coder'sHigh</small></p>
-		<br />
+<body>
 
-      </header>
-      <section>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> <img class="img-thumbnail" padding = "0px" width = "30px" height = "100%" src="images/codershigh_nocolor_head.gif" alt=""> Coder's High</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="pages/item/introduce.html">소개</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">콘텐츠<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="pages/item/portfolio-2014_tot.html">프로토타입 결과물</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">교육<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="pages/lingostar_curriculum_1.html">커리큘럼</a>
+                            </li>
+                            <li>
+                                <a href="pages/seminars.html">세미나</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-<!-- 업데이트 -->
-<h3>최근 업데이트 소식</h3>
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
+        </ol>
 
-<ul class="update">
-  <li><a href="pages/item_2013_snu.html">2013년 프로토타입 결과물</a> 페이지가 업데이트 되었습니다. <small>- 2014. 3. 1</small></p> 
-  <li><a href="pages/author_lingostar_curriculum_iosbasic.html">링고스타의 커리큘럼</a> 페이지가 업데이트 되었습니다. <small>- 2014. 3. 1</small></p> 
-	<li><a href="https://drive.google.com/file/d/0Byosf_jil55pOGtxMmE1Z1l3N1k/edit?usp=sharing">코더스하이 튜토리얼 프라이머 PDF</a> 도서가 출간 되었습니다! <small>- 2013. 11. 15</small></p>
-</ul>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href = "pages/seminar_codingsover.html"><div class="fill" style="background-image:url('images/seminars/codingsover/banner.jpg');"></div></a>
+                <div class="carousel-caption">
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="item">
+                <a href = "pages/seminar_design4developers.html"><div class="fill" style="background-image:url('images/seminars/design4developers/banner.jpg');"></div></a>
+                <div class="carousel-caption">
+                    <h2></h2>
+                </div>
+            </div>
+            <!-- <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div> -->
+        </div>
 
-<br style="clear:both;" />
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
 
+    <!-- Page Content -->
+    <div class="container">
 
-<!-- 시리즈 소개 / 목록-->
-<h3>코더스하이 튜토리얼 시리즈는</h3>
-<p class="description">하나의 앱 제작을 그대로 따라해 봄으로서 단편적인 기술들을 종합해 하나의 앱으로 만들어나가는 과정을 익힐 수 있도록 합니다.<br />
-	코더스하이 튜토리얼 시리즈가 추구하는 방향은 장벽 뛰어넘기입니다. 단편적인 기술을 설명하는 예제는 그 기술들을 종합하는 과정을 익힐 수 없다는 한계가 있으므로, 스토어에 올릴 수 있는 수준의 앱을 예제로 이용해 시작부터 완성까지 전체 과정을 함께 해 보는 것이 도움이 되리라 봅니다.<br />
-특정 분야에 진입하기 전에 간단한 워밍업용으로 활용해 주신다면 시리즈를 만드는 보람을 느낄 수 있을 겁니다.</p>
-<div class="tutorial-list">
-<ul class="primer"><li>
-코더스하이 튜토리얼 프라이머 (무료제공)
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    <a href="./pages/lingostar_curriculum.html">교육 커리큘럼</a>
+                </h1>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-3x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-cube fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>iOS 앱 개발 기본</h4>
+                        <p>iPhone/iPad 네이티브 앱 개발<br/>Cocoa 기본부터 Hands-On 교육<br/>수 천명의 수강생에 의해 검증<br/>선택적 커리큘럼 구성</p>
+                        <a href="./pages/lingostar_curriculum_1.html#curri1" class="btn btn-primary">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-3x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-cubes fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>iOS 앱 개발 고급</h4>
+                        <p>iOS SDK의 다양한 기법<br/>앱 개발을 위한 실용적 방법들<br/>최신 프레임워크 활용법<br/>선택적 커리큘럼 구성</p>
+                        <a href="./pages/lingostar_curriculum_2.html#curri2" class="btn btn-primary">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-3x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-send fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>앱 프로토타입 제작</h4>
+                        <p>절차적으로 앱 아이디어 완성<br/>ADS-멘탈모델-프로토타이핑<br/>앱창업기관/대학에서 운영 중<br/>UI/UX 컨설팅</p>
+                        <a href="./pages/lingostar_curriculum_3.html#curri3" class="btn btn-primary">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-3x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Swift 언어</h4>
+                        <p>퍼즐 풀이를 통한 함수형 언어 접근.<br/>Obj-C에서 Swift로 코드 이전<br/>Future Safe 코드 작성<br/><br/></p>
+                        <a href="./pages/lingostar_curriculum_4.html#curri4" class="btn btn-primary">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
 
-	<ul>
-		<li class="link"><a href="https://drive.google.com/file/d/0Byosf_jil55pOGtxMmE1Z1l3N1k/edit?usp=sharing"><u>⬇︎</u> PDF 다운로드</a>&nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp;
-		<span class="link dimmed"><u>⬇</u> ePUB 다운로드(준비중)</span>
-		</li>
-	</ul>
-</li></ul>
-<ol>
-<li>
-<a href="pages/tutorial01_pomodoro.html">뽀모도로 타이머 만들기</a> (2013. 5) by <a href="pages/author_lingostar.html" class="user-mention">@lingostar</a>
-</li>
-<li>
-<a href="pages/tutorial02_dragonrider.html">드래곤 라이더 만들기</a> (2013. 11) by <a href="https://github.com/krazyeom" class="user-mention">@krazyeom</a>
-</li>
-</ol>
-</div>
-<br style="clear:both;" /><br />	
+        <!-- Portfolio Section -->
+        <!-- <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Portfolio Heading</h2>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+        </div> -->
+        <!-- /.row -->
 
+        <!-- Features Section -->
+        <!-- <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Modern Business Features</h2>
+            </div>
+            <div class="col-md-6">
+                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <ul>
+                    <li><strong>Bootstrap v3.2.0</strong>
+                    </li>
+                    <li>jQuery v1.11.0</li>
+                    <li>Font Awesome v4.1.0</li>
+                    <li>Working PHP contact form with validation</li>
+                    <li>Unstyled page elements for easy customization</li>
+                    <li>17 HTML pages</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+            </div>
+        </div> -->
+        <!-- /.row -->
 
-<!-- 저자 그룹 -->
-<h3>코더스하이의 저자 그룹 멤버</h3>
+        <hr>
 
-<ul>
-<li><a href="pages/author_lingostar.html" class="user-mention">@lingostar</a></li>
-<li><a href="https://github.com/krazyeom" class="user-mention">@krazyeom</a></li>
-</ul>
-<br style="clear:both;" /><br />	
+        <!-- Call to Action Section -->
+        <!-- <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+                </div>
+            </div>
+        </div>
 
-<!-- 서포터즈 -->
-<h3>코더스하이 서포터즈 멤버</h3>
+        <hr> -->
 
-<ul>
-<li><a href="https://github.com/wookchu" class="user-mention">@wookchu</a></li>
-</ul>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Coder's High 2014</p>
+                </div>
+            </div>
+        </footer>
+
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
 </html>
