@@ -518,3 +518,41 @@ csmall2 {
 	
 	margin-top: 32px; margin-bottom: 32px;
 }
+.cimgs {
+	text-align: center;
+}
+.cimgs > img {
+	width: 86px;
+	margin-left: 12px; margin-right: 12px;
+	
+	margin-bottom: 12px;
+}
+
+.k-ctable {
+	width: 100%; height: auto;
+	color: #333;
+	border-collapse: collapse;
+	
+	margin-top: 32px;
+}
+
+.k-ctable tr:first-child td:first-child {
+	width: 120px;
+}
+.k-ctable tr:first-child td:nth-child(2) {
+	width: 52px;
+}
+.k-ctable tr td:first-child {
+	text-align: center;
+}
+.k-ctable tr:first-child td {
+	font-weight: bold;
+}
+.k-ctable tr td:first-child, .k-ctable tr td:nth-child(2) {
+	background-color: #EFEFEF;
+}	
+
+.k-ctable tr td {
+	border: 1px solid #CCC;
+	padding: 8px;
+}
